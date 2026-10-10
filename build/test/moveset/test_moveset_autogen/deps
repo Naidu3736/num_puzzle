@@ -1,5 +1,0 @@
-test_moveset_autogen/timestamp: \
-	/home/naidu/Projects/num_puzzle/test/moveset/CMakeLists.txt \
-	/home/naidu/Projects/num_puzzle/test/moveset/test_moveset.cpp \
-	/home/naidu/Projects/num_puzzle/test/test_main.cpp \
-	/usr/bin/cmake

@@ -1,5 +1,0 @@
-test_evaluation_autogen/timestamp: \
-	/home/naidu/Projects/num_puzzle/test/evaluation/CMakeLists.txt \
-	/home/naidu/Projects/num_puzzle/test/evaluation/test_component.cpp \
-	/home/naidu/Projects/num_puzzle/test/test_main.cpp \
-	/usr/bin/cmake

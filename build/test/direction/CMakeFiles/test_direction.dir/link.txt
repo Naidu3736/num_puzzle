@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/test_direction.dir/link.d CMakeFiles/test_direction.dir/test_direction_autogen/mocs_compilation.cpp.o CMakeFiles/test_direction.dir/__/test_main.cpp.o CMakeFiles/test_direction.dir/test_direction.cpp.o -o ../../bin/test_direction  ../../src/libnum_puzzle_core.a

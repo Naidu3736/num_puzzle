@@ -1,2 +1,0 @@
-/usr/bin/ar qc libnum_puzzle_core.a CMakeFiles/num_puzzle_core.dir/num_puzzle_core_autogen/mocs_compilation.cpp.o CMakeFiles/num_puzzle_core.dir/board/board.cpp.o CMakeFiles/num_puzzle_core.dir/evaluation/evaluation.cpp.o CMakeFiles/num_puzzle_core.dir/evaluation/component.cpp.o
-/usr/bin/ranlib libnum_puzzle_core.a

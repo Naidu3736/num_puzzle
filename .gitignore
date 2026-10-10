@@ -1,0 +1,71 @@
+# === Directorios de build ===
+build/
+build-*/
+cmake-build-*/
+out/
+
+# === Archivos generados por CMake ===
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+*.cmake.stamp
+
+# === Enlace simbólico de compilación ===
+compile_commands.json
+
+# === Logs de compilación ===
+build.log
+
+# === Cache de clangd (LSP) ===
+.cache/
+.clangd/
+.clang-format-cache
+
+# === Qt Creator (config local del IDE) ===
+.qtcreator/
+CMakeLists.txt.user
+CMakeLists.txt.user.*
+
+# === Binarios y objetos ===
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
+*.out
+*.app
+
+# === Qt autogenerado ===
+*_autogen/
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.moc
+.qt/
+
+# === Archivos de test generados ===
+Testing/
+CTestTestfile.cmake
+
+# === Sistema operativo ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Editores ===
+.vscode/
+*.swp
+*~
+.idea/
+
+# === Dependencias / cachés ===
+*.d
+*.dSYM/
+*.stackdump
