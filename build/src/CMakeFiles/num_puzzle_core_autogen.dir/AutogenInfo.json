@@ -1,0 +1,117 @@
+{
+	"BUILD_DIR" : "/home/naidu/Projects/num_puzzle/build/src/num_puzzle_core_autogen",
+	"CMAKE_BINARY_DIR" : "/home/naidu/Projects/num_puzzle/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/naidu/Projects/num_puzzle/build/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/naidu/Projects/num_puzzle/src",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : [ "/home/naidu/Projects/num_puzzle/src/CMakeLists.txt" ],
+	"CMAKE_SOURCE_DIR" : "/home/naidu/Projects/num_puzzle",
+	"CROSS_CONFIG" : false,
+	"DEP_FILE" : "/home/naidu/Projects/num_puzzle/build/src/num_puzzle_core_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "num_puzzle_core_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"/home/naidu/Projects/num_puzzle/src/board/board.hpp",
+			"MU",
+			"R57SBEB5NN/moc_board.cpp",
+			null
+		],
+		[
+			"/home/naidu/Projects/num_puzzle/src/core/direction.hpp",
+			"MU",
+			"TAC5DWH4SE/moc_direction.cpp",
+			null
+		],
+		[
+			"/home/naidu/Projects/num_puzzle/src/core/moveset.hpp",
+			"MU",
+			"TAC5DWH4SE/moc_moveset.cpp",
+			null
+		],
+		[
+			"/home/naidu/Projects/num_puzzle/src/evaluation/component.hpp",
+			"MU",
+			"4ODJ2OA2OK/moc_component.cpp",
+			null
+		],
+		[
+			"/home/naidu/Projects/num_puzzle/src/evaluation/evaluation.hpp",
+			"MU",
+			"4ODJ2OA2OK/moc_evaluation.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/naidu/Projects/num_puzzle/build/src/num_puzzle_core_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/naidu/Projects/num_puzzle/build/src/num_puzzle_core_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : [],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/naidu/Projects/num_puzzle/src",
+		"/usr/include/c++/16",
+		"/usr/include/c++/16/x86_64-pc-linux-gnu",
+		"/usr/include/c++/16/backward",
+		"/usr/lib/gcc/x86_64-pc-linux-gnu/16/include",
+		"/usr/local/include",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : 
+	[
+		"Q_OBJECT",
+		"Q_GADGET",
+		"Q_NAMESPACE",
+		"Q_NAMESPACE_EXPORT",
+		"Q_GADGET_EXPORT",
+		"Q_ENUM_NS"
+	],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/c++",
+		"-std=gnu++23",
+		"-w",
+		"-dM",
+		"-E",
+		"/usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/naidu/Projects/num_puzzle/build/src/num_puzzle_core_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 6,
+	"PARSE_CACHE_FILE" : "/home/naidu/Projects/num_puzzle/build/src/CMakeFiles/num_puzzle_core_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/uic",
+	"QT_VERSION_MAJOR" : 6,
+	"QT_VERSION_MINOR" : 12,
+	"SETTINGS_FILE" : "/home/naidu/Projects/num_puzzle/build/src/CMakeFiles/num_puzzle_core_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "/home/naidu/Projects/num_puzzle/src/board/board.cpp", "MU", null ],
+		[
+			"/home/naidu/Projects/num_puzzle/src/evaluation/component.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/naidu/Projects/num_puzzle/src/evaluation/evaluation.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/naidu/Projects/num_puzzle/build/cmake_install.cmake",
+		"/home/naidu/Projects/num_puzzle/build/src/cmake_install.cmake",
+		"/home/naidu/Projects/num_puzzle/build/test/cmake_install.cmake",
+		"/home/naidu/Projects/num_puzzle/build/test/board/cmake_install.cmake",
+		"/home/naidu/Projects/num_puzzle/build/test/direction/cmake_install.cmake",
+		"/home/naidu/Projects/num_puzzle/build/test/moveset/cmake_install.cmake",
+		"/home/naidu/Projects/num_puzzle/build/test/evaluation/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

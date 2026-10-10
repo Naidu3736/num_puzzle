@@ -1,0 +1,87 @@
+Start testing: Oct 10 11:53 CST
+----------------------------------------------------------
+1/4 Testing: test_board
+1/4 Test: test_board
+Command: "/home/naidu/Projects/num_puzzle/build/bin/test_board"
+Directory: /home/naidu/Projects/num_puzzle/build/test/board
+"test_board" start time: Oct 10 11:53 CST
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.5.3"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases:  28 |  28 passed | 0 failed | 0 skipped
+[doctest] assertions: 165 | 165 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_board" end time: Oct 10 11:53 CST
+"test_board" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: test_direction
+2/4 Test: test_direction
+Command: "/home/naidu/Projects/num_puzzle/build/bin/test_direction"
+Directory: /home/naidu/Projects/num_puzzle/build/test/direction
+"test_direction" start time: Oct 10 11:53 CST
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.5.3"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases:  5 |  5 passed | 0 failed | 0 skipped
+[doctest] assertions: 28 | 28 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_direction" end time: Oct 10 11:53 CST
+"test_direction" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: test_moveset
+3/4 Test: test_moveset
+Command: "/home/naidu/Projects/num_puzzle/build/bin/test_moveset"
+Directory: /home/naidu/Projects/num_puzzle/build/test/moveset
+"test_moveset" start time: Oct 10 11:53 CST
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.5.3"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases: 16 | 16 passed | 0 failed | 0 skipped
+[doctest] assertions: 63 | 63 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_moveset" end time: Oct 10 11:53 CST
+"test_moveset" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: test_evaluation
+4/4 Test: test_evaluation
+Command: "/home/naidu/Projects/num_puzzle/build/bin/test_evaluation"
+Directory: /home/naidu/Projects/num_puzzle/build/test/evaluation
+"test_evaluation" start time: Oct 10 11:53 CST
+Output:
+----------------------------------------------------------
+[doctest] doctest version is "2.5.3"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases:  5 |  5 passed | 0 failed | 0 skipped
+[doctest] assertions: 34 | 34 passed | 0 failed |
+[doctest] Status: SUCCESS!
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_evaluation" end time: Oct 10 11:53 CST
+"test_evaluation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 10 11:53 CST

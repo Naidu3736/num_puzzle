@@ -1,0 +1,5 @@
+test_direction_autogen/timestamp: \
+	/home/naidu/Projects/num_puzzle/test/direction/CMakeLists.txt \
+	/home/naidu/Projects/num_puzzle/test/direction/test_direction.cpp \
+	/home/naidu/Projects/num_puzzle/test/test_main.cpp \
+	/usr/bin/cmake
