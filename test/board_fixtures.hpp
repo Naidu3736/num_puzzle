@@ -126,7 +126,7 @@ namespace fixtures {
     inline constexpr std::uint16_t bad_tiles_random_3x3_1 = 7;
     inline constexpr std::uint16_t broken_pairs_random_3x3_1 = 10;
     inline constexpr std::uint16_t tiles_at_1_distance_random_3x3_1 = 0;
-    inline constexpr double blank_dispersion_random_3x3_1 = 1.875;
+    inline constexpr double blank_dispersion_random_3x3_1 = 2;
 
     // 3x3 aleatorio #2: resoluble, 0 en (2,1).
     // Manhattan = 11, bad_tiles = 8, broken_pairs = 10, tiles_at_1 = 6, dispersion = 1.875
@@ -188,7 +188,7 @@ namespace fixtures {
     inline constexpr std::uint16_t bad_tiles_random_4x4_2 = 9;
     inline constexpr std::uint16_t broken_pairs_random_4x4_2 = 14;
     inline constexpr std::uint16_t tiles_at_1_distance_random_4x4_2 = 6;
-    inline constexpr double blank_dispersion_random_4x4_2 = 2.444444444;
+    inline constexpr double blank_dispersion_random_4x4_2 = 2.777777778;
 
     // 4x4 aleatorio #3: resoluble, 0 en (0,3).
     // Manhattan = 3, bad_tiles = 3, broken_pairs = 4, tiles_at_1 = 3, dispersion = 2.0

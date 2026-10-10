@@ -46,6 +46,6 @@ TEST_CASE("Dispersion del hueco respecto a fichas mal colocadas") {
         CAPTURE(name);
         naidu::Board b(c.tiles);
         naidu::Board goal(b.dim());
-        CHECK(naidu::component::blank_dispersion(b, goal) >= 0.0);
+        CHECK(naidu::component::blank_dispersion(b, goal) == doctest::Approx(c.blank_dispersion));
     }
 }
