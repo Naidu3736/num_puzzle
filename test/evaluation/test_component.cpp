@@ -32,14 +32,14 @@ TEST_CASE("Fichas a 1 de distancia (Manhattan)") {
     }
 }
 
-/* TEST_CASE("Pares rotos") {
+TEST_CASE("Pares rotos") {
     for (const auto& [name, c] : fixtures::random_cases) {
         CAPTURE(name);
         naidu::Board b(c.tiles);
         naidu::Board goal(b.dim());
         CHECK(naidu::component::broken_pairs(b, goal) == c.broken_pairs);
     }
-} */
+}
 
 TEST_CASE("Dispersion del hueco respecto a fichas mal colocadas") {
     for (const auto& [name, c] : fixtures::random_cases) {
