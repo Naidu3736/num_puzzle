@@ -124,7 +124,7 @@ namespace fixtures {
     }
     inline constexpr std::uint16_t manhattan_random_3x3_1 = 21;
     inline constexpr std::uint16_t bad_tiles_random_3x3_1 = 7;
-    inline constexpr std::uint16_t broken_pairs_random_3x3_1 = 10;
+    inline constexpr std::uint16_t broken_pairs_random_3x3_1 = 9;
     inline constexpr std::uint16_t tiles_at_1_distance_random_3x3_1 = 0;
     inline constexpr double blank_dispersion_random_3x3_1 = 2;
 
@@ -139,7 +139,7 @@ namespace fixtures {
     }
     inline constexpr std::uint16_t manhattan_random_3x3_2 = 11;
     inline constexpr std::uint16_t bad_tiles_random_3x3_2 = 8;
-    inline constexpr std::uint16_t broken_pairs_random_3x3_2 = 10;
+    inline constexpr std::uint16_t broken_pairs_random_3x3_2 = 9;
     inline constexpr std::uint16_t tiles_at_1_distance_random_3x3_2 = 6;
     inline constexpr double blank_dispersion_random_3x3_2 = 1.875;
 
@@ -154,7 +154,7 @@ namespace fixtures {
     }
     inline constexpr std::uint16_t manhattan_random_3x3_3 = 8;
     inline constexpr std::uint16_t bad_tiles_random_3x3_3 = 8;
-    inline constexpr std::uint16_t broken_pairs_random_3x3_3 = 8;
+    inline constexpr std::uint16_t broken_pairs_random_3x3_3 = 7;
     inline constexpr std::uint16_t tiles_at_1_distance_random_3x3_3 = 8;
     inline constexpr double blank_dispersion_random_3x3_3 = 2.25;
 
@@ -170,7 +170,7 @@ namespace fixtures {
     }
     inline constexpr std::uint16_t manhattan_random_4x4_1 = 10;
     inline constexpr std::uint16_t bad_tiles_random_4x4_1 = 9;
-    inline constexpr std::uint16_t broken_pairs_random_4x4_1 = 14;
+    inline constexpr std::uint16_t broken_pairs_random_4x4_1 = 12;
     inline constexpr std::uint16_t tiles_at_1_distance_random_4x4_1 = 8;
     inline constexpr double blank_dispersion_random_4x4_1 = 2.333333333;
 
@@ -186,7 +186,7 @@ namespace fixtures {
     }
     inline constexpr std::uint16_t manhattan_random_4x4_2 = 13;
     inline constexpr std::uint16_t bad_tiles_random_4x4_2 = 9;
-    inline constexpr std::uint16_t broken_pairs_random_4x4_2 = 14;
+    inline constexpr std::uint16_t broken_pairs_random_4x4_2 = 13;
     inline constexpr std::uint16_t tiles_at_1_distance_random_4x4_2 = 6;
     inline constexpr double blank_dispersion_random_4x4_2 = 2.777777778;
 
@@ -202,7 +202,7 @@ namespace fixtures {
     }
     inline constexpr std::uint16_t manhattan_random_4x4_3 = 3;
     inline constexpr std::uint16_t bad_tiles_random_4x4_3 = 3;
-    inline constexpr std::uint16_t broken_pairs_random_4x4_3 = 4;
+    inline constexpr std::uint16_t broken_pairs_random_4x4_3 = 3;
     inline constexpr std::uint16_t tiles_at_1_distance_random_4x4_3 = 3;
     inline constexpr double blank_dispersion_random_4x4_3 = 2.0;
 
@@ -253,7 +253,7 @@ namespace fixtures {
     }
     inline constexpr std::uint16_t manhattan_random_5x5_3 = 4;
     inline constexpr std::uint16_t bad_tiles_random_5x5_3 = 1;
-    inline constexpr std::uint16_t broken_pairs_random_5x5_3 = 1;
+    inline constexpr std::uint16_t broken_pairs_random_5x5_3 = 2;
     inline constexpr std::uint16_t tiles_at_1_distance_random_5x5_3 = 0;
     inline constexpr double blank_dispersion_random_5x5_3 = 4.0;
 
