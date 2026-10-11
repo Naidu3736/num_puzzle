@@ -120,7 +120,7 @@ namespace naidu {
         const std::size_t inv = inversions();
         if (m_dim & 1) return !(inv & 1);
         const std::size_t row_from_bottom = m_dim - (m_empty_index / m_dim);
-        return ((inv + row_from_bottom) & 1) == 0;
+        return (!((inv + row_from_bottom) & 1)) == 0;
     }
 
     MoveSet Board::legal_moves() const noexcept {
