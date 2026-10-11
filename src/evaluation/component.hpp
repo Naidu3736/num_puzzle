@@ -3,6 +3,7 @@
 #include "board/board.hpp"
 
 #include <cstdint>
+#include <span>
 
 namespace naidu::component {
 
@@ -12,15 +13,16 @@ namespace naidu::component {
 
     /**
      * @brief Costo de transición entre dos estados adyacentes.
-     *
-     * No es una heurística: es el costo del movimiento que se acumula en g(n).
-     *
      * @param previous Estado anterior.
      * @param current Estado actual (tras un movimiento).
-     * @return Costo del movimiento (por defecto 1).
+     * @param goal_pos Mapa de posiciones meta (positions[ficha] = índice meta).
+     * @return Costo del movimiento (1 o 2).
      */
-    std::uint16_t step_cost(const Board& previous,
-                            const Board& current) noexcept;
+    std::uint16_t step_cost(
+        const Board& previous,
+        const Board& current,
+        std::span<const std::uint8_t> goal_pos
+    ) noexcept;
 
     // --------------------------------------------------------
     // Componentes heurísticos
@@ -29,34 +31,46 @@ namespace naidu::component {
     /**
      * @brief Suma de distancias Manhattan de todas las fichas a su meta.
      * @param b Tablero a evaluar.
-     * @param goal Tablero meta.
+     * @param goal_pos Mapa de posiciones meta.
      * @return Heurística de Manhattan.
      */
-    std::uint16_t manhattan_total(const Board& b, const Board& goal);
+    std::uint16_t manhattan_total(
+        const Board& b,
+        std::span<const std::uint8_t> goal_pos
+    );
 
     /**
      * @brief Número de pares adyacentes mal ordenados (desorden local).
      * @param b Tablero a evaluar.
-     * @param goal Tablero meta.
+     * @param goal_pos Mapa de posiciones meta.
      * @return Conteo de pares rotos.
      */
-    std::uint16_t broken_pairs(const Board& b, const Board& goal);
+    std::uint16_t broken_pairs(
+        const Board& b,
+        std::span<const std::uint8_t> goal_pos
+    );
 
     /**
      * @brief Número de fichas fuera de su meta.
      * @param b Tablero a evaluar.
-     * @param goal Tablero meta.
+     * @param goal_pos Mapa de posiciones meta.
      * @return Conteo de fichas mal colocadas.
      */
-    std::uint16_t misplaced_tiles(const Board& b, const Board& goal);
+    std::uint16_t misplaced_tiles(
+        const Board& b,
+        std::span<const std::uint8_t> goal_pos
+    );
 
     /**
      * @brief Fichas mal colocadas a Manhattan 1 de su meta.
      * @param b Tablero a evaluar.
-     * @param goal Tablero meta.
+     * @param goal_pos Mapa de posiciones meta.
      * @return Número de fichas "casi resueltas".
      */
-    std::uint16_t tiles_at_distance_1(const Board& b, const Board& goal);
+    std::uint16_t tiles_at_distance_1(
+        const Board& b,
+        std::span<const std::uint8_t> goal_pos
+    );
 
     /**
      * @brief Dispersión promedio del hueco respecto a fichas mal colocadas.
@@ -66,9 +80,12 @@ namespace naidu::component {
      * cada función de evaluación decide cómo tratarla.
      *
      * @param b Tablero a evaluar.
-     * @param goal Tablero meta.
+     * @param goal_pos Mapa de posiciones meta.
      * @return Distancia media en celdas. 0.0 si el tablero está resuelto.
      */
-    double blank_dispersion(const Board& b, const Board& goal);
+    double blank_dispersion(
+        const Board& b,
+        std::span<const std::uint8_t> goal_pos
+    );
 
 }

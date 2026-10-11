@@ -1,27 +1,10 @@
 #include "component.hpp"
-#include "board/board.hpp"
 
-#include <array>
 #include <cmath>
 #include <cstdint>
-#include <stdexcept>
+#include <span>
 
 namespace {
-
-    using GoalPositions = std::array<std::uint8_t, naidu::Board::MAX_TILES>;
-
-    GoalPositions goal_positions(
-        const naidu::Board& board,
-        const naidu::Board& goal
-    ) {
-        if (board.dim() != goal.dim())
-            throw std::invalid_argument("Board and goal dimensions must match");
-
-        GoalPositions positions{};
-        for (std::uint8_t i = 0; i < goal.tile_count(); ++i)
-            positions[goal.at(i)] = i;
-        return positions;
-    }
 
     std::uint16_t manhattan(
         std::uint8_t current_pos,
@@ -59,27 +42,38 @@ namespace naidu::component {
 
     std::uint16_t step_cost(
         const Board& previous,
-        const Board& current
+        const Board& current,
+        std::span<const std::uint8_t> goal_pos
     ) noexcept {
-        return 1;
+        const auto new_empty = current.empty_index();
+        const auto moved_tile = previous.at(new_empty);
+
+        if (moved_tile == 0)
+            return 1;
+
+        return (goal_pos[moved_tile] == new_empty) ? 2 : 1;
     }
 
-    std::uint16_t manhattan_total(const Board& b, const Board& goal) {
-        const auto positions = goal_positions(b, goal);
+    std::uint16_t manhattan_total(
+        const Board& b,
+        std::span<const std::uint8_t> goal_pos
+    ) {
         std::uint16_t total = 0;
 
         for (std::uint8_t i = 0; i < b.tile_count(); ++i) {
             const auto tile = b.at(i);
             if (tile == 0)
                 continue;
-            total += manhattan(i, positions[tile], b.dim());
+            total += manhattan(i, goal_pos[tile], b.dim());
         }
 
         return total;
     }
 
-    std::uint16_t broken_pairs(const Board& b, const Board& goal) {
-        const auto positions = goal_positions(b, goal);
+    std::uint16_t broken_pairs(
+        const Board& b,
+        std::span<const std::uint8_t> goal_pos
+    ) {
         const auto dim = b.dim();
         std::uint16_t broken = 0;
 
@@ -91,14 +85,14 @@ namespace naidu::component {
             if ((i % dim) + 1 < dim) {
                 const auto right = b.at(i + 1);
                 if (right != 0
-                    && !well_ordered_right(positions[tile], positions[right], dim))
+                    && !well_ordered_right(goal_pos[tile], goal_pos[right], dim))
                     ++broken;
             }
 
             if ((i / dim) + 1 < dim) {
                 const auto below = b.at(i + dim);
                 if (below != 0
-                    && !well_ordered_below(positions[tile], positions[below], dim))
+                    && !well_ordered_below(goal_pos[tile], goal_pos[below], dim))
                     ++broken;
             }
         }
@@ -106,38 +100,44 @@ namespace naidu::component {
         return broken;
     }
 
-    std::uint16_t misplaced_tiles(const Board& b, const Board& goal) {
-        const auto positions = goal_positions(b, goal);
+    std::uint16_t misplaced_tiles(
+        const Board& b,
+        std::span<const std::uint8_t> goal_pos
+    ) {
         std::uint16_t bad = 0;
 
         for (std::uint8_t i = 0; i < b.tile_count(); ++i) {
             const auto tile = b.at(i);
             if (tile == 0)
                 continue;
-            if (positions[tile] != i)
+            if (goal_pos[tile] != i)
                 ++bad;
         }
 
         return bad;
     }
 
-    std::uint16_t tiles_at_distance_1(const Board& b, const Board& goal) {
-        const auto positions = goal_positions(b, goal);
+    std::uint16_t tiles_at_distance_1(
+        const Board& b,
+        std::span<const std::uint8_t> goal_pos
+    ) {
         std::uint16_t tiles = 0;
 
         for (std::uint8_t i = 0; i < b.tile_count(); ++i) {
             const auto tile = b.at(i);
             if (tile == 0)
                 continue;
-            if (manhattan(i, positions[tile], b.dim()) == 1)
+            if (manhattan(i, goal_pos[tile], b.dim()) == 1)
                 ++tiles;
         }
 
         return tiles;
     }
 
-    double blank_dispersion(const Board& b, const Board& goal) {
-        const auto positions = goal_positions(b, goal);
+    double blank_dispersion(
+        const Board& b,
+        std::span<const std::uint8_t> goal_pos
+    ) {
         std::uint16_t total_distance = 0;
         std::uint16_t misplaced = 0;
 
@@ -145,7 +145,7 @@ namespace naidu::component {
             const auto tile = b.at(i);
             if (tile == 0)
                 continue;
-            if (positions[tile] == i)
+            if (goal_pos[tile] == i)
                 continue;
             total_distance += manhattan(b.empty_index(), i, b.dim());
             ++misplaced;
