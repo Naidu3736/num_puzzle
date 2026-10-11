@@ -3,19 +3,23 @@
 #include "core/direction.hpp"
 #include "core/moveset.hpp"
 
+#include <array>
 #include <cstddef>
 #include <cstdint>
 #include <span>
-#include <vector>
 
 namespace naidu {
 
     /**
      * @brief Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N.
      *
-     * Almacena las fichas en un vector lineal de tamaño N². El valor 0 representa
+     * Almacena las fichas en un arreglo lineal de tamaño N². El valor 0 representa
      * la casilla vacía (hueco). El tablero mantiene su propio índice del hueco
      * para evitar búsquedas repetidas.
+     *
+     * El almacenamiento interno es un std::array de tamaño fijo MAX_TILES, pero
+     * solo los primeros m_size elementos (N²) son válidos. Esto permite cambiar
+     * de dimensión en tiempo de ejecución sin asignaciones dinámicas.
      *
      * Dimensiones soportadas: 3×3 hasta 15×15.
      */
@@ -31,9 +35,10 @@ namespace naidu {
         static constexpr std::uint8_t MAX_TILES = MAX_DIM * MAX_DIM;
 
     private:
-        std::vector<std::uint8_t> m_board;      ///< Fichas en orden fila-mayor.
-        std::uint8_t m_dim;                     ///< Dimensión N del tablero.
-        std::uint8_t m_empty_index;             ///< Índice lineal del hueco.
+        std::array<std::uint8_t, MAX_TILES> m_board;  ///< Fichas en orden fila-mayor (solo m_size válidas).
+        std::uint8_t m_dim;                            ///< Dimensión N del tablero.
+        std::uint8_t m_size;                           ///< Número de fichas válidas (N²).
+        std::uint8_t m_empty_index;                    ///< Índice lineal del hueco.
 
         /**
          * @brief Verifica que las fichas formen una permutación válida de 0..N²-1.
@@ -125,9 +130,13 @@ namespace naidu {
         std::uint8_t at(std::size_t row, std::size_t col) const;
 
         /**
-        * @brief Vista de solo lectura sobre las fichas
-        * @return Span sobre las N×N fichas.
-        */
+         * @brief Vista de solo lectura sobre las fichas válidas del tablero.
+         *
+         * Devuelve un span de tamaño N² (m_size), no de MAX_TILES. Las posiciones
+         * no usadas del array interno quedan fuera de la vista.
+         *
+         * @return Span sobre las N×N fichas.
+         */
         std::span<const std::uint8_t> tiles() const noexcept;
 
         /**
@@ -174,6 +183,11 @@ namespace naidu {
 
         /**
          * @brief Compara dos tableros por contenido y dimensión.
+         *
+         * Solo compara los primeros m_size elementos. Dos tableros de la misma
+         * dimensión con las mismas fichas válidas son iguales, aunque las
+         * posiciones no usadas del array interno difieran.
+         *
          * @param other Otro tablero.
          * @return true si tienen la misma dimensión y las mismas fichas.
          */

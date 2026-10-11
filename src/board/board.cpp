@@ -1,19 +1,19 @@
 #include "board.hpp"
 
 #include <algorithm>
+#include <bitset>
 #include <cmath>
 #include <stdexcept>
-#include <bitset>
 
 namespace naidu {
 
     std::size_t Board::inversions() const {
         std::size_t inv = 0;
-        const std::size_t n = m_board.size();
+        const std::uint8_t n = m_size;
 
-        for (std::size_t i = 0; i + 1 < n; ++i) {
+        for (std::uint8_t i = 0; i + 1 < n; ++i) {
             if (m_board[i] == 0) continue;
-            for (std::size_t j = i + 1; j < n; ++j) {
+            for (std::uint8_t j = static_cast<std::uint8_t>(i + 1); j < n; ++j) {
                 if (m_board[j] == 0) continue;
                 if (m_board[i] > m_board[j]) ++inv;
             }
@@ -23,8 +23,9 @@ namespace naidu {
 
     void Board::validate_tiles() const {
         std::bitset<MAX_TILES> seen;
-        for (std::uint8_t tile : m_board) {
-            if (tile >= m_board.size())
+        for (std::uint8_t i = 0; i < m_size; ++i) {
+            const std::uint8_t tile = m_board[i];
+            if (tile >= m_size)
                 throw std::invalid_argument("Tile out of range");
             if (seen.test(tile))
                 throw std::invalid_argument("Duplicate tile value");
@@ -33,10 +34,10 @@ namespace naidu {
     }
 
     std::uint8_t Board::find_empty() const {
-        auto it = std::find(m_board.begin(), m_board.end(), std::uint8_t{0});
-        if (it == m_board.end())
-            throw std::invalid_argument("Board does not contain an empty tile");
-        return static_cast<std::uint8_t>(it - m_board.begin());
+        for (std::uint8_t i = 0; i < m_size; ++i)
+            if (m_board[i] == 0)
+                return i;
+        throw std::invalid_argument("Board does not contain an empty tile");
     }
 
     std::uint8_t Board::neighbor_of_empty(Direction m) const noexcept {
@@ -76,7 +77,11 @@ namespace naidu {
             throw std::invalid_argument("Board dimension must be between 3 and 15");
 
         m_dim = dim;
-        m_board.assign(tiles.begin(), tiles.end());
+        m_size = static_cast<std::uint8_t>(dim * dim);
+
+        for (std::uint8_t i = 0; i < m_size; ++i)
+            m_board[i] = tiles[i];
+
         validate_tiles();
         m_empty_index = find_empty();
     }
@@ -88,11 +93,12 @@ namespace naidu {
             throw std::invalid_argument("Board dimension must be at most 15");
 
         m_dim = new_dim;
+        m_size = static_cast<std::uint8_t>(new_dim * new_dim);
         reset();
     }
 
     std::uint8_t Board::dim() const noexcept          { return m_dim; }
-    std::uint8_t Board::tile_count() const noexcept   { return static_cast<std::uint8_t>(m_board.size()); }
+    std::uint8_t Board::tile_count() const noexcept   { return m_size; }
     std::uint8_t Board::empty_index() const noexcept  { return m_empty_index; }
 
     std::uint8_t Board::at(std::size_t index) const  { return m_board[index]; }
@@ -100,19 +106,21 @@ namespace naidu {
         return m_board[row * m_dim + col];
     }
 
-    std::span<const std::uint8_t> Board::tiles() const noexcept { return m_board; }
+    std::span<const std::uint8_t> Board::tiles() const noexcept {
+        return std::span<const std::uint8_t>(m_board.data(), m_size);
+    }
 
     bool Board::is_solved() const noexcept {
-        for (std::uint8_t i = 0; i + 1 < m_board.size(); ++i)
+        for (std::uint8_t i = 0; i + 1 < m_size; ++i)
             if (m_board[i] != static_cast<std::uint8_t>(i + 1)) return false;
-        return m_board.back() == 0;
+        return m_board[m_size - 1] == 0;
     }
 
     bool Board::is_solvable() const noexcept {
         const std::size_t inv = inversions();
         if (m_dim & 1) return !(inv & 1);
-        const std::size_t row = m_empty_index / m_dim;
-        return (inv + row) & 1;
+        const std::size_t row_from_bottom = m_dim - (m_empty_index / m_dim);
+        return ((inv + row_from_bottom) & 1) == 0;
     }
 
     MoveSet Board::legal_moves() const noexcept {
@@ -139,17 +147,18 @@ namespace naidu {
     }
 
     void Board::reset() {
-        m_board.resize(static_cast<std::size_t>(m_dim) * m_dim);
-        for (std::uint8_t i = 0; i + 1 < m_board.size(); ++i)
+        for (std::uint8_t i = 0; i + 1 < m_size; ++i)
             m_board[i] = static_cast<std::uint8_t>(i + 1);
-        m_board.back() = 0;
-        m_empty_index = static_cast<std::uint8_t>(m_board.size() - 1);
+        m_board[m_size - 1] = 0;
+        m_empty_index = static_cast<std::uint8_t>(m_size - 1);
     }
 
     bool Board::operator==(const Board& other) const noexcept {
-        return m_dim == other.m_dim
-            && m_empty_index == other.m_empty_index
-            && m_board == other.m_board;
+        if (m_dim != other.m_dim) return false;
+        if (m_empty_index != other.m_empty_index) return false;
+        for (std::uint8_t i = 0; i < m_size; ++i)
+            if (m_board[i] != other.m_board[i]) return false;
+        return true;
     }
 
 }
