@@ -32,10 +32,17 @@ namespace naidu::evaluation {
     }
 
     std::uint16_t evaluation_2(
-        const Board& b, 
+        const Board& b,
         std::span<const std::uint8_t> goal_pos,
         std::uint16_t g
-    ) noexcept;
+    ) noexcept {
+        auto h = component::manhattan_total(b, goal_pos);
+        h += component::misplaced_tiles(b, goal_pos);
+
+        h -= component::tiles_at_distance_1(b, goal_pos);
+
+        return g + h;
+    }
 
     std::uint16_t evaluation_3(
         const Board& b, 

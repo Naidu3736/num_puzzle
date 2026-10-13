@@ -63,3 +63,22 @@ TEST_CASE("Evaluation: Evaluation 1 (Manhattan + misplaced + dispersion ponderad
         CHECK(f == expected);
     }
 }
+
+TEST_CASE("Evaluation: Evaluation 2 (Manhattan + misplaced + proximidad)") {
+    for (const auto& [name, c] : fixtures::random_cases) {
+        CAPTURE(name);
+        naidu::Board b(c.tiles);
+        naidu::Board goal(b.dim());
+        const auto goal_pos = build_goal_positions(goal);
+
+        const auto g = std::uint16_t{0};
+        const auto f = naidu::evaluation::evaluation_2(b, goal_pos, g);
+
+        auto h = static_cast<int>(c.manhattan) + static_cast<int>(c.bad_tiles);
+        h -= static_cast<int>(c.tiles_at_1_distance);
+
+        const auto expected = static_cast<std::uint16_t>(g + h);
+
+        CHECK(f == expected);
+    }
+}

@@ -9,12 +9,21 @@ namespace naidu::evaluation {
     /**
      * @brief Función de evaluación de referencia (baseline).
      *
-     * f(n) = g(n) + manhattan(n) + (#fichas_correctas)
+     * Combina dos componentes:
+     *
+     *   f(n) = g(n) + manhattan(n) + well_placed(n)
+     *
+     * donde:
+     *   - manhattan(n)    suma de distancias Manhattan de cada ficha a su meta.
+     *                     ← component::manhattan_total(b, goal_pos)
+     *   - well_placed(n)  fichas bien colocadas: (N² - 1) - misplaced(n).
+     *                     ← (tile_count - 1) - component::misplaced_tiles(b, goal_pos)
      *
      * Combina Manhattan con una recompensa por fichas bien colocadas.
+     * El término de recompensa premia estados con más piezas ya resueltas.
      *
      * @param b Tablero actual.
-     * @param goal_pos Mapa de posiciones meta.
+     * @param goal_pos Mapa de posiciones meta (positions[ficha] = índice meta).
      * @param g Costo acumulado desde el estado inicial.
      * @return Valor de f para el estado dado.
      */
@@ -25,7 +34,7 @@ namespace naidu::evaluation {
     ) noexcept;
 
     /**
-     * @brief Evaluación 1: Manhattan + fichas mal colocadas + dispersión del hueco.
+     * @brief Evaluación 1: Manhattan + fichas mal colocadas + dispersión.
      *
      * Combina tres componentes:
      *
@@ -33,8 +42,11 @@ namespace naidu::evaluation {
      *
      * donde:
      *   - manhattan(n)    suma de distancias Manhattan de cada ficha a su meta.
+     *                     ← component::manhattan_total(b, goal_pos)
      *   - misplaced(n)    fichas fuera de su meta.
+     *                     ← component::misplaced_tiles(b, goal_pos)
      *   - dispersion(n)   distancia Manhattan media del hueco a cada ficha mal colocada.
+     *                     ← component::blank_dispersion(b, goal_pos)
      *   - w(dim)          peso adaptativo según el tamaño del tablero:
      *                       0.0   si dim ≤ 7   (dispersión ignorada)
      *                       0.5   si 8 ≤ dim ≤ 10
@@ -57,13 +69,30 @@ namespace naidu::evaluation {
     ) noexcept;
 
     /**
-     * @brief 
+     * @brief Evaluación 2: Manhattan + fichas mal colocadas + proximidad.
+     *
+     * Combina tres componentes:
+     *
+     *   f(n) = g(n) + manhattan(n) + misplaced(n) - near(n) / 2
+     *
+     * donde:
+     *   - manhattan(n)    suma de distancias Manhattan de cada ficha a su meta.
+     *                     ← component::manhattan_total(b, goal_pos)
+     *   - misplaced(n)    fichas fuera de su meta.
+     *                     ← component::misplaced_tiles(b, goal_pos)
+     *   - near(n)         fichas mal colocadas a Manhattan 1 de su meta.
+     *                     ← component::tiles_at_distance_1(b, goal_pos)
+     *
+     * El término -near(n) introduce una recompensa por fichas casi
+     * resueltas, sesgando la búsqueda hacia configuraciones próximas a la meta.
+     *
      * @param b Tablero actual.
+     * @param goal_pos Mapa de posiciones meta (positions[ficha] = índice meta).
      * @param g Costo acumulado desde el estado inicial.
-     * @return Valor de f₂.
+     * @return Valor de f para el estado dado.
      */
     std::uint16_t evaluation_2(
-        const Board& b, 
+        const Board& b,
         std::span<const std::uint8_t> goal_pos,
         std::uint16_t g
     ) noexcept;
