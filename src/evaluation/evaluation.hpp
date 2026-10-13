@@ -43,7 +43,7 @@ namespace naidu::evaluation {
     std::uint16_t evaluation_baseline(
         const Board& b,
         std::span<const std::uint8_t> goal_pos,
-        std::uint16_t g
+        std::uint16_t /* g */
     ) noexcept;
 
     /**
