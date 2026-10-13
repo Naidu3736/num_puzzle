@@ -8,20 +8,20 @@
 #include <cmath>
 #include <stdexcept>
 
-TEST_CASE("Constructor por defecto") {
+TEST_CASE("Construction: Constructor por defecto") {
     naidu::Board b;
 
     fixtures::check_default(b, 3);
 }
 
-TEST_CASE("Constructor por defecto con dimesion arbitraria") {
+TEST_CASE("Construction: Constructor por defecto con dimesion arbitraria") {
     std::size_t dim = 7;
     naidu::Board b(dim);
 
     fixtures::check_default(b, dim);
 }
 
-TEST_CASE("Constructor desde vector con casillas correctas") {
+TEST_CASE("Construction: Constructor desde vector con casillas correctas") {
     std::vector<std::uint8_t> tiles = fixtures::solved_4x4();
     naidu::Board b(tiles);
 
@@ -32,7 +32,7 @@ TEST_CASE("Constructor desde vector con casillas correctas") {
         CHECK(b.at(i) == tiles[i]);
 }
 
-TEST_CASE("Constructor desde vector con casilla fuera de rango") {
+TEST_CASE("Construction: Constructor desde vector con casilla fuera de rango") {
     std::vector<std::uint8_t> tiles = {
          1,  2,  3,  4,
          5,  6,  7,  8,
@@ -42,7 +42,7 @@ TEST_CASE("Constructor desde vector con casilla fuera de rango") {
     CHECK_THROWS_AS(naidu::Board{tiles}, std::invalid_argument);
 }
 
-TEST_CASE("Constructor desde vector con casillas duplicadas") {
+TEST_CASE("Construction: Constructor desde vector con casillas duplicadas") {
     std::vector<std::uint8_t> tiles = {
          1,  2,  3,  4,
          5,  6,  7,  8,
@@ -52,7 +52,7 @@ TEST_CASE("Constructor desde vector con casillas duplicadas") {
     CHECK_THROWS_AS(naidu::Board{tiles}, std::invalid_argument);
 }
 
-TEST_CASE("Constructor desde vector con sin casilla vacia") {
+TEST_CASE("Construction: Constructor desde vector con sin casilla vacia") {
     std::vector<std::uint8_t> tiles = {
          1,  2,  3,  4,
          5,  6,  7,  8,

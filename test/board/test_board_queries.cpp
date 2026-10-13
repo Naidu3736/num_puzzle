@@ -6,7 +6,7 @@
 #include <cstdint>
 #include <vector>
 
-TEST_CASE("Consistencia entre at(index) y at(row, col)") {
+TEST_CASE("Queries: Consistencia entre at(index) y at(row, col)") {
     std::vector<std::uint8_t> tiles = fixtures::unsolvable_4x4();
     naidu::Board b(tiles);
 
@@ -16,44 +16,44 @@ TEST_CASE("Consistencia entre at(index) y at(row, col)") {
             CHECK(b.at(i++) == b.at(r, c));
 }
 
-TEST_CASE("Consistencia entre tiles() y at(index)") {
+TEST_CASE("Queries: Consistencia entre tiles() y at(index)") {
     naidu::Board b(fixtures::unsolvable_4x4());
 
     for (std::size_t i = 0; i < b.tile_count(); ++i)
         CHECK(b.tiles()[i] == b.at(i));
 }
 
-TEST_CASE("Tablero resuelto") {
+TEST_CASE("Queries: Tablero resuelto") {
     naidu::Board b(4);
     CHECK(b.is_solved());
 }
 
-TEST_CASE("Tablero no resuelto") {
+TEST_CASE("Queries: Tablero no resuelto") {
     naidu::Board b(fixtures::solvable_unsolved_4x4());
     CHECK_FALSE(b.is_solved());
 }   
 
-TEST_CASE("Tablero par resoluble") {
+TEST_CASE("Queries: Tablero par resoluble") {
     naidu::Board b(fixtures::solvable_unsolved_4x4());
     CHECK(b.is_solvable());
 }
 
-TEST_CASE("Tablero par no resoluble") {
+TEST_CASE("Queries: Tablero par no resoluble") {
     naidu::Board b(fixtures::unsolvable_4x4());
     CHECK_FALSE(b.is_solvable());
 }
 
-TEST_CASE("Tablero impar resoluble") {
+TEST_CASE("Queries: Tablero impar resoluble") {
     naidu::Board b(fixtures::solvable_5x5());
     CHECK(b.is_solvable());
 }
 
-TEST_CASE("Tablero impar no resoluble") {
+TEST_CASE("Queries: Tablero impar no resoluble") {
     naidu::Board b(fixtures::unsolvable_5x5());
     CHECK_FALSE(b.is_solvable());
 }
 
-TEST_CASE("Tablero par resoluble con hueco en el centro") {
+TEST_CASE("Queries: Tablero par resoluble con hueco en el centro") {
     naidu::Board b(fixtures::solvable_hole_center_4x4());
     CHECK(b.is_solvable());
 }
