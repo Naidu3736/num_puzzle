@@ -19,7 +19,7 @@ namespace {
 
 }
 
-TEST_CASE("Distancia total de Manhattan") {
+TEST_CASE("Component: Distancia total de Manhattan") {
     for (const auto& [name, c] : fixtures::random_cases) {
         CAPTURE(name);
         naidu::Board b(c.tiles);
@@ -29,7 +29,7 @@ TEST_CASE("Distancia total de Manhattan") {
     }
 }
 
-TEST_CASE("Fichas fuera de su meta") {
+TEST_CASE("Component: Fichas fuera de su meta") {
     for (const auto& [name, c] : fixtures::random_cases) {
         CAPTURE(name);
         naidu::Board b(c.tiles);
@@ -39,7 +39,7 @@ TEST_CASE("Fichas fuera de su meta") {
     }
 }
 
-TEST_CASE("Fichas a 1 de distancia (Manhattan)") {
+TEST_CASE("Component: Fichas a 1 de distancia (Manhattan)") {
     for (const auto& [name, c] : fixtures::random_cases) {
         CAPTURE(name);
         naidu::Board b(c.tiles);
@@ -49,7 +49,7 @@ TEST_CASE("Fichas a 1 de distancia (Manhattan)") {
     }
 }
 
-TEST_CASE("Pares rotos") {
+TEST_CASE("Component: Pares rotos") {
     for (const auto& [name, c] : fixtures::random_cases) {
         CAPTURE(name);
         naidu::Board b(c.tiles);
@@ -59,7 +59,7 @@ TEST_CASE("Pares rotos") {
     }
 }
 
-TEST_CASE("Dispersion del hueco respecto a fichas mal colocadas") {
+TEST_CASE("Component: Dispersion del hueco respecto a fichas mal colocadas") {
     for (const auto& [name, c] : fixtures::random_cases) {
         CAPTURE(name);
         naidu::Board b(c.tiles);

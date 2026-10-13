@@ -38,7 +38,7 @@ TEST_CASE("Evaluation: Baseline (Manhattan + fichas correctas)") {
 
         const auto total_tiles = static_cast<std::uint16_t>(b.tile_count() - 1);
         const auto well_placed = static_cast<std::uint16_t>(total_tiles - c.bad_tiles);
-        const auto expected = static_cast<std::uint16_t>(g + c.manhattan + well_placed);
+        const auto expected = static_cast<std::uint16_t>(g + c.manhattan - well_placed);
 
         CHECK(f == expected);
     }

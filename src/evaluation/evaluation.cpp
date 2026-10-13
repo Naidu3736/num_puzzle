@@ -9,7 +9,7 @@ namespace naidu::evaluation {
         std::uint16_t g
     ) noexcept {
         auto h = component::manhattan_total(b, goal_pos);
-        h += (b.tile_count() - 1) - component::misplaced_tiles(b, goal_pos);
+        h -= (b.tile_count() - 1) - component::misplaced_tiles(b, goal_pos);
 
         return g + h; 
     }
