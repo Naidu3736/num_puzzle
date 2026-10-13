@@ -48,6 +48,11 @@ namespace naidu::evaluation {
         const Board& b, 
         std::span<const std::uint8_t> goal_pos,
         std::uint16_t g
-    ) noexcept;
+    ) noexcept {
+        auto h = component::manhattan_total(b, goal_pos);
+        h += component::broken_pairs(b, goal_pos);
+
+        return g + h;
+    }
 
 }

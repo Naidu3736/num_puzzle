@@ -17,7 +17,6 @@ namespace {
         return positions;
     }
 
-    /// Peso de la dispersión según la dimensión del tablero.
     double dispersion_weight(std::uint8_t dim) {
         if (dim > 10) return 1.0;
         if (dim > 7)  return 0.5;
@@ -76,6 +75,25 @@ TEST_CASE("Evaluation: Evaluation 2 (Manhattan + misplaced + proximidad)") {
 
         auto h = static_cast<int>(c.manhattan) + static_cast<int>(c.bad_tiles);
         h -= static_cast<int>(c.tiles_at_1_distance);
+
+        const auto expected = static_cast<std::uint16_t>(g + h);
+
+        CHECK(f == expected);
+    }
+}
+
+TEST_CASE("Evaluation: Evaluation 3 (Manhattan + misplaced + broken pairs)") {
+    for (const auto& [name, c] : fixtures::random_cases) {
+        CAPTURE(name);
+        naidu::Board b(c.tiles);
+        naidu::Board goal(b.dim());
+        const auto goal_pos = build_goal_positions(goal);
+
+        const auto g = std::uint16_t{0};
+        const auto f = naidu::evaluation::evaluation_3(b, goal_pos, g);
+
+        auto h = static_cast<int>(c.manhattan);
+        h += static_cast<int>(c.broken_pairs);
 
         const auto expected = static_cast<std::uint16_t>(g + h);
 

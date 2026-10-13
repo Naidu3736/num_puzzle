@@ -98,13 +98,30 @@ namespace naidu::evaluation {
     ) noexcept;
 
     /**
-     * @brief 
+     * @brief Evaluación 3: estructura local.
+     *
+     * Combina dos componentes:
+     *
+     *   f(n) = g(n) + manhattan(n) + broken_pairs(n)
+     *
+     * donde:
+     *   - manhattan(n)     suma de distancias Manhattan de cada ficha a su meta.
+     *                      ← component::manhattan_total(b, goal_pos)
+     *   - broken_pairs(n)  pares adyacentes mal ordenados respecto a la meta.
+     *                      ← component::broken_pairs(b, goal_pos)
+     *
+     * Penaliza el desorden estructural (pares adyacentes mal ordenados)
+     * que Manhattan no captura. Un estado con muchas adyacencias bien
+     * ordenadas se considera más prometedor que uno con estructura local
+     * rota, aunque la distancia Manhattan sea similar.
+     *
      * @param b Tablero actual.
-     * @param g Costo acumulado (puede ser ponderado).
-     * @return Valor de f₃.
+     * @param goal_pos Mapa de posiciones meta (positions[ficha] = índice meta).
+     * @param g Costo acumulado desde el estado inicial.
+     * @return Valor de f para el estado dado.
      */
     std::uint16_t evaluation_3(
-        const Board& b, 
+        const Board& b,
         std::span<const std::uint8_t> goal_pos,
         std::uint16_t g
     ) noexcept;
