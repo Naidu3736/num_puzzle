@@ -7,6 +7,19 @@
 namespace naidu::evaluation {
 
     /**
+     * @brief Firma común de las funciones de evaluación.
+     *
+     * Todas las funciones de evaluación (baseline, evaluation_1, etc.)
+     * tienen esta firma, de modo que el solver puede seleccionar cuál usar
+     * en tiempo de ejecución.
+     */
+    using EvaluationFn = std::uint16_t(*)(
+        const Board&,
+        std::span<const std::uint8_t>,
+        std::uint16_t
+    ) noexcept;
+
+    /**
      * @brief Función de evaluación de referencia (baseline).
      *
      * Combina dos componentes:
