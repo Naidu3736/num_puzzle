@@ -114,7 +114,7 @@ namespace fixtures {
     // blank_dispersion: distancia Manhattan media del hueco a cada ficha mal colocada.
 
     // 3x3 aleatorio #1: resoluble, 0 en (2,1).
-    // Manhattan = 21, bad_tiles = 7, broken_pairs = 10, tiles_at_1 = 0, dispersion = 1.875
+    // Manhattan = 21, bad_tiles = 7, broken_pairs = 9, tiles_at_1 = 0, dispersion = 2
     inline std::vector<std::uint8_t> random_3x3_1() {
         return {
             8,  6,  7,
@@ -129,7 +129,7 @@ namespace fixtures {
     inline constexpr double blank_dispersion_random_3x3_1 = 2;
 
     // 3x3 aleatorio #2: resoluble, 0 en (2,1).
-    // Manhattan = 11, bad_tiles = 8, broken_pairs = 10, tiles_at_1 = 6, dispersion = 1.875
+    // Manhattan = 11, bad_tiles = 8, broken_pairs = 9, tiles_at_1 = 6, dispersion = 1.875
     inline std::vector<std::uint8_t> random_3x3_2() {
         return {
             3,  1,  4,
@@ -159,7 +159,7 @@ namespace fixtures {
     inline constexpr double blank_dispersion_random_3x3_3 = 2.25;
 
     // 4x4 aleatorio #1: resoluble, 0 en (2,2).
-    // Manhattan = 10, bad_tiles = 9, broken_pairs = 14, tiles_at_1 = 8, dispersion = 2.333
+    // Manhattan = 10, bad_tiles = 9, broken_pairs = 12, tiles_at_1 = 8, dispersion = 2.333
     inline std::vector<std::uint8_t> random_4x4_1() {
         return {
             5,   1,   3,   4,
@@ -175,7 +175,7 @@ namespace fixtures {
     inline constexpr double blank_dispersion_random_4x4_1 = 2.333333333;
 
     // 4x4 aleatorio #2: resoluble, 0 en (3,2).
-    // Manhattan = 13, bad_tiles = 9, broken_pairs = 14, tiles_at_1 = 6, dispersion = 2.444
+    // Manhattan = 13, bad_tiles = 9, broken_pairs = 13, tiles_at_1 = 6, dispersion = 2.77777
     inline std::vector<std::uint8_t> random_4x4_2() {
         return {
             2,   8,   3,   4,
@@ -191,7 +191,7 @@ namespace fixtures {
     inline constexpr double blank_dispersion_random_4x4_2 = 2.777777778;
 
     // 4x4 aleatorio #3: resoluble, 0 en (0,3).
-    // Manhattan = 3, bad_tiles = 3, broken_pairs = 4, tiles_at_1 = 3, dispersion = 2.0
+    // Manhattan = 3, bad_tiles = 3, broken_pairs = 3, tiles_at_1 = 3, dispersion = 2.0
     inline std::vector<std::uint8_t> random_4x4_3() {
         return {
             1,   2,   3,   0,
@@ -241,7 +241,7 @@ namespace fixtures {
     inline constexpr double blank_dispersion_random_5x5_2 = 2.5;
 
     // 5x5 aleatorio #3: resoluble, 0 en (1,3).
-    // Manhattan = 4, bad_tiles = 1, broken_pairs = 1, tiles_at_1 = 0, dispersion = 4.0
+    // Manhattan = 4, bad_tiles = 1, broken_pairs = 2, tiles_at_1 = 0, dispersion = 4.0
     inline std::vector<std::uint8_t> random_5x5_3() {
         return {
             1,   2,   3,   4,   5,
