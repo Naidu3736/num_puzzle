@@ -3,18 +3,6 @@
 
 namespace naidu::evaluation {
 
-    std::uint16_t evaluation_baseline(
-        const Board& b, 
-        std::span<const std::uint8_t> goal_pos,
-        std::uint16_t /* g */
-    ) noexcept {
-        int h = static_cast<int>(component::manhattan_total(b, goal_pos));
-        h -= static_cast<int>(b.tile_count() - 1)
-           - static_cast<int>(component::misplaced_tiles(b, goal_pos));
-        if (h < 0) h = 0;
-        return static_cast<std::uint16_t>(1 + h);
-    }
-
     std::uint16_t evaluation_1(
         const Board& b, 
         std::span<const std::uint8_t> goal_pos,

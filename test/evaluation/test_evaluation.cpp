@@ -25,24 +25,6 @@ namespace {
 
 }
 
-TEST_CASE("Evaluation: Baseline (Manhattan + fichas correctas)") {
-    for (const auto& [name, c] : fixtures::random_cases) {
-        CAPTURE(name);
-        naidu::Board b(c.tiles);
-        naidu::Board goal(b.dim());
-        const auto goal_pos = build_goal_positions(goal);
-
-        const auto g = std::uint16_t{0};
-        const auto f = naidu::evaluation::evaluation_baseline(b, goal_pos, g);
-
-        const auto total_tiles = static_cast<std::uint16_t>(b.tile_count() - 1);
-        const auto well_placed = static_cast<std::uint16_t>(total_tiles - c.bad_tiles);
-        const auto expected = static_cast<std::uint16_t>(g + c.manhattan - well_placed);
-
-        CHECK(f == expected);
-    }
-}
-
 TEST_CASE("Evaluation: Evaluation 1 (Manhattan + misplaced + dispersion ponderada)") {
     for (const auto& [name, c] : fixtures::random_cases) {
         CAPTURE(name);
