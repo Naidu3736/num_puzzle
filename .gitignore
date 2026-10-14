@@ -3,6 +3,7 @@ build/
 build-*/
 cmake-build-*/
 out/
+test/general/
 
 # === Archivos generados por CMake ===
 CMakeCache.txt
