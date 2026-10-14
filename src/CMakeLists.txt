@@ -14,8 +14,8 @@ add_library(num_puzzle_core STATIC
     solver/solver.hpp
     solver/solver.cpp
 
-    # randomizer/randomizer.hpp
-    # randomizer/randomizer.cpp
+    randomizer/randomizer.hpp
+    randomizer/randomizer.cpp
 )
 
 target_include_directories(num_puzzle_core PUBLIC
