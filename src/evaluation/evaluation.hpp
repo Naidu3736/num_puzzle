@@ -9,14 +9,18 @@ namespace naidu::evaluation {
     /**
      * @brief Firma común de las funciones de evaluación.
      *
-     * Todas las funciones de evaluación (baseline, evaluation_1, etc.)
-     * tienen esta firma, de modo que el solver puede seleccionar cuál usar
-     * en tiempo de ejecución.
+     * Todas las funciones de evaluación (baseline, evaluation_1/2/3) comparten
+     * esta firma para que el solver pueda seleccionarlas en tiempo de ejecución.
+     *
+     * Una función de evaluación calcula f(n) = g(n) + h(n):
+     *   - b:        estado actual.
+     *   - goal_pos: mapa de posiciones meta (goal_pos[ficha] = índice meta).
+     *   - g:        costo acumulado desde el inicio hasta b.
      */
     using EvaluationFn = std::uint16_t(*)(
-        const Board&,
-        std::span<const std::uint8_t>,
-        std::uint16_t
+        const Board& b,
+        std::span<const std::uint8_t> goal_pos,
+        std::uint16_t g
     ) noexcept;
 
     /**
