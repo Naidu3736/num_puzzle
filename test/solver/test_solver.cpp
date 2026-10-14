@@ -19,7 +19,7 @@ namespace {
         return '?';
     }
 
-    void print_solution(const naidu::Solution& sol) {
+    void print_solution(const naidu::solver::Solution& sol) {
         std::cout << "  found: " << (sol.found ? "true" : "false") << "\n";
         std::cout << "  cost: " << sol.cost << "\n";
         std::cout << "  nodes: " << sol.nodes_expanded << "\n";
@@ -35,11 +35,11 @@ TEST_CASE("Solver: la secuencia de movimientos resuelve el tablero") {
     naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_1
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
 
     CHECK(sol.found);
     
@@ -51,11 +51,11 @@ TEST_CASE("Solver: tablero resuelto devuelve camino vacío") {
     naidu::Board initial(3);
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_1,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     initial.apply(sol.moves);
     // print_solution(sol);
     
@@ -72,11 +72,11 @@ TEST_CASE("Solver: un solo movimiento") {
     });
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_1,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     // print_solution(sol);
 
     CHECK(sol.found);
@@ -88,11 +88,11 @@ TEST_CASE("Solver: tablero 3x3 revuelto") {
     naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_1,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     // print_solution(sol);
 
     CHECK(sol.found);
@@ -103,12 +103,12 @@ TEST_CASE("Solver: respeta max_nodes (0 = sin límite)") {
     naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_1,
         .max_nodes = 0,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     // print_solution(sol);
 
     CHECK(sol.found);
@@ -118,12 +118,12 @@ TEST_CASE("Solver: límite muy bajo devuelve not found") {
     naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_1,
         .max_nodes = 1,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     // print_solution(sol);
 
     CHECK_FALSE(sol.found);
@@ -133,12 +133,12 @@ TEST_CASE("Solver: avoid_revisits = false funciona") {
     naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_1,
         .avoid_revisits = false,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     // print_solution(sol);
 
     CHECK(sol.found);
@@ -148,12 +148,12 @@ TEST_CASE("Solver: avoid_revisits = true funciona") {
     naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_1,
         .avoid_revisits = true,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     // print_solution(sol);
 
     CHECK(sol.found);
@@ -163,12 +163,12 @@ TEST_CASE("Solver: weighted_cost = false funciona") {
     naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_1,
         .weighted_cost = false,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     // print_solution(sol);
 
     CHECK(sol.found);
@@ -178,12 +178,12 @@ TEST_CASE("Solver: weighted_cost = true funciona") {
     naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_1,
         .weighted_cost = true,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     // print_solution(sol);
 
     CHECK(sol.found);
@@ -193,11 +193,11 @@ TEST_CASE("Solver: evaluation_2 funciona") {
     naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_2,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     // print_solution(sol);
 
     CHECK(sol.found);
@@ -207,11 +207,11 @@ TEST_CASE("Solver: evaluation_3 funciona") {
     naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_3,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     // print_solution(sol);
 
     CHECK(sol.found);
@@ -226,11 +226,11 @@ TEST_CASE("Solver: 4x4 a un movimiento") {
     });
     naidu::Board goal(4);
 
-    naidu::Config config{
+    naidu::solver::Config config{
         .eval_fn = naidu::evaluation::evaluation_1,
     };
 
-    const auto sol = naidu::solver(initial, goal, config);
+    const auto sol = naidu::solver::ida(initial, goal, config);
     // print_solution(sol);
 
     CHECK(sol.found);
