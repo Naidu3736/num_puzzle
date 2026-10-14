@@ -19,6 +19,73 @@ namespace {
 
 }
 
+TEST_CASE("Component: step_cost no descoloca ficha (costo 1)") {
+    naidu::Board current({
+        1, 2, 3,
+        4, 5, 6,
+        7, 8, 0,
+    });
+    naidu::Board goal(3);
+    const auto goal_pos = build_goal_positions(goal);
+
+    const auto cost = naidu::component::step_cost(current, 7, goal_pos);
+    CHECK(cost == 1);
+}
+
+TEST_CASE("Component: step_cost descoloca ficha correcta (costo 2)") {
+    naidu::Board current({
+        1, 2, 3,
+        4, 5, 6,
+        7, 0, 8,
+    });
+    naidu::Board goal(3);
+    const auto goal_pos = build_goal_positions(goal);
+
+    const auto cost = naidu::component::step_cost(current, 8, goal_pos);
+    CHECK(cost == 2);
+}
+
+TEST_CASE("Component: step_cost con meta arbitraria") {
+    naidu::Board goal({
+        1, 2, 3,
+        4, 6, 5,
+        7, 8, 0,
+    });
+    const auto goal_pos = build_goal_positions(goal);
+
+    naidu::Board current({
+        1, 2, 3,
+        4, 0, 5,
+        7, 6, 8,  
+    });
+
+    const auto cost = naidu::component::step_cost(current, 7, goal_pos);
+    CHECK(cost == 2);
+}
+
+TEST_CASE("Component: step_cost devuelve 1 o 2 en todos los movimientos") {
+    for (const auto& [name, c] : fixtures::random_cases) {
+        CAPTURE(name);
+        naidu::Board b(c.tiles);
+        naidu::Board goal(b.dim());
+        const auto goal_pos = build_goal_positions(goal);
+
+        const auto moves = b.legal_moves();
+        for (const auto d : naidu::ALL_DIRECTIONS) {
+            if (!moves.contains(d))
+                continue;
+
+            const auto old_empty = b.empty_index();
+
+            naidu::Board next = b;
+            next.move(d);
+
+            const auto cost = naidu::component::step_cost(next, old_empty, goal_pos);
+            CHECK((cost == 1 || cost == 2));
+        }
+    }
+}
+
 TEST_CASE("Component: Distancia total de Manhattan") {
     for (const auto& [name, c] : fixtures::random_cases) {
         CAPTURE(name);
