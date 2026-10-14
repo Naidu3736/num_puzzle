@@ -11,11 +11,11 @@ add_library(num_puzzle_core STATIC
     evaluation/component.hpp
     evaluation/component.cpp
 
-    solver/solver.hpp
-    solver/solver.cpp
+    # solver/solver.hpp
+    # solver/solver.cpp
 
-    randomizer/randomizer.hpp
-    randomizer/randomizer.cpp
+    # randomizer/randomizer.hpp
+    # randomizer/randomizer.cpp
 )
 
 target_include_directories(num_puzzle_core PUBLIC
