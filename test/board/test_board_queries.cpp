@@ -23,6 +23,46 @@ TEST_CASE("Queries: Consistencia entre tiles() y at(index)") {
         CHECK(b.tiles()[i] == b.at(i));
 }
 
+TEST_CASE("Queries: peek_empty coincide con el índice del vecino") {
+    naidu::Board b({
+        1, 2, 3,
+        4, 5, 6,
+        7, 0, 8,
+    });
+
+    CHECK(b.peek_empty(naidu::Direction::UP)    == 4);
+    CHECK(b.peek_empty(naidu::Direction::LEFT)  == 6);
+    CHECK(b.peek_empty(naidu::Direction::RIGHT) == 8);
+}
+
+TEST_CASE("Queries: peek_tile devuelve la ficha del vecino") {
+    naidu::Board b({
+        1, 2, 3,
+        4, 5, 6,
+        7, 0, 8,
+    });
+
+    CHECK(b.peek_tile(naidu::Direction::UP)    == 5);
+    CHECK(b.peek_tile(naidu::Direction::LEFT)  == 7);
+    CHECK(b.peek_tile(naidu::Direction::RIGHT) == 8);
+}
+
+TEST_CASE("Queries: peek_* no modifica el tablero") {
+    naidu::Board b({
+        1, 2, 3,
+        4, 5, 6,
+        7, 0, 8,
+    });
+    const naidu::Board original = b;
+
+    b.peek_empty(naidu::Direction::UP);
+    b.peek_tile(naidu::Direction::UP);
+    b.peek_empty(naidu::Direction::LEFT);
+    b.peek_tile(naidu::Direction::RIGHT);
+
+    CHECK(b == original);
+}
+
 TEST_CASE("Queries: Tablero resuelto") {
     naidu::Board b(4);
     CHECK(b.is_solved());
@@ -31,7 +71,7 @@ TEST_CASE("Queries: Tablero resuelto") {
 TEST_CASE("Queries: Tablero no resuelto") {
     naidu::Board b(fixtures::solvable_unsolved_4x4());
     CHECK_FALSE(b.is_solved());
-}   
+}
 
 TEST_CASE("Queries: Tablero par resoluble") {
     naidu::Board b(fixtures::solvable_unsolved_4x4());
