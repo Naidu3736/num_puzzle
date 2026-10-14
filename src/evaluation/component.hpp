@@ -19,8 +19,8 @@ namespace naidu::component {
      * @return Costo del movimiento (1 o 2).
      */
     std::uint16_t step_cost(
-        const Board& previous,
         const Board& current,
+        std::uint8_t old_empty_index,
         std::span<const std::uint8_t> goal_pos
     ) noexcept;
 

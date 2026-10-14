@@ -41,12 +41,12 @@ namespace {
 namespace naidu::component {
 
     std::uint16_t step_cost(
-        const Board& previous,
         const Board& current,
+        std::uint8_t old_empty_index,
         std::span<const std::uint8_t> goal_pos
     ) noexcept {
         const auto new_empty = current.empty_index();
-        const auto moved_tile = previous.at(new_empty);
+        const auto moved_tile = current.at(old_empty_index);
 
         if (moved_tile == 0)
             return 1;
