@@ -1,5 +1,6 @@
 #pragma once
 
+#include <array>
 #include <cstdint>
 
 namespace naidu {
@@ -22,6 +23,14 @@ namespace naidu {
 
     /** Número total de direcciones posibles. */
     inline constexpr std::uint8_t direction_count = 4;
+
+    /** Array con las 4 direcciones, útil para iterar */
+    inline constexpr std::array<Direction, 4> ALL_DIRECTIONS = {
+        Direction::UP,
+        Direction::DOWN,
+        Direction::LEFT,
+        Direction::RIGHT,
+    };
 
     /**
      * @brief Convierte una dirección a su índice numérico subyacente.
