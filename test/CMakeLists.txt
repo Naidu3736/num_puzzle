@@ -25,6 +25,7 @@ add_subdirectory(direction)
 add_subdirectory(moveset)
 add_subdirectory(evaluation)
 add_subdirectory(solver)
+add_subdirectory(randomizer)
 
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/general/CMakeLists.txt")
     add_subdirectory(general)
