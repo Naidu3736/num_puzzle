@@ -19,7 +19,7 @@ namespace {
      * y la información de la solución cuando se encuentra.
      */
     struct Context {
-        const naidu::Config& config;                                         ///< Configuración de la búsqueda.
+        const naidu::solver::Config& config;                                         ///< Configuración de la búsqueda.
         const naidu::Board& goal;                                            ///< Tablero meta.
         std::vector<std::uint8_t> goal_pos;                                  ///< positions[ficha] = índice meta.
         std::uint64_t nodes_expanded = 0;                                    ///< Contador de nodos expandidos.
@@ -165,9 +165,9 @@ namespace {
     }
 
 }
-namespace naidu {
+namespace naidu::solver {
 
-    Solution solver(
+    Solution ida(
         const Board& initial,
         const Board& goal,
         const Config& config

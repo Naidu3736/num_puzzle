@@ -7,7 +7,7 @@
 #include <cstdint>
 #include <vector>
 
-namespace naidu {
+namespace naidu::solver {
 
     /**
      * @brief Resultado de la búsqueda.
@@ -42,7 +42,7 @@ namespace naidu {
      * @param config Límites de nodos y profundidad.
      * @return Solución con la secuencia de movimientos, costo, nodos expandidos y flag found.
      */
-    Solution solver(
+    Solution ida(
         const Board& initial,
         const Board& goal,
         const Config& config = {}
