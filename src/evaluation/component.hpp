@@ -13,15 +13,17 @@ namespace naidu::component {
 
     /**
      * @brief Costo de transición entre dos estados adyacentes.
-     * @param previous Estado anterior.
-     * @param current Estado actual (tras un movimiento).
-     * @param goal_pos Mapa de posiciones meta (positions[ficha] = índice meta).
+     * @param current Tablero después del movimiento.
+     * @param old_empty_index Ín dice del hueco antes del movimiento
+     * @param goal_pos Mapa de posiciones meta.
+     * @param weighted Si es true, aplica la ponderación.
      * @return Costo del movimiento (1 o 2).
      */
     std::uint16_t step_cost(
         const Board& current,
         std::uint8_t old_empty_index,
-        std::span<const std::uint8_t> goal_pos
+        std::span<const std::uint8_t> goal_pos,
+        bool weighted
     ) noexcept;
 
     // --------------------------------------------------------
