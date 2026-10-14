@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <bitset>
 #include <cmath>
+#include <initializer_list>
 #include <stdexcept>
 
 namespace naidu {
@@ -85,6 +86,9 @@ namespace naidu {
         validate_tiles();
         m_empty_index = find_empty();
     }
+
+    Board::Board(std::initializer_list<std::uint8_t> tiles) 
+        : Board(std::span<const std::uint8_t>(tiles.begin(), tiles.end())) {}
 
     void Board::resize(std::uint8_t new_dim) {
         if (new_dim < MIN_DIM)

@@ -90,6 +90,13 @@ namespace naidu {
          */
         explicit Board(std::span<const std::uint8_t> tiles);
 
+        /*
+         * @brief Construye un tablero desde una lista de fichas.
+         * @param tiles Fichas en orden fila-mayor.
+         * @throw std::invalid_argument si el tamaño no es cuadrado o las fichas son inválidas.
+        */
+        Board(std::initializer_list<std::uint8_t> tiles);
+
         /**
          * @brief Redimensiona el tablero y lo reinicia a su estado resuelto.
          * @param new_dim Nueva dimensión (entre MIN_DIM y MAX_DIM).
