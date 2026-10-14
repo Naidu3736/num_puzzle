@@ -20,43 +20,28 @@ namespace {
 }
 
 TEST_CASE("Component: step_cost uniforme siempre devuelve 1") {
-    naidu::Board current({
-        1, 2, 3,
-        4, 5, 6,
-        7, 8, 0,
-    });
     naidu::Board goal(3);
     const auto goal_pos = build_goal_positions(goal);
 
-    CHECK(naidu::component::step_cost(current, 7, goal_pos, false) == 1);
-    CHECK(naidu::component::step_cost(current, 8, goal_pos, false) == 1);
-    CHECK(naidu::component::step_cost(current, 0, goal_pos, false) == 1);
-}
-
-TEST_CASE("Component: step_cost ponderado no descoloca ficha (costo 1)") {
-    naidu::Board current({
-        1, 2, 3,
-        4, 5, 6,
-        7, 8, 0,
-    });
-    naidu::Board goal(3);
-    const auto goal_pos = build_goal_positions(goal);
-
-    const auto cost = naidu::component::step_cost(current, 7, goal_pos, true);
-    CHECK(cost == 1);
+    CHECK(naidu::component::step_cost(8, 8, goal_pos, false) == 1);
+    CHECK(naidu::component::step_cost(5, 7, goal_pos, false) == 1);
+    CHECK(naidu::component::step_cost(1, 1, goal_pos, false) == 1);
 }
 
 TEST_CASE("Component: step_cost ponderado descoloca ficha correcta (costo 2)") {
-    naidu::Board current({
-        1, 2, 3,
-        4, 5, 6,
-        7, 0, 8,
-    });
     naidu::Board goal(3);
     const auto goal_pos = build_goal_positions(goal);
 
-    const auto cost = naidu::component::step_cost(current, 8, goal_pos, true);
+    const auto cost = naidu::component::step_cost(8, 7, goal_pos, true);
     CHECK(cost == 2);
+}
+
+TEST_CASE("Component: step_cost ponderado no descoloca ficha (costo 1)") {
+    naidu::Board goal(3);
+    const auto goal_pos = build_goal_positions(goal);
+
+    const auto cost = naidu::component::step_cost(8, 8, goal_pos, true);
+    CHECK(cost == 1);
 }
 
 TEST_CASE("Component: Distancia total de Manhattan") {
