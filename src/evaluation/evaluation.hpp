@@ -24,33 +24,6 @@ namespace naidu::evaluation {
     ) noexcept;
 
     /**
-     * @brief Función de evaluación de referencia (baseline).
-     *
-     * Combina dos componentes:
-     *
-     *   f(n) = g(n) + manhattan(n) + well_placed(n)
-     *
-     * donde:
-     *   - manhattan(n)    suma de distancias Manhattan de cada ficha a su meta.
-     *                     ← component::manhattan_total(b, goal_pos)
-     *   - well_placed(n)  fichas bien colocadas: (N² - 1) - misplaced(n).
-     *                     ← (tile_count - 1) - component::misplaced_tiles(b, goal_pos)
-     *
-     * Combina Manhattan con una recompensa por fichas bien colocadas.
-     * El término de recompensa premia estados con más piezas ya resueltas.
-     *
-     * @param b Tablero actual.
-     * @param goal_pos Mapa de posiciones meta (positions[ficha] = índice meta).
-     * @param g Costo acumulado desde el estado inicial.
-     * @return Valor de f para el estado dado.
-     */
-    std::uint16_t evaluation_baseline(
-        const Board& b,
-        std::span<const std::uint8_t> goal_pos,
-        std::uint16_t /* g */
-    ) noexcept;
-
-    /**
      * @brief Evaluación 1: Manhattan + fichas mal colocadas + dispersión.
      *
      * Combina tres componentes:
