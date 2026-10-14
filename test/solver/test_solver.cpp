@@ -1,3 +1,5 @@
+#include "board_fixtures.hpp"
+#include "board/board.hpp"
 #include "solver/solver.hpp"
 #include "evaluation/evaluation.hpp"
 
@@ -29,6 +31,22 @@ namespace {
 
 }
 
+TEST_CASE("Solver: la secuencia de movimientos resuelve el tablero") {
+    naidu::Board initial(fixtures::random_3x3_1());
+    naidu::Board goal(3);
+
+    naidu::Config config{
+        .eval_fn = naidu::evaluation::evaluation_1
+    };
+
+    const auto sol = naidu::solver(initial, goal, config);
+
+    CHECK(sol.found);
+    
+    initial.apply(sol.moves);
+    CHECK(initial == goal);
+}
+
 TEST_CASE("Solver: tablero resuelto devuelve camino vacío") {
     naidu::Board initial(3);
     naidu::Board goal(3);
@@ -38,8 +56,9 @@ TEST_CASE("Solver: tablero resuelto devuelve camino vacío") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
-
+    initial.apply(sol.moves);
+    // print_solution(sol);
+    
     CHECK(sol.found);
     CHECK(sol.moves.empty());
     CHECK(sol.cost == 0);
@@ -58,7 +77,7 @@ TEST_CASE("Solver: un solo movimiento") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
+    // print_solution(sol);
 
     CHECK(sol.found);
     CHECK(sol.moves.size() == 1);
@@ -66,11 +85,7 @@ TEST_CASE("Solver: un solo movimiento") {
 }
 
 TEST_CASE("Solver: tablero 3x3 revuelto") {
-    naidu::Board initial({
-        8, 6, 7,
-        2, 5, 4,
-        3, 0, 1,
-    });
+    naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
     naidu::Config config{
@@ -78,18 +93,14 @@ TEST_CASE("Solver: tablero 3x3 revuelto") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
+    // print_solution(sol);
 
     CHECK(sol.found);
     CHECK(!sol.moves.empty());
 }
 
 TEST_CASE("Solver: respeta max_nodes (0 = sin límite)") {
-    naidu::Board initial({
-        8, 6, 7,
-        2, 5, 4,
-        3, 0, 1,
-    });
+    naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
     naidu::Config config{
@@ -98,17 +109,13 @@ TEST_CASE("Solver: respeta max_nodes (0 = sin límite)") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
+    // print_solution(sol);
 
     CHECK(sol.found);
 }
 
 TEST_CASE("Solver: límite muy bajo devuelve not found") {
-    naidu::Board initial({
-        8, 6, 7,
-        2, 5, 4,
-        3, 0, 1,
-    });
+    naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
     naidu::Config config{
@@ -117,17 +124,13 @@ TEST_CASE("Solver: límite muy bajo devuelve not found") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
+    // print_solution(sol);
 
     CHECK_FALSE(sol.found);
 }
 
 TEST_CASE("Solver: avoid_revisits = false funciona") {
-    naidu::Board initial({
-        8, 6, 7,
-        2, 5, 4,
-        3, 0, 1,
-    });
+    naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
     naidu::Config config{
@@ -136,17 +139,13 @@ TEST_CASE("Solver: avoid_revisits = false funciona") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
+    // print_solution(sol);
 
     CHECK(sol.found);
 }
 
 TEST_CASE("Solver: avoid_revisits = true funciona") {
-    naidu::Board initial({
-        8, 6, 7,
-        2, 5, 4,
-        3, 0, 1,
-    });
+    naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
     naidu::Config config{
@@ -155,17 +154,13 @@ TEST_CASE("Solver: avoid_revisits = true funciona") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
+    // print_solution(sol);
 
     CHECK(sol.found);
 }
 
 TEST_CASE("Solver: weighted_cost = false funciona") {
-    naidu::Board initial({
-        8, 6, 7,
-        2, 5, 4,
-        3, 0, 1,
-    });
+    naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
     naidu::Config config{
@@ -174,17 +169,13 @@ TEST_CASE("Solver: weighted_cost = false funciona") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
+    // print_solution(sol);
 
     CHECK(sol.found);
 }
 
 TEST_CASE("Solver: weighted_cost = true funciona") {
-    naidu::Board initial({
-        8, 6, 7,
-        2, 5, 4,
-        3, 0, 1,
-    });
+    naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
     naidu::Config config{
@@ -193,17 +184,13 @@ TEST_CASE("Solver: weighted_cost = true funciona") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
+    // print_solution(sol);
 
     CHECK(sol.found);
 }
 
 TEST_CASE("Solver: evaluation_2 funciona") {
-    naidu::Board initial({
-        8, 6, 7,
-        2, 5, 4,
-        3, 0, 1,
-    });
+    naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
     naidu::Config config{
@@ -211,17 +198,13 @@ TEST_CASE("Solver: evaluation_2 funciona") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
+    // print_solution(sol);
 
     CHECK(sol.found);
 }
 
 TEST_CASE("Solver: evaluation_3 funciona") {
-    naidu::Board initial({
-        8, 6, 7,
-        2, 5, 4,
-        3, 0, 1,
-    });
+    naidu::Board initial(fixtures::random_3x3_1());
     naidu::Board goal(3);
 
     naidu::Config config{
@@ -229,7 +212,7 @@ TEST_CASE("Solver: evaluation_3 funciona") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
+    // print_solution(sol);
 
     CHECK(sol.found);
 }
@@ -248,7 +231,7 @@ TEST_CASE("Solver: 4x4 a un movimiento") {
     };
 
     const auto sol = naidu::solver(initial, goal, config);
-    print_solution(sol);
+    // print_solution(sol);
 
     CHECK(sol.found);
     CHECK(sol.moves.size() == 1);
