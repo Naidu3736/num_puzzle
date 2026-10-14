@@ -1,8 +1,8 @@
 #pragma once
 
 #include "direction.hpp"
-#include <cstdint>
 #include <bit>
+#include <cstdint>
 
 namespace naidu {
 
@@ -17,6 +17,7 @@ namespace naidu {
      *   MoveSet s = Direction::UP | Direction::LEFT;
      *   s.contains(Direction::UP);    // true
      *   s.count();                    // 2
+     *   for (Direction d : s) { ... }
      */
     class MoveSet {
         std::uint8_t m_mask = 0;   ///< Máscara de bits: bit i ↔ dirección i.
@@ -73,6 +74,87 @@ namespace naidu {
          * @return Máscara cruda (bits 0..3).
          */
         constexpr std::uint8_t raw() const noexcept { return m_mask; }
+
+        // --------------------------------------------------------
+        // Iterador
+        // --------------------------------------------------------
+
+        /**
+         * @brief Iterador minimalista sobre las direcciones activas.
+         *
+         * Salta los bits apagados. Compatible con el bucle `for range`:
+         *
+         *   for (Direction d : moves) { ... }
+         */
+        class iterator {
+            std::uint8_t m_mask;   ///< Máscara del MoveSet.
+            std::uint8_t m_index;  ///< Índice actual (0..direction_count).
+
+            /**
+             * @brief Avanza m_index hasta el siguiente bit activo.
+             *
+             * Si no hay más bits activos, deja m_index en direction_count,
+             * lo cual es equivalente a `end()`.
+             */
+            void advance_to_active() {
+                while (m_index < 4 && !((m_mask >> m_index) & 1u))
+                    ++m_index;
+            }
+
+        public:
+            /**
+             * @brief Construye un iterador sobre la máscara dada.
+             * @param mask Máscara del MoveSet.
+             * @param index Índice inicial (0..4).
+             */
+            iterator(std::uint8_t mask, std::uint8_t index)
+                : m_mask(mask), m_index(index) {
+                advance_to_active();
+            }
+
+            /**
+             * @brief Dirección actual.
+             * @return Direction correspondiente al bit activo actual.
+             */
+            Direction operator*() const {
+                return static_cast<Direction>(m_index);
+            }
+
+            /**
+             * @brief Avanza al siguiente bit activo.
+             * @return Referencia al iterador actualizado.
+             */
+            iterator& operator++() {
+                ++m_index;
+                advance_to_active();
+                return *this;
+            }
+
+            /**
+             * @brief Compara dos iteradores por su índice.
+             * @param other Otro iterador.
+             * @return true si apuntan a índices distintos.
+             */
+            bool operator!=(const iterator& other) const {
+                return m_index != other.m_index;
+            }
+        };
+
+        /**
+         * @brief Iterador al primer bit activo.
+         * @return iterator sobre el primer bit activo (o end() si vacío).
+         */
+        iterator begin() const {
+            return iterator(m_mask, 0);
+        }
+
+        /**
+         * @brief Iterador al final (uno más allá del último bit).
+         * @return iterator con m_index == 4 (fin).
+         */
+        iterator end() const {
+            return iterator(m_mask, 4);
+        }
     };
 
     /**
