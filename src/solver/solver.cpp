@@ -144,11 +144,7 @@ namespace {
 
         std::optional<std::uint32_t> min;
 
-        const auto moves = node.legal_moves();
-        for (const auto d : naidu::ALL_DIRECTIONS) {
-            if (!moves.contains(d))
-                continue;
-
+        for (const auto d : node.legal_moves()) {
             std::uint16_t cost = 0;
             if (!try_entry(node, d, ctx, cost))
                 continue;
