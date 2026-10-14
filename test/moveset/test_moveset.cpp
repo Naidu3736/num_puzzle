@@ -2,6 +2,7 @@
 
 #include "core/moveset.hpp"
 #include <initializer_list>
+#include <vector>
 
 using naidu::Direction;
 using naidu::MoveSet;
@@ -143,4 +144,37 @@ TEST_CASE("MoveSet: usable en contexto constexpr") {
     static_assert(s.contains(Direction::DOWN));
     static_assert(!s.contains(Direction::LEFT));
     CHECK(true);
+}
+
+TEST_CASE("MoveSet: iterador recorre solo direcciones activas") {
+    const MoveSet s = Direction::UP | Direction::LEFT;
+
+    std::vector<Direction> v;
+    for (const auto d : s)
+        v.push_back(d);
+
+    CHECK(v.size() == 2);
+    CHECK(v[0] == Direction::UP);
+    CHECK(v[1] == Direction::LEFT);
+}
+
+TEST_CASE("MoveSet: iterador en set vacío no itera") {
+    const MoveSet s;
+
+    std::size_t count = 0;
+    for ([[maybe_unused]] const auto d : s)
+        ++count;
+
+    CHECK(count == 0);
+}
+
+TEST_CASE("MoveSet: iterador en set completo recorre las 4 direcciones") {
+    const MoveSet s = Direction::UP | Direction::DOWN
+                    | Direction::LEFT | Direction::RIGHT;
+
+    std::size_t count = 0;
+    for ([[maybe_unused]] const auto d : s)
+        ++count;
+
+    CHECK(count == 4);
 }
