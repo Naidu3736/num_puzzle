@@ -1,4 +1,5 @@
 #include "board.hpp"
+#include "core/direction.hpp"
 
 #include <algorithm>
 #include <bitset>
@@ -110,6 +111,14 @@ namespace naidu {
         return m_board[row * m_dim + col];
     }
 
+    std::uint8_t Board::peek_empty(Direction d) const noexcept {
+        return neighbor_of_empty(d);
+    }
+
+    std::uint8_t Board::peek_tile(Direction d) const noexcept {
+        return at(neighbor_of_empty(d));
+    }
+
     std::span<const std::uint8_t> Board::tiles() const noexcept {
         return std::span<const std::uint8_t>(m_board.data(), m_size);
     }
@@ -160,9 +169,13 @@ namespace naidu {
     bool Board::operator==(const Board& other) const noexcept {
         if (m_dim != other.m_dim) return false;
         if (m_empty_index != other.m_empty_index) return false;
-        for (std::uint8_t i = 0; i < m_size; ++i)
+        for (std::uint8_t i = 0; i < m_size; ++i) 
             if (m_board[i] != other.m_board[i]) return false;
         return true;
+    }
+
+    bool Board::operator!=(const Board& other) const noexcept {
+        return !(*this == other);
     }
 
 }

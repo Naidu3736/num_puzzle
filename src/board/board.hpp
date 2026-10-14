@@ -137,6 +137,20 @@ namespace naidu {
         std::uint8_t at(std::size_t row, std::size_t col) const;
 
         /**
+         * @brief Devuelve el índice donde terminaría el hueco tras moverse en `d`.
+         * @param d Dirección del movimiento hipotético.
+         * @return Índice lineal del vecino del hueco.
+         */
+        std::uint8_t peek_empty(Direction d) const noexcept;
+
+        /**
+         * @brief Devuelve la ficha que se movería si el hueco se moviera en `d`.
+         * @param d Dirección del movimiento hipotético.
+         * @return Ficha que ocupa el vecino del hueco en esa dirección.
+         */
+        std::uint8_t peek_tile(Direction d) const noexcept;
+
+        /**
          * @brief Vista de solo lectura sobre las fichas válidas del tablero.
          *
          * Devuelve un span de tamaño N² (m_size), no de MAX_TILES. Las posiciones
@@ -199,6 +213,18 @@ namespace naidu {
          * @return true si tienen la misma dimensión y las mismas fichas.
          */
         bool operator==(const Board& other) const noexcept;
+
+        /**
+         * @brief Compara dos tableros por contenido y dimensión.
+         *
+         * Solo compara las fichas en uso. Dos tableros de la misma dimensión
+         * con las mismas fichas se consideran distintos si al menos una ficha
+         * difiere en posición o valor.
+         *
+         * @param other Otro tablero.
+         * @return true si difieren en dimensión o en alguna ficha.
+         */
+        bool operator!=(const Board& other) const noexcept;
     };
 
 }
