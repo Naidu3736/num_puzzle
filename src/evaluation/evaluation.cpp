@@ -10,7 +10,7 @@ namespace naidu::evaluation {
     ) noexcept {
         int h = static_cast<int>(component::manhattan_total(b, goal_pos));
         h -= static_cast<int>(b.tile_count() - 1)
-        - static_cast<int>(component::misplaced_tiles(b, goal_pos));
+           - static_cast<int>(component::misplaced_tiles(b, goal_pos));
         if (h < 0) h = 0;
         return static_cast<std::uint16_t>(1 + h);
     }
