@@ -70,3 +70,6 @@ desktop.ini
 *.d
 *.dSYM/
 *.stackdump
+
+# === Doxyfile ===
+Doxyfile
