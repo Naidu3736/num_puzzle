@@ -145,6 +145,9 @@ namespace {
         std::optional<std::uint32_t> min;
 
         for (const auto d : node.legal_moves()) {
+            if (!ctx.path.empty() && d == naidu::opposite(ctx.path.back()))
+                continue;
+
             std::uint16_t cost = 0;
             if (!try_entry(node, d, ctx, cost))
                 continue;
@@ -185,6 +188,9 @@ namespace naidu::solver {
 
         Board current = initial;
 
+        if (config.avoid_revisits) 
+            ctx.visited.insert(current);
+
         std::uint32_t threshold = config.eval_fn(current, ctx.goal_pos, 0);
 
         while (true) {
@@ -210,7 +216,10 @@ namespace naidu::solver {
 
             threshold = *t;
 
-            ctx.visited.clear();
+            if (config.avoid_revisits) {
+                ctx.visited.insert(current);
+                ctx.visited.clear();
+            }
         }
     }
 
