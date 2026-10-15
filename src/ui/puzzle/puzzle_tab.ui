@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PuzzleTab</class>
+ <widget class="QWidget" name="PuzzleTab">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>723</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>PuzzleTab</string>
+  </property>
+  <layout class="QHBoxLayout" name="main_layout">
+   <item>
+    <widget class="QWidget" name="board_panel" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <layout class="QVBoxLayout" name="board_panel_layout">
+      <item>
+       <widget class="QGroupBox" name="board_control">
+        <property name="title">
+         <string>Configuración del Tablero</string>
+        </property>
+        <layout class="QVBoxLayout" name="board_control_layout">
+         <item>
+          <widget class="QWidget" name="dimension_widget" native="true">
+           <layout class="QHBoxLayout" name="dimension_layout">
+            <item>
+             <widget class="QLabel" name="dimension_label">
+              <property name="text">
+               <string>Dimensión:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="dimension_slider">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimum">
+               <number>3</number>
+              </property>
+              <property name="maximum">
+               <number>15</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="dimension_value">
+              <property name="text">
+               <string>3</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="initial_input_label">
+           <property name="text">
+            <string>Ingresa estado inicial</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="initial_input">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>e.g &quot;1,2,3,4,5,6,7,8,0&quot;</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="goal_input_label">
+           <property name="text">
+            <string>Ingresa estado meta</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="goal_input">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="placeholderText">
+            <string>e.g &quot;1,2,3,4,5,6,7,8,0&quot;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="views_panel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Tablero</string>
+        </property>
+        <layout class="QVBoxLayout" name="views_layout">
+         <item>
+          <widget class="BoardView" name="board_view" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>200</width>
+             <height>200</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="animation_widget" native="true">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QWidget" name="speed_widget" native="true">
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <widget class="QLabel" name="speed_label">
+                 <property name="text">
+                  <string>Velocidad: 500 ms</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignmentFlag::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSlider" name="speed_slider">
+                 <property name="minimum">
+                  <number>200</number>
+                 </property>
+                 <property name="maximum">
+                  <number>1000</number>
+                 </property>
+                 <property name="value">
+                  <number>500</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="replay_btn">
+              <property name="text">
+               <string>Reiniciar</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="control_panel" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <layout class="QVBoxLayout" name="control_panel_layout">
+      <item>
+       <widget class="QGroupBox" name="solver_panel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Solucionador</string>
+        </property>
+        <layout class="QVBoxLayout" name="solver_layout">
+         <item>
+          <widget class="QWidget" name="solver_controls" native="true">
+           <layout class="QGridLayout" name="solver_grid">
+            <item row="0" column="0">
+             <widget class="QWidget" name="eval_widget" native="true">
+              <layout class="QVBoxLayout" name="eval_layout">
+               <item>
+                <widget class="QLabel" name="eval_label">
+                 <property name="text">
+                  <string>Función de evaluación</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="eval_combo">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Seleccione...</string>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Manhattan + Mal colocadas + Dispersión</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Manhattan + Mal colocadas + Proximidad</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Manhattan + Pares rotos</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QCheckBox" name="avoid_revisits_solver_check">
+              <property name="text">
+               <string>No revisitar</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QWidget" name="max_nodes_widget" native="true">
+              <layout class="QVBoxLayout" name="max_nodes_layout">
+               <item>
+                <widget class="QLabel" name="max_nodes_label">
+                 <property name="text">
+                  <string>Nodos máximos</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="max_nodes_spin">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="maximum">
+                  <number>999999999</number>
+                 </property>
+                 <property name="singleStep">
+                  <number>100</number>
+                 </property>
+                 <property name="stepType">
+                  <enum>QAbstractSpinBox::StepType::AdaptiveDecimalStepType</enum>
+                 </property>
+                 <property name="value">
+                  <number>10000000</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QCheckBox" name="weighted_cost_check">
+              <property name="text">
+               <string>Costo ponderado</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="solve_btn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Resolver</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPushButton" name="stop_btn">
+              <property name="text">
+               <string>Detener</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="randomizer_panel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Randomizador</string>
+        </property>
+        <layout class="QVBoxLayout" name="randomizer_layout">
+         <item>
+          <widget class="QWidget" name="randomizer_controls" native="true">
+           <layout class="QGridLayout" name="randomizer_grid">
+            <item row="0" column="1">
+             <widget class="QCheckBox" name="avoid_revisits_rand_check">
+              <property name="text">
+               <string>No revisitar</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QWidget" name="attempts_widget" native="true">
+              <layout class="QHBoxLayout" name="attempts_layout">
+               <item>
+                <widget class="QLabel" name="attempts_label">
+                 <property name="text">
+                  <string>Intentos:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="attempts_spin">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="maximum">
+                  <number>999999999</number>
+                 </property>
+                 <property name="stepType">
+                  <enum>QAbstractSpinBox::StepType::AdaptiveDecimalStepType</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QWidget" name="moves_widget" native="true">
+              <layout class="QHBoxLayout" name="moves_layout">
+               <item>
+                <widget class="QLabel" name="moves_label">
+                 <property name="text">
+                  <string>Movimientos:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="moves_spin">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimum">
+                  <number>1</number>
+                 </property>
+                 <property name="maximum">
+                  <number>999999999</number>
+                 </property>
+                 <property name="stepType">
+                  <enum>QAbstractSpinBox::StepType::AdaptiveDecimalStepType</enum>
+                 </property>
+                 <property name="value">
+                  <number>20</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QPushButton" name="shuffle_btn">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Mezclar</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="result_panel">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Resultados</string>
+        </property>
+        <layout class="QVBoxLayout" name="result_panel_layout">
+         <item>
+          <widget class="QWidget" name="results_container" native="true">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <layout class="QVBoxLayout" name="results_container_layout">
+            <item>
+             <widget class="QLabel" name="status_label">
+              <property name="text">
+               <string>Entrada de usuario pendiente...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="runtime_widget" native="true">
+              <layout class="QHBoxLayout" name="runtime_layout">
+               <item>
+                <widget class="QLabel" name="runtime_text_label">
+                 <property name="text">
+                  <string>Tiempo de ejecución:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="runtime_value_label">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="nodes_widget" native="true">
+              <layout class="QHBoxLayout" name="nodes_layout">
+               <item>
+                <widget class="QLabel" name="nodes_text_label">
+                 <property name="text">
+                  <string>Nodos expandidos:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="nodes_value_label">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="cost_widget" native="true">
+              <layout class="QHBoxLayout" name="cost_layout">
+               <item>
+                <widget class="QLabel" name="cost_text_label">
+                 <property name="text">
+                  <string>Costo de la ruta:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="cost_value_label">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="path_widget" native="true">
+              <layout class="QVBoxLayout" name="path_layout">
+               <item>
+                <widget class="QLabel" name="path_title_label">
+                 <property name="text">
+                  <string>Ruta a la meta:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QScrollArea" name="path_scroll_area">
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="scrollAreaWidgetContents">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>420</width>
+                    <height>83</height>
+                   </rect>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout">
+                   <item>
+                    <widget class="QLabel" name="path_content_label">
+                     <property name="text">
+                      <string/>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>BoardView</class>
+   <extends>QWidget</extends>
+   <header>ui/puzzle/board_view.hpp</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

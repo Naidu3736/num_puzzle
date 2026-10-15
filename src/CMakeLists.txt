@@ -32,9 +32,21 @@ qt_add_executable(num_puzzle
     ui/mainwindow.h
     ui/mainwindow.cpp
     ui/mainwindow.ui
+
+    ui/puzzle/puzzle_tab.h
+    ui/puzzle/puzzle_tab.cpp
+    ui/puzzle/puzzle_tab.ui
+    ui/puzzle/board_view.hpp
+    ui/puzzle/board_view.cpp
+
+    ui/analysis/analysis_tab.h
+    ui/analysis/analysis_tab.cpp
+    ui/analysis/analysis_tab.ui
 )
 
 target_link_libraries(num_puzzle PRIVATE
     num_puzzle_core
     Qt6::Widgets
+    Qt6::Concurrent
+    Qt6::Charts
 )
