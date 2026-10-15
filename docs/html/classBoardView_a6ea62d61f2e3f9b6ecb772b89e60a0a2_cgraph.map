@@ -1,0 +1,7 @@
+<map id="BoardView::paintEvent" name="BoardView::paintEvent">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,160,57"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="213,5,326,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,31,200,28,195,29,160,36"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="208,56,331,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,52,195,59,190,59,160,57"/>
+</map>

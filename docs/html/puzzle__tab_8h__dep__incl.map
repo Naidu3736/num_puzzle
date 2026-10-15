@@ -1,0 +1,12 @@
+<map id="src/ui/puzzle/puzzle_tab.h" name="src/ui/puzzle/puzzle_tab.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="120,5,257,48"/>
+<area shape="rect" id="Node000002" href="$mainwindow_8cpp.html" title=" " alt="" coords="5,187,159,213"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,59,126,77,110,97,99,120,91,145,85,187,80,185,86,144,94,119,105,95,122,73,145,56"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8h.html" title=" " alt="" coords="119,104,258,131"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="190,61,191,105,186,103,187,66"/>
+<area shape="rect" id="Node000005" href="$puzzle__tab_8cpp.html" title=" " alt="" coords="283,96,420,139"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="241,53,316,95,311,96,240,59"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="163,140,100,188,97,184,157,140"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html" title=" " alt="" coords="183,187,280,213"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="204,142,227,187,222,186,201,147"/>
+</map>

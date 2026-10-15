@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['evaluation_2ecpp_0',['evaluation.cpp',['../evaluation_8cpp.html',1,'']]],
-  ['evaluation_2ehpp_1',['evaluation.hpp',['../evaluation_8hpp.html',1,'']]]
+  ['direction_2ehpp_0',['direction.hpp',['../direction_8hpp.html',1,'']]]
 ];

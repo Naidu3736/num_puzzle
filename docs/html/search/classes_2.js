@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iterator_0',['iterator',['../classMoveSet_1_1iterator.html',1,'MoveSet::iterator'],['../classnaidu_1_1MoveSet_1_1iterator.html',1,'naidu::MoveSet::iterator']]]
+  ['config_0',['Config',['../structnaidu_1_1randomizer_1_1Config.html',1,'naidu::randomizer::Config'],['../structnaidu_1_1solver_1_1Config.html',1,'naidu::solver::Config']]]
 ];

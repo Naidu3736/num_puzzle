@@ -1,14 +1,9 @@
 var searchData=
 [
-  ['oficial_20de_20qt_20recomendado_0',['Opción A: Utilizando el Instalador Oficial de Qt (Recomendado)',['../md_installation__guiede.html#autotoc_md8',1,'']]],
-  ['opción_20a_3a_20utilizando_20el_20instalador_20oficial_20de_20qt_20recomendado_1',['Opción A: Utilizando el Instalador Oficial de Qt (Recomendado)',['../md_installation__guiede.html#autotoc_md8',1,'']]],
-  ['opción_20b_3a_20utilizando_20msys2_20para_20usuarios_20de_20mingw_2',['Opción B: Utilizando MSYS2 (Para usuarios de MinGW)',['../md_installation__guiede.html#autotoc_md9',1,'']]],
-  ['operator_21_3d_3',['operator!=',['../classnaidu_1_1Board.html#a580d6dcc72d504e987194b21b0723bba',1,'naidu::Board::operator!=()'],['../classnaidu_1_1MoveSet_1_1iterator.html#a95ec73ace5c0955686d506226cea72f2',1,'naidu::MoveSet::iterator::operator!=()'],['../classMoveSet_1_1iterator.html#a95ec73ace5c0955686d506226cea72f2',1,'MoveSet::iterator::operator!=()']]],
-  ['operator_26_4',['operator&amp;',['../classnaidu_1_1MoveSet.html#a88d438012b0337a4879efd1534f58eb8',1,'naidu::MoveSet::operator&amp;()'],['../classMoveSet.html#a88d438012b0337a4879efd1534f58eb8',1,'MoveSet::operator&amp;()'],['../namespacenaidu.html#a52859a310d0d68fd947c47c7f7c92ae2',1,'naidu::operator&amp;()']]],
-  ['operator_28_29_5',['operator()',['../structnaidu_1_1BoardHash.html#a10b9c1067de66750ca01e8043799b63f',1,'naidu::BoardHash']]],
-  ['operator_2a_6',['operator*',['../classnaidu_1_1MoveSet_1_1iterator.html#a7222d998feb86f6919e4424fbe415145',1,'naidu::MoveSet::iterator::operator*()'],['../classMoveSet_1_1iterator.html#a7222d998feb86f6919e4424fbe415145',1,'MoveSet::iterator::operator*()']]],
-  ['operator_2b_2b_7',['operator++',['../classnaidu_1_1MoveSet_1_1iterator.html#a05904a54202ea7a8d2cedd292e7d2fe3',1,'naidu::MoveSet::iterator::operator++()'],['../classMoveSet_1_1iterator.html#a05904a54202ea7a8d2cedd292e7d2fe3',1,'MoveSet::iterator::operator++()']]],
-  ['operator_3d_3d_8',['operator==',['../classnaidu_1_1Board.html#af5b3aa81b431cf59983e42cb668a6809',1,'naidu::Board']]],
-  ['operator_7c_9',['operator|',['../classnaidu_1_1MoveSet.html#a6784a78ca015c6348eea2c9a655252f7',1,'naidu::MoveSet::operator|(Direction a, Direction b)'],['../classnaidu_1_1MoveSet.html#aeb9a87526d1618e0172112acb32dfe83',1,'naidu::MoveSet::operator|(MoveSet a, Direction b)'],['../classnaidu_1_1MoveSet.html#ab953bbaa8587656f220e5fd87989c6d5',1,'naidu::MoveSet::operator|(MoveSet a, MoveSet b)'],['../classMoveSet.html#a6784a78ca015c6348eea2c9a655252f7',1,'MoveSet::operator|(Direction a, Direction b)'],['../classMoveSet.html#aeb9a87526d1618e0172112acb32dfe83',1,'MoveSet::operator|(MoveSet a, Direction b)'],['../classMoveSet.html#ab953bbaa8587656f220e5fd87989c6d5',1,'MoveSet::operator|(MoveSet a, MoveSet b)'],['../namespacenaidu.html#a0bb402008e47c9d7c2b8a22ec841f04a',1,'naidu::operator|(Direction a, Direction b)'],['../namespacenaidu.html#a3b5f72d4f8bc5a8cd11b31a10c19914b',1,'naidu::operator|(MoveSet a, Direction b)'],['../namespacenaidu.html#a73e73c4d443a489a75ae80fd6875b002',1,'naidu::operator|(Direction a, MoveSet b) noexcept'],['../namespacenaidu.html#a9b00aabfa0d022c9687bfa76caebe287',1,'naidu::operator|(MoveSet a, MoveSet b)']]],
-  ['opposite_10',['opposite',['../namespacenaidu.html#a2cb0f06155c3ecac63a413b8032310b4',1,'naidu::opposite()'],['../test__direction_8cpp.html#a2cb0f06155c3ecac63a413b8032310b4',1,'opposite():&#160;direction.hpp']]]
+  ['ui_0',['Ui',['../namespaceUi.html',1,'']]],
+  ['up_1',['UP',['../namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bafbaedde498cdead4f2780217646e9ba1',1,'naidu']]],
+  ['update_5fall_5fcharts_2',['update_all_charts',['../classAnalysisTab.html#acf2d2bb4c043ac1e420a2d95c7aae0c2',1,'AnalysisTab']]],
+  ['update_5foptimal_5fchart_3',['update_optimal_chart',['../classAnalysisTab.html#a8942b90fb1c649b79b8a19af962c316c',1,'AnalysisTab']]],
+  ['update_5fsuccess_5fchart_4',['update_success_chart',['../classAnalysisTab.html#a21e3966fa712141b0faa25f35731e3bf',1,'AnalysisTab']]],
+  ['update_5ftime_5fchart_5',['update_time_chart',['../classAnalysisTab.html#ac29b8a05c69e1b8850850b291efa9797',1,'AnalysisTab']]]
 ];

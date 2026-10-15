@@ -1,0 +1,6 @@
+<map id="PuzzleTab::on_solve_clicked" name="PuzzleTab::on_solve_clicked">
+<area shape="rect" id="Node000001" title="Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda naidu::solver..." alt="" coords="205,21,347,64"/>
+<area shape="rect" id="Node000002" href="$classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,43,157,45,157,40,191,42"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="113,14,103,10,81,8,61,10,50,15,47,20,53,29,47,29,42,21,46,11,59,5,81,3,104,5,118,14"/>
+</map>

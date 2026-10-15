@@ -1,0 +1,7 @@
+<map id="naidu::Board::move" name="naidu::Board::move">
+<area shape="rect" id="Node000001" title="Intenta mover el hueco en la dirección m." alt="" coords="5,35,140,61"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#ad7c53785d25523370f230de8777341e5" title="Comprueba si el hueco puede moverse en la dirección m." alt="" coords="188,5,350,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,35,175,32,170,34,141,41"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html#a53d8e015e3658028fb0806e119746827" title="Devuelve el índice del vecino del hueco en la dirección m." alt="" coords="193,56,344,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="140,55,180,63,175,64,140,61"/>
+</map>

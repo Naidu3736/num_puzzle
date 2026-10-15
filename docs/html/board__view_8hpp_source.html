@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Archivo de código fuente src/ui/puzzle/board_view.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('board__view_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">board_view.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="board__view_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once </span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="board_8hpp.html">board/board.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;qtconfigmacros.h&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;qtmetamacros.h&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;qwidget.h&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classBoardView.html">   10</a></span><span class="keyword">class </span><a class="code hl_function" href="classBoardView.html#ab650bf798ba9ed8e1b1e3fc854a8ce94">BoardView</a> : <span class="keyword">public</span> QWidget {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    Q_OBJECT</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classBoardView.html#a8f60f936fdfe024965b2f4f3bb043a7d">   14</a></span>        <a class="code hl_class" href="classnaidu_1_1Board.html">naidu::Board</a> <a class="code hl_variable" href="classBoardView.html#a8f60f936fdfe024965b2f4f3bb043a7d">m_board</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classBoardView.html#ad72e416b1e77d0bcb5506fdfa55a470a">   15</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classBoardView.html#ad72e416b1e77d0bcb5506fdfa55a470a">m_has_board</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classBoardView.html#a7c224eaaed6415bbe3811d953fd86f19">   16</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classBoardView.html#a7c224eaaed6415bbe3811d953fd86f19">MARGIN</a> = 4;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classBoardView.html#a23118d4a3230a60e7608e1a6f7356555">   17</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="classBoardView.html#a23118d4a3230a60e7608e1a6f7356555">MIN_CELL</a> = 30;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classBoardView.html#ab650bf798ba9ed8e1b1e3fc854a8ce94">BoardView</a>(QWidget *parent);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classBoardView.html#acfdf4b20b9e5dd92d464157e5c248876">set_board</a>(<span class="keyword">const</span> <a class="code hl_class" href="classnaidu_1_1Board.html">naidu::Board</a>&amp; board);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classBoardView.html#ab253684c536616529a1408157b19d710">clear</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        QSize <a class="code hl_function" href="classBoardView.html#a0cf9ce1455ca1ca014a16c059a097281">sizeHint</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classBoardView.html#a6ea62d61f2e3f9b6ecb772b89e60a0a2">paintEvent</a>(QPaintEvent *event) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="ttc" id="aboard_8hpp_html"><div class="ttname"><a href="board_8hpp.html">board.hpp</a></div></div>
+<div class="ttc" id="aclassBoardView_html_a0cf9ce1455ca1ca014a16c059a097281"><div class="ttname"><a href="classBoardView.html#a0cf9ce1455ca1ca014a16c059a097281">BoardView::sizeHint</a></div><div class="ttdeci">QSize sizeHint() const override</div><div class="ttdef"><b>Definición</b> <a href="board__view_8cpp_source.html#l00029">board_view.cpp:29</a></div></div>
+<div class="ttc" id="aclassBoardView_html_a23118d4a3230a60e7608e1a6f7356555"><div class="ttname"><a href="classBoardView.html#a23118d4a3230a60e7608e1a6f7356555">BoardView::MIN_CELL</a></div><div class="ttdeci">static constexpr int MIN_CELL</div><div class="ttdef"><b>Definición</b> <a href="#l00017">board_view.hpp:17</a></div></div>
+<div class="ttc" id="aclassBoardView_html_a6ea62d61f2e3f9b6ecb772b89e60a0a2"><div class="ttname"><a href="classBoardView.html#a6ea62d61f2e3f9b6ecb772b89e60a0a2">BoardView::paintEvent</a></div><div class="ttdeci">void paintEvent(QPaintEvent *event) override</div><div class="ttdef"><b>Definición</b> <a href="board__view_8cpp_source.html#l00034">board_view.cpp:34</a></div></div>
+<div class="ttc" id="aclassBoardView_html_a7c224eaaed6415bbe3811d953fd86f19"><div class="ttname"><a href="classBoardView.html#a7c224eaaed6415bbe3811d953fd86f19">BoardView::MARGIN</a></div><div class="ttdeci">static constexpr int MARGIN</div><div class="ttdef"><b>Definición</b> <a href="#l00016">board_view.hpp:16</a></div></div>
+<div class="ttc" id="aclassBoardView_html_a8f60f936fdfe024965b2f4f3bb043a7d"><div class="ttname"><a href="classBoardView.html#a8f60f936fdfe024965b2f4f3bb043a7d">BoardView::m_board</a></div><div class="ttdeci">naidu::Board m_board</div><div class="ttdef"><b>Definición</b> <a href="#l00014">board_view.hpp:14</a></div></div>
+<div class="ttc" id="aclassBoardView_html_ab253684c536616529a1408157b19d710"><div class="ttname"><a href="classBoardView.html#ab253684c536616529a1408157b19d710">BoardView::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdef"><b>Definición</b> <a href="board__view_8cpp_source.html#l00024">board_view.cpp:24</a></div></div>
+<div class="ttc" id="aclassBoardView_html_ab650bf798ba9ed8e1b1e3fc854a8ce94"><div class="ttname"><a href="classBoardView.html#ab650bf798ba9ed8e1b1e3fc854a8ce94">BoardView::BoardView</a></div><div class="ttdeci">BoardView(QWidget *parent)</div><div class="ttdef"><b>Definición</b> <a href="board__view_8cpp_source.html#l00010">board_view.cpp:10</a></div></div>
+<div class="ttc" id="aclassBoardView_html_acfdf4b20b9e5dd92d464157e5c248876"><div class="ttname"><a href="classBoardView.html#acfdf4b20b9e5dd92d464157e5c248876">BoardView::set_board</a></div><div class="ttdeci">void set_board(const naidu::Board &amp;board)</div><div class="ttdoc">Recibe y almacena una copia del tablero lógico del núcleo (naidu::Board) para actualizar su represent...</div><div class="ttdef"><b>Definición</b> <a href="board__view_8cpp_source.html#l00018">board_view.cpp:18</a></div></div>
+<div class="ttc" id="aclassBoardView_html_ad72e416b1e77d0bcb5506fdfa55a470a"><div class="ttname"><a href="classBoardView.html#ad72e416b1e77d0bcb5506fdfa55a470a">BoardView::m_has_board</a></div><div class="ttdeci">bool m_has_board</div><div class="ttdef"><b>Definición</b> <a href="#l00015">board_view.hpp:15</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html"><div class="ttname"><a href="classnaidu_1_1Board.html">naidu::Board</a></div><div class="ttdoc">Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N.</div><div class="ttdef"><b>Definición</b> <a href="board_8hpp_source.html#l00026">board.hpp:26</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a href="dir_c9e9bad68d791e67cd35d3c0eebc6050.html">puzzle</a></li><li class="navelem"><a href="board__view_8hpp.html">board_view.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

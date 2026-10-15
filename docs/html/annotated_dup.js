@@ -1,8 +1,5 @@
 var annotated_dup =
 [
-    [ "fixtures", "namespacefixtures.html", [
-      [ "BoardCase", "structfixtures_1_1BoardCase.html", "structfixtures_1_1BoardCase" ]
-    ] ],
     [ "naidu", "namespacenaidu.html", [
       [ "randomizer", "namespacenaidu_1_1randomizer.html", [
         [ "Config", "structnaidu_1_1randomizer_1_1Config.html", "structnaidu_1_1randomizer_1_1Config" ]
@@ -15,5 +12,10 @@ var annotated_dup =
       [ "BoardHash", "structnaidu_1_1BoardHash.html", "structnaidu_1_1BoardHash" ],
       [ "MoveSet", "classnaidu_1_1MoveSet.html", "classnaidu_1_1MoveSet" ]
     ] ],
-    [ "MoveSet", "classMoveSet.html", "classMoveSet" ]
+    [ "AnalysisResults", "structAnalysisResults.html", "structAnalysisResults" ],
+    [ "AnalysisTab", "classAnalysisTab.html", "classAnalysisTab" ],
+    [ "BoardView", "classBoardView.html", "classBoardView" ],
+    [ "DifficultyMetrics", "structDifficultyMetrics.html", "structDifficultyMetrics" ],
+    [ "MainWindow", "classMainWindow.html", "classMainWindow" ],
+    [ "PuzzleTab", "classPuzzleTab.html", "classPuzzleTab" ]
 ];

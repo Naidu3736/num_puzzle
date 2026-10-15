@@ -1,9 +1,0 @@
-<map id="naidu::MoveSet::empty" name="naidu::MoveSet::empty">
-<area shape="rect" id="Node000001" title="Comprueba si el conjunto está vacío." alt="" coords="153,56,309,83"/>
-<area shape="rect" id="Node000002" href="$test__moveset_8cpp.html#a5dbc5514c65d8750fd6ecab3ba3c49ed" title=" " alt="" coords="5,5,105,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,52,104,35,104,30,169,50"/>
-<area shape="rect" id="Node000003" href="$test__moveset_8cpp.html#a9155485b5ab1cf3352127ab12a399132" title=" " alt="" coords="5,56,105,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,70,105,72,104,67,139,68"/>
-<area shape="rect" id="Node000004" href="$test__moveset_8cpp.html#a2ce40b356aeb65314103a7c7222b06c7" title=" " alt="" coords="5,107,105,133"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="170,87,105,109,103,104,164,88"/>
-</map>

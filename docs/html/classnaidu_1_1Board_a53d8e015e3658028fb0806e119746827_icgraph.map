@@ -1,0 +1,16 @@
+<map id="naidu::Board::neighbor_of_empty" name="naidu::Board::neighbor_of_empty">
+<area shape="rect" id="Node000001" title="Devuelve el índice del vecino del hueco en la dirección m." alt="" coords="626,81,778,124"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9" title="Intenta mover el hueco en la dirección m." alt="" coords="434,31,568,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="610,77,549,61,550,55,615,77"/>
+<area shape="rect" id="Node000006" href="$classnaidu_1_1Board.html#abaab9492b6b831f874a5f2c7be8c237d" title="Devuelve el índice donde terminaría el hueco tras moverse en d." alt="" coords="436,81,566,124"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="608,103,567,105,566,100,613,102"/>
+<area shape="rect" id="Node000007" href="$classnaidu_1_1Board.html#ac275bea4902020994a2462caf3ed3917" title="Devuelve la ficha que se movería si el hueco se moviera en d." alt="" coords="424,148,578,175"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="615,128,550,150,549,145,610,129"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html#ac187e237f061761ba23f3418c41bc5b3" title="Aplica una secuencia de movimientos al tablero." alt="" coords="224,5,357,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="416,35,358,29,357,24,421,34"/>
+<area shape="rect" id="Node000004" href="$classPuzzleTab.html#a51f1e564095a8ca105c4e5e6fa038eca" title=" " alt="" coords="205,56,376,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="416,55,377,62,376,56,421,53"/>
+<area shape="rect" id="Node000005" href="$classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,56,157,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="187,70,158,72,157,67,192,68"/>
+<area shape="poly" id="edge5_Node000005_Node000005" title=" " alt="" coords="115,42,104,37,81,35,59,37,47,41,44,47,50,55,45,56,39,47,44,38,58,31,81,29,106,32,121,40"/>
+</map>

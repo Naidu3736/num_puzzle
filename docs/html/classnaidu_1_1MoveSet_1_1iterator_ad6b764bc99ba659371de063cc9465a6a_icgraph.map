@@ -1,0 +1,14 @@
+<map id="naidu::MoveSet::iterator::advance_to_active" name="naidu::MoveSet::iterator::advance_to_active">
+<area shape="rect" id="Node000001" title="Avanza m_index hasta el siguiente bit activo." alt="" coords="422,140,582,183"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323" title="Construye un iterador sobre la máscara dada." alt="" coords="214,107,374,149"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="404,146,375,144,375,138,409,146"/>
+<area shape="rect" id="Node000006" href="$classnaidu_1_1MoveSet_1_1iterator.html#a05904a54202ea7a8d2cedd292e7d2fe3" title="Avanza al siguiente bit activo." alt="" coords="5,173,166,216"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="406,172,166,191,166,186,406,166"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1MoveSet.html#abeb752bf0a37b455f7a2a909a5f46dab" title="Iterador al primer bit activo." alt="" coords="10,5,161,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="250,98,210,72,165,46,138,35,137,30,167,42,213,68,255,97"/>
+<area shape="rect" id="Node000004" href="$classnaidu_1_1MoveSet.html#a67749b77f18a1b3b401fd9b28fb493a7" title="Iterador al final (uno más allá del último bit)." alt="" coords="15,56,156,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="199,103,136,86,135,81,204,101"/>
+<area shape="rect" id="Node000005" href="$classnaidu_1_1MoveSet_1_1iterator.html#a95ec73ace5c0955686d506226cea72f2" title="Compara dos iteradores por su índice." alt="" coords="5,107,166,149"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="196,129,167,131,166,125,201,127"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="214,154,155,175,154,170,209,155"/>
+</map>

@@ -129,6 +129,18 @@ Métodos públicos</h2></td></tr>
 <tr class="memdesc:a05904a54202ea7a8d2cedd292e7d2fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Avanza al siguiente bit activo.  <br /></td></tr>
 <tr class="memitem:a95ec73ace5c0955686d506226cea72f2" id="r_a95ec73ace5c0955686d506226cea72f2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a95ec73ace5c0955686d506226cea72f2">operator!=</a> (const <a class="el" href="#acb0f52f73a412b6d409a638cf6cd0323">iterator</a> &amp;other) const</td></tr>
 <tr class="memdesc:a95ec73ace5c0955686d506226cea72f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara dos iteradores por su índice.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:ad6b764bc99ba659371de063cc9465a6a" id="r_ad6b764bc99ba659371de063cc9465a6a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad6b764bc99ba659371de063cc9465a6a">advance_to_active</a> ()</td></tr>
+<tr class="memdesc:ad6b764bc99ba659371de063cc9465a6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Avanza m_index hasta el siguiente bit activo.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a72a893bcb9b75e63c68f04c28d627a7f" id="r_a72a893bcb9b75e63c68f04c28d627a7f"><td class="memItemLeft">std::uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a72a893bcb9b75e63c68f04c28d627a7f">m_mask</a></td></tr>
+<tr class="memdesc:a72a893bcb9b75e63c68f04c28d627a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Máscara del <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a>.  <br /></td></tr>
+<tr class="memitem:a0936a6feab6c45252407d71d40e00360" id="r_a0936a6feab6c45252407d71d40e00360"><td class="memItemLeft">std::uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a0936a6feab6c45252407d71d40e00360">m_index</a></td></tr>
+<tr class="memdesc:a0936a6feab6c45252407d71d40e00360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Índice actual (0..direction_count).  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Iterador minimalista sobre las direcciones activas. </p>
@@ -174,11 +186,26 @@ Métodos públicos</h2></td></tr>
 </dl>
 
 <p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00110">110</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>                : m_mask(mask), m_index(index) {</div>
-<div class="line"><span class="lineno">  112</span>                advance_to_active();</div>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                : <a class="code hl_variable" href="#a72a893bcb9b75e63c68f04c28d627a7f">m_mask</a>(mask), <a class="code hl_variable" href="#a0936a6feab6c45252407d71d40e00360">m_index</a>(index) {</div>
+<div class="line"><span class="lineno">  112</span>                <a class="code hl_function" href="#ad6b764bc99ba659371de063cc9465a6a">advance_to_active</a>();</div>
 <div class="line"><span class="lineno">  113</span>            }</div>
+<div class="ttc" id="aclassnaidu_1_1MoveSet_1_1iterator_html_a0936a6feab6c45252407d71d40e00360"><div class="ttname"><a href="#a0936a6feab6c45252407d71d40e00360">naidu::MoveSet::iterator::m_index</a></div><div class="ttdeci">std::uint8_t m_index</div><div class="ttdoc">Índice actual (0..direction_count).</div><div class="ttdef"><b>Definición</b> <a href="moveset_8hpp_source.html#l00091">moveset.hpp:91</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1MoveSet_1_1iterator_html_a72a893bcb9b75e63c68f04c28d627a7f"><div class="ttname"><a href="#a72a893bcb9b75e63c68f04c28d627a7f">naidu::MoveSet::iterator::m_mask</a></div><div class="ttdeci">std::uint8_t m_mask</div><div class="ttdoc">Máscara del MoveSet.</div><div class="ttdef"><b>Definición</b> <a href="moveset_8hpp_source.html#l00090">moveset.hpp:90</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1MoveSet_1_1iterator_html_ad6b764bc99ba659371de063cc9465a6a"><div class="ttname"><a href="#ad6b764bc99ba659371de063cc9465a6a">naidu::MoveSet::iterator::advance_to_active</a></div><div class="ttdeci">void advance_to_active()</div><div class="ttdoc">Avanza m_index hasta el siguiente bit activo.</div><div class="ttdef"><b>Definición</b> <a href="moveset_8hpp_source.html#l00099">moveset.hpp:99</a></div></div>
 </div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00099">advance_to_active()</a>, <a class="el" href="moveset_8hpp_source.html#l00091">m_index</a> y <a class="el" href="moveset_8hpp_source.html#l00090">m_mask</a>.</p>
+
 <p class="reference">Referenciado por <a class="el" href="moveset_8hpp_source.html#l00147">naidu::MoveSet::begin()</a>, <a class="el" href="moveset_8hpp_source.html#l00155">naidu::MoveSet::end()</a>, <a class="el" href="moveset_8hpp_source.html#l00138">operator!=()</a> y <a class="el" href="moveset_8hpp_source.html#l00127">operator++()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_1_1iterator_acb0f52f73a412b6d409a638cf6cd0323_cgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_1_1iterator_acb0f52f73a412b6d409a638cf6cd0323_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_1_1iterator_acb0f52f73a412b6d409a638cf6cd0323_cgraph" id="aclassnaidu_1_1MoveSet_1_1iterator_acb0f52f73a412b6d409a638cf6cd0323_cgraph">
+<area shape="rect" title="Construye un iterador sobre la máscara dada." alt="" coords="5,5,166,48"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#ad6b764bc99ba659371de063cc9465a6a" title="Avanza m_index hasta el siguiente bit activo." alt="" coords="214,5,374,48"/>
+<area shape="poly" title=" " alt="" coords="166,24,201,26,195,27,166,29"/>
+</map>
+</div>
 <div class="dynheader">
 Gráfico de llamadas a esta función:</div>
 <div class="dyncontent">
@@ -199,6 +226,63 @@ Gráfico de llamadas a esta función:</div>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="ad6b764bc99ba659371de063cc9465a6a" name="ad6b764bc99ba659371de063cc9465a6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6b764bc99ba659371de063cc9465a6a">&#9670;&#160;</a></span>advance_to_active()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void naidu::MoveSet::iterator::advance_to_active </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Avanza m_index hasta el siguiente bit activo. </p>
+<p>Si no hay más bits activos, deja m_index en direction_count, lo cual es equivalente a <span class="tt"><a class="el" href="classnaidu_1_1MoveSet.html#a67749b77f18a1b3b401fd9b28fb493a7" title="Iterador al final (uno más allá del último bit).">end()</a></span>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00099">99</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   99</span>                                     {</div>
+<div class="line"><span class="lineno">  100</span>                <span class="keywordflow">while</span> (<a class="code hl_variable" href="#a0936a6feab6c45252407d71d40e00360">m_index</a> &lt; 4 &amp;&amp; !((<a class="code hl_variable" href="#a72a893bcb9b75e63c68f04c28d627a7f">m_mask</a> &gt;&gt; <a class="code hl_variable" href="#a0936a6feab6c45252407d71d40e00360">m_index</a>) &amp; 1u))</div>
+<div class="line"><span class="lineno">  101</span>                    ++<a class="code hl_variable" href="#a0936a6feab6c45252407d71d40e00360">m_index</a>;</div>
+<div class="line"><span class="lineno">  102</span>            }</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00091">m_index</a> y <a class="el" href="moveset_8hpp_source.html#l00090">m_mask</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="moveset_8hpp_source.html#l00110">iterator()</a> y <a class="el" href="moveset_8hpp_source.html#l00127">operator++()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_1_1iterator_ad6b764bc99ba659371de063cc9465a6a_icgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_1_1iterator_ad6b764bc99ba659371de063cc9465a6a_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_1_1iterator_ad6b764bc99ba659371de063cc9465a6a_icgraph" id="aclassnaidu_1_1MoveSet_1_1iterator_ad6b764bc99ba659371de063cc9465a6a_icgraph">
+<area shape="rect" title="Avanza m_index hasta el siguiente bit activo." alt="" coords="422,140,582,183"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323" title="Construye un iterador sobre la máscara dada." alt="" coords="214,107,374,149"/>
+<area shape="poly" title=" " alt="" coords="404,146,375,144,375,138,409,146"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#a05904a54202ea7a8d2cedd292e7d2fe3" title="Avanza al siguiente bit activo." alt="" coords="5,173,166,216"/>
+<area shape="poly" title=" " alt="" coords="406,172,166,191,166,186,406,166"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#abeb752bf0a37b455f7a2a909a5f46dab" title="Iterador al primer bit activo." alt="" coords="10,5,161,32"/>
+<area shape="poly" title=" " alt="" coords="250,98,210,72,165,46,138,35,137,30,167,42,213,68,255,97"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#a67749b77f18a1b3b401fd9b28fb493a7" title="Iterador al final (uno más allá del último bit)." alt="" coords="15,56,156,83"/>
+<area shape="poly" title=" " alt="" coords="199,103,136,86,135,81,204,101"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#a95ec73ace5c0955686d506226cea72f2" title="Compara dos iteradores por su índice." alt="" coords="5,107,166,149"/>
+<area shape="poly" title=" " alt="" coords="196,129,167,131,166,125,201,127"/>
+<area shape="poly" title=" " alt="" coords="214,154,155,175,154,170,209,155"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a95ec73ace5c0955686d506226cea72f2" name="a95ec73ace5c0955686d506226cea72f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a95ec73ace5c0955686d506226cea72f2">&#9670;&#160;</a></span>operator!=()</h2>
 
@@ -233,10 +317,10 @@ Gráfico de llamadas a esta función:</div>
 
 <p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00138">138</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  138</span>                                                       {</div>
-<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">return</span> m_index != other.m_index;</div>
+<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="#a0936a6feab6c45252407d71d40e00360">m_index</a> != other.m_index;</div>
 <div class="line"><span class="lineno">  140</span>            }</div>
 </div><!-- fragment -->
-<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00110">iterator()</a>.</p>
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00110">iterator()</a> y <a class="el" href="moveset_8hpp_source.html#l00091">m_index</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas de esta función:</div>
 <div class="dyncontent">
@@ -245,6 +329,8 @@ Gráfico de llamadas de esta función:</div>
 <area shape="rect" title="Compara dos iteradores por su índice." alt="" coords="5,5,166,48"/>
 <area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323" title="Construye un iterador sobre la máscara dada." alt="" coords="214,5,374,48"/>
 <area shape="poly" title=" " alt="" coords="166,24,201,26,195,27,166,29"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#ad6b764bc99ba659371de063cc9465a6a" title="Avanza m_index hasta el siguiente bit activo." alt="" coords="422,5,582,48"/>
+<area shape="poly" title=" " alt="" coords="374,24,409,27,404,27,374,29"/>
 </map>
 </div>
 
@@ -278,10 +364,12 @@ Gráfico de llamadas de esta función:</div>
 
 <p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00119">119</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  119</span>                                        {</div>
-<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a><span class="keyword">&gt;</span>(m_index);</div>
+<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a><span class="keyword">&gt;</span>(<a class="code hl_variable" href="#a0936a6feab6c45252407d71d40e00360">m_index</a>);</div>
 <div class="line"><span class="lineno">  121</span>            }</div>
 <div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222b"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">Direcciones de movimiento del hueco en el tablero.</div><div class="ttdef"><b>Definición</b> <a href="direction_8hpp_source.html#l00017">direction.hpp:17</a></div></div>
 </div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00091">m_index</a>.</p>
+
 </div>
 </div>
 <a id="a05904a54202ea7a8d2cedd292e7d2fe3" name="a05904a54202ea7a8d2cedd292e7d2fe3"></a>
@@ -312,22 +400,82 @@ Gráfico de llamadas de esta función:</div>
 
 <p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00127">127</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  127</span>                                   {</div>
-<div class="line"><span class="lineno">  128</span>                ++m_index;</div>
-<div class="line"><span class="lineno">  129</span>                advance_to_active();</div>
+<div class="line"><span class="lineno">  128</span>                ++<a class="code hl_variable" href="#a0936a6feab6c45252407d71d40e00360">m_index</a>;</div>
+<div class="line"><span class="lineno">  129</span>                <a class="code hl_function" href="#ad6b764bc99ba659371de063cc9465a6a">advance_to_active</a>();</div>
 <div class="line"><span class="lineno">  130</span>                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><span class="lineno">  131</span>            }</div>
 </div><!-- fragment -->
-<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00110">iterator()</a>.</p>
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00099">advance_to_active()</a>, <a class="el" href="moveset_8hpp_source.html#l00110">iterator()</a> y <a class="el" href="moveset_8hpp_source.html#l00091">m_index</a>.</p>
 <div class="dynheader">
 Gráfico de llamadas de esta función:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnaidu_1_1MoveSet_1_1iterator_a05904a54202ea7a8d2cedd292e7d2fe3_cgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_1_1iterator_a05904a54202ea7a8d2cedd292e7d2fe3_cgraph" loading="lazy" alt=""/></div>
 <map name="aclassnaidu_1_1MoveSet_1_1iterator_a05904a54202ea7a8d2cedd292e7d2fe3_cgraph" id="aclassnaidu_1_1MoveSet_1_1iterator_a05904a54202ea7a8d2cedd292e7d2fe3_cgraph">
 <area shape="rect" title="Avanza al siguiente bit activo." alt="" coords="5,5,166,48"/>
-<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323" title="Construye un iterador sobre la máscara dada." alt="" coords="214,5,374,48"/>
-<area shape="poly" title=" " alt="" coords="166,24,201,26,195,27,166,29"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#ad6b764bc99ba659371de063cc9465a6a" title="Avanza m_index hasta el siguiente bit activo." alt="" coords="422,5,582,48"/>
+<area shape="poly" title=" " alt="" coords="166,21,214,20,374,20,409,23,403,24,374,25,214,25,167,26"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323" title="Construye un iterador sobre la máscara dada." alt="" coords="214,35,374,77"/>
+<area shape="poly" title=" " alt="" coords="166,35,201,42,195,43,166,41"/>
+<area shape="poly" title=" " alt="" coords="374,42,404,40,409,40,374,47"/>
 </map>
 </div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a0936a6feab6c45252407d71d40e00360" name="a0936a6feab6c45252407d71d40e00360"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0936a6feab6c45252407d71d40e00360">&#9670;&#160;</a></span>m_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint8_t naidu::MoveSet::iterator::m_index</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Índice actual (0..direction_count). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00091">91</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="moveset_8hpp_source.html#l00099">advance_to_active()</a>, <a class="el" href="moveset_8hpp_source.html#l00110">iterator()</a>, <a class="el" href="moveset_8hpp_source.html#l00138">operator!=()</a>, <a class="el" href="moveset_8hpp_source.html#l00119">operator*()</a> y <a class="el" href="moveset_8hpp_source.html#l00127">operator++()</a>.</p>
+
+</div>
+</div>
+<a id="a72a893bcb9b75e63c68f04c28d627a7f" name="a72a893bcb9b75e63c68f04c28d627a7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a893bcb9b75e63c68f04c28d627a7f">&#9670;&#160;</a></span>m_mask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint8_t naidu::MoveSet::iterator::m_mask</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Máscara del <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00090">90</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="moveset_8hpp_source.html#l00099">advance_to_active()</a> y <a class="el" href="moveset_8hpp_source.html#l00110">iterator()</a>.</p>
 
 </div>
 </div>

@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['general_20del_20proyecto_0',['1. Descripción General del Proyecto',['../md_Readme.html#autotoc_md13',1,'']]],
-  ['generales_20del_20proyecto_1',['1. Dependencias Generales del Proyecto',['../md_installation__guiede.html#autotoc_md1',1,'']]],
-  ['generate_2',['generate',['../namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44',1,'naidu::randomizer::generate(std::uint8_t dim, const Config &amp;config, std::mt19937 &amp;rng)'],['../namespacenaidu_1_1randomizer.html#a18e8f27e0b21a0c675dde94d09bda214',1,'naidu::randomizer::generate(std::uint8_t dim, std::mt19937 &amp;rng)']]],
-  ['guía_20de_20instalación_20y_20configuración_20multiplataforma_3',['Guía de Instalación y Configuración Multiplataforma',['../md_installation__guiede.html',1,'']]]
+  ['naidu_0',['naidu',['../namespacenaidu.html',1,'']]],
+  ['naidu_3a_3acomponent_1',['component',['../namespacenaidu_1_1component.html',1,'naidu']]],
+  ['naidu_3a_3aevaluation_2',['evaluation',['../namespacenaidu_1_1evaluation.html',1,'naidu']]],
+  ['naidu_3a_3arandomizer_3',['randomizer',['../namespacenaidu_1_1randomizer.html',1,'naidu']]],
+  ['naidu_3a_3asolver_4',['solver',['../namespacenaidu_1_1solver.html',1,'naidu']]],
+  ['neighbor_5fof_5fempty_5',['neighbor_of_empty',['../classnaidu_1_1Board.html#a53d8e015e3658028fb0806e119746827',1,'naidu::Board']]],
+  ['nodes_5fexpanded_6',['nodes_expanded',['../structnaidu_1_1solver_1_1Solution.html#ad649b059f3febb835964a3010380dc11',1,'naidu::solver::Solution']]]
 ];

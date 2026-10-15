@@ -37,4 +37,4 @@ Para instrucciones detalladas sobre cómo instalar las dependencias, configurar 
 
 La documentación completa del código fuente del motor de búsqueda y las estructuras de datos (excluyendo la interfaz gráfica) ha sido generada mediante Doxygen. Puede consultarla clonando el repositorio y abriendo el siguiente archivo en su navegador web:
 
-- [Ver Documentación Técnica (HTML)](docs/html/index.html)
+- [Ver Documentación Técnica (HTML)](doc.html)

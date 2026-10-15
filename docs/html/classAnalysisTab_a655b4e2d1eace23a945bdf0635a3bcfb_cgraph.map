@@ -1,0 +1,15 @@
+<map id="AnalysisTab::execute_empirical_analysis" name="AnalysisTab::execute_empirical_analysis">
+<area shape="rect" id="Node000001" title="Ejecuta el análisis empírico masivo coordinando lotes de tableros generados por naidu::randomizer y r..." alt="" coords="5,112,152,155"/>
+<area shape="rect" id="Node000002" href="$classAnalysisTab.html#a1d775b33101bc4f235805aca68cfffd3" title="Ejecuta un lote de pruebas de dificultad para medir rendimiento y métricas utilizando el núcleo de re..." alt="" coords="200,112,373,155"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,131,187,133,182,134,153,136"/>
+<area shape="rect" id="Node000003" href="$namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44" title="Genera un tablero aleatorio resoluble." alt="" coords="438,29,571,72"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="344,109,430,79,435,77,346,114"/>
+<area shape="rect" id="Node000004" href="$namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num&#45;puzzle usando IDA* (Iterative Deepening A*)." alt="" coords="444,120,565,147"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="373,131,432,133,426,134,374,136"/>
+<area shape="rect" id="Node000005" href="$classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04" title="Comprueba si el tablero es soluble desde su estado actual." alt="" coords="421,171,588,197"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="374,151,432,167,427,167,373,156"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="464,27,463,19,469,10,483,5,505,3,527,5,543,14,537,14,526,10,505,8,485,10,473,15,468,21,469,30"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="468,119,462,111,467,102,481,95,505,93,530,96,545,105,540,104,528,101,505,99,482,101,470,105,468,111,473,121"/>
+<area shape="rect" id="Node000006" href="$classnaidu_1_1Board.html#a889102c77069dc5a4ed2be943c4b9716" title="Cuenta el número de inversiones del tablero." alt="" coords="636,171,798,197"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="589,181,623,184,618,184,589,187"/>
+</map>

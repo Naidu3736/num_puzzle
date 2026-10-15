@@ -1,0 +1,13 @@
+<map id="AnalysisTab::run_difficulty_batch" name="AnalysisTab::run_difficulty_batch">
+<area shape="rect" id="Node000001" title="Ejecuta un lote de pruebas de dificultad para medir rendimiento y métricas utilizando el núcleo de re..." alt="" coords="5,112,179,155"/>
+<area shape="rect" id="Node000002" href="$namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44" title="Genera un tablero aleatorio resoluble." alt="" coords="244,29,376,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,109,240,77,236,79,152,114"/>
+<area shape="rect" id="Node000003" href="$namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num&#45;puzzle usando IDA* (Iterative Deepening A*)." alt="" coords="250,120,370,147"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="179,131,237,133,232,134,179,136"/>
+<area shape="rect" id="Node000004" href="$classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04" title="Comprueba si el tablero es soluble desde su estado actual." alt="" coords="227,171,394,197"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="179,151,238,166,233,167,179,156"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="270,28,268,19,275,10,289,5,310,3,333,5,348,14,343,14,332,10,310,8,290,10,278,15,273,21,275,30"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="274,119,268,111,272,102,287,95,310,93,336,96,351,105,345,105,334,101,310,99,288,101,276,105,273,111,279,120"/>
+<area shape="rect" id="Node000005" href="$classnaidu_1_1Board.html#a889102c77069dc5a4ed2be943c4b9716" title="Cuenta el número de inversiones del tablero." alt="" coords="442,171,603,197"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="394,181,429,184,423,184,395,187"/>
+</map>

@@ -1,0 +1,26 @@
+var classPuzzleTab =
+[
+    [ "PuzzleTab", "classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4", null ],
+    [ "~PuzzleTab", "classPuzzleTab.html#aa673cd721d79dc6958e6c5c79f7a38e8", null ],
+    [ "get_selected_evaluation", "classPuzzleTab.html#a4532f1e18c2053e5a77a179ac9349652", null ],
+    [ "on_anim_step", "classPuzzleTab.html#a51f1e564095a8ca105c4e5e6fa038eca", null ],
+    [ "on_dimension_changed", "classPuzzleTab.html#ab90d67d4f231a0bdd9dd9a58a6986ff5", null ],
+    [ "on_replay_animation", "classPuzzleTab.html#a3794d62cea4e1f02bbf5c69e69312965", null ],
+    [ "on_shuffle_clicked", "classPuzzleTab.html#aaab7b43869327f957614c225446940ac", null ],
+    [ "on_solve_clicked", "classPuzzleTab.html#af92079c81348986c55c3f9025d3d1450", null ],
+    [ "on_solver_cancelled", "classPuzzleTab.html#aa1d493396cefc640b572d366048d50ee", null ],
+    [ "on_solver_finished", "classPuzzleTab.html#af1b31fea90eed57085485179397854ef", null ],
+    [ "on_speed_slider_changed", "classPuzzleTab.html#afe132dd7b37da93ac8c818c36ad20c78", null ],
+    [ "on_stop_clicked", "classPuzzleTab.html#a550a8b30e4566d4a0157c2e9df1241bb", null ],
+    [ "parse_board_input", "classPuzzleTab.html#a13539036477fd037d27a341d6af36f59", null ],
+    [ "set_boards", "classPuzzleTab.html#a1f00027785e44f07330810f204be0be7", null ],
+    [ "m_anim_index", "classPuzzleTab.html#a50870c89d7fe28b515f359885c452cb2", null ],
+    [ "m_anim_moves", "classPuzzleTab.html#a1d4d4232471bdfeb8d9521f8eda4f010", null ],
+    [ "m_anim_timer", "classPuzzleTab.html#a38e537e5c35ceb87abb8ddc5953ebd29", null ],
+    [ "m_current_anim_board", "classPuzzleTab.html#a074978075a2cd13500206c34cdbed78e", null ],
+    [ "m_goal_board", "classPuzzleTab.html#acd37e53f5b76c43eb0e73e52efd1df3f", null ],
+    [ "m_initial_board", "classPuzzleTab.html#af6d8ced1674796a92e81af62daaf4e10", null ],
+    [ "m_solver_watcher", "classPuzzleTab.html#ab18fd5487a3f3a6b093d60f167b92a15", null ],
+    [ "m_start_time", "classPuzzleTab.html#aa4fac1d2c93c04491ceaf428b9671b27", null ],
+    [ "m_ui", "classPuzzleTab.html#ad84d9b3e52aa349b9f4f3136c928f81c", null ]
+];

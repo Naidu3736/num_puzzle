@@ -1,6 +1,0 @@
-<map id="fixtures::hole_top_center_3x3" name="fixtures::hole_top_center_3x3">
-<area shape="rect" id="Node000001" title=" " alt="" coords="153,29,274,72"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="237,13,229,10,213,8,199,10,190,14,186,20,187,30,183,27,181,19,186,11,197,5,213,3,231,5,242,14"/>
-<area shape="rect" id="Node000002" href="$test__board__moves_8cpp.html#ab0930be29daf0eae97fe3858e8a885e7" title=" " alt="" coords="5,37,105,64"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="134,51,105,53,105,48,140,50"/>
-</map>

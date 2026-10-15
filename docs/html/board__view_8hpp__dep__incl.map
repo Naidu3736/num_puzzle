@@ -1,0 +1,7 @@
+<map id="src/ui/puzzle/board_view.hpp" name="src/ui/puzzle/board_view.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="84,5,215,48"/>
+<area shape="rect" id="Node000002" href="$board__view_8cpp.html" title=" " alt="" coords="5,96,137,139"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="124,59,91,98,87,94,119,61"/>
+<area shape="rect" id="Node000003" href="$puzzle__tab_8cpp.html" title=" " alt="" coords="161,96,298,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="179,57,214,96,209,96,177,62"/>
+</map>

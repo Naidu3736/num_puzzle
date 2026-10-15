@@ -1,0 +1,5 @@
+<map id="BoardView::sizeHint" name="BoardView::sizeHint">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,146,32"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="194,5,317,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,16,181,19,176,19,146,21"/>
+</map>

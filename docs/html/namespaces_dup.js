@@ -1,5 +1,5 @@
 var namespaces_dup =
 [
-    [ "fixtures", "namespacefixtures.html", "namespacefixtures" ],
-    [ "naidu", "namespacenaidu.html", "namespacenaidu" ]
+    [ "naidu", "namespacenaidu.html", "namespacenaidu" ],
+    [ "Ui", "namespaceUi.html", null ]
 ];

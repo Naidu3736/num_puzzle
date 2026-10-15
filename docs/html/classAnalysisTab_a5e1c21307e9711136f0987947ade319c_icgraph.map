@@ -1,0 +1,6 @@
+<map id="AnalysisTab::on_cancel_analysis_clicked" name="AnalysisTab::on_cancel_analysis_clicked">
+<area shape="rect" id="Node000001" title=" " alt="" coords="225,21,384,64"/>
+<area shape="rect" id="Node000002" href="$classAnalysisTab.html#a8b92a76d421f4739f4bfea7a80134d5a" title=" " alt="" coords="5,29,177,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,43,177,45,177,40,212,42"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="126,14,115,10,91,8,69,10,57,15,54,20,60,29,54,29,48,21,53,11,67,5,91,3,116,5,131,14"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="PuzzleTab::get_selected_evaluation" name="PuzzleTab::get_selected_evaluation">
+<area shape="rect" id="Node000001" title="Obtiene la función heurística vinculada a los métodos de evaluación del núcleo (naidu::evaluation)." alt="" coords="395,21,559,64"/>
+<area shape="rect" id="Node000002" href="$classPuzzleTab.html#af92079c81348986c55c3f9025d3d1450" title="Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda naidu::solver..." alt="" coords="205,21,347,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="377,43,347,45,347,40,382,43"/>
+<area shape="rect" id="Node000003" href="$classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="186,43,157,45,157,40,191,42"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="113,14,103,10,81,8,61,10,50,15,47,20,53,29,47,29,42,21,46,11,59,5,81,3,104,5,118,14"/>
+</map>

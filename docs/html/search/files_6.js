@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['randomizer_2ecpp_0',['randomizer.cpp',['../randomizer_8cpp.html',1,'']]],
-  ['randomizer_2ehpp_1',['randomizer.hpp',['../randomizer_8hpp.html',1,'']]],
-  ['readme_2emd_2',['Readme.md',['../Readme_8md.html',1,'']]]
+  ['puzzle_5ftab_2ecpp_0',['puzzle_tab.cpp',['../puzzle__tab_8cpp.html',1,'']]],
+  ['puzzle_5ftab_2eh_1',['puzzle_tab.h',['../puzzle__tab_8h.html',1,'']]]
 ];

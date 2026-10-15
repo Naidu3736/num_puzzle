@@ -1,0 +1,5 @@
+<map id="naidu::Board::validate_tiles" name="naidu::Board::validate_tiles">
+<area shape="rect" id="Node000001" title="Verifica que las fichas formen una permutación válida de 0..N²&#45;1." alt="" coords="190,5,337,48"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#afb5bd20f5b1a40b9fa2763ac5d7e0f51" title="Construye un tablero a partir de una secuencia lineal de fichas." alt="" coords="5,13,142,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,27,142,29,142,24,177,26"/>
+</map>

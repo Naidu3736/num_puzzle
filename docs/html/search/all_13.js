@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['qt_20recomendado_0',['Opción A: Utilizando el Instalador Oficial de Qt (Recomendado)',['../md_installation__guiede.html#autotoc_md8',1,'']]]
+  ['weighted_5fcost_0',['weighted_cost',['../structnaidu_1_1solver_1_1Config.html#a0b82393bc386e27be882d4242c928869',1,'naidu::solver::Config']]]
 ];

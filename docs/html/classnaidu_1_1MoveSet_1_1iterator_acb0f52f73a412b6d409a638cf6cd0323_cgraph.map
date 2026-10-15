@@ -1,0 +1,5 @@
+<map id="naidu::MoveSet::iterator::iterator" name="naidu::MoveSet::iterator::iterator">
+<area shape="rect" id="Node000001" title="Construye un iterador sobre la máscara dada." alt="" coords="5,5,166,48"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1MoveSet_1_1iterator.html#ad6b764bc99ba659371de063cc9465a6a" title="Avanza m_index hasta el siguiente bit activo." alt="" coords="214,5,374,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="166,24,201,26,195,27,166,29"/>
+</map>

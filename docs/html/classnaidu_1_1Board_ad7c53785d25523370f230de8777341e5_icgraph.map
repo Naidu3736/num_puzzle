@@ -1,0 +1,14 @@
+<map id="naidu::Board::can_move" name="naidu::Board::can_move">
+<area shape="rect" id="Node000001" title="Comprueba si el hueco puede moverse en la dirección m." alt="" coords="606,43,769,69"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#ae5927ff613abc30c3a4015d3d4b27a5f" title="Devuelve el conjunto de movimientos legales desde el estado actual." alt="" coords="426,5,556,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="588,42,556,39,557,34,593,41"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9" title="Intenta mover el hueco en la dirección m." alt="" coords="424,72,558,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="593,70,559,78,559,73,588,71"/>
+<area shape="rect" id="Node000004" href="$classnaidu_1_1Board.html#ac187e237f061761ba23f3418c41bc5b3" title="Aplica una secuencia de movimientos al tablero." alt="" coords="224,47,357,73"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="406,75,357,71,357,66,412,75"/>
+<area shape="rect" id="Node000005" href="$classPuzzleTab.html#a51f1e564095a8ca105c4e5e6fa038eca" title=" " alt="" coords="205,97,376,124"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="412,95,377,102,376,97,406,96"/>
+<area shape="rect" id="Node000006" href="$classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,97,157,124"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="187,111,157,113,157,108,192,111"/>
+<area shape="poly" id="edge6_Node000006_Node000006" title=" " alt="" coords="115,82,104,78,81,76,59,78,47,83,44,88,50,97,45,97,39,89,44,79,58,73,81,71,106,73,121,82"/>
+</map>

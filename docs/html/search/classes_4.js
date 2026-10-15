@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['solution_0',['Solution',['../structnaidu_1_1solver_1_1Solution.html',1,'naidu::solver']]]
+  ['iterator_0',['iterator',['../classnaidu_1_1MoveSet_1_1iterator.html',1,'naidu::MoveSet']]]
 ];

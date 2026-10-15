@@ -1,0 +1,1633 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Referencia de la clase PuzzleTab</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classPuzzleTab.html','','classPuzzleTab-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase PuzzleTab</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Componente de interfaz que actúa como puente gráfico y controlador para el motor del puzzle y el solucionador IDA*.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencia de PuzzleTab</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab__inherit__graph.png" border="0" usemap="#aPuzzleTab_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="aPuzzleTab_inherit__map" id="aPuzzleTab_inherit__map">
+<area shape="rect" title="Componente de interfaz que actúa como puente gráfico y controlador para el motor del puzzle y el solu..." alt="" coords="5,80,88,107"/>
+<area shape="rect" title=" " alt="" coords="10,5,83,32"/>
+<area shape="poly" title=" " alt="" coords="48,46,49,80,44,79,45,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">leyenda</a>]</span></center></div>
+<div class="dynheader">
+Diagrama de colaboración de PuzzleTab:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab__coll__graph.png" border="0" usemap="#aPuzzleTab_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aPuzzleTab_coll__map" id="aPuzzleTab_coll__map">
+<area shape="rect" title="Componente de interfaz que actúa como puente gráfico y controlador para el motor del puzzle y el solu..." alt="" coords="54,147,136,173"/>
+<area shape="rect" title=" " alt="" coords="5,5,78,32"/>
+<area shape="poly" title=" " alt="" coords="54,45,93,146,87,147,50,48"/>
+<area shape="rect" href="classnaidu_1_1Board.html" title="Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N." alt="" coords="102,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="142,46,102,148,97,145,136,47"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">leyenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a9cf28d7926ecb6eb3fa4a7c4031f81e4" id="r_a9cf28d7926ecb6eb3fa4a7c4031f81e4"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a9cf28d7926ecb6eb3fa4a7c4031f81e4">PuzzleTab</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memitem:aa673cd721d79dc6958e6c5c79f7a38e8" id="r_aa673cd721d79dc6958e6c5c79f7a38e8"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#aa673cd721d79dc6958e6c5c79f7a38e8">~PuzzleTab</a> () override</td></tr>
+<tr class="memitem:a1f00027785e44f07330810f204be0be7" id="r_a1f00027785e44f07330810f204be0be7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1f00027785e44f07330810f204be0be7">set_boards</a> (const <a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> &amp;initial, const <a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> &amp;goal)</td></tr>
+<tr class="memdesc:a1f00027785e44f07330810f204be0be7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sincroniza y actualiza los tableros inicial y meta con el núcleo lógico.  <br /></td></tr>
+<tr class="memitem:a4532f1e18c2053e5a77a179ac9349652" id="r_a4532f1e18c2053e5a77a179ac9349652"><td class="memItemLeft"><a class="el" href="namespacenaidu_1_1evaluation.html#a00edf3a90cd05b589b2d73e444e63863">naidu::evaluation::EvaluationFn</a>&#160;</td><td class="memItemRight"><a class="el" href="#a4532f1e18c2053e5a77a179ac9349652">get_selected_evaluation</a> () const</td></tr>
+<tr class="memdesc:a4532f1e18c2053e5a77a179ac9349652"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtiene la función heurística vinculada a los métodos de evaluación del núcleo (<a class="el" href="namespacenaidu_1_1evaluation.html">naidu::evaluation</a>).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:ab90d67d4f231a0bdd9dd9a58a6986ff5" id="r_ab90d67d4f231a0bdd9dd9a58a6986ff5"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab90d67d4f231a0bdd9dd9a58a6986ff5">on_dimension_changed</a> (int value)</td></tr>
+<tr class="memitem:af92079c81348986c55c3f9025d3d1450" id="r_af92079c81348986c55c3f9025d3d1450"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af92079c81348986c55c3f9025d3d1450">on_solve_clicked</a> ()</td></tr>
+<tr class="memdesc:af92079c81348986c55c3f9025d3d1450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda <a class="el" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num-puzzle usando IDA* (Iterative Deepening A*).">naidu::solver::ida</a>.  <br /></td></tr>
+<tr class="memitem:a550a8b30e4566d4a0157c2e9df1241bb" id="r_a550a8b30e4566d4a0157c2e9df1241bb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a550a8b30e4566d4a0157c2e9df1241bb">on_stop_clicked</a> ()</td></tr>
+<tr class="memitem:aaab7b43869327f957614c225446940ac" id="r_aaab7b43869327f957614c225446940ac"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aaab7b43869327f957614c225446940ac">on_shuffle_clicked</a> ()</td></tr>
+<tr class="memdesc:aaab7b43869327f957614c225446940ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solicita al generador aleatorio del núcleo <a class="el" href="namespacenaidu_1_1randomizer.html">naidu::randomizer</a> un nuevo estado válido para el tablero.  <br /></td></tr>
+<tr class="memitem:af1b31fea90eed57085485179397854ef" id="r_af1b31fea90eed57085485179397854ef"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af1b31fea90eed57085485179397854ef">on_solver_finished</a> ()</td></tr>
+<tr class="memitem:aa1d493396cefc640b572d366048d50ee" id="r_aa1d493396cefc640b572d366048d50ee"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa1d493396cefc640b572d366048d50ee">on_solver_cancelled</a> ()</td></tr>
+<tr class="memitem:a51f1e564095a8ca105c4e5e6fa038eca" id="r_a51f1e564095a8ca105c4e5e6fa038eca"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a51f1e564095a8ca105c4e5e6fa038eca">on_anim_step</a> ()</td></tr>
+<tr class="memitem:afe132dd7b37da93ac8c818c36ad20c78" id="r_afe132dd7b37da93ac8c818c36ad20c78"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afe132dd7b37da93ac8c818c36ad20c78">on_speed_slider_changed</a> (int value)</td></tr>
+<tr class="memitem:a3794d62cea4e1f02bbf5c69e69312965" id="r_a3794d62cea4e1f02bbf5c69e69312965"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3794d62cea4e1f02bbf5c69e69312965">on_replay_animation</a> ()</td></tr>
+<tr class="memitem:a13539036477fd037d27a341d6af36f59" id="r_a13539036477fd037d27a341d6af36f59"><td class="memItemLeft">std::optional&lt; <a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a13539036477fd037d27a341d6af36f59">parse_board_input</a> (const QString &amp;text, std::uint8_t dim) const</td></tr>
+<tr class="memdesc:a13539036477fd037d27a341d6af36f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Valida y convierte la entrada de texto en una instancia de <a class="el" href="classnaidu_1_1Board.html" title="Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N.">naidu::Board</a> para el núcleo.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:ad84d9b3e52aa349b9f4f3136c928f81c" id="r_ad84d9b3e52aa349b9f4f3136c928f81c"><td class="memItemLeft">Ui::PuzzleTab *&#160;</td><td class="memItemRight"><a class="el" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a></td></tr>
+<tr class="memitem:ab18fd5487a3f3a6b093d60f167b92a15" id="r_ab18fd5487a3f3a6b093d60f167b92a15"><td class="memItemLeft">QFutureWatcher&lt; <a class="el" href="structnaidu_1_1solver_1_1Solution.html">naidu::solver::Solution</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a></td></tr>
+<tr class="memitem:a38e537e5c35ceb87abb8ddc5953ebd29" id="r_a38e537e5c35ceb87abb8ddc5953ebd29"><td class="memItemLeft">QTimer&#160;</td><td class="memItemRight"><a class="el" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a></td></tr>
+<tr class="memitem:af6d8ced1674796a92e81af62daaf4e10" id="r_af6d8ced1674796a92e81af62daaf4e10"><td class="memItemLeft"><a class="el" href="classnaidu_1_1Board.html">naidu::Board</a>&#160;</td><td class="memItemRight"><a class="el" href="#af6d8ced1674796a92e81af62daaf4e10">m_initial_board</a></td></tr>
+<tr class="memdesc:af6d8ced1674796a92e81af62daaf4e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tablero inicial gestionado por el núcleo lógico.  <br /></td></tr>
+<tr class="memitem:acd37e53f5b76c43eb0e73e52efd1df3f" id="r_acd37e53f5b76c43eb0e73e52efd1df3f"><td class="memItemLeft"><a class="el" href="classnaidu_1_1Board.html">naidu::Board</a>&#160;</td><td class="memItemRight"><a class="el" href="#acd37e53f5b76c43eb0e73e52efd1df3f">m_goal_board</a></td></tr>
+<tr class="memdesc:acd37e53f5b76c43eb0e73e52efd1df3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tablero objetivo o meta del núcleo lógico.  <br /></td></tr>
+<tr class="memitem:a074978075a2cd13500206c34cdbed78e" id="r_a074978075a2cd13500206c34cdbed78e"><td class="memItemLeft"><a class="el" href="classnaidu_1_1Board.html">naidu::Board</a>&#160;</td><td class="memItemRight"><a class="el" href="#a074978075a2cd13500206c34cdbed78e">m_current_anim_board</a></td></tr>
+<tr class="memitem:a1d4d4232471bdfeb8d9521f8eda4f010" id="r_a1d4d4232471bdfeb8d9521f8eda4f010"><td class="memItemLeft">std::vector&lt; <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1d4d4232471bdfeb8d9521f8eda4f010">m_anim_moves</a></td></tr>
+<tr class="memitem:a50870c89d7fe28b515f359885c452cb2" id="r_a50870c89d7fe28b515f359885c452cb2"><td class="memItemLeft">std::size_t&#160;</td><td class="memItemRight"><a class="el" href="#a50870c89d7fe28b515f359885c452cb2">m_anim_index</a> = 0</td></tr>
+<tr class="memitem:aa4fac1d2c93c04491ceaf428b9671b27" id="r_aa4fac1d2c93c04491ceaf428b9671b27"><td class="memItemLeft">std::chrono::high_resolution_clock::time_point&#160;</td><td class="memItemRight"><a class="el" href="#aa4fac1d2c93c04491ceaf428b9671b27">m_start_time</a></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Componente de interfaz que actúa como puente gráfico y controlador para el motor del puzzle y el solucionador IDA*. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8h_source.html#l00024">24</a> del archivo <a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a9cf28d7926ecb6eb3fa4a7c4031f81e4" name="a9cf28d7926ecb6eb3fa4a7c4031f81e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cf28d7926ecb6eb3fa4a7c4031f81e4">&#9670;&#160;</a></span>PuzzleTab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PuzzleTab::PuzzleTab </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00015">15</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   16</span>    : QWidget(parent)</div>
+<div class="line"><span class="lineno">   17</span>    , <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>(<span class="keyword">new</span> Ui::PuzzleTab)</div>
+<div class="line"><span class="lineno">   18</span>{</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;eval_combo-&gt;setCurrentIndex(-1);</div>
+<div class="line"><span class="lineno">   21</span> </div>
+<div class="line"><span class="lineno">   22</span>    connect(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;dimension_slider, &amp;QSlider::valueChanged, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#ab90d67d4f231a0bdd9dd9a58a6986ff5">PuzzleTab::on_dimension_changed</a>);</div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;dimension_value-&gt;setText(QString::number(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;dimension_slider-&gt;value()));</div>
+<div class="line"><span class="lineno">   24</span> </div>
+<div class="line"><span class="lineno">   25</span>    connect(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;speed_slider, &amp;QSlider::valueChanged, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#afe132dd7b37da93ac8c818c36ad20c78">PuzzleTab::on_speed_slider_changed</a>);</div>
+<div class="line"><span class="lineno">   26</span>    connect(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;solve_btn, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#af92079c81348986c55c3f9025d3d1450">PuzzleTab::on_solve_clicked</a>);</div>
+<div class="line"><span class="lineno">   27</span>    connect(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;stop_btn, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#a550a8b30e4566d4a0157c2e9df1241bb">PuzzleTab::on_stop_clicked</a>);</div>
+<div class="line"><span class="lineno">   28</span>    connect(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;shuffle_btn, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#aaab7b43869327f957614c225446940ac">PuzzleTab::on_shuffle_clicked</a>);</div>
+<div class="line"><span class="lineno">   29</span>    connect(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;replay_btn, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#a3794d62cea4e1f02bbf5c69e69312965">PuzzleTab::on_replay_animation</a>);</div>
+<div class="line"><span class="lineno">   30</span> </div>
+<div class="line"><span class="lineno">   31</span>    connect(&amp;<a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>, &amp;QFutureWatcher&lt;naidu::solver::Solution&gt;::finished, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#af1b31fea90eed57085485179397854ef">PuzzleTab::on_solver_finished</a>);</div>
+<div class="line"><span class="lineno">   32</span>    connect(&amp;<a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>, &amp;QFutureWatcher&lt;naidu::solver::Solution&gt;::canceled, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#aa1d493396cefc640b572d366048d50ee">PuzzleTab::on_solver_cancelled</a>);</div>
+<div class="line"><span class="lineno">   33</span>    connect(&amp;<a class="code hl_variable" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>, &amp;QTimer::timeout, <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#a51f1e564095a8ca105c4e5e6fa038eca">PuzzleTab::on_anim_step</a>);</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>    std::uint8_t default_dim = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;dimension_slider-&gt;value());</div>
+<div class="line"><span class="lineno">   36</span>    naidu::Board default_board(default_dim);</div>
+<div class="line"><span class="lineno">   37</span>    <a class="code hl_variable" href="#af6d8ced1674796a92e81af62daaf4e10">m_initial_board</a> = default_board;</div>
+<div class="line"><span class="lineno">   38</span>    <a class="code hl_variable" href="#acd37e53f5b76c43eb0e73e52efd1df3f">m_goal_board</a> = default_board;</div>
+<div class="line"><span class="lineno">   39</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;board_view-&gt;set_board(<a class="code hl_variable" href="#af6d8ced1674796a92e81af62daaf4e10">m_initial_board</a>);</div>
+<div class="line"><span class="lineno">   40</span>}</div>
+<div class="ttc" id="aclassPuzzleTab_html_a3794d62cea4e1f02bbf5c69e69312965"><div class="ttname"><a href="#a3794d62cea4e1f02bbf5c69e69312965">PuzzleTab::on_replay_animation</a></div><div class="ttdeci">void on_replay_animation()</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00269">puzzle_tab.cpp:269</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a38e537e5c35ceb87abb8ddc5953ebd29"><div class="ttname"><a href="#a38e537e5c35ceb87abb8ddc5953ebd29">PuzzleTab::m_anim_timer</a></div><div class="ttdeci">QTimer m_anim_timer</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8h_source.html#l00031">puzzle_tab.h:31</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a51f1e564095a8ca105c4e5e6fa038eca"><div class="ttname"><a href="#a51f1e564095a8ca105c4e5e6fa038eca">PuzzleTab::on_anim_step</a></div><div class="ttdeci">void on_anim_step()</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00289">puzzle_tab.cpp:289</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a550a8b30e4566d4a0157c2e9df1241bb"><div class="ttname"><a href="#a550a8b30e4566d4a0157c2e9df1241bb">PuzzleTab::on_stop_clicked</a></div><div class="ttdeci">void on_stop_clicked()</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00254">puzzle_tab.cpp:254</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_aa1d493396cefc640b572d366048d50ee"><div class="ttname"><a href="#aa1d493396cefc640b572d366048d50ee">PuzzleTab::on_solver_cancelled</a></div><div class="ttdeci">void on_solver_cancelled()</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00263">puzzle_tab.cpp:263</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_aaab7b43869327f957614c225446940ac"><div class="ttname"><a href="#aaab7b43869327f957614c225446940ac">PuzzleTab::on_shuffle_clicked</a></div><div class="ttdeci">void on_shuffle_clicked()</div><div class="ttdoc">Solicita al generador aleatorio del núcleo naidu::randomizer un nuevo estado válido para el tablero.</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00300">puzzle_tab.cpp:300</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_ab18fd5487a3f3a6b093d60f167b92a15"><div class="ttname"><a href="#ab18fd5487a3f3a6b093d60f167b92a15">PuzzleTab::m_solver_watcher</a></div><div class="ttdeci">QFutureWatcher&lt; naidu::solver::Solution &gt; m_solver_watcher</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8h_source.html#l00030">puzzle_tab.h:30</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_ab90d67d4f231a0bdd9dd9a58a6986ff5"><div class="ttname"><a href="#ab90d67d4f231a0bdd9dd9a58a6986ff5">PuzzleTab::on_dimension_changed</a></div><div class="ttdeci">void on_dimension_changed(int value)</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00079">puzzle_tab.cpp:79</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_acd37e53f5b76c43eb0e73e52efd1df3f"><div class="ttname"><a href="#acd37e53f5b76c43eb0e73e52efd1df3f">PuzzleTab::m_goal_board</a></div><div class="ttdeci">naidu::Board m_goal_board</div><div class="ttdoc">Tablero objetivo o meta del núcleo lógico.</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8h_source.html#l00036">puzzle_tab.h:36</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_ad84d9b3e52aa349b9f4f3136c928f81c"><div class="ttname"><a href="#ad84d9b3e52aa349b9f4f3136c928f81c">PuzzleTab::m_ui</a></div><div class="ttdeci">Ui::PuzzleTab * m_ui</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8h_source.html#l00028">puzzle_tab.h:28</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_af1b31fea90eed57085485179397854ef"><div class="ttname"><a href="#af1b31fea90eed57085485179397854ef">PuzzleTab::on_solver_finished</a></div><div class="ttdeci">void on_solver_finished()</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00212">puzzle_tab.cpp:212</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_af6d8ced1674796a92e81af62daaf4e10"><div class="ttname"><a href="#af6d8ced1674796a92e81af62daaf4e10">PuzzleTab::m_initial_board</a></div><div class="ttdeci">naidu::Board m_initial_board</div><div class="ttdoc">Tablero inicial gestionado por el núcleo lógico.</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8h_source.html#l00034">puzzle_tab.h:34</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_af92079c81348986c55c3f9025d3d1450"><div class="ttname"><a href="#af92079c81348986c55c3f9025d3d1450">PuzzleTab::on_solve_clicked</a></div><div class="ttdeci">void on_solve_clicked()</div><div class="ttdoc">Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda naidu::solver...</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00123">puzzle_tab.cpp:123</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_afe132dd7b37da93ac8c818c36ad20c78"><div class="ttname"><a href="#afe132dd7b37da93ac8c818c36ad20c78">PuzzleTab::on_speed_slider_changed</a></div><div class="ttdeci">void on_speed_slider_changed(int value)</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00087">puzzle_tab.cpp:87</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="puzzle__tab_8h_source.html#l00031">m_anim_timer</a>, <a class="el" href="puzzle__tab_8h_source.html#l00036">m_goal_board</a>, <a class="el" href="puzzle__tab_8h_source.html#l00034">m_initial_board</a>, <a class="el" href="puzzle__tab_8h_source.html#l00030">m_solver_watcher</a>, <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00289">on_anim_step()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00079">on_dimension_changed()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00269">on_replay_animation()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00300">on_shuffle_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00123">on_solve_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00263">on_solver_cancelled()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00212">on_solver_finished()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00087">on_speed_slider_changed()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00254">on_stop_clicked()</a> y <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_a9cf28d7926ecb6eb3fa4a7c4031f81e4_cgraph.png" border="0" usemap="#aclassPuzzleTab_a9cf28d7926ecb6eb3fa4a7c4031f81e4_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_a9cf28d7926ecb6eb3fa4a7c4031f81e4_cgraph" id="aclassPuzzleTab_a9cf28d7926ecb6eb3fa4a7c4031f81e4_cgraph">
+<area shape="rect" title=" " alt="" coords="5,261,157,288"/>
+<area shape="poly" title=" " alt="" coords="45,262,39,253,44,243,58,237,81,235,106,237,120,245,116,247,104,242,81,240,59,242,47,247,44,252,50,260"/>
+<area shape="rect" href="classPuzzleTab.html#a51f1e564095a8ca105c4e5e6fa038eca" title=" " alt="" coords="205,11,376,37"/>
+<area shape="poly" title=" " alt="" coords="83,260,96,219,120,162,155,100,177,72,203,47,212,43,209,47,206,51,181,76,159,103,124,164,101,221,88,262"/>
+<area shape="rect" href="classPuzzleTab.html#ab90d67d4f231a0bdd9dd9a58a6986ff5" title=" " alt="" coords="205,61,376,104"/>
+<area shape="poly" title=" " alt="" coords="87,260,130,191,164,150,203,114,212,110,208,114,206,118,168,154,135,194,92,262"/>
+<area shape="rect" href="classPuzzleTab.html#a3794d62cea4e1f02bbf5c69e69312965" title=" " alt="" coords="433,205,579,248"/>
+<area shape="poly" title=" " alt="" coords="156,268,261,259,376,247,420,242,415,244,376,252,261,264,158,273"/>
+<area shape="rect" href="classPuzzleTab.html#aaab7b43869327f957614c225446940ac" title="Solicita al generador aleatorio del núcleo naidu::randomizer un nuevo estado válido para el tablero." alt="" coords="216,128,365,171"/>
+<area shape="poly" title=" " alt="" coords="96,259,143,221,203,180,216,176,212,180,206,185,146,225,100,262"/>
+<area shape="rect" href="classPuzzleTab.html#af92079c81348986c55c3f9025d3d1450" title="Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda naidu::solver..." alt="" coords="219,379,362,421"/>
+<area shape="poly" title=" " alt="" coords="98,286,146,324,206,364,217,371,212,372,203,369,143,328,98,291"/>
+<area shape="rect" href="classPuzzleTab.html#aa1d493396cefc640b572d366048d50ee" title=" " alt="" coords="217,312,364,355"/>
+<area shape="poly" title=" " alt="" coords="131,286,205,307,200,310,132,291"/>
+<area shape="rect" href="classPuzzleTab.html#af1b31fea90eed57085485179397854ef" title=" " alt="" coords="217,195,364,237"/>
+<area shape="poly" title=" " alt="" coords="130,259,204,239,201,243,133,263"/>
+<area shape="rect" href="classPuzzleTab.html#afe132dd7b37da93ac8c818c36ad20c78" title=" " alt="" coords="217,445,364,488"/>
+<area shape="poly" title=" " alt="" coords="90,286,135,355,168,396,206,431,213,437,207,437,203,435,164,399,130,358,89,291"/>
+<area shape="rect" href="classPuzzleTab.html#a550a8b30e4566d4a0157c2e9df1241bb" title=" " alt="" coords="222,512,358,555"/>
+<area shape="poly" title=" " alt="" coords="86,286,102,328,126,384,161,445,182,473,206,498,212,504,206,503,203,502,178,477,156,448,121,387,97,330,86,291"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9" title="Intenta mover el hueco en la dirección m." alt="" coords="439,11,573,37"/>
+<area shape="poly" title=" " alt="" coords="375,22,426,23,421,25,378,26"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ad7c53785d25523370f230de8777341e5" title="Comprueba si el hueco puede moverse en la dirección m." alt="" coords="636,5,799,32"/>
+<area shape="poly" title=" " alt="" coords="573,20,623,20,618,22,574,25"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a53d8e015e3658028fb0806e119746827" title="Devuelve el índice del vecino del hueco en la dirección m." alt="" coords="642,56,793,99"/>
+<area shape="poly" title=" " alt="" coords="561,35,630,54,624,55,562,40"/>
+<area shape="rect" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44" title="Genera un tablero aleatorio resoluble." alt="" coords="440,87,572,129"/>
+<area shape="poly" title=" " alt="" coords="364,133,427,122,423,125,367,137"/>
+<area shape="rect" href="classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f" title="Vista de solo lectura sobre las fichas válidas del tablero." alt="" coords="443,153,569,180"/>
+<area shape="poly" title=" " alt="" coords="365,153,430,159,425,161,366,158"/>
+<area shape="poly" title=" " alt="" coords="466,85,464,77,471,68,485,62,506,60,529,62,544,71,539,72,527,68,506,65,486,67,474,72,469,78,471,87"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="1096,345,1219,372"/>
+<area shape="poly" title=" " alt="" coords="354,419,377,431,392,443,401,455,410,465,425,474,514,507,593,532,665,548,734,555,802,552,873,539,951,515,1039,480,1071,461,1098,436,1138,387,1143,384,1102,440,1074,466,1041,485,953,520,874,544,802,557,733,560,664,553,592,537,513,512,423,478,407,469,397,458,388,447,375,436,354,424"/>
+<area shape="rect" href="classPuzzleTab.html#a4532f1e18c2053e5a77a179ac9349652" title="Obtiene la función heurística vinculada a los métodos de evaluación del núcleo (naidu::evaluation)." alt="" coords="424,275,588,317"/>
+<area shape="poly" title=" " alt="" coords="351,376,375,364,399,349,423,332,441,326,445,323,425,337,402,353,377,369,353,380"/>
+<area shape="rect" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num&#45;puzzle usando IDA* (Iterative Deepening A*)." alt="" coords="446,371,566,397"/>
+<area shape="poly" title=" " alt="" coords="362,392,433,389,428,390,363,397"/>
+<area shape="rect" href="classPuzzleTab.html#a13539036477fd037d27a341d6af36f59" title="Valida y convierte la entrada de texto en una instancia de naidu::Board para el núcleo." alt="" coords="426,421,587,464"/>
+<area shape="poly" title=" " alt="" coords="362,411,413,423,408,424,362,417"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad" title="Evaluación 1: Manhattan + fichas mal colocadas + dispersión." alt="" coords="654,156,781,199"/>
+<area shape="poly" title=" " alt="" coords="563,272,587,258,601,245,610,234,620,221,635,209,641,208,645,205,638,213,624,225,614,237,605,249,590,262,566,276"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c" title="Evaluación 2: Manhattan + fichas mal colocadas + proximidad." alt="" coords="654,247,781,289"/>
+<area shape="poly" title=" " alt="" coords="588,283,641,278,636,279,589,288"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8" title="Evaluación 3: estructura local." alt="" coords="654,337,781,380"/>
+<area shape="poly" title=" " alt="" coords="580,315,642,335,636,336,580,321"/>
+<area shape="poly" title=" " alt="" coords="677,154,676,146,682,137,696,131,718,129,740,132,755,140,750,141,739,137,717,135,698,137,686,141,681,147,682,156"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a5aa323aa12d6f0d47981caadf025a27f" title="Dispersión promedio del hueco respecto a fichas mal colocadas." alt="" coords="862,65,1025,108"/>
+<area shape="poly" title=" " alt="" coords="764,153,846,118,866,113,861,115,848,122,766,158"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a98dbc965e47e6afe68a7d482ffa677dd" title="Suma de distancias Manhattan de todas las fichas a su meta." alt="" coords="847,337,1040,380"/>
+<area shape="poly" title=" " alt="" coords="782,196,801,209,818,232,826,254,833,276,849,300,884,330,879,329,845,303,828,279,821,256,814,234,797,213,781,201"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#aa2edc1ec363b10621ca53482da223200" title="Número de fichas fuera de su meta." alt="" coords="848,156,1039,199"/>
+<area shape="poly" title=" " alt="" coords="781,175,835,177,829,178,782,180"/>
+<area shape="poly" title=" " alt="" coords="1026,105,1042,118,1060,143,1068,168,1070,193,1069,216,1069,265,1076,290,1090,316,1112,338,1107,336,1086,319,1071,292,1064,265,1064,216,1065,193,1063,169,1055,146,1038,122,1025,110"/>
+<area shape="poly" title=" " alt="" coords="903,64,901,55,908,46,922,41,943,39,966,41,982,50,976,50,965,46,943,44,923,46,911,51,906,57,908,66"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="1100,212,1214,239"/>
+<area shape="poly" title=" " alt="" coords="1017,106,1041,118,1094,158,1137,201,1131,200,1091,162,1039,122,1017,111"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac" title="Devuelve el índice lineal del hueco." alt="" coords="1088,65,1226,108"/>
+<area shape="poly" title=" " alt="" coords="1025,84,1075,86,1070,87,1026,89"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="1098,263,1217,305"/>
+<area shape="poly" title=" " alt="" coords="1025,106,1042,118,1055,135,1063,152,1068,184,1072,216,1078,232,1090,249,1092,253,1087,252,1086,252,1074,235,1067,218,1062,185,1058,153,1051,138,1038,122,1025,111"/>
+<area shape="poly" title=" " alt="" coords="1040,356,1082,358,1077,359,1041,361"/>
+<area shape="poly" title=" " alt="" coords="986,334,1038,299,1061,273,1071,261,1086,248,1094,247,1099,245,1090,253,1075,265,1065,277,1042,303,988,339"/>
+<area shape="poly" title=" " alt="" coords="1006,334,1080,311,1085,309,1008,339"/>
+<area shape="poly" title=" " alt="" coords="903,335,901,327,908,318,922,313,943,311,966,313,982,322,976,321,965,318,943,316,923,318,911,323,906,329,907,338"/>
+<area shape="poly" title=" " alt="" coords="1039,196,1088,209,1083,210,1039,201"/>
+<area shape="poly" title=" " alt="" coords="1016,197,1041,208,1066,228,1090,249,1097,255,1092,254,1086,253,1063,232,1039,213,1016,202"/>
+<area shape="poly" title=" " alt="" coords="903,154,901,146,908,137,922,131,943,129,966,132,982,140,976,140,965,137,943,135,923,137,911,141,906,147,908,157"/>
+<area shape="poly" title=" " alt="" coords="773,287,877,331,871,331,773,293"/>
+<area shape="poly" title=" " alt="" coords="764,244,846,208,866,203,861,205,848,213,766,249"/>
+<area shape="poly" title=" " alt="" coords="677,245,676,237,682,228,696,222,718,220,740,222,755,231,750,231,739,228,717,225,698,227,686,232,681,238,682,247"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a076a19f62fc59f74a485906361657a20" title="Fichas mal colocadas a Manhattan 1 de su meta." alt="" coords="865,247,1022,289"/>
+<area shape="poly" title=" " alt="" coords="781,265,852,267,847,269,782,271"/>
+<area shape="poly" title=" " alt="" coords="1011,287,1041,299,1119,338,1114,337,1039,304,1011,293"/>
+<area shape="poly" title=" " alt="" coords="1021,250,1088,239,1083,240,1023,255"/>
+<area shape="poly" title=" " alt="" coords="1022,271,1084,278,1079,279,1022,277"/>
+<area shape="poly" title=" " alt="" coords="903,245,901,237,908,228,922,222,943,220,966,222,982,231,976,231,965,228,943,225,923,227,911,232,906,238,907,247"/>
+<area shape="poly" title=" " alt="" coords="781,356,834,358,829,359,782,361"/>
+<area shape="poly" title=" " alt="" coords="677,335,676,327,682,318,696,313,718,311,740,313,755,322,750,322,739,318,717,316,698,318,686,323,681,329,682,338"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a5ee867554a720e7a9657f21048c01975" title="Número de pares adyacentes mal ordenados (desorden local)." alt="" coords="858,428,1029,471"/>
+<area shape="poly" title=" " alt="" coords="773,378,877,422,871,422,772,383"/>
+<area shape="poly" title=" " alt="" coords="995,425,1107,379,1112,378,997,430"/>
+<area shape="poly" title=" " alt="" coords="995,425,1018,410,1038,390,1050,372,1056,354,1060,319,1064,285,1072,267,1086,249,1089,249,1093,246,1090,252,1077,270,1069,286,1065,320,1061,355,1055,374,1042,394,1021,414,997,430"/>
+<area shape="poly" title=" " alt="" coords="987,425,1038,390,1062,361,1086,331,1108,316,1113,314,1090,335,1066,365,1042,394,989,430"/>
+<area shape="poly" title=" " alt="" coords="903,426,901,418,908,409,922,403,943,401,966,404,982,413,976,412,965,409,943,407,923,409,911,413,906,419,907,429"/>
+<area shape="poly" title=" " alt="" coords="470,370,464,362,468,352,483,346,506,344,531,347,546,355,541,355,530,352,506,349,484,351,472,356,469,361,475,371"/>
+<area shape="poly" title=" " alt="" coords="363,217,420,221,415,223,365,222"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_a9cf28d7926ecb6eb3fa4a7c4031f81e4_icgraph.png" border="0" usemap="#aclassPuzzleTab_a9cf28d7926ecb6eb3fa4a7c4031f81e4_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_a9cf28d7926ecb6eb3fa4a7c4031f81e4_icgraph" id="aclassPuzzleTab_a9cf28d7926ecb6eb3fa4a7c4031f81e4_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" title=" " alt="" coords="105,14,98,10,81,8,66,10,57,14,55,20,60,29,54,28,50,21,53,11,64,5,81,3,99,5,110,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa673cd721d79dc6958e6c5c79f7a38e8" name="aa673cd721d79dc6958e6c5c79f7a38e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa673cd721d79dc6958e6c5c79f7a38e8">&#9670;&#160;</a></span>~PuzzleTab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">PuzzleTab::~PuzzleTab </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00042">42</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   42</span>                      {</div>
+<div class="line"><span class="lineno">   43</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.isRunning()) {</div>
+<div class="line"><span class="lineno">   44</span>        <a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.cancel();</div>
+<div class="line"><span class="lineno">   45</span>        <a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.waitForFinished();</div>
+<div class="line"><span class="lineno">   46</span>    }</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>;</div>
+<div class="line"><span class="lineno">   48</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="puzzle__tab_8h_source.html#l00030">m_solver_watcher</a> y <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a4532f1e18c2053e5a77a179ac9349652" name="a4532f1e18c2053e5a77a179ac9349652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4532f1e18c2053e5a77a179ac9349652">&#9670;&#160;</a></span>get_selected_evaluation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacenaidu_1_1evaluation.html#a00edf3a90cd05b589b2d73e444e63863">naidu::evaluation::EvaluationFn</a> PuzzleTab::get_selected_evaluation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtiene la función heurística vinculada a los métodos de evaluación del núcleo (<a class="el" href="namespacenaidu_1_1evaluation.html">naidu::evaluation</a>). </p>
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00094">94</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>                                                                     {</div>
+<div class="line"><span class="lineno">   95</span>    <span class="keywordtype">int</span> index = <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;eval_combo-&gt;currentIndex();</div>
+<div class="line"><span class="lineno">   96</span>    <span class="keywordflow">if</span> (index == -1) <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad">naidu::evaluation::evaluation_1</a>;</div>
+<div class="line"><span class="lineno">   97</span> </div>
+<div class="line"><span class="lineno">   98</span>    <span class="keywordflow">switch</span> (index) {</div>
+<div class="line"><span class="lineno">   99</span>        <span class="keywordflow">case</span> 0: <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad">naidu::evaluation::evaluation_1</a>;</div>
+<div class="line"><span class="lineno">  100</span>        <span class="keywordflow">case</span> 1: <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c">naidu::evaluation::evaluation_2</a>;</div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">case</span> 2: <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8">naidu::evaluation::evaluation_3</a>;</div>
+<div class="line"><span class="lineno">  102</span>        <span class="keywordflow">default</span>: <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad">naidu::evaluation::evaluation_1</a>;</div>
+<div class="line"><span class="lineno">  103</span>    }</div>
+<div class="line"><span class="lineno">  104</span>}</div>
+<div class="ttc" id="anamespacenaidu_1_1evaluation_html_a8a26edc956478e7deebd54494f215b3c"><div class="ttname"><a href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c">naidu::evaluation::evaluation_2</a></div><div class="ttdeci">std::uint16_t evaluation_2(const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos, std::uint16_t g) noexcept</div><div class="ttdoc">Evaluación 2: Manhattan + fichas mal colocadas + proximidad.</div><div class="ttdef"><b>Definición</b> <a href="evaluation_8cpp_source.html#l00023">evaluation.cpp:23</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1evaluation_html_ac122c34c66431e7add2459e0008b20ad"><div class="ttname"><a href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad">naidu::evaluation::evaluation_1</a></div><div class="ttdeci">std::uint16_t evaluation_1(const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos, std::uint16_t g) noexcept</div><div class="ttdoc">Evaluación 1: Manhattan + fichas mal colocadas + dispersión.</div><div class="ttdef"><b>Definición</b> <a href="evaluation_8cpp_source.html#l00006">evaluation.cpp:6</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1evaluation_html_affdb7131eb24ddbc7a1c7c653bec86b8"><div class="ttname"><a href="namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8">naidu::evaluation::evaluation_3</a></div><div class="ttdeci">std::uint16_t evaluation_3(const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos, std::uint16_t g) noexcept</div><div class="ttdoc">Evaluación 3: estructura local.</div><div class="ttdef"><b>Definición</b> <a href="evaluation_8cpp_source.html#l00037">evaluation.cpp:37</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="evaluation_8cpp_source.html#l00006">naidu::evaluation::evaluation_1()</a>, <a class="el" href="evaluation_8cpp_source.html#l00023">naidu::evaluation::evaluation_2()</a>, <a class="el" href="evaluation_8cpp_source.html#l00037">naidu::evaluation::evaluation_3()</a> y <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00123">on_solve_clicked()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_a4532f1e18c2053e5a77a179ac9349652_cgraph.png" border="0" usemap="#aclassPuzzleTab_a4532f1e18c2053e5a77a179ac9349652_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_a4532f1e18c2053e5a77a179ac9349652_cgraph" id="aclassPuzzleTab_a4532f1e18c2053e5a77a179ac9349652_cgraph">
+<area shape="rect" title="Obtiene la función heurística vinculada a los métodos de evaluación del núcleo (naidu::evaluation)." alt="" coords="5,211,170,253"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad" title="Evaluación 1: Manhattan + fichas mal colocadas + dispersión." alt="" coords="218,120,345,163"/>
+<area shape="poly" title=" " alt="" coords="134,208,222,167,219,172,137,212"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c" title="Evaluación 2: Manhattan + fichas mal colocadas + proximidad." alt="" coords="218,211,345,253"/>
+<area shape="poly" title=" " alt="" coords="169,230,204,231,200,233,171,234"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8" title="Evaluación 3: estructura local." alt="" coords="218,301,345,344"/>
+<area shape="poly" title=" " alt="" coords="135,251,223,293,218,296,135,257"/>
+<area shape="poly" title=" " alt="" coords="244,119,243,110,249,101,262,95,281,93,302,96,316,104,311,105,301,101,281,99,263,101,252,105,248,111,249,120"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a5aa323aa12d6f0d47981caadf025a27f" title="Dispersión promedio del hueco respecto a fichas mal colocadas." alt="" coords="408,29,571,72"/>
+<area shape="poly" title=" " alt="" coords="320,117,392,82,410,77,405,79,394,86,323,122"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a98dbc965e47e6afe68a7d482ffa677dd" title="Suma de distancias Manhattan de todas las fichas a su meta." alt="" coords="393,211,586,253"/>
+<area shape="poly" title=" " alt="" coords="333,161,428,203,422,205,332,166"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#aa2edc1ec363b10621ca53482da223200" title="Número de fichas fuera de su meta." alt="" coords="394,120,585,163"/>
+<area shape="poly" title=" " alt="" coords="345,139,381,140,376,142,346,144"/>
+<area shape="poly" title=" " alt="" coords="450,28,448,19,455,10,469,5,490,3,512,5,527,13,522,14,511,10,490,8,470,10,458,15,453,21,455,30"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="647,176,760,203"/>
+<area shape="poly" title=" " alt="" coords="564,70,588,82,641,122,683,165,678,164,637,126,585,86,564,75"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="642,301,765,328"/>
+<area shape="poly" title=" " alt="" coords="572,69,588,82,606,108,614,133,616,157,615,181,614,230,621,254,636,280,649,294,644,292,632,283,616,256,609,231,609,181,611,157,609,134,601,110,584,86,572,75"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac" title="Devuelve el índice lineal del hueco." alt="" coords="634,29,773,72"/>
+<area shape="poly" title=" " alt="" coords="571,48,621,50,616,52,572,53"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="644,227,763,269"/>
+<area shape="poly" title=" " alt="" coords="571,70,588,82,602,99,609,116,614,148,618,180,625,196,636,213,639,217,634,216,632,216,620,199,613,182,609,149,604,117,597,102,584,86,571,75"/>
+<area shape="poly" title=" " alt="" coords="586,210,634,203,629,204,587,215"/>
+<area shape="poly" title=" " alt="" coords="555,251,587,263,660,295,654,295,585,268,555,256"/>
+<area shape="poly" title=" " alt="" coords="586,237,631,242,626,243,587,242"/>
+<area shape="poly" title=" " alt="" coords="450,209,448,201,455,192,469,186,490,184,512,186,527,195,522,195,511,192,490,189,470,191,458,196,453,202,455,211"/>
+<area shape="poly" title=" " alt="" coords="585,160,635,173,629,174,586,165"/>
+<area shape="poly" title=" " alt="" coords="563,160,588,172,612,192,636,213,644,219,638,218,633,217,609,196,585,177,562,166"/>
+<area shape="poly" title=" " alt="" coords="450,118,448,110,455,101,469,95,490,93,512,96,527,104,522,105,511,101,490,99,470,101,458,105,453,111,455,120"/>
+<area shape="poly" title=" " alt="" coords="345,229,380,231,375,233,346,235"/>
+<area shape="poly" title=" " alt="" coords="320,208,392,172,410,167,405,170,394,177,323,213"/>
+<area shape="poly" title=" " alt="" coords="244,209,243,201,249,192,262,186,281,184,302,186,316,195,311,195,301,192,281,189,263,191,252,196,248,202,249,211"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a076a19f62fc59f74a485906361657a20" title="Fichas mal colocadas a Manhattan 1 de su meta." alt="" coords="412,301,568,344"/>
+<area shape="poly" title=" " alt="" coords="333,251,428,294,422,295,332,257"/>
+<area shape="poly" title=" " alt="" coords="532,298,585,263,608,237,617,225,633,212,640,211,645,209,636,217,621,229,612,241,588,267,534,303"/>
+<area shape="poly" title=" " alt="" coords="568,317,629,317,623,318,569,322"/>
+<area shape="poly" title=" " alt="" coords="552,298,627,275,632,273,554,303"/>
+<area shape="poly" title=" " alt="" coords="450,299,448,291,455,282,469,277,490,275,512,277,527,286,522,286,511,282,490,280,470,282,458,287,453,293,455,302"/>
+<area shape="poly" title=" " alt="" coords="320,298,392,263,410,258,405,260,394,268,322,303"/>
+<area shape="poly" title=" " alt="" coords="244,300,243,291,249,282,262,277,281,275,302,277,316,286,311,286,301,282,281,280,263,282,252,287,248,293,249,302"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a5ee867554a720e7a9657f21048c01975" title="Número de pares adyacentes mal ordenados (desorden local)." alt="" coords="404,392,575,435"/>
+<area shape="poly" title=" " alt="" coords="333,342,428,385,422,386,332,347"/>
+<area shape="poly" title=" " alt="" coords="541,389,564,374,584,354,596,336,602,318,606,283,611,249,618,231,632,213,635,213,640,210,636,216,623,234,616,250,611,284,607,319,601,338,588,358,567,378,543,394"/>
+<area shape="poly" title=" " alt="" coords="537,389,656,336,661,334,539,394"/>
+<area shape="poly" title=" " alt="" coords="535,389,560,373,584,354,599,337,608,321,617,305,632,287,646,279,651,277,636,291,621,308,613,324,604,340,588,358,563,377,537,394"/>
+<area shape="poly" title=" " alt="" coords="450,390,448,382,455,373,469,367,490,365,512,368,527,377,522,376,511,373,490,371,470,373,458,377,453,383,455,393"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_a4532f1e18c2053e5a77a179ac9349652_icgraph.png" border="0" usemap="#aclassPuzzleTab_a4532f1e18c2053e5a77a179ac9349652_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_a4532f1e18c2053e5a77a179ac9349652_icgraph" id="aclassPuzzleTab_a4532f1e18c2053e5a77a179ac9349652_icgraph">
+<area shape="rect" title="Obtiene la función heurística vinculada a los métodos de evaluación del núcleo (naidu::evaluation)." alt="" coords="395,21,559,64"/>
+<area shape="rect" href="classPuzzleTab.html#af92079c81348986c55c3f9025d3d1450" title="Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda naidu::solver..." alt="" coords="205,21,347,64"/>
+<area shape="poly" title=" " alt="" coords="377,43,347,45,347,40,382,43"/>
+<area shape="rect" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" title=" " alt="" coords="186,43,157,45,157,40,191,42"/>
+<area shape="poly" title=" " alt="" coords="113,14,103,10,81,8,61,10,50,15,47,20,53,29,47,29,42,21,46,11,59,5,81,3,104,5,118,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a51f1e564095a8ca105c4e5e6fa038eca" name="a51f1e564095a8ca105c4e5e6fa038eca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51f1e564095a8ca105c4e5e6fa038eca">&#9670;&#160;</a></span>on_anim_step()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleTab::on_anim_step </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00289">289</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  289</span>                             {</div>
+<div class="line"><span class="lineno">  290</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a50870c89d7fe28b515f359885c452cb2">m_anim_index</a> &lt; <a class="code hl_variable" href="#a1d4d4232471bdfeb8d9521f8eda4f010">m_anim_moves</a>.size()) {</div>
+<div class="line"><span class="lineno">  291</span>        <a class="code hl_variable" href="#a074978075a2cd13500206c34cdbed78e">m_current_anim_board</a>.<a class="code hl_function" href="classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9">move</a>(<a class="code hl_variable" href="#a1d4d4232471bdfeb8d9521f8eda4f010">m_anim_moves</a>[<a class="code hl_variable" href="#a50870c89d7fe28b515f359885c452cb2">m_anim_index</a>]);</div>
+<div class="line"><span class="lineno">  292</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;board_view-&gt;set_board(<a class="code hl_variable" href="#a074978075a2cd13500206c34cdbed78e">m_current_anim_board</a>);</div>
+<div class="line"><span class="lineno">  293</span>        ++<a class="code hl_variable" href="#a50870c89d7fe28b515f359885c452cb2">m_anim_index</a>;</div>
+<div class="line"><span class="lineno">  294</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  295</span>        <a class="code hl_variable" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>.stop();</div>
+<div class="line"><span class="lineno">  296</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;status_label-&gt;setText(<span class="stringliteral">&quot;¡Animación completada!&quot;</span>);</div>
+<div class="line"><span class="lineno">  297</span>    }</div>
+<div class="line"><span class="lineno">  298</span>}</div>
+<div class="ttc" id="aclassPuzzleTab_html_a074978075a2cd13500206c34cdbed78e"><div class="ttname"><a href="#a074978075a2cd13500206c34cdbed78e">PuzzleTab::m_current_anim_board</a></div><div class="ttdeci">naidu::Board m_current_anim_board</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8h_source.html#l00037">puzzle_tab.h:37</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a1d4d4232471bdfeb8d9521f8eda4f010"><div class="ttname"><a href="#a1d4d4232471bdfeb8d9521f8eda4f010">PuzzleTab::m_anim_moves</a></div><div class="ttdeci">std::vector&lt; naidu::Direction &gt; m_anim_moves</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8h_source.html#l00038">puzzle_tab.h:38</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a50870c89d7fe28b515f359885c452cb2"><div class="ttname"><a href="#a50870c89d7fe28b515f359885c452cb2">PuzzleTab::m_anim_index</a></div><div class="ttdeci">std::size_t m_anim_index</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8h_source.html#l00039">puzzle_tab.h:39</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_a1f90e96f7037c77e87b72788fc895af9"><div class="ttname"><a href="classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9">naidu::Board::move</a></div><div class="ttdeci">bool move(Direction m)</div><div class="ttdoc">Intenta mover el hueco en la dirección m.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00148">board.cpp:148</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="puzzle__tab_8h_source.html#l00039">m_anim_index</a>, <a class="el" href="puzzle__tab_8h_source.html#l00038">m_anim_moves</a>, <a class="el" href="puzzle__tab_8h_source.html#l00031">m_anim_timer</a>, <a class="el" href="puzzle__tab_8h_source.html#l00037">m_current_anim_board</a>, <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a> y <a class="el" href="board_8cpp_source.html#l00148">naidu::Board::move()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_a51f1e564095a8ca105c4e5e6fa038eca_cgraph.png" border="0" usemap="#aclassPuzzleTab_a51f1e564095a8ca105c4e5e6fa038eca_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_a51f1e564095a8ca105c4e5e6fa038eca_cgraph" id="aclassPuzzleTab_a51f1e564095a8ca105c4e5e6fa038eca_cgraph">
+<area shape="rect" title=" " alt="" coords="5,35,177,61"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9" title="Intenta mover el hueco en la dirección m." alt="" coords="225,35,359,61"/>
+<area shape="poly" title=" " alt="" coords="177,45,212,48,206,48,177,51"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ad7c53785d25523370f230de8777341e5" title="Comprueba si el hueco puede moverse en la dirección m." alt="" coords="407,5,569,32"/>
+<area shape="poly" title=" " alt="" coords="359,35,394,33,389,33,360,41"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a53d8e015e3658028fb0806e119746827" title="Devuelve el índice del vecino del hueco en la dirección m." alt="" coords="412,56,564,99"/>
+<area shape="poly" title=" " alt="" coords="359,55,400,64,395,64,359,61"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_a51f1e564095a8ca105c4e5e6fa038eca_icgraph.png" border="0" usemap="#aclassPuzzleTab_a51f1e564095a8ca105c4e5e6fa038eca_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_a51f1e564095a8ca105c4e5e6fa038eca_icgraph" id="aclassPuzzleTab_a51f1e564095a8ca105c4e5e6fa038eca_icgraph">
+<area shape="rect" title=" " alt="" coords="205,29,376,56"/>
+<area shape="rect" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" title=" " alt="" coords="187,43,157,45,157,40,192,43"/>
+<area shape="poly" title=" " alt="" coords="115,14,104,10,81,8,59,10,47,15,44,20,50,29,45,29,39,21,44,11,58,5,81,3,106,5,121,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab90d67d4f231a0bdd9dd9a58a6986ff5" name="ab90d67d4f231a0bdd9dd9a58a6986ff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90d67d4f231a0bdd9dd9a58a6986ff5">&#9670;&#160;</a></span>on_dimension_changed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleTab::on_dimension_changed </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00079">79</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   79</span>                                              {</div>
+<div class="line"><span class="lineno">   80</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;dimension_value-&gt;setText(QString::number(value));</div>
+<div class="line"><span class="lineno">   81</span>    naidu::Board default_board(<span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(value));</div>
+<div class="line"><span class="lineno">   82</span>    <a class="code hl_variable" href="#af6d8ced1674796a92e81af62daaf4e10">m_initial_board</a> = default_board;</div>
+<div class="line"><span class="lineno">   83</span>    <a class="code hl_variable" href="#acd37e53f5b76c43eb0e73e52efd1df3f">m_goal_board</a> = default_board;</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;board_view-&gt;set_board(default_board);</div>
+<div class="line"><span class="lineno">   85</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="puzzle__tab_8h_source.html#l00036">m_goal_board</a>, <a class="el" href="puzzle__tab_8h_source.html#l00034">m_initial_board</a> y <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_ab90d67d4f231a0bdd9dd9a58a6986ff5_icgraph.png" border="0" usemap="#aclassPuzzleTab_ab90d67d4f231a0bdd9dd9a58a6986ff5_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_ab90d67d4f231a0bdd9dd9a58a6986ff5_icgraph" id="aclassPuzzleTab_ab90d67d4f231a0bdd9dd9a58a6986ff5_icgraph">
+<area shape="rect" title=" " alt="" coords="205,21,375,64"/>
+<area shape="rect" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" title=" " alt="" coords="186,43,157,45,157,40,192,42"/>
+<area shape="poly" title=" " alt="" coords="115,14,104,10,81,8,59,10,47,15,45,20,50,29,45,29,39,21,44,11,58,5,81,3,106,5,121,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3794d62cea4e1f02bbf5c69e69312965" name="a3794d62cea4e1f02bbf5c69e69312965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3794d62cea4e1f02bbf5c69e69312965">&#9670;&#160;</a></span>on_replay_animation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleTab::on_replay_animation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00269">269</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  269</span>                                    {</div>
+<div class="line"><span class="lineno">  270</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a1d4d4232471bdfeb8d9521f8eda4f010">m_anim_moves</a>.empty() &amp;&amp; <a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.isFinished()) {</div>
+<div class="line"><span class="lineno">  271</span>        <span class="keyword">auto</span> solution = <a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.result();</div>
+<div class="line"><span class="lineno">  272</span>        <a class="code hl_variable" href="#a1d4d4232471bdfeb8d9521f8eda4f010">m_anim_moves</a> = solution.moves;</div>
+<div class="line"><span class="lineno">  273</span>    }</div>
+<div class="line"><span class="lineno">  274</span> </div>
+<div class="line"><span class="lineno">  275</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a1d4d4232471bdfeb8d9521f8eda4f010">m_anim_moves</a>.empty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  276</span> </div>
+<div class="line"><span class="lineno">  277</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>.isActive()) {</div>
+<div class="line"><span class="lineno">  278</span>        <a class="code hl_variable" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>.stop();</div>
+<div class="line"><span class="lineno">  279</span>    }</div>
+<div class="line"><span class="lineno">  280</span> </div>
+<div class="line"><span class="lineno">  281</span>    <a class="code hl_variable" href="#a074978075a2cd13500206c34cdbed78e">m_current_anim_board</a> = <a class="code hl_variable" href="#af6d8ced1674796a92e81af62daaf4e10">m_initial_board</a>;</div>
+<div class="line"><span class="lineno">  282</span>    <a class="code hl_variable" href="#a50870c89d7fe28b515f359885c452cb2">m_anim_index</a> = 0;</div>
+<div class="line"><span class="lineno">  283</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;board_view-&gt;set_board(<a class="code hl_variable" href="#a074978075a2cd13500206c34cdbed78e">m_current_anim_board</a>);</div>
+<div class="line"><span class="lineno">  284</span> </div>
+<div class="line"><span class="lineno">  285</span>    <a class="code hl_variable" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>.start(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;speed_slider-&gt;value());</div>
+<div class="line"><span class="lineno">  286</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;status_label-&gt;setText(<span class="stringliteral">&quot;Animando solución...&quot;</span>);</div>
+<div class="line"><span class="lineno">  287</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="puzzle__tab_8h_source.html#l00039">m_anim_index</a>, <a class="el" href="puzzle__tab_8h_source.html#l00038">m_anim_moves</a>, <a class="el" href="puzzle__tab_8h_source.html#l00031">m_anim_timer</a>, <a class="el" href="puzzle__tab_8h_source.html#l00037">m_current_anim_board</a>, <a class="el" href="puzzle__tab_8h_source.html#l00034">m_initial_board</a>, <a class="el" href="puzzle__tab_8h_source.html#l00030">m_solver_watcher</a> y <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00212">on_solver_finished()</a> y <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_a3794d62cea4e1f02bbf5c69e69312965_icgraph.png" border="0" usemap="#aclassPuzzleTab_a3794d62cea4e1f02bbf5c69e69312965_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_a3794d62cea4e1f02bbf5c69e69312965_icgraph" id="aclassPuzzleTab_a3794d62cea4e1f02bbf5c69e69312965_icgraph">
+<area shape="rect" title=" " alt="" coords="399,35,545,77"/>
+<area shape="rect" href="classPuzzleTab.html#af1b31fea90eed57085485179397854ef" title=" " alt="" coords="205,5,351,48"/>
+<area shape="poly" title=" " alt="" coords="381,43,351,40,351,35,386,43"/>
+<area shape="rect" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,43,157,69"/>
+<area shape="poly" title=" " alt="" coords="381,59,351,63,205,63,157,61,157,56,205,57,351,57,386,59"/>
+<area shape="poly" title=" " alt="" coords="187,40,158,47,157,42,192,39"/>
+<area shape="poly" title=" " alt="" coords="113,28,103,24,81,21,60,23,49,28,47,33,52,42,47,42,42,34,46,24,59,18,81,16,105,19,118,27"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaab7b43869327f957614c225446940ac" name="aaab7b43869327f957614c225446940ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaab7b43869327f957614c225446940ac">&#9670;&#160;</a></span>on_shuffle_clicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleTab::on_shuffle_clicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Solicita al generador aleatorio del núcleo <a class="el" href="namespacenaidu_1_1randomizer.html">naidu::randomizer</a> un nuevo estado válido para el tablero. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00300">300</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  300</span>                                   {</div>
+<div class="line"><span class="lineno">  301</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>.isActive()) {</div>
+<div class="line"><span class="lineno">  302</span>        <a class="code hl_variable" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>.stop();</div>
+<div class="line"><span class="lineno">  303</span>    }</div>
+<div class="line"><span class="lineno">  304</span> </div>
+<div class="line"><span class="lineno">  305</span>    std::uint8_t dim = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;dimension_slider-&gt;value());</div>
+<div class="line"><span class="lineno">  306</span> </div>
+<div class="line"><span class="lineno">  307</span>    naidu::randomizer::Config rand_config;</div>
+<div class="line"><span class="lineno">  308</span>    rand_config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#a2424ba488d6884baa0607b19f1f6d43b">moves</a> = <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;moves_spin-&gt;value());</div>
+<div class="line"><span class="lineno">  309</span>    rand_config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#ac7eeb9dad90f2b1e42515903eb2e67f7">max_attempts</a> = <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;attempts_spin-&gt;value());</div>
+<div class="line"><span class="lineno">  310</span>    rand_config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#a2e2c83fb8e19ea2b77dc9bd4206aa218">avoid_revisits</a> = <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;avoid_revisits_rand_check-&gt;isChecked();</div>
+<div class="line"><span class="lineno">  311</span> </div>
+<div class="line"><span class="lineno">  312</span>    std::random_device rd;</div>
+<div class="line"><span class="lineno">  313</span>    std::mt19937 rng(rd());</div>
+<div class="line"><span class="lineno">  314</span> </div>
+<div class="line"><span class="lineno">  315</span>    naidu::Board shuffled = <a class="code hl_function" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44">naidu::randomizer::generate</a>(dim, rand_config, rng);</div>
+<div class="line"><span class="lineno">  316</span>    <a class="code hl_variable" href="#af6d8ced1674796a92e81af62daaf4e10">m_initial_board</a> = shuffled;</div>
+<div class="line"><span class="lineno">  317</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;board_view-&gt;set_board(shuffled);</div>
+<div class="line"><span class="lineno">  318</span> </div>
+<div class="line"><span class="lineno">  319</span>    QString tiles_str;</div>
+<div class="line"><span class="lineno">  320</span>    <span class="keyword">auto</span> tiles = shuffled.<a class="code hl_function" href="classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f">tiles</a>();</div>
+<div class="line"><span class="lineno">  321</span>    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; tiles.size(); ++i) {</div>
+<div class="line"><span class="lineno">  322</span>        tiles_str += QString::number(tiles[i]);</div>
+<div class="line"><span class="lineno">  323</span>        <span class="keywordflow">if</span> (i + 1 &lt; tiles.size()) tiles_str += <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><span class="lineno">  324</span>    }</div>
+<div class="line"><span class="lineno">  325</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;initial_input-&gt;setText(tiles_str);</div>
+<div class="line"><span class="lineno">  326</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;status_label-&gt;setText(<span class="stringliteral">&quot;Tablero mezclado aleatoriamente.&quot;</span>);</div>
+<div class="line"><span class="lineno">  327</span>}</div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_acfa91c67a9c781e336100d285b8a0a5f"><div class="ttname"><a href="classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f">naidu::Board::tiles</a></div><div class="ttdeci">std::span&lt; const std::uint8_t &gt; tiles() const noexcept</div><div class="ttdoc">Vista de solo lectura sobre las fichas válidas del tablero.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00122">board.cpp:122</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1randomizer_html_a0b188bc9bd11f1f8a32fdd9bbee10d44"><div class="ttname"><a href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44">naidu::randomizer::generate</a></div><div class="ttdeci">Board generate(std::uint8_t dim, const Config &amp;config, std::mt19937 &amp;rng)</div><div class="ttdoc">Genera un tablero aleatorio resoluble.</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8cpp_source.html#l00096">randomizer.cpp:96</a></div></div>
+<div class="ttc" id="astructnaidu_1_1randomizer_1_1Config_html_a2424ba488d6884baa0607b19f1f6d43b"><div class="ttname"><a href="structnaidu_1_1randomizer_1_1Config.html#a2424ba488d6884baa0607b19f1f6d43b">naidu::randomizer::Config::moves</a></div><div class="ttdeci">std::uint32_t moves</div><div class="ttdoc">Número de movimientos a aplicar (0 = dim² · 20).</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8hpp_source.html#l00015">randomizer.hpp:15</a></div></div>
+<div class="ttc" id="astructnaidu_1_1randomizer_1_1Config_html_a2e2c83fb8e19ea2b77dc9bd4206aa218"><div class="ttname"><a href="structnaidu_1_1randomizer_1_1Config.html#a2e2c83fb8e19ea2b77dc9bd4206aa218">naidu::randomizer::Config::avoid_revisits</a></div><div class="ttdeci">bool avoid_revisits</div><div class="ttdoc">Si true, evita repetir estados en el walk.</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8hpp_source.html#l00016">randomizer.hpp:16</a></div></div>
+<div class="ttc" id="astructnaidu_1_1randomizer_1_1Config_html_ac7eeb9dad90f2b1e42515903eb2e67f7"><div class="ttname"><a href="structnaidu_1_1randomizer_1_1Config.html#ac7eeb9dad90f2b1e42515903eb2e67f7">naidu::randomizer::Config::max_attempts</a></div><div class="ttdeci">std::uint32_t max_attempts</div><div class="ttdoc">Límite de intentos totales (0 = moves · 10).</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8hpp_source.html#l00017">randomizer.hpp:17</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="randomizer_8hpp_source.html#l00016">naidu::randomizer::Config::avoid_revisits</a>, <a class="el" href="randomizer_8cpp_source.html#l00096">naidu::randomizer::generate()</a>, <a class="el" href="puzzle__tab_8h_source.html#l00031">m_anim_timer</a>, <a class="el" href="puzzle__tab_8h_source.html#l00034">m_initial_board</a>, <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a>, <a class="el" href="randomizer_8hpp_source.html#l00017">naidu::randomizer::Config::max_attempts</a>, <a class="el" href="randomizer_8hpp_source.html#l00015">naidu::randomizer::Config::moves</a> y <a class="el" href="board_8cpp_source.html#l00122">naidu::Board::tiles()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_aaab7b43869327f957614c225446940ac_cgraph.png" border="0" usemap="#aclassPuzzleTab_aaab7b43869327f957614c225446940ac_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_aaab7b43869327f957614c225446940ac_cgraph" id="aclassPuzzleTab_aaab7b43869327f957614c225446940ac_cgraph">
+<area shape="rect" title="Solicita al generador aleatorio del núcleo naidu::randomizer un nuevo estado válido para el tablero." alt="" coords="5,59,155,101"/>
+<area shape="rect" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44" title="Genera un tablero aleatorio resoluble." alt="" coords="203,29,335,72"/>
+<area shape="poly" title=" " alt="" coords="154,66,190,63,185,64,156,71"/>
+<area shape="rect" href="classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f" title="Vista de solo lectura sobre las fichas válidas del tablero." alt="" coords="206,96,332,123"/>
+<area shape="poly" title=" " alt="" coords="155,89,193,97,188,97,155,94"/>
+<area shape="poly" title=" " alt="" coords="233,28,231,19,237,10,250,5,269,3,289,5,303,14,298,14,288,10,269,8,251,10,241,15,236,21,237,30"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_aaab7b43869327f957614c225446940ac_icgraph.png" border="0" usemap="#aclassPuzzleTab_aaab7b43869327f957614c225446940ac_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_aaab7b43869327f957614c225446940ac_icgraph" id="aclassPuzzleTab_aaab7b43869327f957614c225446940ac_icgraph">
+<area shape="rect" title="Solicita al generador aleatorio del núcleo naidu::randomizer un nuevo estado válido para el tablero." alt="" coords="205,21,354,64"/>
+<area shape="rect" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" title=" " alt="" coords="186,43,157,45,157,40,191,42"/>
+<area shape="poly" title=" " alt="" coords="113,14,103,10,81,8,60,10,49,15,47,20,52,29,47,29,41,21,45,11,59,5,81,3,105,5,119,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af92079c81348986c55c3f9025d3d1450" name="af92079c81348986c55c3f9025d3d1450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af92079c81348986c55c3f9025d3d1450">&#9670;&#160;</a></span>on_solve_clicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleTab::on_solve_clicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda <a class="el" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num-puzzle usando IDA* (Iterative Deepening A*).">naidu::solver::ida</a>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00123">123</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  123</span>                                 {</div>
+<div class="line"><span class="lineno">  124</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.isRunning()) {</div>
+<div class="line"><span class="lineno">  125</span>        QMessageBox::warning(<span class="keyword">this</span>, <span class="stringliteral">&quot;Aviso&quot;</span>, <span class="stringliteral">&quot;Ya hay una búsqueda en curso.&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  127</span>    }</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>.isActive()) {</div>
+<div class="line"><span class="lineno">  130</span>        <a class="code hl_variable" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>.stop();</div>
+<div class="line"><span class="lineno">  131</span>    }</div>
+<div class="line"><span class="lineno">  132</span> </div>
+<div class="line"><span class="lineno">  133</span>    QString initial_text = <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;initial_input-&gt;text().trimmed();</div>
+<div class="line"><span class="lineno">  134</span>    QString goal_text = <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;goal_input-&gt;text().trimmed();</div>
+<div class="line"><span class="lineno">  135</span> </div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">if</span> (initial_text.isEmpty()) {</div>
+<div class="line"><span class="lineno">  137</span>        QMessageBox::warning(<span class="keyword">this</span>, <span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;El campo de estado inicial no puede estar vacío.&quot;</span>);</div>
+<div class="line"><span class="lineno">  138</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  139</span>    }</div>
+<div class="line"><span class="lineno">  140</span> </div>
+<div class="line"><span class="lineno">  141</span>    QStringList initial_parts = initial_text.split(<span class="charliteral">&#39;,&#39;</span>, Qt::SkipEmptyParts);</div>
+<div class="line"><span class="lineno">  142</span>    <span class="keywordtype">int</span> initial_total = initial_parts.size();</div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordtype">int</span> initial_dim_int = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::round(std::sqrt(initial_total)));</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordflow">if</span> (initial_dim_int * initial_dim_int != initial_total || initial_dim_int &lt; 3 || initial_dim_int &gt; 15) {</div>
+<div class="line"><span class="lineno">  145</span>        QMessageBox::warning(<span class="keyword">this</span>, <span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;El tamaño del estado inicial no forma un tablero cuadrado válido.&quot;</span>);</div>
+<div class="line"><span class="lineno">  146</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  147</span>    }</div>
+<div class="line"><span class="lineno">  148</span>    std::uint8_t initial_dim = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(initial_dim_int);</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>    <span class="keyword">auto</span> initial_parsed = <a class="code hl_function" href="#a13539036477fd037d27a341d6af36f59">parse_board_input</a>(initial_text, initial_dim);</div>
+<div class="line"><span class="lineno">  151</span>    <span class="keywordflow">if</span> (!initial_parsed) {</div>
+<div class="line"><span class="lineno">  152</span>        QMessageBox::warning(<span class="keyword">this</span>, <span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;El estado inicial ingresado no es válido.&quot;</span>);</div>
+<div class="line"><span class="lineno">  153</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  154</span>    }</div>
+<div class="line"><span class="lineno">  155</span> </div>
+<div class="line"><span class="lineno">  156</span>    naidu::Board initial_board = *initial_parsed;</div>
+<div class="line"><span class="lineno">  157</span>    naidu::Board goal_board;</div>
+<div class="line"><span class="lineno">  158</span> </div>
+<div class="line"><span class="lineno">  159</span>    <span class="comment">// Si el campo meta está vacío, se asume automáticamente la meta estándar por defecto</span></div>
+<div class="line"><span class="lineno">  160</span>    <span class="keywordflow">if</span> (goal_text.isEmpty()) {</div>
+<div class="line"><span class="lineno">  161</span>        goal_board = naidu::Board(initial_dim);</div>
+<div class="line"><span class="lineno">  162</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  163</span>        QStringList goal_parts = goal_text.split(<span class="charliteral">&#39;,&#39;</span>, Qt::SkipEmptyParts);</div>
+<div class="line"><span class="lineno">  164</span>        <span class="keywordtype">int</span> goal_total = goal_parts.size();</div>
+<div class="line"><span class="lineno">  165</span>        <span class="keywordtype">int</span> goal_dim_int = <span class="keyword">static_cast&lt;</span><span class="keywordtype">int</span><span class="keyword">&gt;</span>(std::round(std::sqrt(goal_total)));</div>
+<div class="line"><span class="lineno">  166</span>        <span class="keywordflow">if</span> (goal_dim_int * goal_dim_int != goal_total || goal_dim_int &lt; 3 || goal_dim_int &gt; 15) {</div>
+<div class="line"><span class="lineno">  167</span>            QMessageBox::warning(<span class="keyword">this</span>, <span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;El tamaño del estado meta no forma un tablero cuadrado válido.&quot;</span>);</div>
+<div class="line"><span class="lineno">  168</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  169</span>        }</div>
+<div class="line"><span class="lineno">  170</span>        std::uint8_t goal_dim = <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(goal_dim_int);</div>
+<div class="line"><span class="lineno">  171</span> </div>
+<div class="line"><span class="lineno">  172</span>        <span class="keyword">auto</span> goal_parsed = <a class="code hl_function" href="#a13539036477fd037d27a341d6af36f59">parse_board_input</a>(goal_text, goal_dim);</div>
+<div class="line"><span class="lineno">  173</span>        <span class="keywordflow">if</span> (!goal_parsed) {</div>
+<div class="line"><span class="lineno">  174</span>            QMessageBox::warning(<span class="keyword">this</span>, <span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;El estado meta ingresado no es válido.&quot;</span>);</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  176</span>        }</div>
+<div class="line"><span class="lineno">  177</span>        goal_board = *goal_parsed;</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
+<div class="line"><span class="lineno">  179</span> </div>
+<div class="line"><span class="lineno">  180</span>    <span class="keywordflow">if</span> (initial_board.<a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a>() != goal_board.<a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a>()) {</div>
+<div class="line"><span class="lineno">  181</span>        QMessageBox::warning(<span class="keyword">this</span>, <span class="stringliteral">&quot;Error&quot;</span>, <span class="stringliteral">&quot;El tablero inicial y el tablero meta deben tener exactamente la misma dimensión.&quot;</span>);</div>
+<div class="line"><span class="lineno">  182</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  183</span>    }</div>
+<div class="line"><span class="lineno">  184</span> </div>
+<div class="line"><span class="lineno">  185</span>    <a class="code hl_variable" href="#af6d8ced1674796a92e81af62daaf4e10">m_initial_board</a> = initial_board;</div>
+<div class="line"><span class="lineno">  186</span>    <a class="code hl_variable" href="#acd37e53f5b76c43eb0e73e52efd1df3f">m_goal_board</a> = goal_board;</div>
+<div class="line"><span class="lineno">  187</span> </div>
+<div class="line"><span class="lineno">  188</span>    naidu::solver::Config config;</div>
+<div class="line"><span class="lineno">  189</span>    config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a85dcc562cc0a88423c73eeee4d3e5bfc">eval_fn</a> = <a class="code hl_function" href="#a4532f1e18c2053e5a77a179ac9349652">get_selected_evaluation</a>();</div>
+<div class="line"><span class="lineno">  190</span>    config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#addedafd3219e33cfe2225af32e635432">max_nodes</a> = <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;max_nodes_spin-&gt;value());</div>
+<div class="line"><span class="lineno">  191</span>    config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a5303b954f1bd89dfe63fe0ffff13107e">avoid_revisits</a> = <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;avoid_revisits_solver_check-&gt;isChecked();</div>
+<div class="line"><span class="lineno">  192</span>    config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a0b82393bc386e27be882d4242c928869">weighted_cost</a> = <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;weighted_cost_check-&gt;isChecked();</div>
+<div class="line"><span class="lineno">  193</span>    config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a7df4c850f048c1ae30fde20834aa91aa">cancel_requested</a> = [<span class="keyword">this</span>]() {</div>
+<div class="line"><span class="lineno">  194</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.isCanceled();</div>
+<div class="line"><span class="lineno">  195</span>    };</div>
+<div class="line"><span class="lineno">  196</span> </div>
+<div class="line"><span class="lineno">  197</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;status_label-&gt;setText(<span class="stringliteral">&quot;Resolviendo en segundo plano...&quot;</span>);</div>
+<div class="line"><span class="lineno">  198</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;solve_btn-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  199</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;stop_btn-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>    <a class="code hl_variable" href="#aa4fac1d2c93c04491ceaf428b9671b27">m_start_time</a> = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><span class="lineno">  202</span> </div>
+<div class="line"><span class="lineno">  203</span>    QFuture&lt;naidu::solver::Solution&gt; future = QtConcurrent::run(</div>
+<div class="line"><span class="lineno">  204</span>        [initial_board, goal_board, config]() {</div>
+<div class="line"><span class="lineno">  205</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4">naidu::solver::ida</a>(initial_board, goal_board, config);</div>
+<div class="line"><span class="lineno">  206</span>        }</div>
+<div class="line"><span class="lineno">  207</span>    );</div>
+<div class="line"><span class="lineno">  208</span> </div>
+<div class="line"><span class="lineno">  209</span>    <a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.setFuture(future);</div>
+<div class="line"><span class="lineno">  210</span>}</div>
+<div class="ttc" id="aclassPuzzleTab_html_a13539036477fd037d27a341d6af36f59"><div class="ttname"><a href="#a13539036477fd037d27a341d6af36f59">PuzzleTab::parse_board_input</a></div><div class="ttdeci">std::optional&lt; naidu::Board &gt; parse_board_input(const QString &amp;text, std::uint8_t dim) const</div><div class="ttdoc">Valida y convierte la entrada de texto en una instancia de naidu::Board para el núcleo.</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00106">puzzle_tab.cpp:106</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a4532f1e18c2053e5a77a179ac9349652"><div class="ttname"><a href="#a4532f1e18c2053e5a77a179ac9349652">PuzzleTab::get_selected_evaluation</a></div><div class="ttdeci">naidu::evaluation::EvaluationFn get_selected_evaluation() const</div><div class="ttdoc">Obtiene la función heurística vinculada a los métodos de evaluación del núcleo (naidu::evaluation).</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00094">puzzle_tab.cpp:94</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_aa4fac1d2c93c04491ceaf428b9671b27"><div class="ttname"><a href="#aa4fac1d2c93c04491ceaf428b9671b27">PuzzleTab::m_start_time</a></div><div class="ttdeci">std::chrono::high_resolution_clock::time_point m_start_time</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8h_source.html#l00041">puzzle_tab.h:41</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ab65a3e1adb23a5d6c1b12a8f8bed3337"><div class="ttname"><a href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">naidu::Board::dim</a></div><div class="ttdeci">std::uint8_t dim() const noexcept</div><div class="ttdoc">Devuelve la dimensión N del tablero.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00105">board.cpp:105</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1solver_html_a58e65e18b4d9edeeb787b0d6ab36f5c4"><div class="ttname"><a href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4">naidu::solver::ida</a></div><div class="ttdeci">Solution ida(const Board &amp;initial, const Board &amp;goal, const Config &amp;config)</div><div class="ttdoc">Resuelve un num-puzzle usando IDA* (Iterative Deepening A*).</div><div class="ttdef"><b>Definición</b> <a href="solver_8cpp_source.html#l00176">solver.cpp:176</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_a0b82393bc386e27be882d4242c928869"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#a0b82393bc386e27be882d4242c928869">naidu::solver::Config::weighted_cost</a></div><div class="ttdeci">bool weighted_cost</div><div class="ttdoc">Coste ponderado (true), uniforme (false).</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00031">solver.hpp:31</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_a5303b954f1bd89dfe63fe0ffff13107e"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#a5303b954f1bd89dfe63fe0ffff13107e">naidu::solver::Config::avoid_revisits</a></div><div class="ttdeci">bool avoid_revisits</div><div class="ttdoc">Evitar revisitar estados en el camino actual.</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00030">solver.hpp:30</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_a7df4c850f048c1ae30fde20834aa91aa"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#a7df4c850f048c1ae30fde20834aa91aa">naidu::solver::Config::cancel_requested</a></div><div class="ttdeci">std::function&lt; bool()&gt; cancel_requested</div><div class="ttdoc">Función para detener busqueda.</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00028">solver.hpp:28</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_a85dcc562cc0a88423c73eeee4d3e5bfc"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#a85dcc562cc0a88423c73eeee4d3e5bfc">naidu::solver::Config::eval_fn</a></div><div class="ttdeci">evaluation::EvaluationFn eval_fn</div><div class="ttdoc">Función de evaluación.</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00027">solver.hpp:27</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_addedafd3219e33cfe2225af32e635432"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#addedafd3219e33cfe2225af32e635432">naidu::solver::Config::max_nodes</a></div><div class="ttdeci">std::uint64_t max_nodes</div><div class="ttdoc">Límite de nodos expandidos.</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00029">solver.hpp:29</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="solver_8hpp_source.html#l00030">naidu::solver::Config::avoid_revisits</a>, <a class="el" href="solver_8hpp_source.html#l00028">naidu::solver::Config::cancel_requested</a>, <a class="el" href="board_8cpp_source.html#l00105">naidu::Board::dim()</a>, <a class="el" href="solver_8hpp_source.html#l00027">naidu::solver::Config::eval_fn</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00094">get_selected_evaluation()</a>, <a class="el" href="solver_8cpp_source.html#l00176">naidu::solver::ida()</a>, <a class="el" href="puzzle__tab_8h_source.html#l00031">m_anim_timer</a>, <a class="el" href="puzzle__tab_8h_source.html#l00036">m_goal_board</a>, <a class="el" href="puzzle__tab_8h_source.html#l00034">m_initial_board</a>, <a class="el" href="puzzle__tab_8h_source.html#l00030">m_solver_watcher</a>, <a class="el" href="puzzle__tab_8h_source.html#l00041">m_start_time</a>, <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a>, <a class="el" href="solver_8hpp_source.html#l00029">naidu::solver::Config::max_nodes</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00106">parse_board_input()</a> y <a class="el" href="solver_8hpp_source.html#l00031">naidu::solver::Config::weighted_cost</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_af92079c81348986c55c3f9025d3d1450_cgraph.png" border="0" usemap="#aclassPuzzleTab_af92079c81348986c55c3f9025d3d1450_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_af92079c81348986c55c3f9025d3d1450_cgraph" id="aclassPuzzleTab_af92079c81348986c55c3f9025d3d1450_cgraph">
+<area shape="rect" title="Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda naidu::solver..." alt="" coords="5,240,148,283"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="832,162,956,188"/>
+<area shape="poly" title=" " alt="" coords="107,238,194,185,299,129,382,86,468,53,583,24,638,12,682,4,726,6,778,25,814,49,843,82,867,116,883,148,878,147,862,119,839,85,810,53,775,29,725,11,683,9,639,17,584,30,470,58,384,91,302,133,197,189,111,242"/>
+<area shape="rect" href="classPuzzleTab.html#a4532f1e18c2053e5a77a179ac9349652" title="Obtiene la función heurística vinculada a los métodos de evaluación del núcleo (naidu::evaluation)." alt="" coords="196,199,360,242"/>
+<area shape="poly" title=" " alt="" coords="147,245,182,239,178,242,149,249"/>
+<area shape="rect" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num&#45;puzzle usando IDA* (Iterative Deepening A*)." alt="" coords="218,290,338,316"/>
+<area shape="poly" title=" " alt="" coords="147,274,205,286,200,289,148,279"/>
+<area shape="rect" href="classPuzzleTab.html#a13539036477fd037d27a341d6af36f59" title="Valida y convierte la entrada de texto en una instancia de naidu::Board para el núcleo." alt="" coords="197,340,358,383"/>
+<area shape="poly" title=" " alt="" coords="114,281,197,326,210,333,204,334,194,331,114,286"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad" title="Evaluación 1: Manhattan + fichas mal colocadas + dispersión." alt="" coords="408,335,535,378"/>
+<area shape="poly" title=" " alt="" coords="339,239,362,251,387,273,410,297,438,325,433,324,406,301,383,277,358,256,339,245"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c" title="Evaluación 2: Manhattan + fichas mal colocadas + proximidad." alt="" coords="408,244,535,287"/>
+<area shape="poly" title=" " alt="" coords="360,237,395,247,390,248,361,242"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8" title="Evaluación 3: estructura local." alt="" coords="408,154,535,196"/>
+<area shape="poly" title=" " alt="" coords="359,199,395,192,390,195,361,204"/>
+<area shape="poly" title=" " alt="" coords="435,333,433,325,439,316,452,310,472,308,493,311,507,320,501,319,491,316,472,314,454,316,443,320,438,326,439,336"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a5aa323aa12d6f0d47981caadf025a27f" title="Dispersión promedio del hueco respecto a fichas mal colocadas." alt="" coords="598,426,762,468"/>
+<area shape="poly" title=" " alt="" coords="523,376,618,419,613,419,522,381"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a98dbc965e47e6afe68a7d482ffa677dd" title="Suma de distancias Manhattan de todas las fichas a su meta." alt="" coords="583,154,777,196"/>
+<area shape="poly" title=" " alt="" coords="499,332,533,297,547,273,554,250,563,229,581,206,585,207,590,204,585,210,567,231,559,252,552,275,537,301,502,337"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#aa2edc1ec363b10621ca53482da223200" title="Número de fichas fuera de su meta." alt="" coords="584,335,776,378"/>
+<area shape="poly" title=" " alt="" coords="536,354,572,356,566,357,536,359"/>
+<area shape="poly" title=" " alt="" coords="732,423,755,408,775,388,788,365,795,344,798,303,801,261,808,238,823,215,844,198,848,195,827,218,813,241,806,262,803,303,800,345,793,368,779,391,758,412,734,428"/>
+<area shape="poly" title=" " alt="" coords="641,423,639,416,645,407,659,401,680,399,702,401,717,411,712,410,701,407,680,404,660,406,649,411,644,417,645,427"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="837,295,950,322"/>
+<area shape="poly" title=" " alt="" coords="718,423,775,387,859,332,864,330,778,392,720,428"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac" title="Devuelve el índice lineal del hueco." alt="" coords="825,426,963,468"/>
+<area shape="poly" title=" " alt="" coords="762,444,812,447,806,447,762,450"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="834,228,954,271"/>
+<area shape="poly" title=" " alt="" coords="729,423,753,407,775,388,791,361,797,335,804,309,823,281,824,282,829,280,827,285,809,311,803,336,796,363,779,391,756,412,731,428"/>
+<area shape="poly" title=" " alt="" coords="777,172,819,175,814,176,777,178"/>
+<area shape="poly" title=" " alt="" coords="759,194,778,206,795,225,803,245,811,263,826,281,833,288,828,286,823,285,806,266,798,247,791,228,775,210,758,200"/>
+<area shape="poly" title=" " alt="" coords="744,194,778,206,822,223,817,223,776,211,744,200"/>
+<area shape="poly" title=" " alt="" coords="640,152,639,144,645,135,659,129,680,127,702,129,717,138,712,138,701,135,680,132,660,134,649,139,644,145,645,154"/>
+<area shape="poly" title=" " alt="" coords="775,332,820,325,825,324,776,337"/>
+<area shape="poly" title=" " alt="" coords="722,332,823,281,831,279,836,278,826,285,724,337"/>
+<area shape="poly" title=" " alt="" coords="641,333,639,325,645,316,659,310,680,308,702,311,717,320,712,319,701,316,680,314,660,316,649,320,644,326,645,336"/>
+<area shape="poly" title=" " alt="" coords="511,241,582,206,600,201,595,203,584,211,513,246"/>
+<area shape="poly" title=" " alt="" coords="523,285,618,328,613,329,522,290"/>
+<area shape="poly" title=" " alt="" coords="435,243,433,234,439,225,452,220,472,218,493,220,507,229,501,229,491,225,472,223,454,225,443,230,438,236,439,245"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a076a19f62fc59f74a485906361657a20" title="Fichas mal colocadas a Manhattan 1 de su meta." alt="" coords="602,244,758,287"/>
+<area shape="poly" title=" " alt="" coords="535,263,589,265,584,266,536,268"/>
+<area shape="poly" title=" " alt="" coords="731,241,844,196,849,194,733,246"/>
+<area shape="poly" title=" " alt="" coords="759,279,825,294,820,294,759,284"/>
+<area shape="poly" title=" " alt="" coords="758,257,821,255,816,256,759,262"/>
+<area shape="poly" title=" " alt="" coords="640,242,639,234,645,225,659,220,680,218,702,220,717,229,712,229,701,225,680,223,660,225,649,230,644,236,645,245"/>
+<area shape="poly" title=" " alt="" coords="535,172,570,174,565,176,536,178"/>
+<area shape="poly" title=" " alt="" coords="435,152,433,144,439,135,452,129,472,127,493,129,507,138,501,138,491,135,472,132,454,134,443,139,438,145,440,154"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a5ee867554a720e7a9657f21048c01975" title="Número de pares adyacentes mal ordenados (desorden local)." alt="" coords="594,63,766,106"/>
+<area shape="poly" title=" " alt="" coords="510,151,582,115,600,110,596,113,584,120,513,156"/>
+<area shape="poly" title=" " alt="" coords="747,104,778,115,856,154,850,154,776,120,747,109"/>
+<area shape="poly" title=" " alt="" coords="763,104,779,116,794,137,802,159,804,200,805,241,812,261,827,281,830,287,825,285,823,285,807,263,800,242,798,200,796,160,789,140,775,120,762,109"/>
+<area shape="poly" title=" " alt="" coords="760,104,778,116,796,136,805,156,812,177,827,199,847,219,842,218,823,202,807,179,800,158,792,139,775,120,759,109"/>
+<area shape="poly" title=" " alt="" coords="640,61,639,53,645,44,659,38,680,36,702,39,717,47,712,48,701,44,680,42,660,44,649,48,644,54,645,63"/>
+<area shape="poly" title=" " alt="" coords="244,289,239,281,243,271,256,265,278,263,301,266,315,274,309,275,299,271,278,268,258,270,247,275,244,280,250,290"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_af92079c81348986c55c3f9025d3d1450_icgraph.png" border="0" usemap="#aclassPuzzleTab_af92079c81348986c55c3f9025d3d1450_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_af92079c81348986c55c3f9025d3d1450_icgraph" id="aclassPuzzleTab_af92079c81348986c55c3f9025d3d1450_icgraph">
+<area shape="rect" title="Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda naidu::solver..." alt="" coords="205,21,347,64"/>
+<area shape="rect" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" title=" " alt="" coords="186,43,157,45,157,40,191,42"/>
+<area shape="poly" title=" " alt="" coords="113,14,103,10,81,8,61,10,50,15,47,20,53,29,47,29,42,21,46,11,59,5,81,3,104,5,118,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa1d493396cefc640b572d366048d50ee" name="aa1d493396cefc640b572d366048d50ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d493396cefc640b572d366048d50ee">&#9670;&#160;</a></span>on_solver_cancelled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleTab::on_solver_cancelled </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00263">263</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  263</span>                                    {</div>
+<div class="line"><span class="lineno">  264</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;solve_btn-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  265</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;stop_btn-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  266</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;status_label-&gt;setText(<span class="stringliteral">&quot;Búsqueda cancelada.&quot;</span>);</div>
+<div class="line"><span class="lineno">  267</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_aa1d493396cefc640b572d366048d50ee_icgraph.png" border="0" usemap="#aclassPuzzleTab_aa1d493396cefc640b572d366048d50ee_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_aa1d493396cefc640b572d366048d50ee_icgraph" id="aclassPuzzleTab_aa1d493396cefc640b572d366048d50ee_icgraph">
+<area shape="rect" title=" " alt="" coords="205,21,351,64"/>
+<area shape="rect" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" title=" " alt="" coords="186,43,157,45,157,40,192,42"/>
+<area shape="poly" title=" " alt="" coords="113,14,103,10,81,8,60,10,49,15,47,20,52,29,47,29,42,21,46,11,59,5,81,3,105,5,118,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af1b31fea90eed57085485179397854ef" name="af1b31fea90eed57085485179397854ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1b31fea90eed57085485179397854ef">&#9670;&#160;</a></span>on_solver_finished()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleTab::on_solver_finished </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00212">212</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  212</span>                                   {</div>
+<div class="line"><span class="lineno">  213</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;solve_btn-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  214</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;stop_btn-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  215</span> </div>
+<div class="line"><span class="lineno">  216</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.isCanceled()) {</div>
+<div class="line"><span class="lineno">  217</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  218</span>    }</div>
+<div class="line"><span class="lineno">  219</span> </div>
+<div class="line"><span class="lineno">  220</span>    naidu::solver::Solution solution = <a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.result();</div>
+<div class="line"><span class="lineno">  221</span> </div>
+<div class="line"><span class="lineno">  222</span>    <span class="keyword">auto</span> end_time = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><span class="lineno">  223</span>    <span class="keyword">auto</span> duration_ms = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(end_time - <a class="code hl_variable" href="#aa4fac1d2c93c04491ceaf428b9671b27">m_start_time</a>).count();</div>
+<div class="line"><span class="lineno">  224</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;runtime_value_label-&gt;setText(QString::number(duration_ms) + <span class="stringliteral">&quot; ms&quot;</span>);</div>
+<div class="line"><span class="lineno">  225</span> </div>
+<div class="line"><span class="lineno">  226</span>    <span class="keywordflow">if</span> (solution.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Solution.html#a62a09ac08e4f204a10fd85d1d3beb0aa">found</a>) {</div>
+<div class="line"><span class="lineno">  227</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;status_label-&gt;setText(<span class="stringliteral">&quot;¡Solución encontrada! Animando...&quot;</span>);</div>
+<div class="line"><span class="lineno">  228</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;nodes_value_label-&gt;setText(QString::number(solution.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Solution.html#ad649b059f3febb835964a3010380dc11">nodes_expanded</a>));</div>
+<div class="line"><span class="lineno">  229</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;cost_value_label-&gt;setText(QString::number(solution.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Solution.html#abd816af1b0c9214d337ce143793edca2">cost</a>));</div>
+<div class="line"><span class="lineno">  230</span> </div>
+<div class="line"><span class="lineno">  231</span>        QStringList path_list;</div>
+<div class="line"><span class="lineno">  232</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> d : solution.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Solution.html#a29567a8c5d5d48866b052d978309a7b3">moves</a>) {</div>
+<div class="line"><span class="lineno">  233</span>            <span class="keywordflow">switch</span>(d) {</div>
+<div class="line"><span class="lineno">  234</span>                <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bafbaedde498cdead4f2780217646e9ba1">naidu::Direction::UP</a>: path_list.append(<span class="stringliteral">&quot;U&quot;</span>); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  235</span>                <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bac4e0e4e3118472beeb2ae75827450f1f">naidu::Direction::DOWN</a>: path_list.append(<span class="stringliteral">&quot;D&quot;</span>); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  236</span>                <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba684d325a7303f52e64011467ff5c5758">naidu::Direction::LEFT</a>: path_list.append(<span class="stringliteral">&quot;L&quot;</span>); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  237</span>                <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba21507b40c80068eda19865706fdc2403">naidu::Direction::RIGHT</a>: path_list.append(<span class="stringliteral">&quot;R&quot;</span>); <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  238</span>            }</div>
+<div class="line"><span class="lineno">  239</span>        }</div>
+<div class="line"><span class="lineno">  240</span>        </div>
+<div class="line"><span class="lineno">  241</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;path_content_label-&gt;setText(path_list.join(<span class="stringliteral">&quot;,&quot;</span>));</div>
+<div class="line"><span class="lineno">  242</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;path_content_label-&gt;adjustSize();</div>
+<div class="line"><span class="lineno">  243</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;path_scroll_area-&gt;updateGeometry();</div>
+<div class="line"><span class="lineno">  244</span> </div>
+<div class="line"><span class="lineno">  245</span>        <a class="code hl_variable" href="#a1d4d4232471bdfeb8d9521f8eda4f010">m_anim_moves</a> = solution.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Solution.html#a29567a8c5d5d48866b052d978309a7b3">moves</a>;</div>
+<div class="line"><span class="lineno">  246</span>        <a class="code hl_function" href="#a3794d62cea4e1f02bbf5c69e69312965">on_replay_animation</a>();</div>
+<div class="line"><span class="lineno">  247</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  248</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;status_label-&gt;setText(<span class="stringliteral">&quot;No se encontró solución (límite de nodos alcanzado).&quot;</span>);</div>
+<div class="line"><span class="lineno">  249</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;nodes_value_label-&gt;setText(QString::number(solution.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Solution.html#ad649b059f3febb835964a3010380dc11">nodes_expanded</a>));</div>
+<div class="line"><span class="lineno">  250</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;path_content_label-&gt;clear();</div>
+<div class="line"><span class="lineno">  251</span>    }</div>
+<div class="line"><span class="lineno">  252</span>}</div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222ba21507b40c80068eda19865706fdc2403"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba21507b40c80068eda19865706fdc2403">naidu::Direction::RIGHT</a></div><div class="ttdeci">@ RIGHT</div><div class="ttdoc">Desplazamiento hacia la derecha (columna + 1).</div><div class="ttdef"><b>Definición</b> <a href="direction_8hpp_source.html#l00021">direction.hpp:21</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222ba684d325a7303f52e64011467ff5c5758"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba684d325a7303f52e64011467ff5c5758">naidu::Direction::LEFT</a></div><div class="ttdeci">@ LEFT</div><div class="ttdoc">Desplazamiento hacia la izquierda (columna - 1).</div><div class="ttdef"><b>Definición</b> <a href="direction_8hpp_source.html#l00020">direction.hpp:20</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222bac4e0e4e3118472beeb2ae75827450f1f"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bac4e0e4e3118472beeb2ae75827450f1f">naidu::Direction::DOWN</a></div><div class="ttdeci">@ DOWN</div><div class="ttdoc">Desplazamiento hacia abajo (fila + 1).</div><div class="ttdef"><b>Definición</b> <a href="direction_8hpp_source.html#l00019">direction.hpp:19</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222bafbaedde498cdead4f2780217646e9ba1"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bafbaedde498cdead4f2780217646e9ba1">naidu::Direction::UP</a></div><div class="ttdeci">@ UP</div><div class="ttdoc">Desplazamiento hacia arriba (fila - 1).</div><div class="ttdef"><b>Definición</b> <a href="direction_8hpp_source.html#l00018">direction.hpp:18</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Solution_html_a29567a8c5d5d48866b052d978309a7b3"><div class="ttname"><a href="structnaidu_1_1solver_1_1Solution.html#a29567a8c5d5d48866b052d978309a7b3">naidu::solver::Solution::moves</a></div><div class="ttdeci">std::vector&lt; Direction &gt; moves</div><div class="ttdoc">Secuencia de movimientos (vacía si no se encontró).</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00017">solver.hpp:17</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Solution_html_a62a09ac08e4f204a10fd85d1d3beb0aa"><div class="ttname"><a href="structnaidu_1_1solver_1_1Solution.html#a62a09ac08e4f204a10fd85d1d3beb0aa">naidu::solver::Solution::found</a></div><div class="ttdeci">bool found</div><div class="ttdoc">¿Se encontró solución?</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00020">solver.hpp:20</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Solution_html_abd816af1b0c9214d337ce143793edca2"><div class="ttname"><a href="structnaidu_1_1solver_1_1Solution.html#abd816af1b0c9214d337ce143793edca2">naidu::solver::Solution::cost</a></div><div class="ttdeci">std::uint16_t cost</div><div class="ttdoc">Costo total del camino.</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00018">solver.hpp:18</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Solution_html_ad649b059f3febb835964a3010380dc11"><div class="ttname"><a href="structnaidu_1_1solver_1_1Solution.html#ad649b059f3febb835964a3010380dc11">naidu::solver::Solution::nodes_expanded</a></div><div class="ttdeci">std::uint64_t nodes_expanded</div><div class="ttdoc">Nodos expandidos durante la búsqueda.</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00019">solver.hpp:19</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="solver_8hpp_source.html#l00018">naidu::solver::Solution::cost</a>, <a class="el" href="direction_8hpp_source.html#l00019">naidu::DOWN</a>, <a class="el" href="solver_8hpp_source.html#l00020">naidu::solver::Solution::found</a>, <a class="el" href="direction_8hpp_source.html#l00020">naidu::LEFT</a>, <a class="el" href="puzzle__tab_8h_source.html#l00038">m_anim_moves</a>, <a class="el" href="puzzle__tab_8h_source.html#l00030">m_solver_watcher</a>, <a class="el" href="puzzle__tab_8h_source.html#l00041">m_start_time</a>, <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a>, <a class="el" href="solver_8hpp_source.html#l00017">naidu::solver::Solution::moves</a>, <a class="el" href="solver_8hpp_source.html#l00019">naidu::solver::Solution::nodes_expanded</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00269">on_replay_animation()</a>, <a class="el" href="direction_8hpp_source.html#l00021">naidu::RIGHT</a> y <a class="el" href="direction_8hpp_source.html#l00018">naidu::UP</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_af1b31fea90eed57085485179397854ef_cgraph.png" border="0" usemap="#aclassPuzzleTab_af1b31fea90eed57085485179397854ef_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_af1b31fea90eed57085485179397854ef_cgraph" id="aclassPuzzleTab_af1b31fea90eed57085485179397854ef_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,152,48"/>
+<area shape="rect" href="classPuzzleTab.html#a3794d62cea4e1f02bbf5c69e69312965" title=" " alt="" coords="200,5,346,48"/>
+<area shape="poly" title=" " alt="" coords="152,24,187,26,182,27,152,29"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_af1b31fea90eed57085485179397854ef_icgraph.png" border="0" usemap="#aclassPuzzleTab_af1b31fea90eed57085485179397854ef_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_af1b31fea90eed57085485179397854ef_icgraph" id="aclassPuzzleTab_af1b31fea90eed57085485179397854ef_icgraph">
+<area shape="rect" title=" " alt="" coords="205,21,351,64"/>
+<area shape="rect" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" title=" " alt="" coords="186,43,157,45,157,40,192,42"/>
+<area shape="poly" title=" " alt="" coords="113,14,103,10,81,8,60,10,49,15,47,20,52,29,47,29,42,21,46,11,59,5,81,3,105,5,118,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afe132dd7b37da93ac8c818c36ad20c78" name="afe132dd7b37da93ac8c818c36ad20c78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe132dd7b37da93ac8c818c36ad20c78">&#9670;&#160;</a></span>on_speed_slider_changed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleTab::on_speed_slider_changed </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00087">87</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   87</span>                                                 {</div>
+<div class="line"><span class="lineno">   88</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;speed_label-&gt;setText(QString(<span class="stringliteral">&quot;Velocidad: %1 ms&quot;</span>).arg(value));</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>.isActive()) {</div>
+<div class="line"><span class="lineno">   90</span>        <a class="code hl_variable" href="#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>.setInterval(value);</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="line"><span class="lineno">   92</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="puzzle__tab_8h_source.html#l00031">m_anim_timer</a> y <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_afe132dd7b37da93ac8c818c36ad20c78_icgraph.png" border="0" usemap="#aclassPuzzleTab_afe132dd7b37da93ac8c818c36ad20c78_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_afe132dd7b37da93ac8c818c36ad20c78_icgraph" id="aclassPuzzleTab_afe132dd7b37da93ac8c818c36ad20c78_icgraph">
+<area shape="rect" title=" " alt="" coords="205,21,351,64"/>
+<area shape="rect" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" title=" " alt="" coords="186,43,157,45,157,40,192,42"/>
+<area shape="poly" title=" " alt="" coords="113,14,103,10,81,8,60,10,49,15,47,20,52,29,47,29,42,21,46,11,59,5,81,3,105,5,118,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a550a8b30e4566d4a0157c2e9df1241bb" name="a550a8b30e4566d4a0157c2e9df1241bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a550a8b30e4566d4a0157c2e9df1241bb">&#9670;&#160;</a></span>on_stop_clicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleTab::on_stop_clicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00254">254</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  254</span>                                {</div>
+<div class="line"><span class="lineno">  255</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.isRunning()) {</div>
+<div class="line"><span class="lineno">  256</span>        <a class="code hl_variable" href="#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>.cancel();</div>
+<div class="line"><span class="lineno">  257</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;solve_btn-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  258</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;stop_btn-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  259</span>        <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;status_label-&gt;setText(<span class="stringliteral">&quot;Búsqueda cancelada por el usuario.&quot;</span>);</div>
+<div class="line"><span class="lineno">  260</span>    }</div>
+<div class="line"><span class="lineno">  261</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="puzzle__tab_8h_source.html#l00030">m_solver_watcher</a> y <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_a550a8b30e4566d4a0157c2e9df1241bb_icgraph.png" border="0" usemap="#aclassPuzzleTab_a550a8b30e4566d4a0157c2e9df1241bb_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_a550a8b30e4566d4a0157c2e9df1241bb_icgraph" id="aclassPuzzleTab_a550a8b30e4566d4a0157c2e9df1241bb_icgraph">
+<area shape="rect" title=" " alt="" coords="205,21,341,64"/>
+<area shape="rect" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" title=" " alt="" coords="186,43,157,45,157,40,192,42"/>
+<area shape="poly" title=" " alt="" coords="112,14,102,10,81,8,61,10,50,15,48,20,53,29,48,29,42,21,46,11,60,5,81,3,104,5,118,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a13539036477fd037d27a341d6af36f59" name="a13539036477fd037d27a341d6af36f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13539036477fd037d27a341d6af36f59">&#9670;&#160;</a></span>parse_board_input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt; <a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> &gt; PuzzleTab::parse_board_input </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint8_t</td>          <td class="paramname"><span class="paramname"><em>dim</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Valida y convierte la entrada de texto en una instancia de <a class="el" href="classnaidu_1_1Board.html" title="Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N.">naidu::Board</a> para el núcleo. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00106">106</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  106</span>                                                                                              {</div>
+<div class="line"><span class="lineno">  107</span>    QStringList parts = text.split(<span class="charliteral">&#39;,&#39;</span>, Qt::SkipEmptyParts);</div>
+<div class="line"><span class="lineno">  108</span>    std::vector&lt;std::uint8_t&gt; tiles;</div>
+<div class="line"><span class="lineno">  109</span>    tiles.reserve(parts.size());</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> QString&amp; part : parts) {</div>
+<div class="line"><span class="lineno">  111</span>        <span class="keywordtype">bool</span> ok = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  112</span>        <span class="keywordtype">int</span> val = part.trimmed().toInt(&amp;ok);</div>
+<div class="line"><span class="lineno">  113</span>        <span class="keywordflow">if</span> (!ok || val &lt; 0 || val &gt;= dim * dim) <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><span class="lineno">  114</span>        tiles.push_back(<span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(val));</div>
+<div class="line"><span class="lineno">  115</span>    }</div>
+<div class="line"><span class="lineno">  116</span>    <span class="keywordflow">try</span> {</div>
+<div class="line"><span class="lineno">  117</span>        <span class="keywordflow">return</span> naidu::Board(tiles);</div>
+<div class="line"><span class="lineno">  118</span>    } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><span class="lineno">  119</span>        <span class="keywordflow">return</span> std::nullopt;</div>
+<div class="line"><span class="lineno">  120</span>    }</div>
+<div class="line"><span class="lineno">  121</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00123">on_solve_clicked()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_a13539036477fd037d27a341d6af36f59_icgraph.png" border="0" usemap="#aclassPuzzleTab_a13539036477fd037d27a341d6af36f59_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_a13539036477fd037d27a341d6af36f59_icgraph" id="aclassPuzzleTab_a13539036477fd037d27a341d6af36f59_icgraph">
+<area shape="rect" title="Valida y convierte la entrada de texto en una instancia de naidu::Board para el núcleo." alt="" coords="395,21,556,64"/>
+<area shape="rect" href="classPuzzleTab.html#af92079c81348986c55c3f9025d3d1450" title="Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda naidu::solver..." alt="" coords="205,21,347,64"/>
+<area shape="poly" title=" " alt="" coords="377,43,348,45,347,40,382,43"/>
+<area shape="rect" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" title=" " alt="" coords="186,43,157,45,157,40,191,42"/>
+<area shape="poly" title=" " alt="" coords="113,14,103,10,81,8,61,10,50,15,47,20,53,29,47,29,42,21,46,11,59,5,81,3,104,5,118,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1f00027785e44f07330810f204be0be7" name="a1f00027785e44f07330810f204be0be7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f00027785e44f07330810f204be0be7">&#9670;&#160;</a></span>set_boards()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PuzzleTab::set_boards </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>initial</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>goal</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sincroniza y actualiza los tableros inicial y meta con el núcleo lógico. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8cpp_source.html#l00050">50</a> del archivo <a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>                                                                            {</div>
+<div class="line"><span class="lineno">   51</span>    <a class="code hl_variable" href="#af6d8ced1674796a92e81af62daaf4e10">m_initial_board</a> = initial;</div>
+<div class="line"><span class="lineno">   52</span>    <a class="code hl_variable" href="#acd37e53f5b76c43eb0e73e52efd1df3f">m_goal_board</a> = goal;</div>
+<div class="line"><span class="lineno">   53</span> </div>
+<div class="line"><span class="lineno">   54</span>    std::uint8_t dim = initial.<a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a>();</div>
+<div class="line"><span class="lineno">   55</span>    </div>
+<div class="line"><span class="lineno">   56</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;dimension_slider-&gt;blockSignals(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;dimension_slider-&gt;setValue(dim);</div>
+<div class="line"><span class="lineno">   58</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;dimension_slider-&gt;blockSignals(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">   59</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;dimension_value-&gt;setText(QString::number(dim));</div>
+<div class="line"><span class="lineno">   60</span> </div>
+<div class="line"><span class="lineno">   61</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;board_view-&gt;set_board(initial);</div>
+<div class="line"><span class="lineno">   62</span> </div>
+<div class="line"><span class="lineno">   63</span>    QString initial_str, goal_str;</div>
+<div class="line"><span class="lineno">   64</span>    <span class="keyword">auto</span> initial_tiles = initial.<a class="code hl_function" href="classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f">tiles</a>();</div>
+<div class="line"><span class="lineno">   65</span>    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; initial_tiles.size(); ++i) {</div>
+<div class="line"><span class="lineno">   66</span>        initial_str += QString::number(initial_tiles[i]);</div>
+<div class="line"><span class="lineno">   67</span>        <span class="keywordflow">if</span> (i + 1 &lt; initial_tiles.size()) initial_str += <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><span class="lineno">   68</span>    }</div>
+<div class="line"><span class="lineno">   69</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;initial_input-&gt;setText(initial_str);</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>    <span class="keyword">auto</span> goal_tiles = goal.<a class="code hl_function" href="classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f">tiles</a>();</div>
+<div class="line"><span class="lineno">   72</span>    <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; goal_tiles.size(); ++i) {</div>
+<div class="line"><span class="lineno">   73</span>        goal_str += QString::number(goal_tiles[i]);</div>
+<div class="line"><span class="lineno">   74</span>        <span class="keywordflow">if</span> (i + 1 &lt; goal_tiles.size()) goal_str += <span class="stringliteral">&quot;,&quot;</span>;</div>
+<div class="line"><span class="lineno">   75</span>    }</div>
+<div class="line"><span class="lineno">   76</span>    <a class="code hl_variable" href="#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>-&gt;goal_input-&gt;setText(goal_str);</div>
+<div class="line"><span class="lineno">   77</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board_8cpp_source.html#l00105">naidu::Board::dim()</a>, <a class="el" href="puzzle__tab_8h_source.html#l00036">m_goal_board</a>, <a class="el" href="puzzle__tab_8h_source.html#l00034">m_initial_board</a>, <a class="el" href="puzzle__tab_8h_source.html#l00028">m_ui</a> y <a class="el" href="board_8cpp_source.html#l00122">naidu::Board::tiles()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="mainwindow_8cpp_source.html#l00076">MainWindow::action_load_board_triggered()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_a1f00027785e44f07330810f204be0be7_cgraph.png" border="0" usemap="#aclassPuzzleTab_a1f00027785e44f07330810f204be0be7_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_a1f00027785e44f07330810f204be0be7_cgraph" id="aclassPuzzleTab_a1f00027785e44f07330810f204be0be7_cgraph">
+<area shape="rect" title="Sincroniza y actualiza los tableros inicial y meta con el núcleo lógico." alt="" coords="5,31,160,57"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="209,5,332,32"/>
+<area shape="poly" title=" " alt="" coords="159,31,196,28,191,30,160,36"/>
+<area shape="rect" href="classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f" title="Vista de solo lectura sobre las fichas válidas del tablero." alt="" coords="208,56,334,83"/>
+<area shape="poly" title=" " alt="" coords="160,52,195,59,190,59,160,57"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classPuzzleTab_a1f00027785e44f07330810f204be0be7_icgraph.png" border="0" usemap="#aclassPuzzleTab_a1f00027785e44f07330810f204be0be7_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassPuzzleTab_a1f00027785e44f07330810f204be0be7_icgraph" id="aclassPuzzleTab_a1f00027785e44f07330810f204be0be7_icgraph">
+<area shape="rect" title="Sincroniza y actualiza los tableros inicial y meta con el núcleo lógico." alt="" coords="429,29,583,56"/>
+<area shape="rect" href="classMainWindow.html#a2d929140cf5108ef5b5766e6cd805fbb" title=" " alt="" coords="233,21,381,64"/>
+<area shape="poly" title=" " alt="" coords="411,43,381,45,381,40,416,43"/>
+<area shape="rect" href="classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,29,185,56"/>
+<area shape="poly" title=" " alt="" coords="214,43,185,45,185,40,220,42"/>
+<area shape="poly" title=" " alt="" coords="130,14,119,10,95,8,73,10,61,15,58,20,64,29,59,29,53,21,57,11,72,5,95,3,120,5,135,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a50870c89d7fe28b515f359885c452cb2" name="a50870c89d7fe28b515f359885c452cb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50870c89d7fe28b515f359885c452cb2">&#9670;&#160;</a></span>m_anim_index</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t PuzzleTab::m_anim_index = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8h_source.html#l00039">39</a> del archivo <a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00289">on_anim_step()</a> y <a class="el" href="puzzle__tab_8cpp_source.html#l00269">on_replay_animation()</a>.</p>
+
+</div>
+</div>
+<a id="a1d4d4232471bdfeb8d9521f8eda4f010" name="a1d4d4232471bdfeb8d9521f8eda4f010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4d4232471bdfeb8d9521f8eda4f010">&#9670;&#160;</a></span>m_anim_moves</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a>&gt; PuzzleTab::m_anim_moves</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8h_source.html#l00038">38</a> del archivo <a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00289">on_anim_step()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00269">on_replay_animation()</a> y <a class="el" href="puzzle__tab_8cpp_source.html#l00212">on_solver_finished()</a>.</p>
+
+</div>
+</div>
+<a id="a38e537e5c35ceb87abb8ddc5953ebd29" name="a38e537e5c35ceb87abb8ddc5953ebd29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e537e5c35ceb87abb8ddc5953ebd29">&#9670;&#160;</a></span>m_anim_timer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer PuzzleTab::m_anim_timer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8h_source.html#l00031">31</a> del archivo <a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00289">on_anim_step()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00269">on_replay_animation()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00300">on_shuffle_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00123">on_solve_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00087">on_speed_slider_changed()</a> y <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>.</p>
+
+</div>
+</div>
+<a id="a074978075a2cd13500206c34cdbed78e" name="a074978075a2cd13500206c34cdbed78e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a074978075a2cd13500206c34cdbed78e">&#9670;&#160;</a></span>m_current_anim_board</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> PuzzleTab::m_current_anim_board</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8h_source.html#l00037">37</a> del archivo <a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00289">on_anim_step()</a> y <a class="el" href="puzzle__tab_8cpp_source.html#l00269">on_replay_animation()</a>.</p>
+
+</div>
+</div>
+<a id="acd37e53f5b76c43eb0e73e52efd1df3f" name="acd37e53f5b76c43eb0e73e52efd1df3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd37e53f5b76c43eb0e73e52efd1df3f">&#9670;&#160;</a></span>m_goal_board</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> PuzzleTab::m_goal_board</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tablero objetivo o meta del núcleo lógico. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8h_source.html#l00036">36</a> del archivo <a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00079">on_dimension_changed()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00123">on_solve_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a> y <a class="el" href="puzzle__tab_8cpp_source.html#l00050">set_boards()</a>.</p>
+
+</div>
+</div>
+<a id="af6d8ced1674796a92e81af62daaf4e10" name="af6d8ced1674796a92e81af62daaf4e10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6d8ced1674796a92e81af62daaf4e10">&#9670;&#160;</a></span>m_initial_board</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> PuzzleTab::m_initial_board</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tablero inicial gestionado por el núcleo lógico. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8h_source.html#l00034">34</a> del archivo <a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00079">on_dimension_changed()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00269">on_replay_animation()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00300">on_shuffle_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00123">on_solve_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a> y <a class="el" href="puzzle__tab_8cpp_source.html#l00050">set_boards()</a>.</p>
+
+</div>
+</div>
+<a id="ab18fd5487a3f3a6b093d60f167b92a15" name="ab18fd5487a3f3a6b093d60f167b92a15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab18fd5487a3f3a6b093d60f167b92a15">&#9670;&#160;</a></span>m_solver_watcher</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QFutureWatcher&lt;<a class="el" href="structnaidu_1_1solver_1_1Solution.html">naidu::solver::Solution</a>&gt; PuzzleTab::m_solver_watcher</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8h_source.html#l00030">30</a> del archivo <a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00269">on_replay_animation()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00123">on_solve_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00212">on_solver_finished()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00254">on_stop_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a> y <a class="el" href="puzzle__tab_8cpp_source.html#l00042">~PuzzleTab()</a>.</p>
+
+</div>
+</div>
+<a id="aa4fac1d2c93c04491ceaf428b9671b27" name="aa4fac1d2c93c04491ceaf428b9671b27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4fac1d2c93c04491ceaf428b9671b27">&#9670;&#160;</a></span>m_start_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::chrono::high_resolution_clock::time_point PuzzleTab::m_start_time</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8h_source.html#l00041">41</a> del archivo <a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00123">on_solve_clicked()</a> y <a class="el" href="puzzle__tab_8cpp_source.html#l00212">on_solver_finished()</a>.</p>
+
+</div>
+</div>
+<a id="ad84d9b3e52aa349b9f4f3136c928f81c" name="ad84d9b3e52aa349b9f4f3136c928f81c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad84d9b3e52aa349b9f4f3136c928f81c">&#9670;&#160;</a></span>m_ui</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ui::PuzzleTab* PuzzleTab::m_ui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="puzzle__tab_8h_source.html#l00028">28</a> del archivo <a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="puzzle__tab_8cpp_source.html#l00094">get_selected_evaluation()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00289">on_anim_step()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00079">on_dimension_changed()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00269">on_replay_animation()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00300">on_shuffle_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00123">on_solve_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00263">on_solver_cancelled()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00212">on_solver_finished()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00087">on_speed_slider_changed()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00254">on_stop_clicked()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00015">PuzzleTab()</a>, <a class="el" href="puzzle__tab_8cpp_source.html#l00050">set_boards()</a> y <a class="el" href="puzzle__tab_8cpp_source.html#l00042">~PuzzleTab()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>src/ui/puzzle/<a class="el" href="puzzle__tab_8h_source.html">puzzle_tab.h</a></li>
+<li>src/ui/puzzle/<a class="el" href="puzzle__tab_8cpp_source.html">puzzle_tab.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="classPuzzleTab.html">PuzzleTab</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

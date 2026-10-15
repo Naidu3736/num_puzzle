@@ -1,0 +1,6 @@
+<map id="MainWindow::action_quit_triggered" name="MainWindow::action_quit_triggered">
+<area shape="rect" id="Node000001" title=" " alt="" coords="233,21,372,64"/>
+<area shape="rect" id="Node000002" href="$classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,29,185,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="214,43,185,45,185,40,220,42"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="129,14,118,10,95,8,73,10,62,15,59,20,65,29,59,29,54,21,58,11,72,5,95,3,120,5,134,14"/>
+</map>

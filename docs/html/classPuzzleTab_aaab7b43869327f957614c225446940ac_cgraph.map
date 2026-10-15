@@ -1,0 +1,8 @@
+<map id="PuzzleTab::on_shuffle_clicked" name="PuzzleTab::on_shuffle_clicked">
+<area shape="rect" id="Node000001" title="Solicita al generador aleatorio del núcleo naidu::randomizer un nuevo estado válido para el tablero." alt="" coords="5,59,155,101"/>
+<area shape="rect" id="Node000002" href="$namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44" title="Genera un tablero aleatorio resoluble." alt="" coords="203,29,335,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="154,66,190,63,185,64,156,71"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f" title="Vista de solo lectura sobre las fichas válidas del tablero." alt="" coords="206,96,332,123"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="155,89,193,97,188,97,155,94"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="233,28,231,19,237,10,250,5,269,3,289,5,303,14,298,14,288,10,269,8,251,10,241,15,236,21,237,30"/>
+</map>

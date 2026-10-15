@@ -25,23 +25,6 @@
 var NAVTREE =
 [
   [ "Num Puzzle IDA* Solver Suite", "index.html", [
-    [ "Guía de Instalación y Configuración Multiplataforma", "md_installation__guiede.html", [
-      [ "1. Dependencias Generales del Proyecto", "md_installation__guiede.html#autotoc_md1", null ],
-      [ "2. Instalación en Linux (Distribuciones Basadas en Debian / Ubuntu)", "md_installation__guiede.html#autotoc_md3", null ],
-      [ "3. Instalación en Arch Linux", "md_installation__guiede.html#autotoc_md5", null ],
-      [ "4. Instalación en Windows", "md_installation__guiede.html#autotoc_md7", [
-        [ "Opción A: Utilizando el Instalador Oficial de Qt (Recomendado)", "md_installation__guiede.html#autotoc_md8", null ],
-        [ "Opción B: Utilizando MSYS2 (Para usuarios de MinGW)", "md_installation__guiede.html#autotoc_md9", null ]
-      ] ],
-      [ "5. Proceso de Compilación (Común para Todos los Sistemas)", "md_installation__guiede.html#autotoc_md11", null ]
-    ] ],
-    [ "Puzzle Numérico con IDA*", "md_Readme.html", [
-      [ "1. Descripción General del Proyecto", "md_Readme.html#autotoc_md13", null ],
-      [ "2. Características Principales", "md_Readme.html#autotoc_md15", null ],
-      [ "3. Instalación y Configuración", "md_Readme.html#autotoc_md17", null ],
-      [ "4. Estructura del Código y Componentes Clave", "md_Readme.html#autotoc_md19", null ],
-      [ "4. Documentación Técnica", "md_Readme.html#autotoc_md20", null ]
-    ] ],
     [ "Espacios de nombres", "namespaces.html", [
       [ "Lista de espacios de nombres", "namespaces.html", "namespaces_dup" ],
       [ "Miembros del espacio de nombres ", "namespacemembers.html", [
@@ -55,6 +38,7 @@ var NAVTREE =
     [ "Clases", "annotated.html", [
       [ "Lista de clases", "annotated.html", "annotated_dup" ],
       [ "Índice de clases", "classes.html", null ],
+      [ "Jerarquía de clases", "hierarchy.html", "hierarchy" ],
       [ "Miembros de clases", "functions.html", [
         [ "Todos", "functions.html", null ],
         [ "Funciones", "functions_func.html", null ],
@@ -66,10 +50,7 @@ var NAVTREE =
       [ "Lista de archivos", "files.html", "files_dup" ],
       [ "Miembros de los archivos", "globals.html", [
         [ "Todos", "globals.html", null ],
-        [ "Funciones", "globals_func.html", null ],
-        [ "Variables", "globals_vars.html", null ],
-        [ "Enumeraciones", "globals_enum.html", null ],
-        [ "defines", "globals_defs.html", null ]
+        [ "Funciones", "globals_func.html", null ]
       ] ]
     ] ]
   ] ]
@@ -77,8 +58,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"namespacenaidu.html#ab4e3bdb5b0cdf449b9e4e6fe93563d82"
+"analysis__tab_8cpp.html",
+"namespacenaidu.html#a9b00aabfa0d022c9687bfa76caebe287"
 ];
 
 const SYNCONMSG = 'pulsar para deshabilitar sincronización';

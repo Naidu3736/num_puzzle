@@ -1,7 +1,0 @@
-<map id="to_index" name="to_index">
-<area shape="rect" id="Node000001" title="Convierte una dirección a su índice numérico subyacente." alt="" coords="153,31,223,57"/>
-<area shape="rect" id="Node000002" href="$test__direction_8cpp.html#a202f227fa00ad8dc99ddcd693c37161b" title=" " alt="" coords="5,5,105,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,35,105,31,105,25,140,34"/>
-<area shape="rect" id="Node000003" href="$test__direction_8cpp.html#ad3668fa6a33c60f909d2753600e72275" title=" " alt="" coords="5,56,105,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,54,106,62,104,57,140,53"/>
-</map>

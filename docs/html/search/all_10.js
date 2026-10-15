@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['naidu_0',['naidu',['../namespacenaidu.html',1,'']]],
-  ['naidu_3a_3acomponent_1',['component',['../namespacenaidu_1_1component.html',1,'naidu']]],
-  ['naidu_3a_3aevaluation_2',['evaluation',['../namespacenaidu_1_1evaluation.html',1,'naidu']]],
-  ['naidu_3a_3arandomizer_3',['randomizer',['../namespacenaidu_1_1randomizer.html',1,'naidu']]],
-  ['naidu_3a_3asolver_4',['solver',['../namespacenaidu_1_1solver.html',1,'naidu']]],
-  ['nodes_5fexpanded_5',['nodes_expanded',['../structnaidu_1_1solver_1_1Solution.html#ad649b059f3febb835964a3010380dc11',1,'naidu::solver::Solution']]],
-  ['numérico_20con_20ida_6',['Puzzle Numérico con IDA*',['../md_Readme.html',1,'']]]
+  ['tile_5fcount_0',['tile_count',['../classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4',1,'naidu::Board']]],
+  ['tiles_1',['tiles',['../classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f',1,'naidu::Board']]],
+  ['tiles_5fat_5fdistance_5f1_2',['tiles_at_distance_1',['../namespacenaidu_1_1component.html#a076a19f62fc59f74a485906361657a20',1,'naidu::component']]],
+  ['to_5findex_3',['to_index',['../namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939',1,'naidu']]],
+  ['total_5fcost_4',['total_cost',['../structDifficultyMetrics.html#a7a694fb496f842c813f9a9e212124a03',1,'DifficultyMetrics']]],
+  ['total_5fmixing_5',['total_mixing',['../structDifficultyMetrics.html#a0a34c8151ffc7cc30559918b649d965a',1,'DifficultyMetrics']]]
 ];

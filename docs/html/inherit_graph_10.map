@@ -1,0 +1,9 @@
+<map id="Gráfico de jerarquía de clases" name="Gráfico de jerarquía de clases">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,56,78,83"/>
+<area shape="rect" id="Node000001" href="$classAnalysisTab.html" title=" " alt="" coords="126,5,218,32"/>
+<area shape="poly" id="edge2_Node000000_Node000001" title=" " alt="" coords="91,47,137,31,133,34,93,52"/>
+<area shape="rect" id="Node000002" href="$classBoardView.html" title=" " alt="" coords="130,56,214,83"/>
+<area shape="poly" id="edge3_Node000000_Node000002" title=" " alt="" coords="93,67,131,68,127,70,94,72"/>
+<area shape="rect" id="Node000003" href="$classPuzzleTab.html" title="Componente de interfaz que actúa como puente gráfico y controlador para el motor del puzzle y el solu..." alt="" coords="131,107,213,133"/>
+<area shape="poly" id="edge4_Node000000_Node000003" title=" " alt="" coords="92,86,138,105,133,107,92,91"/>
+</map>

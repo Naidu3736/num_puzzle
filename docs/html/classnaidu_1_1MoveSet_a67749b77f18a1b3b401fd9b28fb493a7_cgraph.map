@@ -2,4 +2,6 @@
 <area shape="rect" id="Node000001" title="Iterador al final (uno más allá del último bit)." alt="" coords="5,13,147,40"/>
 <area shape="rect" id="Node000002" href="$classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323" title="Construye un iterador sobre la máscara dada." alt="" coords="195,5,355,48"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,24,182,26,176,27,147,29"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1MoveSet_1_1iterator.html#ad6b764bc99ba659371de063cc9465a6a" title="Avanza m_index hasta el siguiente bit activo." alt="" coords="403,5,563,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="355,24,390,27,385,27,355,29"/>
 </map>

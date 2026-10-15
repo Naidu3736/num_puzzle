@@ -1,13 +1,19 @@
 <map id="naidu::component::broken_pairs" name="naidu::component::broken_pairs">
-<area shape="rect" id="Node000001" title="Número de pares adyacentes mal ordenados (desorden local)." alt="" coords="328,59,499,101"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="444,43,433,40,414,37,395,39,384,44,380,50,381,60,376,57,374,49,381,40,394,34,414,32,435,34,449,43"/>
-<area shape="rect" id="Node000002" href="$namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8" title="Evaluación 3: estructura local." alt="" coords="153,29,280,72"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="310,65,281,63,281,57,315,65"/>
-<area shape="rect" id="Node000005" href="$test__component_8cpp.html#a6156c4d640be4854078a77a432913607" title=" " alt="" coords="167,96,266,123"/>
-<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="315,95,267,105,266,99,310,95"/>
-<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="241,14,232,10,216,8,201,10,193,14,189,20,190,30,185,28,184,19,189,11,200,5,216,3,234,5,246,14"/>
-<area shape="rect" id="Node000003" href="$test__evaluation_8cpp.html#a887b592a9635e045eb32009d6be28c47" title=" " alt="" coords="5,12,105,39"/>
-<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="135,39,105,36,105,30,140,37"/>
-<area shape="rect" id="Node000004" href="$test__solver_8cpp.html#a956905c670acd85146d6c16dd89dee1b" title=" " alt="" coords="5,63,105,89"/>
-<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="135,64,106,71,104,66,140,62"/>
+<area shape="rect" id="Node000001" title="Número de pares adyacentes mal ordenados (desorden local)." alt="" coords="812,63,983,105"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="928,47,917,44,897,41,879,43,868,48,863,54,864,64,860,60,858,53,864,44,878,38,897,36,919,38,933,48"/>
+<area shape="rect" id="Node000002" href="$namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8" title="Evaluación 3: estructura local." alt="" coords="636,63,764,105"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="793,84,764,87,764,81,799,84"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="730,47,719,44,700,41,682,43,671,48,667,54,668,64,663,61,661,53,668,44,681,38,700,36,721,38,735,47"/>
+<area shape="rect" id="Node000003" href="$classPuzzleTab.html#a4532f1e18c2053e5a77a179ac9349652" title="Obtiene la función heurística vinculada a los métodos de evaluación del núcleo (naidu::evaluation)." alt="" coords="424,25,588,68"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="619,69,589,65,589,60,624,69"/>
+<area shape="rect" id="Node000006" href="$classAnalysisTab.html#aeff7abdc8a7f8111e9e783d19440bc24" title=" " alt="" coords="436,96,576,139"/>
+<area shape="poly" id="edge8_Node000002_Node000006" title=" " alt="" coords="624,97,577,108,576,103,619,98"/>
+<area shape="rect" id="Node000004" href="$classPuzzleTab.html#af92079c81348986c55c3f9025d3d1450" title="Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda naidu::solver..." alt="" coords="219,21,362,64"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="406,45,362,47,362,41,411,44"/>
+<area shape="rect" id="Node000005" href="$classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,29,157,56"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="201,44,158,45,157,40,206,42"/>
+<area shape="poly" id="edge7_Node000005_Node000005" title=" " alt="" coords="115,15,104,10,81,8,59,10,47,15,44,20,50,28,45,29,39,21,44,11,58,5,81,3,106,5,121,13"/>
+<area shape="rect" id="Node000007" href="$classAnalysisTab.html#a8b92a76d421f4739f4bfea7a80134d5a" title=" " alt="" coords="205,112,376,139"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="419,121,377,125,376,119,424,120"/>
+<area shape="poly" id="edge10_Node000007_Node000007" title=" " alt="" coords="325,96,314,93,290,91,268,93,257,97,254,103,260,113,255,111,248,103,253,94,267,87,290,85,315,88,330,97"/>
 </map>

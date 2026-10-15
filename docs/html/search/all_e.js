@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['left_0',['LEFT',['../namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba684d325a7303f52e64011467ff5c5758',1,'naidu']]],
-  ['legal_5fmoves_1',['legal_moves',['../classnaidu_1_1Board.html#ae5927ff613abc30c3a4015d3d4b27a5f',1,'naidu::Board']]],
-  ['linux_2',['3. Instalación en Arch Linux',['../md_installation__guiede.html#autotoc_md5',1,'']]],
-  ['linux_20distribuciones_20basadas_20en_20debian_20ubuntu_3',['2. Instalación en Linux (Distribuciones Basadas en Debian / Ubuntu)',['../md_installation__guiede.html#autotoc_md3',1,'']]],
-  ['los_20sistemas_4',['5. Proceso de Compilación (Común para Todos los Sistemas)',['../md_installation__guiede.html#autotoc_md11',1,'']]]
+  ['randomizer_2ecpp_0',['randomizer.cpp',['../randomizer_8cpp.html',1,'']]],
+  ['randomizer_2ehpp_1',['randomizer.hpp',['../randomizer_8hpp.html',1,'']]],
+  ['raw_2',['raw',['../classnaidu_1_1MoveSet.html#a8ccfc7a05c6e97abbbf3be4ea16f1489',1,'naidu::MoveSet']]],
+  ['reset_3',['reset',['../classnaidu_1_1Board.html#aaac8dd20fedb46ab483b9cc70f046740',1,'naidu::Board']]],
+  ['resize_4',['resize',['../classnaidu_1_1Board.html#a6984ceb36ab56184586162dfcb7695da',1,'naidu::Board']]],
+  ['right_5',['RIGHT',['../namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba21507b40c80068eda19865706fdc2403',1,'naidu']]],
+  ['run_5fdifficulty_5fbatch_6',['run_difficulty_batch',['../classAnalysisTab.html#a1d775b33101bc4f235805aca68cfffd3',1,'AnalysisTab']]]
 ];

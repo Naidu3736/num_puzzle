@@ -1,0 +1,20 @@
+<map id="naidu::MoveSet::MoveSet" name="naidu::MoveSet::MoveSet">
+<area shape="rect" id="Node000001" title="Construye un MoveSet a partir de una máscara cruda." alt="" coords="666,120,839,146"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1MoveSet.html#a2fb1539a5fdf0fa3cf644a2c0ba2c81d" title="Crea un MoveSet con una sola dirección." alt="" coords="457,69,603,96"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="673,116,592,99,592,94,678,115"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1MoveSet.html#a6784a78ca015c6348eea2c9a655252f7" title="Unión de dos direcciones." alt="" coords="224,120,394,146"/>
+<area shape="poly" id="edge10_Node000001_Node000003" title=" " alt="" coords="649,134,395,136,394,130,654,132"/>
+<area shape="rect" id="Node000004" href="$classnaidu_1_1MoveSet.html#aeb9a87526d1618e0172112acb32dfe83" title="Añade una dirección a un MoveSet." alt="" coords="5,45,176,72"/>
+<area shape="poly" id="edge11_Node000001_Node000004" title=" " alt="" coords="726,108,679,69,649,50,617,36,553,19,486,10,419,8,353,11,233,27,142,47,140,42,232,22,352,6,419,3,487,5,554,14,619,31,652,45,682,65,731,109"/>
+<area shape="rect" id="Node000005" href="$classnaidu_1_1MoveSet.html#ab953bbaa8587656f220e5fd87989c6d5" title="Unión de dos MoveSets." alt="" coords="5,145,176,172"/>
+<area shape="poly" id="edge12_Node000001_Node000005" title=" " alt="" coords="648,143,394,161,176,163,176,157,394,156,653,141"/>
+<area shape="rect" id="Node000006" href="$classnaidu_1_1MoveSet.html#a88d438012b0337a4879efd1534f58eb8" title="Intersección de dos MoveSets." alt="" coords="442,245,618,272"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="716,154,557,247,555,242,711,155"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="567,54,555,50,530,48,507,50,494,54,491,60,498,69,492,68,486,60,491,51,506,44,530,42,556,45,572,54"/>
+<area shape="poly" id="edge3_Node000002_Node000003" title=" " alt="" coords="451,101,371,122,370,117,456,99"/>
+<area shape="poly" id="edge7_Node000002_Node000004" title=" " alt="" coords="440,80,176,66,176,60,443,75"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="345,105,333,101,309,98,286,100,274,105,271,110,277,120,272,119,265,111,270,101,285,95,309,93,335,96,350,104"/>
+<area shape="poly" id="edge5_Node000003_Node000004" title=" " alt="" coords="251,116,132,75,132,70,255,113"/>
+<area shape="poly" id="edge6_Node000003_Node000005" title=" " alt="" coords="206,146,177,151,175,146,211,144"/>
+<area shape="poly" id="edge9_Node000006_Node000006" title=" " alt="" coords="567,229,555,226,530,224,507,226,494,230,491,236,497,246,493,243,486,236,491,227,506,220,530,218,556,221,572,230"/>
+</map>

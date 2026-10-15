@@ -1,0 +1,7 @@
+<map id="BoardView" name="BoardView">
+<area shape="rect" id="Node000001" title=" " alt="" coords="53,104,137,131"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,78,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,43,91,103,85,104,54,48"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html" title="Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N." alt="" coords="102,5,197,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,45,104,105,100,102,132,46"/>
+</map>

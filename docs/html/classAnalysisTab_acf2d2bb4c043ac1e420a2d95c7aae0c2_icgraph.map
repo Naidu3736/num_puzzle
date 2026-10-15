@@ -1,0 +1,8 @@
+<map id="AnalysisTab::update_all_charts" name="AnalysisTab::update_all_charts">
+<area shape="rect" id="Node000001" title=" " alt="" coords="412,21,551,64"/>
+<area shape="rect" id="Node000002" href="$classAnalysisTab.html#aeff7abdc8a7f8111e9e783d19440bc24" title=" " alt="" coords="225,21,364,64"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="394,43,365,45,364,40,399,43"/>
+<area shape="rect" id="Node000003" href="$classAnalysisTab.html#a8b92a76d421f4739f4bfea7a80134d5a" title=" " alt="" coords="5,29,177,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="207,43,177,45,177,40,212,42"/>
+<area shape="poly" id="edge3_Node000003_Node000003" title=" " alt="" coords="124,14,114,10,91,8,70,10,58,15,56,20,61,29,56,29,50,21,55,11,68,5,91,3,115,5,130,14"/>
+</map>

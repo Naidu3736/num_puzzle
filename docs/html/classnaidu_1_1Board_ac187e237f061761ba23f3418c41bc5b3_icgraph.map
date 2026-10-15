@@ -1,7 +1,0 @@
-<map id="naidu::Board::apply" name="naidu::Board::apply">
-<area shape="rect" id="Node000001" title="Aplica una secuencia de movimientos al tablero." alt="" coords="153,31,286,57"/>
-<area shape="rect" id="Node000002" href="$test__solver_8cpp.html#a600d978eb5018ff2cd2e3380c0dc6062" title=" " alt="" coords="5,5,105,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,32,105,29,105,24,140,31"/>
-<area shape="rect" id="Node000003" href="$test__solver_8cpp.html#a047a4f7f60d6e8c0703c255d36154eb1" title=" " alt="" coords="5,56,105,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,57,106,64,105,59,140,56"/>
-</map>

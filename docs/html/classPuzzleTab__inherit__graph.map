@@ -1,0 +1,5 @@
+<map id="PuzzleTab" name="PuzzleTab">
+<area shape="rect" id="Node000001" title="Componente de interfaz que actúa como puente gráfico y controlador para el motor del puzzle y el solu..." alt="" coords="5,80,88,107"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="10,5,83,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,46,49,80,44,79,45,50"/>
+</map>

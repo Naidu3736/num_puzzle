@@ -1,0 +1,5 @@
+<map id="naidu::Board::is_solvable" name="naidu::Board::is_solvable">
+<area shape="rect" id="Node000001" title="Comprueba si el tablero es soluble desde su estado actual." alt="" coords="5,5,173,32"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#a889102c77069dc5a4ed2be943c4b9716" title="Cuenta el número de inversiones del tablero." alt="" coords="221,5,382,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="173,16,207,19,202,19,173,21"/>
+</map>

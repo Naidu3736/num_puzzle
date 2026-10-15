@@ -1,17 +1,10 @@
 <map id="naidu::Board::move" name="naidu::Board::move">
-<area shape="rect" id="Node000001" title="Intenta mover el hueco en la dirección m." alt="" coords="334,132,468,159"/>
-<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#ac187e237f061761ba23f3418c41bc5b3" title="Aplica una secuencia de movimientos al tablero." alt="" coords="153,31,286,57"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="367,123,329,98,285,72,261,61,261,55,287,67,332,93,372,123"/>
-<area shape="rect" id="Node000005" href="$test__board__moves_8cpp.html#a07934cac081b4c15a1824a3e245a5b10" title=" " alt="" coords="170,81,269,108"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="333,128,269,111,269,106,338,127"/>
-<area shape="rect" id="Node000006" href="$test__board__moves_8cpp.html#a8fd6b71c564515bd4bd7b03c8aedf0fb" title=" " alt="" coords="170,132,269,159"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="316,146,270,148,269,143,321,145"/>
-<area shape="rect" id="Node000007" href="$test__board__moves_8cpp.html#a31b4fcfac7dd19e8fe740260e4e60a07" title=" " alt="" coords="170,183,269,209"/>
-<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="333,164,270,185,269,180,338,163"/>
-<area shape="rect" id="Node000008" href="$test__unordored__map_8cpp.html#a4bd4216f95c6a0940550928aed333bc0" title=" " alt="" coords="170,233,269,260"/>
-<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="372,167,332,197,287,224,261,235,260,230,285,219,329,193,367,169"/>
-<area shape="rect" id="Node000003" href="$test__solver_8cpp.html#a600d978eb5018ff2cd2e3380c0dc6062" title=" " alt="" coords="5,5,105,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="135,33,106,29,104,24,140,30"/>
-<area shape="rect" id="Node000004" href="$test__solver_8cpp.html#a047a4f7f60d6e8c0703c255d36154eb1" title=" " alt="" coords="5,56,105,83"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="135,58,107,64,104,59,139,55"/>
+<area shape="rect" id="Node000001" title="Intenta mover el hueco en la dirección m." alt="" coords="424,31,558,57"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#ac187e237f061761ba23f3418c41bc5b3" title="Aplica una secuencia de movimientos al tablero." alt="" coords="224,5,357,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="406,34,357,30,357,24,412,34"/>
+<area shape="rect" id="Node000003" href="$classPuzzleTab.html#a51f1e564095a8ca105c4e5e6fa038eca" title=" " alt="" coords="205,56,376,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="412,54,377,61,376,56,406,55"/>
+<area shape="rect" id="Node000004" href="$classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4" title=" " alt="" coords="5,56,157,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="187,69,157,72,157,67,192,69"/>
+<area shape="poly" id="edge4_Node000004_Node000004" title=" " alt="" coords="115,41,104,37,81,35,59,37,47,41,44,47,50,56,45,56,39,47,44,38,58,31,81,29,106,32,121,41"/>
 </map>

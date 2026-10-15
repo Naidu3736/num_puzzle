@@ -1,7 +1,0 @@
-<map id="naidu::Board::legal_moves" name="naidu::Board::legal_moves">
-<area shape="rect" id="Node000001" title="Devuelve el conjunto de movimientos legales desde el estado actual." alt="" coords="153,23,282,65"/>
-<area shape="rect" id="Node000002" href="$test__board__moves_8cpp.html#ab0930be29daf0eae97fe3858e8a885e7" title=" " alt="" coords="5,5,105,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,32,105,29,105,24,140,31"/>
-<area shape="rect" id="Node000003" href="$test__board__moves_8cpp.html#a24d80ced9a6647240de1d7d344a7b0bb" title=" " alt="" coords="5,56,105,83"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,57,105,64,104,59,140,56"/>
-</map>

@@ -1,0 +1,7 @@
+<map id="PuzzleTab" name="PuzzleTab">
+<area shape="rect" id="Node000001" title="Componente de interfaz que actúa como puente gráfico y controlador para el motor del puzzle y el solu..." alt="" coords="54,147,136,173"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,78,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,45,93,146,87,147,50,48"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html" title="Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N." alt="" coords="102,5,197,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,46,102,148,97,145,136,47"/>
+</map>

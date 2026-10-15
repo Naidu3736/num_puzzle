@@ -1,5 +1,7 @@
 <map id="naidu::Board::peek_tile" name="naidu::Board::peek_tile">
-<area shape="rect" id="Node000001" title="Devuelve la ficha que se movería si el hueco se moviera en d." alt="" coords="5,5,160,32"/>
-<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="208,5,321,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,16,195,19,189,19,160,21"/>
+<area shape="rect" id="Node000001" title="Devuelve la ficha que se movería si el hueco se moviera en d." alt="" coords="5,35,160,61"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="227,5,340,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="159,34,214,28,209,30,160,39"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html#a53d8e015e3658028fb0806e119746827" title="Devuelve el índice del vecino del hueco en la dirección m." alt="" coords="208,56,359,99"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="160,57,195,64,189,64,160,62"/>
 </map>

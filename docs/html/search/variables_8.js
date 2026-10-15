@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['random_5fcases_0',['random_cases',['../namespacefixtures.html#a73d50d81c9c1a04f296e9124aed54448',1,'fixtures']]]
+  ['nodes_5fexpanded_0',['nodes_expanded',['../structnaidu_1_1solver_1_1Solution.html#ad649b059f3febb835964a3010380dc11',1,'naidu::solver::Solution']]]
 ];

@@ -1,0 +1,228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Referencia del archivo src/ui/puzzle/puzzle_tab.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('puzzle__tab_8h.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo puzzle_tab.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="board_8hpp_source.html">board/board.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="evaluation_8hpp_source.html">evaluation/evaluation.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="solver_8hpp_source.html">solver/solver.hpp</a>&quot;</code><br />
+<code>#include &lt;QWidget&gt;</code><br />
+<code>#include &lt;QString&gt;</code><br />
+<code>#include &lt;optional&gt;</code><br />
+<code>#include &lt;chrono&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;QFutureWatcher&gt;</code><br />
+<code>#include &lt;QTimer&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependencias incluidas en puzzle_tab.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="puzzle__tab_8h__incl.png" border="0" usemap="#asrc_2ui_2puzzle_2puzzle__tab_8h" loading="lazy" alt=""/></div>
+<map name="asrc_2ui_2puzzle_2puzzle__tab_8h" id="asrc_2ui_2puzzle_2puzzle__tab_8h">
+<area shape="rect" title=" " alt="" coords="660,5,797,48"/>
+<area shape="rect" href="board_8hpp.html" title=" " alt="" coords="418,245,532,272"/>
+<area shape="poly" title=" " alt="" coords="693,47,663,72,636,98,619,124,612,148,603,173,585,199,556,223,524,241,521,236,553,219,581,196,598,170,606,147,614,122,631,94,660,68,689,50"/>
+<area shape="rect" href="evaluation_8hpp.html" title=" " alt="" coords="5,171,174,197"/>
+<area shape="poly" title=" " alt="" coords="657,37,506,61,416,78,328,99,222,132,134,166,131,162,220,127,326,93,415,73,505,56,662,35"/>
+<area shape="rect" href="solver_8hpp.html" title=" " alt="" coords="339,96,459,123"/>
+<area shape="poly" title=" " alt="" coords="657,46,466,94,464,89,661,43"/>
+<area shape="rect" title=" " alt="" coords="513,171,570,197"/>
+<area shape="poly" title=" " alt="" coords="665,50,628,71,591,98,569,127,553,158,549,155,564,124,588,94,625,66,669,47"/>
+<area shape="rect" title=" " alt="" coords="645,96,718,123"/>
+<area shape="poly" title=" " alt="" coords="718,47,698,84,695,81,714,50"/>
+<area shape="rect" title=" " alt="" coords="742,96,808,123"/>
+<area shape="poly" title=" " alt="" coords="741,46,762,83,757,82,739,51"/>
+<area shape="rect" title=" " alt="" coords="831,96,897,123"/>
+<area shape="poly" title=" " alt="" coords="763,46,832,88,827,88,763,51"/>
+<area shape="rect" title=" " alt="" coords="922,96,982,123"/>
+<area shape="poly" title=" " alt="" coords="786,46,910,92,905,92,786,51"/>
+<area shape="rect" title=" " alt="" coords="1006,96,1122,123"/>
+<area shape="poly" title=" " alt="" coords="797,42,999,91,994,92,797,47"/>
+<area shape="rect" title=" " alt="" coords="1147,96,1211,123"/>
+<area shape="poly" title=" " alt="" coords="797,35,947,58,1134,95,1129,96,946,63,798,40"/>
+<area shape="rect" href="direction_8hpp.html" title=" " alt="" coords="341,395,465,421"/>
+<area shape="poly" title=" " alt="" coords="471,271,418,382,414,379,466,274"/>
+<area shape="rect" title=" " alt="" coords="427,469,477,496"/>
+<area shape="poly" title=" " alt="" coords="478,270,485,336,485,379,480,422,468,457,464,453,475,421,480,379,480,337,475,274"/>
+<area shape="rect" title=" " alt="" coords="161,469,221,496"/>
+<area shape="poly" title=" " alt="" coords="415,267,302,288,250,303,231,312,218,322,199,352,190,387,188,423,189,455,184,452,182,423,185,387,194,350,214,318,228,307,248,298,301,283,419,265"/>
+<area shape="rect" href="moveset_8hpp.html" title=" " alt="" coords="228,320,354,347"/>
+<area shape="poly" title=" " alt="" coords="440,274,338,316,336,311,445,271"/>
+<area shape="rect" title=" " alt="" coords="540,320,604,347"/>
+<area shape="poly" title=" " alt="" coords="492,270,546,311,541,311,491,275"/>
+<area shape="rect" title=" " alt="" coords="629,320,678,347"/>
+<area shape="poly" title=" " alt="" coords="506,270,617,316,612,317,506,275"/>
+<area shape="poly" title=" " alt="" coords="413,420,438,457,433,455,410,424"/>
+<area shape="poly" title=" " alt="" coords="369,422,236,469,235,464,363,422"/>
+<area shape="poly" title=" " alt="" coords="311,345,373,386,368,386,310,350"/>
+<area shape="poly" title=" " alt="" coords="294,345,293,382,289,403,280,423,259,446,235,464,232,459,256,442,275,420,283,402,288,382,290,349"/>
+<area shape="rect" title=" " alt="" coords="228,395,266,421"/>
+<area shape="poly" title=" " alt="" coords="285,346,264,383,260,379,281,349"/>
+<area shape="poly" title=" " alt="" coords="157,195,404,242,401,246,157,201"/>
+<area shape="poly" title=" " alt="" coords="89,195,89,237,91,294,101,359,111,390,124,420,140,441,160,460,155,460,136,445,119,423,106,392,96,360,85,295,84,237,88,200"/>
+<area shape="poly" title=" " alt="" coords="413,121,434,143,452,169,465,200,472,231,467,229,459,202,447,172,429,146,412,126"/>
+<area shape="poly" title=" " alt="" coords="385,121,366,145,351,172,348,189,349,212,361,269,395,381,390,379,355,271,344,213,343,188,346,170,362,142,382,125"/>
+<area shape="poly" title=" " alt="" coords="379,125,343,155,291,200,239,257,216,288,196,321,184,355,181,390,187,455,182,453,176,390,179,354,191,319,211,285,235,253,288,196,339,151,383,121"/>
+<area shape="poly" title=" " alt="" coords="343,125,160,169,157,164,346,121"/>
+<area shape="rect" title=" " alt="" coords="360,171,438,197"/>
+<area shape="poly" title=" " alt="" coords="400,121,401,156,396,154,398,126"/>
+<area shape="poly" title=" " alt="" coords="424,121,506,163,500,164,424,126"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="puzzle__tab_8h__dep__incl.png" border="0" usemap="#asrc_2ui_2puzzle_2puzzle__tab_8hdep" loading="lazy" alt=""/></div>
+<map name="asrc_2ui_2puzzle_2puzzle__tab_8hdep" id="asrc_2ui_2puzzle_2puzzle__tab_8hdep">
+<area shape="rect" title=" " alt="" coords="120,5,257,48"/>
+<area shape="rect" href="mainwindow_8cpp.html" title=" " alt="" coords="5,187,159,213"/>
+<area shape="poly" title=" " alt="" coords="141,59,126,77,110,97,99,120,91,145,85,187,80,185,86,144,94,119,105,95,122,73,145,56"/>
+<area shape="rect" href="mainwindow_8h.html" title=" " alt="" coords="119,104,258,131"/>
+<area shape="poly" title=" " alt="" coords="190,61,191,105,186,103,187,66"/>
+<area shape="rect" href="puzzle__tab_8cpp.html" title=" " alt="" coords="283,96,420,139"/>
+<area shape="poly" title=" " alt="" coords="241,53,316,95,311,96,240,59"/>
+<area shape="poly" title=" " alt="" coords="163,140,100,188,97,184,157,140"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="183,187,280,213"/>
+<area shape="poly" title=" " alt="" coords="204,142,227,187,222,186,201,147"/>
+</map>
+</div>
+</div>
+<p><a href="puzzle__tab_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:PuzzleTab" id="r_PuzzleTab"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classPuzzleTab.html">PuzzleTab</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Componente de interfaz que actúa como puente gráfico y controlador para el motor del puzzle y el solucionador IDA*.  <a href="classPuzzleTab.html#details">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Espacios de nombres</h2></td></tr>
+<tr class="memitem:Ui" id="r_Ui"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespaceUi.html">Ui</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a href="dir_c9e9bad68d791e67cd35d3c0eebc6050.html">puzzle</a></li><li class="navelem"><a href="puzzle__tab_8h.html">puzzle_tab.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

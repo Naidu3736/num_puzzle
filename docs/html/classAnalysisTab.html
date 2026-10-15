@@ -1,0 +1,1549 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Referencia de la clase AnalysisTab</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classAnalysisTab.html','','classAnalysisTab-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase AnalysisTab</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencia de AnalysisTab</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab__inherit__graph.png" border="0" usemap="#aAnalysisTab_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="aAnalysisTab_inherit__map" id="aAnalysisTab_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,98,107"/>
+<area shape="rect" title=" " alt="" coords="15,5,88,32"/>
+<area shape="poly" title=" " alt="" coords="53,46,54,80,49,79,50,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">leyenda</a>]</span></center></div>
+<div class="dynheader">
+Diagrama de colaboración de AnalysisTab:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab__coll__graph.png" border="0" usemap="#aAnalysisTab_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aAnalysisTab_coll__map" id="aAnalysisTab_coll__map">
+<area shape="rect" title=" " alt="" coords="5,80,98,107"/>
+<area shape="rect" title=" " alt="" coords="15,5,88,32"/>
+<area shape="poly" title=" " alt="" coords="53,46,54,80,49,79,50,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">leyenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a8b92a76d421f4739f4bfea7a80134d5a" id="r_a8b92a76d421f4739f4bfea7a80134d5a"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a8b92a76d421f4739f4bfea7a80134d5a">AnalysisTab</a> (QWidget *parent=nullptr)</td></tr>
+<tr class="memitem:a4ba50ef8e17f43805ae4d7f832d59a19" id="r_a4ba50ef8e17f43805ae4d7f832d59a19"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4ba50ef8e17f43805ae4d7f832d59a19">~AnalysisTab</a> () override</td></tr>
+<tr class="memitem:a2c5fe39468645b48c0a1792f2d10fec0" id="r_a2c5fe39468645b48c0a1792f2d10fec0"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2c5fe39468645b48c0a1792f2d10fec0">save_all_charts</a> (const QString &amp;directory_path)</td></tr>
+<tr class="memdesc:a2c5fe39468645b48c0a1792f2d10fec0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Guarda las gráficas estadísticas del análisis en el directorio especificado.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Métodos privados</h2></td></tr>
+<tr class="memitem:aab47c36d85abb5bb798be4d1811aecc1" id="r_aab47c36d85abb5bb798be4d1811aecc1"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aab47c36d85abb5bb798be4d1811aecc1">setup_charts</a> ()</td></tr>
+<tr class="memitem:ac29b8a05c69e1b8850850b291efa9797" id="r_ac29b8a05c69e1b8850850b291efa9797"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac29b8a05c69e1b8850850b291efa9797">update_time_chart</a> (const <a class="el" href="structAnalysisResults.html">AnalysisResults</a> &amp;results)</td></tr>
+<tr class="memitem:a21e3966fa712141b0faa25f35731e3bf" id="r_a21e3966fa712141b0faa25f35731e3bf"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a21e3966fa712141b0faa25f35731e3bf">update_success_chart</a> (const <a class="el" href="structAnalysisResults.html">AnalysisResults</a> &amp;results)</td></tr>
+<tr class="memitem:a8942b90fb1c649b79b8a19af962c316c" id="r_a8942b90fb1c649b79b8a19af962c316c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8942b90fb1c649b79b8a19af962c316c">update_optimal_chart</a> (const <a class="el" href="structAnalysisResults.html">AnalysisResults</a> &amp;results)</td></tr>
+<tr class="memitem:acf2d2bb4c043ac1e420a2d95c7aae0c2" id="r_acf2d2bb4c043ac1e420a2d95c7aae0c2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acf2d2bb4c043ac1e420a2d95c7aae0c2">update_all_charts</a> (const <a class="el" href="structAnalysisResults.html">AnalysisResults</a> &amp;results)</td></tr>
+<tr class="memitem:a655b4e2d1eace23a945bdf0635a3bcfb" id="r_a655b4e2d1eace23a945bdf0635a3bcfb"><td class="memItemLeft"><a class="el" href="structAnalysisResults.html">AnalysisResults</a>&#160;</td><td class="memItemRight"><a class="el" href="#a655b4e2d1eace23a945bdf0635a3bcfb">execute_empirical_analysis</a> (int instances, int easy_m, int med_m, int hard_m, int max_attempts, int dim, const <a class="el" href="structnaidu_1_1solver_1_1Config.html">naidu::solver::Config</a> &amp;config, bool rand_avoid)</td></tr>
+<tr class="memdesc:a655b4e2d1eace23a945bdf0635a3bcfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta el análisis empírico masivo coordinando lotes de tableros generados por <a class="el" href="namespacenaidu_1_1randomizer.html">naidu::randomizer</a> y resueltos por <a class="el" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num-puzzle usando IDA* (Iterative Deepening A*).">naidu::solver::ida</a>.  <br /></td></tr>
+<tr class="memitem:a1d775b33101bc4f235805aca68cfffd3" id="r_a1d775b33101bc4f235805aca68cfffd3"><td class="memItemLeft"><a class="el" href="structDifficultyMetrics.html">DifficultyMetrics</a>&#160;</td><td class="memItemRight"><a class="el" href="#a1d775b33101bc4f235805aca68cfffd3">run_difficulty_batch</a> (int moves_count, int instances, std::uint8_t dim, int max_attempts, bool rand_avoid, const <a class="el" href="structnaidu_1_1solver_1_1Config.html">naidu::solver::Config</a> &amp;config)</td></tr>
+<tr class="memdesc:a1d775b33101bc4f235805aca68cfffd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ejecuta un lote de pruebas de dificultad para medir rendimiento y métricas utilizando el núcleo de resolución.  <br /></td></tr>
+<tr class="memitem:aeff7abdc8a7f8111e9e783d19440bc24" id="r_aeff7abdc8a7f8111e9e783d19440bc24"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeff7abdc8a7f8111e9e783d19440bc24">on_run_analysis_clicked</a> ()</td></tr>
+<tr class="memitem:a5e1c21307e9711136f0987947ade319c" id="r_a5e1c21307e9711136f0987947ade319c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5e1c21307e9711136f0987947ade319c">on_cancel_analysis_clicked</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:af98f5fe75bd919ae7108e98327806821" id="r_af98f5fe75bd919ae7108e98327806821"><td class="memItemLeft">Ui::AnalysisTab *&#160;</td><td class="memItemRight"><a class="el" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a></td></tr>
+<tr class="memitem:aadc496156792c39f6c764b5ba4d97d17" id="r_aadc496156792c39f6c764b5ba4d97d17"><td class="memItemLeft">QFutureWatcher&lt; void &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aadc496156792c39f6c764b5ba4d97d17">m_analysis_watcher</a></td></tr>
+<tr class="memitem:aff96c65044d33c9db4be69aa6fc7604e" id="r_aff96c65044d33c9db4be69aa6fc7604e"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aff96c65044d33c9db4be69aa6fc7604e">m_is_analyzing</a> = false</td></tr>
+<tr class="memitem:a7e4bae40bf71a00591864648f991fc99" id="r_a7e4bae40bf71a00591864648f991fc99"><td class="memItemLeft">QChart *&#160;</td><td class="memItemRight"><a class="el" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a> = nullptr</td></tr>
+<tr class="memitem:af29af942308612d0edca1e48c93b7f24" id="r_af29af942308612d0edca1e48c93b7f24"><td class="memItemLeft">QChart *&#160;</td><td class="memItemRight"><a class="el" href="#af29af942308612d0edca1e48c93b7f24">m_success_chart</a> = nullptr</td></tr>
+<tr class="memitem:a90839b0d27ed05d148ad97061e451554" id="r_a90839b0d27ed05d148ad97061e451554"><td class="memItemLeft">QChart *&#160;</td><td class="memItemRight"><a class="el" href="#a90839b0d27ed05d148ad97061e451554">m_optimal_chart</a> = nullptr</td></tr>
+<tr class="memitem:ad2a74647215ebb92e4eb00842fd50e4b" id="r_ad2a74647215ebb92e4eb00842fd50e4b"><td class="memItemLeft">QChartView *&#160;</td><td class="memItemRight"><a class="el" href="#ad2a74647215ebb92e4eb00842fd50e4b">m_time_chart_view</a> = nullptr</td></tr>
+<tr class="memitem:a32872d6c281b2bef1005b6794fd43396" id="r_a32872d6c281b2bef1005b6794fd43396"><td class="memItemLeft">QChartView *&#160;</td><td class="memItemRight"><a class="el" href="#a32872d6c281b2bef1005b6794fd43396">m_success_chart_view</a> = nullptr</td></tr>
+<tr class="memitem:aa3f8166ad6ba7c0887af055da4d25333" id="r_aa3f8166ad6ba7c0887af055da4d25333"><td class="memItemLeft">QChartView *&#160;</td><td class="memItemRight"><a class="el" href="#aa3f8166ad6ba7c0887af055da4d25333">m_optimal_chart_view</a> = nullptr</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock">
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8h_source.html#l00036">36</a> del archivo <a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a8b92a76d421f4739f4bfea7a80134d5a" name="a8b92a76d421f4739f4bfea7a80134d5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b92a76d421f4739f4bfea7a80134d5a">&#9670;&#160;</a></span>AnalysisTab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnalysisTab::AnalysisTab </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00019">19</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   20</span>    : QWidget(parent)</div>
+<div class="line"><span class="lineno">   21</span>    , <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>(<span class="keyword">new</span> Ui::AnalysisTab)</div>
+<div class="line"><span class="lineno">   22</span>{</div>
+<div class="line"><span class="lineno">   23</span>    <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   24</span>    <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;eval_combo-&gt;setCurrentIndex(-1);</div>
+<div class="line"><span class="lineno">   25</span> </div>
+<div class="line"><span class="lineno">   26</span>    <a class="code hl_function" href="#aab47c36d85abb5bb798be4d1811aecc1">setup_charts</a>();</div>
+<div class="line"><span class="lineno">   27</span> </div>
+<div class="line"><span class="lineno">   28</span>    connect(</div>
+<div class="line"><span class="lineno">   29</span>        <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;dimension_slider, &amp;QSlider::valueChanged,</div>
+<div class="line"><span class="lineno">   30</span>        <span class="keyword">this</span>, [<span class="keyword">this</span>](<span class="keywordtype">int</span> val) {</div>
+<div class="line"><span class="lineno">   31</span>            m_ui-&gt;dimension_value_label-&gt;setText(QString::number(val));</div>
+<div class="line"><span class="lineno">   32</span>        }</div>
+<div class="line"><span class="lineno">   33</span>    );</div>
+<div class="line"><span class="lineno">   34</span> </div>
+<div class="line"><span class="lineno">   35</span>    connect(</div>
+<div class="line"><span class="lineno">   36</span>        <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;run_analysis_btn, &amp;QPushButton::clicked,</div>
+<div class="line"><span class="lineno">   37</span>        <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#aeff7abdc8a7f8111e9e783d19440bc24">AnalysisTab::on_run_analysis_clicked</a></div>
+<div class="line"><span class="lineno">   38</span>    );</div>
+<div class="line"><span class="lineno">   39</span> </div>
+<div class="line"><span class="lineno">   40</span>    connect(</div>
+<div class="line"><span class="lineno">   41</span>        <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;stop_analysis_btn, &amp;QPushButton::clicked,</div>
+<div class="line"><span class="lineno">   42</span>        <span class="keyword">this</span>, &amp;<a class="code hl_function" href="#a5e1c21307e9711136f0987947ade319c">AnalysisTab::on_cancel_analysis_clicked</a></div>
+<div class="line"><span class="lineno">   43</span>    );</div>
+<div class="line"><span class="lineno">   44</span>}</div>
+<div class="ttc" id="aclassAnalysisTab_html_a5e1c21307e9711136f0987947ade319c"><div class="ttname"><a href="#a5e1c21307e9711136f0987947ade319c">AnalysisTab::on_cancel_analysis_clicked</a></div><div class="ttdeci">void on_cancel_analysis_clicked()</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8cpp_source.html#l00351">analysis_tab.cpp:351</a></div></div>
+<div class="ttc" id="aclassAnalysisTab_html_aab47c36d85abb5bb798be4d1811aecc1"><div class="ttname"><a href="#aab47c36d85abb5bb798be4d1811aecc1">AnalysisTab::setup_charts</a></div><div class="ttdeci">void setup_charts()</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8cpp_source.html#l00054">analysis_tab.cpp:54</a></div></div>
+<div class="ttc" id="aclassAnalysisTab_html_aeff7abdc8a7f8111e9e783d19440bc24"><div class="ttname"><a href="#aeff7abdc8a7f8111e9e783d19440bc24">AnalysisTab::on_run_analysis_clicked</a></div><div class="ttdeci">void on_run_analysis_clicked()</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8cpp_source.html#l00247">analysis_tab.cpp:247</a></div></div>
+<div class="ttc" id="aclassAnalysisTab_html_af98f5fe75bd919ae7108e98327806821"><div class="ttname"><a href="#af98f5fe75bd919ae7108e98327806821">AnalysisTab::m_ui</a></div><div class="ttdeci">Ui::AnalysisTab * m_ui</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00040">analysis_tab.h:40</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="analysis__tab_8cpp_source.html#l00019">AnalysisTab()</a>, <a class="el" href="analysis__tab_8h_source.html#l00040">m_ui</a>, <a class="el" href="analysis__tab_8cpp_source.html#l00351">on_cancel_analysis_clicked()</a>, <a class="el" href="analysis__tab_8cpp_source.html#l00247">on_run_analysis_clicked()</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00054">setup_charts()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00019">AnalysisTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_a8b92a76d421f4739f4bfea7a80134d5a_cgraph.png" border="0" usemap="#aclassAnalysisTab_a8b92a76d421f4739f4bfea7a80134d5a_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_a8b92a76d421f4739f4bfea7a80134d5a_cgraph" id="aclassAnalysisTab_a8b92a76d421f4739f4bfea7a80134d5a_cgraph">
+<area shape="rect" title=" " alt="" coords="5,400,177,427"/>
+<area shape="poly" title=" " alt="" coords="55,400,48,391,53,382,67,375,91,373,116,376,131,384,126,386,115,381,91,379,69,381,57,385,54,391,60,399"/>
+<area shape="rect" href="classAnalysisTab.html#a5e1c21307e9711136f0987947ade319c" title=" " alt="" coords="225,325,384,368"/>
+<area shape="poly" title=" " alt="" coords="135,397,221,371,217,375,138,402"/>
+<area shape="rect" href="classAnalysisTab.html#aeff7abdc8a7f8111e9e783d19440bc24" title=" " alt="" coords="235,392,374,435"/>
+<area shape="poly" title=" " alt="" coords="176,411,221,412,217,415,178,416"/>
+<area shape="rect" href="classAnalysisTab.html#aab47c36d85abb5bb798be4d1811aecc1" title=" " alt="" coords="238,459,370,501"/>
+<area shape="poly" title=" " alt="" coords="136,425,225,453,221,456,137,430"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad" title="Evaluación 1: Manhattan + fichas mal colocadas + dispersión." alt="" coords="452,120,579,163"/>
+<area shape="poly" title=" " alt="" coords="370,389,382,378,398,352,406,327,407,302,405,277,403,252,405,226,412,200,430,173,441,166,437,170,434,176,417,202,410,227,409,252,410,277,412,302,411,328,403,355,386,382,373,393"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c" title="Evaluación 2: Manhattan + fichas mal colocadas + proximidad." alt="" coords="452,211,579,253"/>
+<area shape="poly" title=" " alt="" coords="368,389,382,378,393,364,400,350,405,322,411,293,418,278,430,263,441,257,437,261,434,267,423,281,416,295,410,323,405,352,398,367,386,382,371,393"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8" title="Evaluación 3: estructura local." alt="" coords="452,301,579,344"/>
+<area shape="poly" title=" " alt="" coords="357,389,383,378,431,354,447,349,443,352,433,358,385,382,360,394"/>
+<area shape="rect" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44" title="Genera un tablero aleatorio resoluble." alt="" coords="450,392,582,435"/>
+<area shape="poly" title=" " alt="" coords="374,411,436,412,431,414,375,416"/>
+<area shape="rect" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num&#45;puzzle usando IDA* (Iterative Deepening A*)." alt="" coords="456,483,576,509"/>
+<area shape="poly" title=" " alt="" coords="361,433,468,476,462,477,361,438"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04" title="Comprueba si el tablero es soluble desde su estado actual." alt="" coords="432,533,599,560"/>
+<area shape="poly" title=" " alt="" coords="367,433,386,445,402,464,410,484,418,502,434,519,441,526,436,526,430,523,413,505,405,486,398,467,382,449,367,438"/>
+<area shape="rect" href="classAnalysisTab.html#acf2d2bb4c043ac1e420a2d95c7aae0c2" title=" " alt="" coords="446,600,585,643"/>
+<area shape="poly" title=" " alt="" coords="370,432,386,445,399,461,406,477,412,508,417,538,423,554,434,570,456,592,451,591,430,574,418,557,412,540,407,509,401,479,394,464,382,449,370,438"/>
+<area shape="poly" title=" " alt="" coords="475,119,474,110,480,101,495,95,516,93,538,96,553,104,548,105,537,101,516,99,496,101,484,105,479,111,481,120"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a5aa323aa12d6f0d47981caadf025a27f" title="Dispersión promedio del hueco respecto a fichas mal colocadas." alt="" coords="662,29,826,72"/>
+<area shape="poly" title=" " alt="" coords="563,117,646,82,666,76,662,79,648,86,566,122"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a98dbc965e47e6afe68a7d482ffa677dd" title="Suma de distancias Manhattan de todas las fichas a su meta." alt="" coords="647,301,841,344"/>
+<area shape="poly" title=" " alt="" coords="579,158,601,173,619,196,627,218,634,240,649,264,685,293,680,293,645,267,629,243,622,220,614,198,598,177,580,164"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#aa2edc1ec363b10621ca53482da223200" title="Número de fichas fuera de su meta." alt="" coords="648,120,840,163"/>
+<area shape="poly" title=" " alt="" coords="579,139,635,140,630,142,581,144"/>
+<area shape="poly" title=" " alt="" coords="703,28,702,19,708,10,723,5,744,3,767,5,782,13,777,14,766,10,744,8,724,10,712,15,707,21,708,30"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="901,176,1014,203"/>
+<area shape="poly" title=" " alt="" coords="818,70,842,82,895,122,937,164,932,164,892,126,839,86,818,75"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="896,301,1020,328"/>
+<area shape="poly" title=" " alt="" coords="826,69,843,82,860,108,868,133,870,157,869,181,869,230,875,254,891,280,904,293,898,293,887,283,870,256,863,231,864,181,865,157,863,134,855,110,839,86,826,75"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac" title="Devuelve el índice lineal del hueco." alt="" coords="889,29,1027,72"/>
+<area shape="poly" title=" " alt="" coords="825,48,876,50,871,52,827,53"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="898,227,1018,269"/>
+<area shape="poly" title=" " alt="" coords="826,70,843,82,856,99,864,116,868,148,872,180,879,196,891,213,893,217,888,216,887,216,874,199,867,182,863,149,858,117,851,102,839,86,826,75"/>
+<area shape="poly" title=" " alt="" coords="786,298,839,263,862,237,872,225,887,212,895,211,899,208,890,217,876,229,866,241,842,267,789,303"/>
+<area shape="poly" title=" " alt="" coords="840,316,883,317,878,318,842,322"/>
+<area shape="poly" title=" " alt="" coords="806,298,886,273,881,275,809,303"/>
+<area shape="poly" title=" " alt="" coords="703,300,702,291,708,282,723,277,744,275,767,277,782,286,777,286,766,282,744,280,724,282,712,287,707,293,708,302"/>
+<area shape="poly" title=" " alt="" coords="839,160,889,173,884,174,840,165"/>
+<area shape="poly" title=" " alt="" coords="817,161,842,172,867,192,890,213,898,219,893,219,887,217,863,196,839,177,817,166"/>
+<area shape="poly" title=" " alt="" coords="703,119,702,110,708,101,723,95,744,93,767,96,782,104,777,105,766,101,744,99,724,101,712,105,707,111,708,120"/>
+<area shape="poly" title=" " alt="" coords="571,251,677,294,671,296,572,257"/>
+<area shape="poly" title=" " alt="" coords="563,208,646,172,666,167,662,170,648,177,566,212"/>
+<area shape="poly" title=" " alt="" coords="475,209,474,201,480,192,495,186,516,184,538,186,554,195,548,196,537,192,516,189,496,191,484,196,479,202,481,211"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a076a19f62fc59f74a485906361657a20" title="Fichas mal colocadas a Manhattan 1 de su meta." alt="" coords="666,211,822,253"/>
+<area shape="poly" title=" " alt="" coords="579,229,652,231,648,233,581,235"/>
+<area shape="poly" title=" " alt="" coords="822,214,889,202,884,205,824,219"/>
+<area shape="poly" title=" " alt="" coords="809,251,842,263,914,294,909,295,840,268,810,256"/>
+<area shape="poly" title=" " alt="" coords="822,235,885,242,880,243,823,240"/>
+<area shape="poly" title=" " alt="" coords="703,209,702,201,708,192,723,186,744,184,767,186,782,195,777,195,766,192,744,189,724,191,712,196,707,202,708,211"/>
+<area shape="poly" title=" " alt="" coords="579,320,634,322,629,324,581,325"/>
+<area shape="poly" title=" " alt="" coords="475,300,474,291,480,282,495,277,516,275,538,277,554,285,548,286,537,282,516,280,496,282,484,287,479,293,480,302"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a5ee867554a720e7a9657f21048c01975" title="Número de pares adyacentes mal ordenados (desorden local)." alt="" coords="658,392,830,435"/>
+<area shape="poly" title=" " alt="" coords="572,342,677,385,671,386,572,347"/>
+<area shape="poly" title=" " alt="" coords="795,389,818,374,839,354,850,336,857,318,860,283,865,249,873,231,887,213,890,213,894,210,891,216,877,234,870,250,866,284,862,319,855,338,843,358,822,378,798,394"/>
+<area shape="poly" title=" " alt="" coords="791,389,911,336,915,334,793,394"/>
+<area shape="poly" title=" " alt="" coords="789,389,815,373,839,354,854,337,862,321,871,305,887,287,900,280,905,277,891,291,876,308,867,324,858,340,843,358,818,377,791,394"/>
+<area shape="poly" title=" " alt="" coords="703,390,702,382,708,373,723,367,744,365,767,368,782,376,777,376,766,373,744,371,724,373,712,377,707,383,708,393"/>
+<area shape="poly" title=" " alt="" coords="475,390,474,382,480,373,495,367,516,365,538,368,554,376,548,377,537,373,516,371,496,373,484,377,479,383,480,392"/>
+<area shape="poly" title=" " alt="" coords="479,482,473,474,478,464,492,458,516,456,541,459,556,467,550,467,539,464,516,461,494,463,482,468,479,473,485,483"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a889102c77069dc5a4ed2be943c4b9716" title="Cuenta el número de inversiones del tablero." alt="" coords="663,516,825,543"/>
+<area shape="poly" title=" " alt="" coords="599,538,650,536,645,537,600,543"/>
+<area shape="rect" href="classAnalysisTab.html#a8942b90fb1c649b79b8a19af962c316c" title=" " alt="" coords="674,567,814,609"/>
+<area shape="poly" title=" " alt="" coords="585,609,661,600,656,601,586,614"/>
+<area shape="rect" href="classAnalysisTab.html#a21e3966fa712141b0faa25f35731e3bf" title=" " alt="" coords="674,633,814,676"/>
+<area shape="poly" title=" " alt="" coords="586,629,661,642,656,642,586,634"/>
+<area shape="rect" href="classAnalysisTab.html#ac29b8a05c69e1b8850850b291efa9797" title=" " alt="" coords="674,700,814,743"/>
+<area shape="poly" title=" " alt="" coords="557,641,648,686,665,694,659,694,646,690,556,646"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_a8b92a76d421f4739f4bfea7a80134d5a_icgraph.png" border="0" usemap="#aclassAnalysisTab_a8b92a76d421f4739f4bfea7a80134d5a_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_a8b92a76d421f4739f4bfea7a80134d5a_icgraph" id="aclassAnalysisTab_a8b92a76d421f4739f4bfea7a80134d5a_icgraph">
+<area shape="rect" title=" " alt="" coords="5,29,177,56"/>
+<area shape="poly" title=" " alt="" coords="119,14,110,10,91,8,73,10,64,15,62,20,66,29,61,28,56,21,60,11,72,5,91,3,112,5,124,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4ba50ef8e17f43805ae4d7f832d59a19" name="a4ba50ef8e17f43805ae4d7f832d59a19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ba50ef8e17f43805ae4d7f832d59a19">&#9670;&#160;</a></span>~AnalysisTab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">AnalysisTab::~AnalysisTab </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00046">46</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   46</span>                          {</div>
+<div class="line"><span class="lineno">   47</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aadc496156792c39f6c764b5ba4d97d17">m_analysis_watcher</a>.isRunning()) {</div>
+<div class="line"><span class="lineno">   48</span>        <a class="code hl_variable" href="#aadc496156792c39f6c764b5ba4d97d17">m_analysis_watcher</a>.cancel();</div>
+<div class="line"><span class="lineno">   49</span>        <a class="code hl_variable" href="#aadc496156792c39f6c764b5ba4d97d17">m_analysis_watcher</a>.waitForFinished();</div>
+<div class="line"><span class="lineno">   50</span>    }</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>;</div>
+<div class="line"><span class="lineno">   52</span>}</div>
+<div class="ttc" id="aclassAnalysisTab_html_aadc496156792c39f6c764b5ba4d97d17"><div class="ttname"><a href="#aadc496156792c39f6c764b5ba4d97d17">AnalysisTab::m_analysis_watcher</a></div><div class="ttdeci">QFutureWatcher&lt; void &gt; m_analysis_watcher</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00041">analysis_tab.h:41</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="analysis__tab_8h_source.html#l00041">m_analysis_watcher</a> y <a class="el" href="analysis__tab_8h_source.html#l00040">m_ui</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a655b4e2d1eace23a945bdf0635a3bcfb" name="a655b4e2d1eace23a945bdf0635a3bcfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a655b4e2d1eace23a945bdf0635a3bcfb">&#9670;&#160;</a></span>execute_empirical_analysis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structAnalysisResults.html">AnalysisResults</a> AnalysisTab::execute_empirical_analysis </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>instances</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>easy_m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>med_m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>hard_m</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max_attempts</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>dim</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structnaidu_1_1solver_1_1Config.html">naidu::solver::Config</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>config</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>rand_avoid</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ejecuta el análisis empírico masivo coordinando lotes de tableros generados por <a class="el" href="namespacenaidu_1_1randomizer.html">naidu::randomizer</a> y resueltos por <a class="el" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num-puzzle usando IDA* (Iterative Deepening A*).">naidu::solver::ida</a>. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00236">236</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  236</span>                                                                                                                                                                                     {</div>
+<div class="line"><span class="lineno">  237</span>    AnalysisResults results;</div>
+<div class="line"><span class="lineno">  238</span>    results.<a class="code hl_variable" href="structAnalysisResults.html#ad33aa0f22fb9902da6d2d233b2b27dcd">board_dimension</a> = dim;</div>
+<div class="line"><span class="lineno">  239</span> </div>
+<div class="line"><span class="lineno">  240</span>    results.<a class="code hl_variable" href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">easy</a> = <a class="code hl_function" href="#a1d775b33101bc4f235805aca68cfffd3">run_difficulty_batch</a>(easy_m, instances, <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(dim), max_attempts, rand_avoid, config);</div>
+<div class="line"><span class="lineno">  241</span>    results.<a class="code hl_variable" href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">medium</a> = <a class="code hl_function" href="#a1d775b33101bc4f235805aca68cfffd3">run_difficulty_batch</a>(med_m, instances, <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(dim), max_attempts, rand_avoid, config);</div>
+<div class="line"><span class="lineno">  242</span>    results.<a class="code hl_variable" href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">hard</a> = <a class="code hl_function" href="#a1d775b33101bc4f235805aca68cfffd3">run_difficulty_batch</a>(hard_m, instances, <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(dim), max_attempts, rand_avoid, config);</div>
+<div class="line"><span class="lineno">  243</span> </div>
+<div class="line"><span class="lineno">  244</span>    <span class="keywordflow">return</span> results;</div>
+<div class="line"><span class="lineno">  245</span>}</div>
+<div class="ttc" id="aclassAnalysisTab_html_a1d775b33101bc4f235805aca68cfffd3"><div class="ttname"><a href="#a1d775b33101bc4f235805aca68cfffd3">AnalysisTab::run_difficulty_batch</a></div><div class="ttdeci">DifficultyMetrics run_difficulty_batch(int moves_count, int instances, std::uint8_t dim, int max_attempts, bool rand_avoid, const naidu::solver::Config &amp;config)</div><div class="ttdoc">Ejecuta un lote de pruebas de dificultad para medir rendimiento y métricas utilizando el núcleo de re...</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8cpp_source.html#l00191">analysis_tab.cpp:191</a></div></div>
+<div class="ttc" id="astructAnalysisResults_html_a915f753eee7d48caec903afbc340e0f4"><div class="ttname"><a href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">AnalysisResults::hard</a></div><div class="ttdeci">DifficultyMetrics hard</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00032">analysis_tab.h:32</a></div></div>
+<div class="ttc" id="astructAnalysisResults_html_a9a9c2c70dd0a3dcc8c6e4e3416269903"><div class="ttname"><a href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">AnalysisResults::easy</a></div><div class="ttdeci">DifficultyMetrics easy</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00030">analysis_tab.h:30</a></div></div>
+<div class="ttc" id="astructAnalysisResults_html_ad33aa0f22fb9902da6d2d233b2b27dcd"><div class="ttname"><a href="structAnalysisResults.html#ad33aa0f22fb9902da6d2d233b2b27dcd">AnalysisResults::board_dimension</a></div><div class="ttdeci">int board_dimension</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00033">analysis_tab.h:33</a></div></div>
+<div class="ttc" id="astructAnalysisResults_html_ad3a037e5a9046df8ff66cd2547c12436"><div class="ttname"><a href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">AnalysisResults::medium</a></div><div class="ttdeci">DifficultyMetrics medium</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00031">analysis_tab.h:31</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="analysis__tab_8h_source.html#l00033">AnalysisResults::board_dimension</a>, <a class="el" href="analysis__tab_8h_source.html#l00030">AnalysisResults::easy</a>, <a class="el" href="analysis__tab_8h_source.html#l00032">AnalysisResults::hard</a>, <a class="el" href="analysis__tab_8h_source.html#l00031">AnalysisResults::medium</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00191">run_difficulty_batch()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_a655b4e2d1eace23a945bdf0635a3bcfb_cgraph.png" border="0" usemap="#aclassAnalysisTab_a655b4e2d1eace23a945bdf0635a3bcfb_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_a655b4e2d1eace23a945bdf0635a3bcfb_cgraph" id="aclassAnalysisTab_a655b4e2d1eace23a945bdf0635a3bcfb_cgraph">
+<area shape="rect" title="Ejecuta el análisis empírico masivo coordinando lotes de tableros generados por naidu::randomizer y r..." alt="" coords="5,112,152,155"/>
+<area shape="rect" href="classAnalysisTab.html#a1d775b33101bc4f235805aca68cfffd3" title="Ejecuta un lote de pruebas de dificultad para medir rendimiento y métricas utilizando el núcleo de re..." alt="" coords="200,112,373,155"/>
+<area shape="poly" title=" " alt="" coords="152,131,187,133,182,134,153,136"/>
+<area shape="rect" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44" title="Genera un tablero aleatorio resoluble." alt="" coords="438,29,571,72"/>
+<area shape="poly" title=" " alt="" coords="344,109,430,79,435,77,346,114"/>
+<area shape="rect" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num&#45;puzzle usando IDA* (Iterative Deepening A*)." alt="" coords="444,120,565,147"/>
+<area shape="poly" title=" " alt="" coords="373,131,432,133,426,134,374,136"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04" title="Comprueba si el tablero es soluble desde su estado actual." alt="" coords="421,171,588,197"/>
+<area shape="poly" title=" " alt="" coords="374,151,432,167,427,167,373,156"/>
+<area shape="poly" title=" " alt="" coords="464,27,463,19,469,10,483,5,505,3,527,5,543,14,537,14,526,10,505,8,485,10,473,15,468,21,469,30"/>
+<area shape="poly" title=" " alt="" coords="468,119,462,111,467,102,481,95,505,93,530,96,545,105,540,104,528,101,505,99,482,101,470,105,468,111,473,121"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a889102c77069dc5a4ed2be943c4b9716" title="Cuenta el número de inversiones del tablero." alt="" coords="636,171,798,197"/>
+<area shape="poly" title=" " alt="" coords="589,181,623,184,618,184,589,187"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5e1c21307e9711136f0987947ade319c" name="a5e1c21307e9711136f0987947ade319c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e1c21307e9711136f0987947ade319c">&#9670;&#160;</a></span>on_cancel_analysis_clicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalysisTab::on_cancel_analysis_clicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00351">351</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  351</span>                                             {</div>
+<div class="line"><span class="lineno">  352</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aff96c65044d33c9db4be69aa6fc7604e">m_is_analyzing</a>) {</div>
+<div class="line"><span class="lineno">  353</span>        <a class="code hl_variable" href="#aadc496156792c39f6c764b5ba4d97d17">m_analysis_watcher</a>.cancel();</div>
+<div class="line"><span class="lineno">  354</span>        <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;stop_analysis_btn-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  355</span>    }</div>
+<div class="line"><span class="lineno">  356</span>}</div>
+<div class="ttc" id="aclassAnalysisTab_html_aff96c65044d33c9db4be69aa6fc7604e"><div class="ttname"><a href="#aff96c65044d33c9db4be69aa6fc7604e">AnalysisTab::m_is_analyzing</a></div><div class="ttdeci">bool m_is_analyzing</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00042">analysis_tab.h:42</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="analysis__tab_8h_source.html#l00041">m_analysis_watcher</a>, <a class="el" href="analysis__tab_8h_source.html#l00042">m_is_analyzing</a> y <a class="el" href="analysis__tab_8h_source.html#l00040">m_ui</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00019">AnalysisTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_a5e1c21307e9711136f0987947ade319c_icgraph.png" border="0" usemap="#aclassAnalysisTab_a5e1c21307e9711136f0987947ade319c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_a5e1c21307e9711136f0987947ade319c_icgraph" id="aclassAnalysisTab_a5e1c21307e9711136f0987947ade319c_icgraph">
+<area shape="rect" title=" " alt="" coords="225,21,384,64"/>
+<area shape="rect" href="classAnalysisTab.html#a8b92a76d421f4739f4bfea7a80134d5a" title=" " alt="" coords="5,29,177,56"/>
+<area shape="poly" title=" " alt="" coords="207,43,177,45,177,40,212,42"/>
+<area shape="poly" title=" " alt="" coords="126,14,115,10,91,8,69,10,57,15,54,20,60,29,54,29,48,21,53,11,67,5,91,3,116,5,131,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeff7abdc8a7f8111e9e783d19440bc24" name="aeff7abdc8a7f8111e9e783d19440bc24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeff7abdc8a7f8111e9e783d19440bc24">&#9670;&#160;</a></span>on_run_analysis_clicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalysisTab::on_run_analysis_clicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00247">247</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  247</span>                                          {</div>
+<div class="line"><span class="lineno">  248</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aff96c65044d33c9db4be69aa6fc7604e">m_is_analyzing</a>) {</div>
+<div class="line"><span class="lineno">  249</span>        QMessageBox::warning(<span class="keyword">this</span>, <span class="stringliteral">&quot;Aviso&quot;</span>, <span class="stringliteral">&quot;Ya hay un análisis en ejecución.&quot;</span>);</div>
+<div class="line"><span class="lineno">  250</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  251</span>    }</div>
+<div class="line"><span class="lineno">  252</span> </div>
+<div class="line"><span class="lineno">  253</span>    <span class="keywordtype">int</span> instances = <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;instances_spin-&gt;value();</div>
+<div class="line"><span class="lineno">  254</span>    <span class="keywordtype">int</span> easy_moves = <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;easy_spin-&gt;value();</div>
+<div class="line"><span class="lineno">  255</span>    <span class="keywordtype">int</span> med_moves = <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;medium_spin-&gt;value();</div>
+<div class="line"><span class="lineno">  256</span>    <span class="keywordtype">int</span> hard_moves = <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;hard_spin-&gt;value();</div>
+<div class="line"><span class="lineno">  257</span>    <span class="keywordtype">int</span> max_attempts = <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;attempts_spin-&gt;value();</div>
+<div class="line"><span class="lineno">  258</span>    <span class="keywordtype">int</span> target_dim = <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;dimension_slider-&gt;value();</div>
+<div class="line"><span class="lineno">  259</span>    <span class="keywordtype">bool</span> rand_avoid = <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;avoid_revisits_rand_radio-&gt;isChecked();</div>
+<div class="line"><span class="lineno">  260</span> </div>
+<div class="line"><span class="lineno">  261</span>    naidu::solver::Config config;</div>
+<div class="line"><span class="lineno">  262</span>    <span class="keywordtype">int</span> eval_index = <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;eval_combo-&gt;currentIndex();</div>
+<div class="line"><span class="lineno">  263</span>    <span class="keywordflow">switch</span> (eval_index) {</div>
+<div class="line"><span class="lineno">  264</span>        <span class="keywordflow">case</span> 0: config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a85dcc562cc0a88423c73eeee4d3e5bfc">eval_fn</a> = <a class="code hl_function" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad">naidu::evaluation::evaluation_1</a>; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  265</span>        <span class="keywordflow">case</span> 1: config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a85dcc562cc0a88423c73eeee4d3e5bfc">eval_fn</a> = <a class="code hl_function" href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c">naidu::evaluation::evaluation_2</a>; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  266</span>        <span class="keywordflow">case</span> 2: config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a85dcc562cc0a88423c73eeee4d3e5bfc">eval_fn</a> = <a class="code hl_function" href="namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8">naidu::evaluation::evaluation_3</a>; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  267</span>        <span class="keywordflow">default</span>: config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a85dcc562cc0a88423c73eeee4d3e5bfc">eval_fn</a> = <a class="code hl_function" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad">naidu::evaluation::evaluation_1</a>; <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="lineno">  268</span>    }</div>
+<div class="line"><span class="lineno">  269</span> </div>
+<div class="line"><span class="lineno">  270</span>    config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#addedafd3219e33cfe2225af32e635432">max_nodes</a> = <span class="keyword">static_cast&lt;</span>std::uint64_t<span class="keyword">&gt;</span>(<a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;max_nodes_spin-&gt;value());</div>
+<div class="line"><span class="lineno">  271</span>    config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a0b82393bc386e27be882d4242c928869">weighted_cost</a> = <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;weighted_cost_radio-&gt;isChecked();</div>
+<div class="line"><span class="lineno">  272</span>    config.<a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a5303b954f1bd89dfe63fe0ffff13107e">avoid_revisits</a> = <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;avoid_revisits_solver_radio-&gt;isChecked();</div>
+<div class="line"><span class="lineno">  273</span> </div>
+<div class="line"><span class="lineno">  274</span>    <span class="comment">// Marcar como en ejecución y actualizar botones</span></div>
+<div class="line"><span class="lineno">  275</span>    <a class="code hl_variable" href="#aff96c65044d33c9db4be69aa6fc7604e">m_is_analyzing</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  276</span>    <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;run_analysis_btn-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  277</span>    <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;stop_analysis_btn-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  278</span> </div>
+<div class="line"><span class="lineno">  279</span>    QFuture&lt;void&gt; future = QtConcurrent::run([=, <span class="keyword">this</span>]() {</div>
+<div class="line"><span class="lineno">  280</span>        AnalysisResults results;</div>
+<div class="line"><span class="lineno">  281</span>        results.<a class="code hl_variable" href="structAnalysisResults.html#ad33aa0f22fb9902da6d2d233b2b27dcd">board_dimension</a> = target_dim;</div>
+<div class="line"><span class="lineno">  282</span> </div>
+<div class="line"><span class="lineno">  283</span>        <span class="keyword">auto</span> batch_with_check = [&amp;](<span class="keywordtype">int</span> moves_count, DifficultyMetrics&amp; metrics) {</div>
+<div class="line"><span class="lineno">  284</span>            naidu::randomizer::Config rand_config;</div>
+<div class="line"><span class="lineno">  285</span>            rand_config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#a2424ba488d6884baa0607b19f1f6d43b">moves</a> = <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(moves_count);</div>
+<div class="line"><span class="lineno">  286</span>            rand_config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#ac7eeb9dad90f2b1e42515903eb2e67f7">max_attempts</a> = <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(max_attempts == 0 ? 50000 : max_attempts);</div>
+<div class="line"><span class="lineno">  287</span>            rand_config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#a2e2c83fb8e19ea2b77dc9bd4206aa218">avoid_revisits</a> = rand_avoid;</div>
+<div class="line"><span class="lineno">  288</span> </div>
+<div class="line"><span class="lineno">  289</span>            QList&lt;int&gt; tasks;</div>
+<div class="line"><span class="lineno">  290</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; instances; ++i) tasks.append(i);</div>
+<div class="line"><span class="lineno">  291</span> </div>
+<div class="line"><span class="lineno">  292</span>            QMutex mutex;</div>
+<div class="line"><span class="lineno">  293</span>            <span class="keywordtype">int</span> instance_counter = 0;</div>
+<div class="line"><span class="lineno">  294</span> </div>
+<div class="line"><span class="lineno">  295</span>            QtConcurrent::blockingMap(tasks, [&amp;](<span class="keywordtype">int</span>) {</div>
+<div class="line"><span class="lineno">  296</span>                <span class="keywordflow">if</span> (QThread::currentThread()-&gt;isInterruptionRequested() || <a class="code hl_variable" href="#aadc496156792c39f6c764b5ba4d97d17">m_analysis_watcher</a>.isCanceled()) {</div>
+<div class="line"><span class="lineno">  297</span>                    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  298</span>                }</div>
+<div class="line"><span class="lineno">  299</span> </div>
+<div class="line"><span class="lineno">  300</span>                std::random_device rd;</div>
+<div class="line"><span class="lineno">  301</span>                std::mt19937 rng(rd());</div>
+<div class="line"><span class="lineno">  302</span> </div>
+<div class="line"><span class="lineno">  303</span>                naidu::Board initial = <a class="code hl_function" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44">naidu::randomizer::generate</a>(<span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(target_dim), rand_config, rng);</div>
+<div class="line"><span class="lineno">  304</span>                naidu::Board goal(<span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(target_dim));</div>
+<div class="line"><span class="lineno">  305</span> </div>
+<div class="line"><span class="lineno">  306</span>                <span class="keywordflow">if</span> (initial.<a class="code hl_function" href="classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04">is_solvable</a>()) {</div>
+<div class="line"><span class="lineno">  307</span>                    <span class="keyword">auto</span> start = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><span class="lineno">  308</span>                    <span class="keyword">auto</span> solution = <a class="code hl_function" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4">naidu::solver::ida</a>(initial, goal, config);</div>
+<div class="line"><span class="lineno">  309</span>                    <span class="keyword">auto</span> end = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><span class="lineno">  310</span>                    <span class="keyword">auto</span> duration = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(end - start).count();</div>
+<div class="line"><span class="lineno">  311</span> </div>
+<div class="line"><span class="lineno">  312</span>                    QMutexLocker locker(&amp;mutex);</div>
+<div class="line"><span class="lineno">  313</span>                    <span class="keywordtype">int</span> current_id = instance_counter++;</div>
+<div class="line"><span class="lineno">  314</span>                    <span class="keywordflow">if</span> (solution.found) {</div>
+<div class="line"><span class="lineno">  315</span>                        metrics.successes++;</div>
+<div class="line"><span class="lineno">  316</span>                        metrics.execution_times.append(QPointF(current_id, <span class="keyword">static_cast&lt;</span>qreal<span class="keyword">&gt;</span>(duration)));</div>
+<div class="line"><span class="lineno">  317</span>                        metrics.total_cost += solution.cost;</div>
+<div class="line"><span class="lineno">  318</span>                        metrics.total_mixing += moves_count;</div>
+<div class="line"><span class="lineno">  319</span>                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  320</span>                        metrics.failures++;</div>
+<div class="line"><span class="lineno">  321</span>                    }</div>
+<div class="line"><span class="lineno">  322</span>                } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  323</span>                    QMutexLocker locker(&amp;mutex);</div>
+<div class="line"><span class="lineno">  324</span>                    metrics.failures++;</div>
+<div class="line"><span class="lineno">  325</span>                }</div>
+<div class="line"><span class="lineno">  326</span>            });</div>
+<div class="line"><span class="lineno">  327</span>        };</div>
+<div class="line"><span class="lineno">  328</span> </div>
+<div class="line"><span class="lineno">  329</span>        batch_with_check(easy_moves, results.<a class="code hl_variable" href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">easy</a>);</div>
+<div class="line"><span class="lineno">  330</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#aadc496156792c39f6c764b5ba4d97d17">m_analysis_watcher</a>.isCanceled()) batch_with_check(med_moves, results.<a class="code hl_variable" href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">medium</a>);</div>
+<div class="line"><span class="lineno">  331</span>        <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#aadc496156792c39f6c764b5ba4d97d17">m_analysis_watcher</a>.isCanceled()) batch_with_check(hard_moves, results.<a class="code hl_variable" href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">hard</a>);</div>
+<div class="line"><span class="lineno">  332</span> </div>
+<div class="line"><span class="lineno">  333</span>        QMetaObject::invokeMethod(<span class="keyword">this</span>, [=, <span class="keyword">this</span>]() {</div>
+<div class="line"><span class="lineno">  334</span>            <span class="comment">// Liberar estado al terminar</span></div>
+<div class="line"><span class="lineno">  335</span>            <a class="code hl_variable" href="#aff96c65044d33c9db4be69aa6fc7604e">m_is_analyzing</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  336</span>            <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;run_analysis_btn-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  337</span>            <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;stop_analysis_btn-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><span class="lineno">  338</span> </div>
+<div class="line"><span class="lineno">  339</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aadc496156792c39f6c764b5ba4d97d17">m_analysis_watcher</a>.isCanceled()) {</div>
+<div class="line"><span class="lineno">  340</span>                QMessageBox::information(<span class="keyword">this</span>, <span class="stringliteral">&quot;Cancelado&quot;</span>, <span class="stringliteral">&quot;El análisis empírico fue cancelado por el usuario.&quot;</span>);</div>
+<div class="line"><span class="lineno">  341</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  342</span>                <a class="code hl_function" href="#acf2d2bb4c043ac1e420a2d95c7aae0c2">update_all_charts</a>(results);</div>
+<div class="line"><span class="lineno">  343</span>                QMessageBox::information(<span class="keyword">this</span>, <span class="stringliteral">&quot;Completado&quot;</span>, QString(<span class="stringliteral">&quot;Análisis individual para el tablero de %1x%1 finalizado.&quot;</span>).arg(target_dim));</div>
+<div class="line"><span class="lineno">  344</span>            }</div>
+<div class="line"><span class="lineno">  345</span>        }, Qt::QueuedConnection);</div>
+<div class="line"><span class="lineno">  346</span>    });</div>
+<div class="line"><span class="lineno">  347</span> </div>
+<div class="line"><span class="lineno">  348</span>    <a class="code hl_variable" href="#aadc496156792c39f6c764b5ba4d97d17">m_analysis_watcher</a>.setFuture(future);</div>
+<div class="line"><span class="lineno">  349</span>}</div>
+<div class="ttc" id="aclassAnalysisTab_html_acf2d2bb4c043ac1e420a2d95c7aae0c2"><div class="ttname"><a href="#acf2d2bb4c043ac1e420a2d95c7aae0c2">AnalysisTab::update_all_charts</a></div><div class="ttdeci">void update_all_charts(const AnalysisResults &amp;results)</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8cpp_source.html#l00170">analysis_tab.cpp:170</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ab4d4df6f09f8f37842b68e8fee429e04"><div class="ttname"><a href="classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04">naidu::Board::is_solvable</a></div><div class="ttdeci">bool is_solvable() const noexcept</div><div class="ttdoc">Comprueba si el tablero es soluble desde su estado actual.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00132">board.cpp:132</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1evaluation_html_a8a26edc956478e7deebd54494f215b3c"><div class="ttname"><a href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c">naidu::evaluation::evaluation_2</a></div><div class="ttdeci">std::uint16_t evaluation_2(const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos, std::uint16_t g) noexcept</div><div class="ttdoc">Evaluación 2: Manhattan + fichas mal colocadas + proximidad.</div><div class="ttdef"><b>Definición</b> <a href="evaluation_8cpp_source.html#l00023">evaluation.cpp:23</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1evaluation_html_ac122c34c66431e7add2459e0008b20ad"><div class="ttname"><a href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad">naidu::evaluation::evaluation_1</a></div><div class="ttdeci">std::uint16_t evaluation_1(const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos, std::uint16_t g) noexcept</div><div class="ttdoc">Evaluación 1: Manhattan + fichas mal colocadas + dispersión.</div><div class="ttdef"><b>Definición</b> <a href="evaluation_8cpp_source.html#l00006">evaluation.cpp:6</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1evaluation_html_affdb7131eb24ddbc7a1c7c653bec86b8"><div class="ttname"><a href="namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8">naidu::evaluation::evaluation_3</a></div><div class="ttdeci">std::uint16_t evaluation_3(const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos, std::uint16_t g) noexcept</div><div class="ttdoc">Evaluación 3: estructura local.</div><div class="ttdef"><b>Definición</b> <a href="evaluation_8cpp_source.html#l00037">evaluation.cpp:37</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1randomizer_html_a0b188bc9bd11f1f8a32fdd9bbee10d44"><div class="ttname"><a href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44">naidu::randomizer::generate</a></div><div class="ttdeci">Board generate(std::uint8_t dim, const Config &amp;config, std::mt19937 &amp;rng)</div><div class="ttdoc">Genera un tablero aleatorio resoluble.</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8cpp_source.html#l00096">randomizer.cpp:96</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1solver_html_a58e65e18b4d9edeeb787b0d6ab36f5c4"><div class="ttname"><a href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4">naidu::solver::ida</a></div><div class="ttdeci">Solution ida(const Board &amp;initial, const Board &amp;goal, const Config &amp;config)</div><div class="ttdoc">Resuelve un num-puzzle usando IDA* (Iterative Deepening A*).</div><div class="ttdef"><b>Definición</b> <a href="solver_8cpp_source.html#l00176">solver.cpp:176</a></div></div>
+<div class="ttc" id="astructnaidu_1_1randomizer_1_1Config_html_a2424ba488d6884baa0607b19f1f6d43b"><div class="ttname"><a href="structnaidu_1_1randomizer_1_1Config.html#a2424ba488d6884baa0607b19f1f6d43b">naidu::randomizer::Config::moves</a></div><div class="ttdeci">std::uint32_t moves</div><div class="ttdoc">Número de movimientos a aplicar (0 = dim² · 20).</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8hpp_source.html#l00015">randomizer.hpp:15</a></div></div>
+<div class="ttc" id="astructnaidu_1_1randomizer_1_1Config_html_a2e2c83fb8e19ea2b77dc9bd4206aa218"><div class="ttname"><a href="structnaidu_1_1randomizer_1_1Config.html#a2e2c83fb8e19ea2b77dc9bd4206aa218">naidu::randomizer::Config::avoid_revisits</a></div><div class="ttdeci">bool avoid_revisits</div><div class="ttdoc">Si true, evita repetir estados en el walk.</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8hpp_source.html#l00016">randomizer.hpp:16</a></div></div>
+<div class="ttc" id="astructnaidu_1_1randomizer_1_1Config_html_ac7eeb9dad90f2b1e42515903eb2e67f7"><div class="ttname"><a href="structnaidu_1_1randomizer_1_1Config.html#ac7eeb9dad90f2b1e42515903eb2e67f7">naidu::randomizer::Config::max_attempts</a></div><div class="ttdeci">std::uint32_t max_attempts</div><div class="ttdoc">Límite de intentos totales (0 = moves · 10).</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8hpp_source.html#l00017">randomizer.hpp:17</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_a0b82393bc386e27be882d4242c928869"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#a0b82393bc386e27be882d4242c928869">naidu::solver::Config::weighted_cost</a></div><div class="ttdeci">bool weighted_cost</div><div class="ttdoc">Coste ponderado (true), uniforme (false).</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00031">solver.hpp:31</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_a5303b954f1bd89dfe63fe0ffff13107e"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#a5303b954f1bd89dfe63fe0ffff13107e">naidu::solver::Config::avoid_revisits</a></div><div class="ttdeci">bool avoid_revisits</div><div class="ttdoc">Evitar revisitar estados en el camino actual.</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00030">solver.hpp:30</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_a85dcc562cc0a88423c73eeee4d3e5bfc"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#a85dcc562cc0a88423c73eeee4d3e5bfc">naidu::solver::Config::eval_fn</a></div><div class="ttdeci">evaluation::EvaluationFn eval_fn</div><div class="ttdoc">Función de evaluación.</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00027">solver.hpp:27</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_addedafd3219e33cfe2225af32e635432"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#addedafd3219e33cfe2225af32e635432">naidu::solver::Config::max_nodes</a></div><div class="ttdeci">std::uint64_t max_nodes</div><div class="ttdoc">Límite de nodos expandidos.</div><div class="ttdef"><b>Definición</b> <a href="solver_8hpp_source.html#l00029">solver.hpp:29</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="randomizer_8hpp_source.html#l00016">naidu::randomizer::Config::avoid_revisits</a>, <a class="el" href="solver_8hpp_source.html#l00030">naidu::solver::Config::avoid_revisits</a>, <a class="el" href="analysis__tab_8h_source.html#l00033">AnalysisResults::board_dimension</a>, <a class="el" href="analysis__tab_8h_source.html#l00030">AnalysisResults::easy</a>, <a class="el" href="solver_8hpp_source.html#l00027">naidu::solver::Config::eval_fn</a>, <a class="el" href="evaluation_8cpp_source.html#l00006">naidu::evaluation::evaluation_1()</a>, <a class="el" href="evaluation_8cpp_source.html#l00023">naidu::evaluation::evaluation_2()</a>, <a class="el" href="evaluation_8cpp_source.html#l00037">naidu::evaluation::evaluation_3()</a>, <a class="el" href="randomizer_8cpp_source.html#l00096">naidu::randomizer::generate()</a>, <a class="el" href="analysis__tab_8h_source.html#l00032">AnalysisResults::hard</a>, <a class="el" href="solver_8cpp_source.html#l00176">naidu::solver::ida()</a>, <a class="el" href="board_8cpp_source.html#l00132">naidu::Board::is_solvable()</a>, <a class="el" href="analysis__tab_8h_source.html#l00041">m_analysis_watcher</a>, <a class="el" href="analysis__tab_8h_source.html#l00042">m_is_analyzing</a>, <a class="el" href="analysis__tab_8h_source.html#l00040">m_ui</a>, <a class="el" href="randomizer_8hpp_source.html#l00017">naidu::randomizer::Config::max_attempts</a>, <a class="el" href="solver_8hpp_source.html#l00029">naidu::solver::Config::max_nodes</a>, <a class="el" href="analysis__tab_8h_source.html#l00031">AnalysisResults::medium</a>, <a class="el" href="randomizer_8hpp_source.html#l00015">naidu::randomizer::Config::moves</a>, <a class="el" href="analysis__tab_8cpp_source.html#l00170">update_all_charts()</a> y <a class="el" href="solver_8hpp_source.html#l00031">naidu::solver::Config::weighted_cost</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00019">AnalysisTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_aeff7abdc8a7f8111e9e783d19440bc24_cgraph.png" border="0" usemap="#aclassAnalysisTab_aeff7abdc8a7f8111e9e783d19440bc24_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_aeff7abdc8a7f8111e9e783d19440bc24_cgraph" id="aclassAnalysisTab_aeff7abdc8a7f8111e9e783d19440bc24_cgraph">
+<area shape="rect" title=" " alt="" coords="5,392,145,435"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad" title="Evaluación 1: Manhattan + fichas mal colocadas + dispersión." alt="" coords="213,120,340,163"/>
+<area shape="poly" title=" " alt="" coords="79,391,92,346,114,288,147,227,167,198,191,173,201,167,198,171,195,177,171,202,151,230,119,290,97,348,84,392"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c" title="Evaluación 2: Manhattan + fichas mal colocadas + proximidad." alt="" coords="213,211,340,253"/>
+<area shape="poly" title=" " alt="" coords="86,391,128,328,157,294,191,263,201,259,197,263,194,267,161,297,132,332,91,393"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8" title="Evaluación 3: estructura local." alt="" coords="213,301,340,344"/>
+<area shape="poly" title=" " alt="" coords="117,389,192,354,207,349,204,352,194,358,121,393"/>
+<area shape="rect" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44" title="Genera un tablero aleatorio resoluble." alt="" coords="210,392,342,435"/>
+<area shape="poly" title=" " alt="" coords="144,411,196,412,192,415,146,416"/>
+<area shape="rect" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num&#45;puzzle usando IDA* (Iterative Deepening A*)." alt="" coords="216,483,336,509"/>
+<area shape="poly" title=" " alt="" coords="129,433,230,475,225,478,129,438"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04" title="Comprueba si el tablero es soluble desde su estado actual." alt="" coords="193,533,360,560"/>
+<area shape="poly" title=" " alt="" coords="94,432,138,477,165,499,194,519,206,526,201,528,191,524,162,504,135,481,94,438"/>
+<area shape="rect" href="classAnalysisTab.html#acf2d2bb4c043ac1e420a2d95c7aae0c2" title=" " alt="" coords="207,600,346,643"/>
+<area shape="poly" title=" " alt="" coords="89,432,133,498,162,536,194,570,221,592,216,592,191,574,158,539,128,502,88,438"/>
+<area shape="poly" title=" " alt="" coords="238,119,236,110,243,101,256,95,276,93,298,96,312,103,307,105,297,101,276,99,257,101,246,105,241,111,243,120"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a5aa323aa12d6f0d47981caadf025a27f" title="Dispersión promedio del hueco respecto a fichas mal colocadas." alt="" coords="423,29,586,72"/>
+<area shape="poly" title=" " alt="" coords="323,117,407,82,427,76,422,79,409,86,327,122"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a98dbc965e47e6afe68a7d482ffa677dd" title="Suma de distancias Manhattan de todas las fichas a su meta." alt="" coords="408,301,601,344"/>
+<area shape="poly" title=" " alt="" coords="340,158,362,173,380,196,387,218,394,240,410,264,446,293,440,294,406,267,390,243,382,220,375,198,358,177,341,164"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#aa2edc1ec363b10621ca53482da223200" title="Número de fichas fuera de su meta." alt="" coords="409,120,600,163"/>
+<area shape="poly" title=" " alt="" coords="339,139,396,140,391,143,342,144"/>
+<area shape="poly" title=" " alt="" coords="464,28,462,19,469,10,483,5,505,3,528,5,543,13,538,14,526,10,505,8,485,10,472,15,467,21,469,29"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="662,176,775,203"/>
+<area shape="poly" title=" " alt="" coords="578,70,603,82,656,122,698,164,693,164,652,126,600,86,579,75"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="657,301,780,328"/>
+<area shape="poly" title=" " alt="" coords="587,69,603,82,621,108,629,133,631,157,630,181,629,230,636,254,651,280,664,293,659,293,647,283,631,256,624,231,624,181,626,157,624,134,616,110,599,86,587,75"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac" title="Devuelve el índice lineal del hueco." alt="" coords="649,29,788,72"/>
+<area shape="poly" title=" " alt="" coords="585,48,636,49,631,52,587,53"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="659,227,778,269"/>
+<area shape="poly" title=" " alt="" coords="586,70,603,82,617,99,624,116,629,148,633,180,640,196,651,213,654,217,649,216,647,216,635,199,628,182,624,149,619,117,612,102,599,86,586,75"/>
+<area shape="poly" title=" " alt="" coords="546,299,600,263,623,237,632,225,648,212,660,208,655,211,651,217,636,229,627,241,603,267,550,303"/>
+<area shape="poly" title=" " alt="" coords="601,316,644,317,639,318,602,322"/>
+<area shape="poly" title=" " alt="" coords="567,298,646,273,642,275,569,303"/>
+<area shape="poly" title=" " alt="" coords="464,300,462,291,469,282,483,277,505,275,528,277,543,285,538,286,526,282,505,280,485,282,472,287,467,293,469,302"/>
+<area shape="poly" title=" " alt="" coords="600,160,650,173,644,174,601,165"/>
+<area shape="poly" title=" " alt="" coords="577,161,603,172,627,192,651,213,659,219,653,219,648,217,624,196,600,177,578,166"/>
+<area shape="poly" title=" " alt="" coords="464,119,462,110,469,101,483,95,505,93,528,96,543,104,538,105,526,101,505,99,485,101,472,105,467,111,469,120"/>
+<area shape="poly" title=" " alt="" coords="332,251,437,294,432,296,333,257"/>
+<area shape="poly" title=" " alt="" coords="323,208,407,172,427,167,422,170,409,177,327,212"/>
+<area shape="poly" title=" " alt="" coords="238,210,236,201,243,192,256,186,276,184,298,186,312,194,307,196,297,192,276,189,257,191,246,196,241,202,243,210"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a076a19f62fc59f74a485906361657a20" title="Fichas mal colocadas a Manhattan 1 de su meta." alt="" coords="426,211,583,253"/>
+<area shape="poly" title=" " alt="" coords="339,230,413,231,408,233,342,234"/>
+<area shape="poly" title=" " alt="" coords="582,214,649,202,645,205,585,219"/>
+<area shape="poly" title=" " alt="" coords="570,251,602,263,675,294,669,295,600,268,571,256"/>
+<area shape="poly" title=" " alt="" coords="583,235,646,241,641,243,584,240"/>
+<area shape="poly" title=" " alt="" coords="464,209,462,201,469,192,483,186,505,184,528,186,543,195,538,196,526,192,505,189,485,191,472,196,467,202,469,211"/>
+<area shape="poly" title=" " alt="" coords="340,320,395,321,390,324,342,325"/>
+<area shape="poly" title=" " alt="" coords="238,300,236,291,243,282,256,277,276,275,298,277,312,285,307,286,297,282,276,280,257,282,246,287,241,293,243,301"/>
+<area shape="rect" href="namespacenaidu_1_1component.html#a5ee867554a720e7a9657f21048c01975" title="Número de pares adyacentes mal ordenados (desorden local)." alt="" coords="419,392,590,435"/>
+<area shape="poly" title=" " alt="" coords="332,342,437,385,432,387,332,347"/>
+<area shape="poly" title=" " alt="" coords="556,389,579,374,599,354,611,336,617,318,621,283,626,249,633,231,647,213,650,214,654,210,651,216,638,234,631,250,626,284,622,319,616,338,603,358,582,378,558,394"/>
+<area shape="poly" title=" " alt="" coords="552,389,676,334,671,336,554,394"/>
+<area shape="poly" title=" " alt="" coords="549,389,575,373,599,354,614,337,623,321,632,305,647,287,661,280,665,276,651,291,636,308,628,324,619,340,603,358,578,377,552,394"/>
+<area shape="poly" title=" " alt="" coords="464,390,462,382,469,373,483,367,505,365,528,368,543,376,538,377,526,373,505,371,485,373,472,377,467,383,469,392"/>
+<area shape="poly" title=" " alt="" coords="238,391,236,382,243,373,256,367,276,365,298,368,312,376,307,377,297,373,276,371,257,373,246,377,241,383,243,392"/>
+<area shape="poly" title=" " alt="" coords="242,482,236,474,240,464,254,458,276,456,300,459,315,467,309,468,299,464,276,461,255,463,244,468,241,473,247,482"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a889102c77069dc5a4ed2be943c4b9716" title="Cuenta el número de inversiones del tablero." alt="" coords="424,516,585,543"/>
+<area shape="poly" title=" " alt="" coords="360,538,411,536,406,537,361,543"/>
+<area shape="rect" href="classAnalysisTab.html#a8942b90fb1c649b79b8a19af962c316c" title=" " alt="" coords="435,567,574,609"/>
+<area shape="poly" title=" " alt="" coords="346,609,422,600,417,601,347,614"/>
+<area shape="rect" href="classAnalysisTab.html#a21e3966fa712141b0faa25f35731e3bf" title=" " alt="" coords="435,633,574,676"/>
+<area shape="poly" title=" " alt="" coords="347,629,422,642,417,643,347,634"/>
+<area shape="rect" href="classAnalysisTab.html#ac29b8a05c69e1b8850850b291efa9797" title=" " alt="" coords="435,700,574,743"/>
+<area shape="poly" title=" " alt="" coords="318,641,409,686,425,694,420,694,407,690,316,646"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_aeff7abdc8a7f8111e9e783d19440bc24_icgraph.png" border="0" usemap="#aclassAnalysisTab_aeff7abdc8a7f8111e9e783d19440bc24_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_aeff7abdc8a7f8111e9e783d19440bc24_icgraph" id="aclassAnalysisTab_aeff7abdc8a7f8111e9e783d19440bc24_icgraph">
+<area shape="rect" title=" " alt="" coords="225,21,364,64"/>
+<area shape="rect" href="classAnalysisTab.html#a8b92a76d421f4739f4bfea7a80134d5a" title=" " alt="" coords="5,29,177,56"/>
+<area shape="poly" title=" " alt="" coords="207,43,177,45,177,40,212,42"/>
+<area shape="poly" title=" " alt="" coords="124,14,114,10,91,8,70,10,58,15,56,20,61,29,56,29,50,21,55,11,68,5,91,3,115,5,130,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1d775b33101bc4f235805aca68cfffd3" name="a1d775b33101bc4f235805aca68cfffd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d775b33101bc4f235805aca68cfffd3">&#9670;&#160;</a></span>run_difficulty_batch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDifficultyMetrics.html">DifficultyMetrics</a> AnalysisTab::run_difficulty_batch </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>moves_count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>instances</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint8_t</td>          <td class="paramname"><span class="paramname"><em>dim</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>max_attempts</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>rand_avoid</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structnaidu_1_1solver_1_1Config.html">naidu::solver::Config</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>config</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ejecuta un lote de pruebas de dificultad para medir rendimiento y métricas utilizando el núcleo de resolución. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00191">191</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  191</span>                                                                                                                                                                      {</div>
+<div class="line"><span class="lineno">  192</span>    DifficultyMetrics metrics;</div>
+<div class="line"><span class="lineno">  193</span>    naidu::randomizer::Config rand_config;</div>
+<div class="line"><span class="lineno">  194</span>    rand_config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#a2424ba488d6884baa0607b19f1f6d43b">moves</a> = <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(moves_count);</div>
+<div class="line"><span class="lineno">  195</span>    rand_config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#ac7eeb9dad90f2b1e42515903eb2e67f7">max_attempts</a> = <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(max_attempts == 0 ? 50000 : max_attempts);</div>
+<div class="line"><span class="lineno">  196</span>    rand_config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#a2e2c83fb8e19ea2b77dc9bd4206aa218">avoid_revisits</a> = rand_avoid;</div>
+<div class="line"><span class="lineno">  197</span> </div>
+<div class="line"><span class="lineno">  198</span>    QList&lt;int&gt; tasks;</div>
+<div class="line"><span class="lineno">  199</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; instances; ++i) tasks.append(i);</div>
+<div class="line"><span class="lineno">  200</span> </div>
+<div class="line"><span class="lineno">  201</span>    QMutex mutex;</div>
+<div class="line"><span class="lineno">  202</span>    <span class="keywordtype">int</span> instance_counter = 0;</div>
+<div class="line"><span class="lineno">  203</span> </div>
+<div class="line"><span class="lineno">  204</span>    QtConcurrent::blockingMap(tasks, [&amp;](<span class="keywordtype">int</span>) {</div>
+<div class="line"><span class="lineno">  205</span>        std::random_device rd;</div>
+<div class="line"><span class="lineno">  206</span>        std::mt19937 rng(rd());</div>
+<div class="line"><span class="lineno">  207</span> </div>
+<div class="line"><span class="lineno">  208</span>        naidu::Board initial = <a class="code hl_function" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44">naidu::randomizer::generate</a>(dim, rand_config, rng);</div>
+<div class="line"><span class="lineno">  209</span>        naidu::Board goal(dim);</div>
+<div class="line"><span class="lineno">  210</span> </div>
+<div class="line"><span class="lineno">  211</span>        <span class="keywordflow">if</span> (initial.<a class="code hl_function" href="classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04">is_solvable</a>()) {</div>
+<div class="line"><span class="lineno">  212</span>            <span class="keyword">auto</span> start = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><span class="lineno">  213</span>            <span class="keyword">auto</span> solution = <a class="code hl_function" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4">naidu::solver::ida</a>(initial, goal, config);</div>
+<div class="line"><span class="lineno">  214</span>            <span class="keyword">auto</span> end = std::chrono::high_resolution_clock::now();</div>
+<div class="line"><span class="lineno">  215</span>            <span class="keyword">auto</span> duration = std::chrono::duration_cast&lt;std::chrono::milliseconds&gt;(end - start).count();</div>
+<div class="line"><span class="lineno">  216</span> </div>
+<div class="line"><span class="lineno">  217</span>            QMutexLocker locker(&amp;mutex);</div>
+<div class="line"><span class="lineno">  218</span>            <span class="keywordtype">int</span> current_id = instance_counter++;</div>
+<div class="line"><span class="lineno">  219</span>            <span class="keywordflow">if</span> (solution.found) {</div>
+<div class="line"><span class="lineno">  220</span>                metrics.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a>++;</div>
+<div class="line"><span class="lineno">  221</span>                metrics.<a class="code hl_variable" href="structDifficultyMetrics.html#a50920c97778a55d5846f4f8d41bcfc97">execution_times</a>.append(QPointF(current_id, <span class="keyword">static_cast&lt;</span>qreal<span class="keyword">&gt;</span>(duration)));</div>
+<div class="line"><span class="lineno">  222</span>                metrics.<a class="code hl_variable" href="structDifficultyMetrics.html#a7a694fb496f842c813f9a9e212124a03">total_cost</a> += solution.cost;</div>
+<div class="line"><span class="lineno">  223</span>                metrics.<a class="code hl_variable" href="structDifficultyMetrics.html#a0a34c8151ffc7cc30559918b649d965a">total_mixing</a> += moves_count;</div>
+<div class="line"><span class="lineno">  224</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  225</span>                metrics.<a class="code hl_variable" href="structDifficultyMetrics.html#a8e1a548c613a501a4c029ef213229b2d">failures</a>++;</div>
+<div class="line"><span class="lineno">  226</span>            }</div>
+<div class="line"><span class="lineno">  227</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">  228</span>            QMutexLocker locker(&amp;mutex);</div>
+<div class="line"><span class="lineno">  229</span>            metrics.<a class="code hl_variable" href="structDifficultyMetrics.html#a8e1a548c613a501a4c029ef213229b2d">failures</a>++;</div>
+<div class="line"><span class="lineno">  230</span>        }</div>
+<div class="line"><span class="lineno">  231</span>    });</div>
+<div class="line"><span class="lineno">  232</span> </div>
+<div class="line"><span class="lineno">  233</span>    <span class="keywordflow">return</span> metrics;</div>
+<div class="line"><span class="lineno">  234</span>}</div>
+<div class="ttc" id="astructDifficultyMetrics_html_a0a34c8151ffc7cc30559918b649d965a"><div class="ttname"><a href="structDifficultyMetrics.html#a0a34c8151ffc7cc30559918b649d965a">DifficultyMetrics::total_mixing</a></div><div class="ttdeci">double total_mixing</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00026">analysis_tab.h:26</a></div></div>
+<div class="ttc" id="astructDifficultyMetrics_html_a50920c97778a55d5846f4f8d41bcfc97"><div class="ttname"><a href="structDifficultyMetrics.html#a50920c97778a55d5846f4f8d41bcfc97">DifficultyMetrics::execution_times</a></div><div class="ttdeci">QVector&lt; QPointF &gt; execution_times</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00022">analysis_tab.h:22</a></div></div>
+<div class="ttc" id="astructDifficultyMetrics_html_a6963634855b4191ca8bb8016d95ef91f"><div class="ttname"><a href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">DifficultyMetrics::successes</a></div><div class="ttdeci">int successes</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00023">analysis_tab.h:23</a></div></div>
+<div class="ttc" id="astructDifficultyMetrics_html_a7a694fb496f842c813f9a9e212124a03"><div class="ttname"><a href="structDifficultyMetrics.html#a7a694fb496f842c813f9a9e212124a03">DifficultyMetrics::total_cost</a></div><div class="ttdeci">double total_cost</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00025">analysis_tab.h:25</a></div></div>
+<div class="ttc" id="astructDifficultyMetrics_html_a8e1a548c613a501a4c029ef213229b2d"><div class="ttname"><a href="structDifficultyMetrics.html#a8e1a548c613a501a4c029ef213229b2d">DifficultyMetrics::failures</a></div><div class="ttdeci">int failures</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00024">analysis_tab.h:24</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="randomizer_8hpp_source.html#l00016">naidu::randomizer::Config::avoid_revisits</a>, <a class="el" href="analysis__tab_8h_source.html#l00022">DifficultyMetrics::execution_times</a>, <a class="el" href="analysis__tab_8h_source.html#l00024">DifficultyMetrics::failures</a>, <a class="el" href="randomizer_8cpp_source.html#l00096">naidu::randomizer::generate()</a>, <a class="el" href="solver_8cpp_source.html#l00176">naidu::solver::ida()</a>, <a class="el" href="board_8cpp_source.html#l00132">naidu::Board::is_solvable()</a>, <a class="el" href="randomizer_8hpp_source.html#l00017">naidu::randomizer::Config::max_attempts</a>, <a class="el" href="randomizer_8hpp_source.html#l00015">naidu::randomizer::Config::moves</a>, <a class="el" href="analysis__tab_8h_source.html#l00023">DifficultyMetrics::successes</a>, <a class="el" href="analysis__tab_8h_source.html#l00025">DifficultyMetrics::total_cost</a> y <a class="el" href="analysis__tab_8h_source.html#l00026">DifficultyMetrics::total_mixing</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00236">execute_empirical_analysis()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_a1d775b33101bc4f235805aca68cfffd3_cgraph.png" border="0" usemap="#aclassAnalysisTab_a1d775b33101bc4f235805aca68cfffd3_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_a1d775b33101bc4f235805aca68cfffd3_cgraph" id="aclassAnalysisTab_a1d775b33101bc4f235805aca68cfffd3_cgraph">
+<area shape="rect" title="Ejecuta un lote de pruebas de dificultad para medir rendimiento y métricas utilizando el núcleo de re..." alt="" coords="5,112,179,155"/>
+<area shape="rect" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44" title="Genera un tablero aleatorio resoluble." alt="" coords="244,29,376,72"/>
+<area shape="poly" title=" " alt="" coords="150,109,240,77,236,79,152,114"/>
+<area shape="rect" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4" title="Resuelve un num&#45;puzzle usando IDA* (Iterative Deepening A*)." alt="" coords="250,120,370,147"/>
+<area shape="poly" title=" " alt="" coords="179,131,237,133,232,134,179,136"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04" title="Comprueba si el tablero es soluble desde su estado actual." alt="" coords="227,171,394,197"/>
+<area shape="poly" title=" " alt="" coords="179,151,238,166,233,167,179,156"/>
+<area shape="poly" title=" " alt="" coords="270,28,268,19,275,10,289,5,310,3,333,5,348,14,343,14,332,10,310,8,290,10,278,15,273,21,275,30"/>
+<area shape="poly" title=" " alt="" coords="274,119,268,111,272,102,287,95,310,93,336,96,351,105,345,105,334,101,310,99,288,101,276,105,273,111,279,120"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a889102c77069dc5a4ed2be943c4b9716" title="Cuenta el número de inversiones del tablero." alt="" coords="442,171,603,197"/>
+<area shape="poly" title=" " alt="" coords="394,181,429,184,423,184,395,187"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_a1d775b33101bc4f235805aca68cfffd3_icgraph.png" border="0" usemap="#aclassAnalysisTab_a1d775b33101bc4f235805aca68cfffd3_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_a1d775b33101bc4f235805aca68cfffd3_icgraph" id="aclassAnalysisTab_a1d775b33101bc4f235805aca68cfffd3_icgraph">
+<area shape="rect" title="Ejecuta un lote de pruebas de dificultad para medir rendimiento y métricas utilizando el núcleo de re..." alt="" coords="200,5,373,48"/>
+<area shape="rect" href="classAnalysisTab.html#a655b4e2d1eace23a945bdf0635a3bcfb" title="Ejecuta el análisis empírico masivo coordinando lotes de tableros generados por naidu::randomizer y r..." alt="" coords="5,5,152,48"/>
+<area shape="poly" title=" " alt="" coords="181,27,152,29,152,24,187,26"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2c5fe39468645b48c0a1792f2d10fec0" name="a2c5fe39468645b48c0a1792f2d10fec0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c5fe39468645b48c0a1792f2d10fec0">&#9670;&#160;</a></span>save_all_charts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalysisTab::save_all_charts </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>directory_path</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Guarda las gráficas estadísticas del análisis en el directorio especificado. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00176">176</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>                                                               {</div>
+<div class="line"><span class="lineno">  177</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#ad2a74647215ebb92e4eb00842fd50e4b">m_time_chart_view</a>) {</div>
+<div class="line"><span class="lineno">  178</span>        QPixmap pixmap = <a class="code hl_variable" href="#ad2a74647215ebb92e4eb00842fd50e4b">m_time_chart_view</a>-&gt;grab();</div>
+<div class="line"><span class="lineno">  179</span>        pixmap.save(QDir(directory_path).filePath(<span class="stringliteral">&quot;tiempo_ejecucion.png&quot;</span>));</div>
+<div class="line"><span class="lineno">  180</span>    }</div>
+<div class="line"><span class="lineno">  181</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#a32872d6c281b2bef1005b6794fd43396">m_success_chart_view</a>) {</div>
+<div class="line"><span class="lineno">  182</span>        QPixmap pixmap = <a class="code hl_variable" href="#a32872d6c281b2bef1005b6794fd43396">m_success_chart_view</a>-&gt;grab();</div>
+<div class="line"><span class="lineno">  183</span>        pixmap.save(QDir(directory_path).filePath(<span class="stringliteral">&quot;porcentaje_exito.png&quot;</span>));</div>
+<div class="line"><span class="lineno">  184</span>    }</div>
+<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="#aa3f8166ad6ba7c0887af055da4d25333">m_optimal_chart_view</a>) {</div>
+<div class="line"><span class="lineno">  186</span>        QPixmap pixmap = <a class="code hl_variable" href="#aa3f8166ad6ba7c0887af055da4d25333">m_optimal_chart_view</a>-&gt;grab();</div>
+<div class="line"><span class="lineno">  187</span>        pixmap.save(QDir(directory_path).filePath(<span class="stringliteral">&quot;comparativa_optima.png&quot;</span>));</div>
+<div class="line"><span class="lineno">  188</span>    }</div>
+<div class="line"><span class="lineno">  189</span>}</div>
+<div class="ttc" id="aclassAnalysisTab_html_a32872d6c281b2bef1005b6794fd43396"><div class="ttname"><a href="#a32872d6c281b2bef1005b6794fd43396">AnalysisTab::m_success_chart_view</a></div><div class="ttdeci">QChartView * m_success_chart_view</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00049">analysis_tab.h:49</a></div></div>
+<div class="ttc" id="aclassAnalysisTab_html_aa3f8166ad6ba7c0887af055da4d25333"><div class="ttname"><a href="#aa3f8166ad6ba7c0887af055da4d25333">AnalysisTab::m_optimal_chart_view</a></div><div class="ttdeci">QChartView * m_optimal_chart_view</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00050">analysis_tab.h:50</a></div></div>
+<div class="ttc" id="aclassAnalysisTab_html_ad2a74647215ebb92e4eb00842fd50e4b"><div class="ttname"><a href="#ad2a74647215ebb92e4eb00842fd50e4b">AnalysisTab::m_time_chart_view</a></div><div class="ttdeci">QChartView * m_time_chart_view</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00048">analysis_tab.h:48</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="analysis__tab_8h_source.html#l00050">m_optimal_chart_view</a>, <a class="el" href="analysis__tab_8h_source.html#l00049">m_success_chart_view</a> y <a class="el" href="analysis__tab_8h_source.html#l00048">m_time_chart_view</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="mainwindow_8cpp_source.html#l00124">MainWindow::action_save_analysis_triggered()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_a2c5fe39468645b48c0a1792f2d10fec0_icgraph.png" border="0" usemap="#aclassAnalysisTab_a2c5fe39468645b48c0a1792f2d10fec0_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_a2c5fe39468645b48c0a1792f2d10fec0_icgraph" id="aclassAnalysisTab_a2c5fe39468645b48c0a1792f2d10fec0_icgraph">
+<area shape="rect" title="Guarda las gráficas estadísticas del análisis en el directorio especificado." alt="" coords="449,21,597,64"/>
+<area shape="rect" href="classMainWindow.html#a8d92a4e6bc49e49607befbc176c40fab" title=" " alt="" coords="233,21,401,64"/>
+<area shape="poly" title=" " alt="" coords="431,43,401,45,401,40,436,43"/>
+<area shape="rect" href="classMainWindow.html#a996c5a2b6f77944776856f08ec30858d" title=" " alt="" coords="5,29,185,56"/>
+<area shape="poly" title=" " alt="" coords="214,43,185,45,185,40,219,42"/>
+<area shape="poly" title=" " alt="" coords="132,14,120,10,95,8,72,10,59,15,56,20,62,29,57,29,51,21,55,11,71,5,95,3,121,5,137,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aab47c36d85abb5bb798be4d1811aecc1" name="aab47c36d85abb5bb798be4d1811aecc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab47c36d85abb5bb798be4d1811aecc1">&#9670;&#160;</a></span>setup_charts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalysisTab::setup_charts </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00054">54</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                               {</div>
+<div class="line"><span class="lineno">   55</span>    <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a> = <span class="keyword">new</span> QChart();</div>
+<div class="line"><span class="lineno">   56</span>    <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>-&gt;setTitle(<span class="stringliteral">&quot;Tiempo de Ejecución por Instancia&quot;</span>);</div>
+<div class="line"><span class="lineno">   57</span>    <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>-&gt;setAnimationOptions(QChart::SeriesAnimations);</div>
+<div class="line"><span class="lineno">   58</span>    <a class="code hl_variable" href="#ad2a74647215ebb92e4eb00842fd50e4b">m_time_chart_view</a> = <span class="keyword">new</span> QChartView(<a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>, <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;time_chart_view);</div>
+<div class="line"><span class="lineno">   59</span>    <a class="code hl_variable" href="#ad2a74647215ebb92e4eb00842fd50e4b">m_time_chart_view</a>-&gt;setRenderHint(QPainter::Antialiasing);</div>
+<div class="line"><span class="lineno">   60</span>    </div>
+<div class="line"><span class="lineno">   61</span>    QVBoxLayout *time_layout = <span class="keyword">new</span> QVBoxLayout(<a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;time_chart_view);</div>
+<div class="line"><span class="lineno">   62</span>    time_layout-&gt;addWidget(<a class="code hl_variable" href="#ad2a74647215ebb92e4eb00842fd50e4b">m_time_chart_view</a>);</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>    <a class="code hl_variable" href="#af29af942308612d0edca1e48c93b7f24">m_success_chart</a> = <span class="keyword">new</span> QChart();</div>
+<div class="line"><span class="lineno">   65</span>    <a class="code hl_variable" href="#af29af942308612d0edca1e48c93b7f24">m_success_chart</a>-&gt;setTitle(<span class="stringliteral">&quot;Porcentaje de Soluciones Encontradas vs No Encontradas&quot;</span>);</div>
+<div class="line"><span class="lineno">   66</span>    <a class="code hl_variable" href="#af29af942308612d0edca1e48c93b7f24">m_success_chart</a>-&gt;setAnimationOptions(QChart::SeriesAnimations);</div>
+<div class="line"><span class="lineno">   67</span>    <a class="code hl_variable" href="#a32872d6c281b2bef1005b6794fd43396">m_success_chart_view</a> = <span class="keyword">new</span> QChartView(<a class="code hl_variable" href="#af29af942308612d0edca1e48c93b7f24">m_success_chart</a>, <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;success_chart_view);</div>
+<div class="line"><span class="lineno">   68</span>    <a class="code hl_variable" href="#a32872d6c281b2bef1005b6794fd43396">m_success_chart_view</a>-&gt;setRenderHint(QPainter::Antialiasing);</div>
+<div class="line"><span class="lineno">   69</span>    </div>
+<div class="line"><span class="lineno">   70</span>    QVBoxLayout *success_layout = <span class="keyword">new</span> QVBoxLayout(<a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;success_chart_view);</div>
+<div class="line"><span class="lineno">   71</span>    success_layout-&gt;addWidget(<a class="code hl_variable" href="#a32872d6c281b2bef1005b6794fd43396">m_success_chart_view</a>);</div>
+<div class="line"><span class="lineno">   72</span> </div>
+<div class="line"><span class="lineno">   73</span>    <a class="code hl_variable" href="#a90839b0d27ed05d148ad97061e451554">m_optimal_chart</a> = <span class="keyword">new</span> QChart();</div>
+<div class="line"><span class="lineno">   74</span>    <a class="code hl_variable" href="#a90839b0d27ed05d148ad97061e451554">m_optimal_chart</a>-&gt;setTitle(<span class="stringliteral">&quot;Comparativa: Costo Real Promedio vs Movimientos de Mezcla&quot;</span>);</div>
+<div class="line"><span class="lineno">   75</span>    <a class="code hl_variable" href="#a90839b0d27ed05d148ad97061e451554">m_optimal_chart</a>-&gt;setAnimationOptions(QChart::SeriesAnimations);</div>
+<div class="line"><span class="lineno">   76</span>    <a class="code hl_variable" href="#aa3f8166ad6ba7c0887af055da4d25333">m_optimal_chart_view</a> = <span class="keyword">new</span> QChartView(<a class="code hl_variable" href="#a90839b0d27ed05d148ad97061e451554">m_optimal_chart</a>, <a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;optimal_chart_view);</div>
+<div class="line"><span class="lineno">   77</span>    <a class="code hl_variable" href="#aa3f8166ad6ba7c0887af055da4d25333">m_optimal_chart_view</a>-&gt;setRenderHint(QPainter::Antialiasing);</div>
+<div class="line"><span class="lineno">   78</span>    </div>
+<div class="line"><span class="lineno">   79</span>    QVBoxLayout *optimal_layout = <span class="keyword">new</span> QVBoxLayout(<a class="code hl_variable" href="#af98f5fe75bd919ae7108e98327806821">m_ui</a>-&gt;optimal_chart_view);</div>
+<div class="line"><span class="lineno">   80</span>    optimal_layout-&gt;addWidget(<a class="code hl_variable" href="#aa3f8166ad6ba7c0887af055da4d25333">m_optimal_chart_view</a>);</div>
+<div class="line"><span class="lineno">   81</span>}</div>
+<div class="ttc" id="aclassAnalysisTab_html_a7e4bae40bf71a00591864648f991fc99"><div class="ttname"><a href="#a7e4bae40bf71a00591864648f991fc99">AnalysisTab::m_time_chart</a></div><div class="ttdeci">QChart * m_time_chart</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00044">analysis_tab.h:44</a></div></div>
+<div class="ttc" id="aclassAnalysisTab_html_a90839b0d27ed05d148ad97061e451554"><div class="ttname"><a href="#a90839b0d27ed05d148ad97061e451554">AnalysisTab::m_optimal_chart</a></div><div class="ttdeci">QChart * m_optimal_chart</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00046">analysis_tab.h:46</a></div></div>
+<div class="ttc" id="aclassAnalysisTab_html_af29af942308612d0edca1e48c93b7f24"><div class="ttname"><a href="#af29af942308612d0edca1e48c93b7f24">AnalysisTab::m_success_chart</a></div><div class="ttdeci">QChart * m_success_chart</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00045">analysis_tab.h:45</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="analysis__tab_8h_source.html#l00046">m_optimal_chart</a>, <a class="el" href="analysis__tab_8h_source.html#l00050">m_optimal_chart_view</a>, <a class="el" href="analysis__tab_8h_source.html#l00045">m_success_chart</a>, <a class="el" href="analysis__tab_8h_source.html#l00049">m_success_chart_view</a>, <a class="el" href="analysis__tab_8h_source.html#l00044">m_time_chart</a>, <a class="el" href="analysis__tab_8h_source.html#l00048">m_time_chart_view</a> y <a class="el" href="analysis__tab_8h_source.html#l00040">m_ui</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00019">AnalysisTab()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_aab47c36d85abb5bb798be4d1811aecc1_icgraph.png" border="0" usemap="#aclassAnalysisTab_aab47c36d85abb5bb798be4d1811aecc1_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_aab47c36d85abb5bb798be4d1811aecc1_icgraph" id="aclassAnalysisTab_aab47c36d85abb5bb798be4d1811aecc1_icgraph">
+<area shape="rect" title=" " alt="" coords="225,21,357,64"/>
+<area shape="rect" href="classAnalysisTab.html#a8b92a76d421f4739f4bfea7a80134d5a" title=" " alt="" coords="5,29,177,56"/>
+<area shape="poly" title=" " alt="" coords="207,43,177,45,177,40,212,42"/>
+<area shape="poly" title=" " alt="" coords="124,14,113,10,91,8,70,10,59,15,56,20,62,29,57,29,51,21,55,11,69,5,91,3,115,5,129,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acf2d2bb4c043ac1e420a2d95c7aae0c2" name="acf2d2bb4c043ac1e420a2d95c7aae0c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf2d2bb4c043ac1e420a2d95c7aae0c2">&#9670;&#160;</a></span>update_all_charts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalysisTab::update_all_charts </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structAnalysisResults.html">AnalysisResults</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>results</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00170">170</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  170</span>                                                                  {</div>
+<div class="line"><span class="lineno">  171</span>    <a class="code hl_function" href="#ac29b8a05c69e1b8850850b291efa9797">update_time_chart</a>(results);</div>
+<div class="line"><span class="lineno">  172</span>    <a class="code hl_function" href="#a21e3966fa712141b0faa25f35731e3bf">update_success_chart</a>(results);</div>
+<div class="line"><span class="lineno">  173</span>    <a class="code hl_function" href="#a8942b90fb1c649b79b8a19af962c316c">update_optimal_chart</a>(results);</div>
+<div class="line"><span class="lineno">  174</span>}</div>
+<div class="ttc" id="aclassAnalysisTab_html_a21e3966fa712141b0faa25f35731e3bf"><div class="ttname"><a href="#a21e3966fa712141b0faa25f35731e3bf">AnalysisTab::update_success_chart</a></div><div class="ttdeci">void update_success_chart(const AnalysisResults &amp;results)</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8cpp_source.html#l00108">analysis_tab.cpp:108</a></div></div>
+<div class="ttc" id="aclassAnalysisTab_html_a8942b90fb1c649b79b8a19af962c316c"><div class="ttname"><a href="#a8942b90fb1c649b79b8a19af962c316c">AnalysisTab::update_optimal_chart</a></div><div class="ttdeci">void update_optimal_chart(const AnalysisResults &amp;results)</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8cpp_source.html#l00136">analysis_tab.cpp:136</a></div></div>
+<div class="ttc" id="aclassAnalysisTab_html_ac29b8a05c69e1b8850850b291efa9797"><div class="ttname"><a href="#ac29b8a05c69e1b8850850b291efa9797">AnalysisTab::update_time_chart</a></div><div class="ttdeci">void update_time_chart(const AnalysisResults &amp;results)</div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8cpp_source.html#l00083">analysis_tab.cpp:83</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="analysis__tab_8cpp_source.html#l00136">update_optimal_chart()</a>, <a class="el" href="analysis__tab_8cpp_source.html#l00108">update_success_chart()</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00083">update_time_chart()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00247">on_run_analysis_clicked()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_acf2d2bb4c043ac1e420a2d95c7aae0c2_cgraph.png" border="0" usemap="#aclassAnalysisTab_acf2d2bb4c043ac1e420a2d95c7aae0c2_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_acf2d2bb4c043ac1e420a2d95c7aae0c2_cgraph" id="aclassAnalysisTab_acf2d2bb4c043ac1e420a2d95c7aae0c2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,72,145,115"/>
+<area shape="rect" href="classAnalysisTab.html#a8942b90fb1c649b79b8a19af962c316c" title=" " alt="" coords="193,5,332,48"/>
+<area shape="poly" title=" " alt="" coords="136,69,188,52,184,55,138,74"/>
+<area shape="rect" href="classAnalysisTab.html#a21e3966fa712141b0faa25f35731e3bf" title=" " alt="" coords="193,72,332,115"/>
+<area shape="poly" title=" " alt="" coords="145,91,180,92,175,94,146,96"/>
+<area shape="rect" href="classAnalysisTab.html#ac29b8a05c69e1b8850850b291efa9797" title=" " alt="" coords="193,139,332,181"/>
+<area shape="poly" title=" " alt="" coords="137,113,189,132,184,134,137,118"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_acf2d2bb4c043ac1e420a2d95c7aae0c2_icgraph.png" border="0" usemap="#aclassAnalysisTab_acf2d2bb4c043ac1e420a2d95c7aae0c2_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_acf2d2bb4c043ac1e420a2d95c7aae0c2_icgraph" id="aclassAnalysisTab_acf2d2bb4c043ac1e420a2d95c7aae0c2_icgraph">
+<area shape="rect" title=" " alt="" coords="412,21,551,64"/>
+<area shape="rect" href="classAnalysisTab.html#aeff7abdc8a7f8111e9e783d19440bc24" title=" " alt="" coords="225,21,364,64"/>
+<area shape="poly" title=" " alt="" coords="394,43,365,45,364,40,399,43"/>
+<area shape="rect" href="classAnalysisTab.html#a8b92a76d421f4739f4bfea7a80134d5a" title=" " alt="" coords="5,29,177,56"/>
+<area shape="poly" title=" " alt="" coords="207,43,177,45,177,40,212,42"/>
+<area shape="poly" title=" " alt="" coords="124,14,114,10,91,8,70,10,58,15,56,20,61,29,56,29,50,21,55,11,68,5,91,3,115,5,130,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8942b90fb1c649b79b8a19af962c316c" name="a8942b90fb1c649b79b8a19af962c316c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8942b90fb1c649b79b8a19af962c316c">&#9670;&#160;</a></span>update_optimal_chart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalysisTab::update_optimal_chart </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structAnalysisResults.html">AnalysisResults</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>results</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00136">136</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  136</span>                                                                     {</div>
+<div class="line"><span class="lineno">  137</span>    <a class="code hl_variable" href="#a90839b0d27ed05d148ad97061e451554">m_optimal_chart</a>-&gt;removeAllSeries();</div>
+<div class="line"><span class="lineno">  138</span>    <span class="keywordflow">for</span> (QAbstractAxis *axis : <a class="code hl_variable" href="#a90839b0d27ed05d148ad97061e451554">m_optimal_chart</a>-&gt;axes()) { <a class="code hl_variable" href="#a90839b0d27ed05d148ad97061e451554">m_optimal_chart</a>-&gt;removeAxis(axis); <span class="keyword">delete</span> axis; }</div>
+<div class="line"><span class="lineno">  139</span> </div>
+<div class="line"><span class="lineno">  140</span>    QBarSet *bar_cost = <span class="keyword">new</span> QBarSet(<span class="stringliteral">&quot;Promedio de Costo Real&quot;</span>);</div>
+<div class="line"><span class="lineno">  141</span>    QBarSet *bar_mix = <span class="keyword">new</span> QBarSet(<span class="stringliteral">&quot;Promedio de Mezcla&quot;</span>);</div>
+<div class="line"><span class="lineno">  142</span> </div>
+<div class="line"><span class="lineno">  143</span>    <span class="keywordtype">double</span> avg_c_e = results.<a class="code hl_variable" href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">easy</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> &gt; 0 ? results.<a class="code hl_variable" href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">easy</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a7a694fb496f842c813f9a9e212124a03">total_cost</a> / results.<a class="code hl_variable" href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">easy</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> : 0;</div>
+<div class="line"><span class="lineno">  144</span>    <span class="keywordtype">double</span> avg_m_e = results.<a class="code hl_variable" href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">easy</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> &gt; 0 ? results.<a class="code hl_variable" href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">easy</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a0a34c8151ffc7cc30559918b649d965a">total_mixing</a> / results.<a class="code hl_variable" href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">easy</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> : 0;</div>
+<div class="line"><span class="lineno">  145</span>    <span class="keywordtype">double</span> avg_c_m = results.<a class="code hl_variable" href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">medium</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> &gt; 0 ? results.<a class="code hl_variable" href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">medium</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a7a694fb496f842c813f9a9e212124a03">total_cost</a> / results.<a class="code hl_variable" href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">medium</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> : 0;</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordtype">double</span> avg_m_m = results.<a class="code hl_variable" href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">medium</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> &gt; 0 ? results.<a class="code hl_variable" href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">medium</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a0a34c8151ffc7cc30559918b649d965a">total_mixing</a> / results.<a class="code hl_variable" href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">medium</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> : 0;</div>
+<div class="line"><span class="lineno">  147</span>    <span class="keywordtype">double</span> avg_c_h = results.<a class="code hl_variable" href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">hard</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> &gt; 0 ? results.<a class="code hl_variable" href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">hard</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a7a694fb496f842c813f9a9e212124a03">total_cost</a> / results.<a class="code hl_variable" href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">hard</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> : 0;</div>
+<div class="line"><span class="lineno">  148</span>    <span class="keywordtype">double</span> avg_m_h = results.<a class="code hl_variable" href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">hard</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> &gt; 0 ? results.<a class="code hl_variable" href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">hard</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a0a34c8151ffc7cc30559918b649d965a">total_mixing</a> / results.<a class="code hl_variable" href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">hard</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> : 0;</div>
+<div class="line"><span class="lineno">  149</span> </div>
+<div class="line"><span class="lineno">  150</span>    *bar_cost &lt;&lt; avg_c_e &lt;&lt; avg_c_m &lt;&lt; avg_c_h;</div>
+<div class="line"><span class="lineno">  151</span>    *bar_mix &lt;&lt; avg_m_e &lt;&lt; avg_m_m &lt;&lt; avg_m_h;</div>
+<div class="line"><span class="lineno">  152</span> </div>
+<div class="line"><span class="lineno">  153</span>    QBarSeries *compare_series = <span class="keyword">new</span> QBarSeries();</div>
+<div class="line"><span class="lineno">  154</span>    compare_series-&gt;append(bar_cost);</div>
+<div class="line"><span class="lineno">  155</span>    compare_series-&gt;append(bar_mix);</div>
+<div class="line"><span class="lineno">  156</span>    <a class="code hl_variable" href="#a90839b0d27ed05d148ad97061e451554">m_optimal_chart</a>-&gt;addSeries(compare_series);</div>
+<div class="line"><span class="lineno">  157</span> </div>
+<div class="line"><span class="lineno">  158</span>    QStringList categories_bar = {<span class="stringliteral">&quot;Fácil&quot;</span>, <span class="stringliteral">&quot;Medio&quot;</span>, <span class="stringliteral">&quot;Difícil&quot;</span>};</div>
+<div class="line"><span class="lineno">  159</span>    QBarCategoryAxis *axisX_opt = <span class="keyword">new</span> QBarCategoryAxis();</div>
+<div class="line"><span class="lineno">  160</span>    axisX_opt-&gt;append(categories_bar);</div>
+<div class="line"><span class="lineno">  161</span>    <a class="code hl_variable" href="#a90839b0d27ed05d148ad97061e451554">m_optimal_chart</a>-&gt;addAxis(axisX_opt, Qt::AlignBottom);</div>
+<div class="line"><span class="lineno">  162</span>    compare_series-&gt;attachAxis(axisX_opt);</div>
+<div class="line"><span class="lineno">  163</span> </div>
+<div class="line"><span class="lineno">  164</span>    QValueAxis *axisY_opt = <span class="keyword">new</span> QValueAxis();</div>
+<div class="line"><span class="lineno">  165</span>    axisY_opt-&gt;setTitleText(<span class="stringliteral">&quot;Número de Movimientos&quot;</span>);</div>
+<div class="line"><span class="lineno">  166</span>    <a class="code hl_variable" href="#a90839b0d27ed05d148ad97061e451554">m_optimal_chart</a>-&gt;addAxis(axisY_opt, Qt::AlignLeft);</div>
+<div class="line"><span class="lineno">  167</span>    compare_series-&gt;attachAxis(axisY_opt);</div>
+<div class="line"><span class="lineno">  168</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="analysis__tab_8h_source.html#l00030">AnalysisResults::easy</a>, <a class="el" href="analysis__tab_8h_source.html#l00032">AnalysisResults::hard</a>, <a class="el" href="analysis__tab_8h_source.html#l00046">m_optimal_chart</a>, <a class="el" href="analysis__tab_8h_source.html#l00031">AnalysisResults::medium</a>, <a class="el" href="analysis__tab_8h_source.html#l00023">DifficultyMetrics::successes</a>, <a class="el" href="analysis__tab_8h_source.html#l00025">DifficultyMetrics::total_cost</a> y <a class="el" href="analysis__tab_8h_source.html#l00026">DifficultyMetrics::total_mixing</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00170">update_all_charts()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_a8942b90fb1c649b79b8a19af962c316c_icgraph.png" border="0" usemap="#aclassAnalysisTab_a8942b90fb1c649b79b8a19af962c316c_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_a8942b90fb1c649b79b8a19af962c316c_icgraph" id="aclassAnalysisTab_a8942b90fb1c649b79b8a19af962c316c_icgraph">
+<area shape="rect" title=" " alt="" coords="599,21,739,64"/>
+<area shape="rect" href="classAnalysisTab.html#acf2d2bb4c043ac1e420a2d95c7aae0c2" title=" " alt="" coords="412,21,551,64"/>
+<area shape="poly" title=" " alt="" coords="581,43,552,45,552,40,587,43"/>
+<area shape="rect" href="classAnalysisTab.html#aeff7abdc8a7f8111e9e783d19440bc24" title=" " alt="" coords="225,21,364,64"/>
+<area shape="poly" title=" " alt="" coords="394,43,365,45,364,40,399,43"/>
+<area shape="rect" href="classAnalysisTab.html#a8b92a76d421f4739f4bfea7a80134d5a" title=" " alt="" coords="5,29,177,56"/>
+<area shape="poly" title=" " alt="" coords="207,43,177,45,177,40,212,42"/>
+<area shape="poly" title=" " alt="" coords="124,14,114,10,91,8,70,10,58,15,56,20,61,29,56,29,50,21,55,11,68,5,91,3,115,5,130,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a21e3966fa712141b0faa25f35731e3bf" name="a21e3966fa712141b0faa25f35731e3bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e3966fa712141b0faa25f35731e3bf">&#9670;&#160;</a></span>update_success_chart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalysisTab::update_success_chart </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structAnalysisResults.html">AnalysisResults</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>results</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00108">108</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>                                                                     {</div>
+<div class="line"><span class="lineno">  109</span>    <a class="code hl_variable" href="#af29af942308612d0edca1e48c93b7f24">m_success_chart</a>-&gt;removeAllSeries();</div>
+<div class="line"><span class="lineno">  110</span>    <span class="keywordflow">for</span> (QAbstractAxis *axis : <a class="code hl_variable" href="#af29af942308612d0edca1e48c93b7f24">m_success_chart</a>-&gt;axes()) { <a class="code hl_variable" href="#af29af942308612d0edca1e48c93b7f24">m_success_chart</a>-&gt;removeAxis(axis); <span class="keyword">delete</span> axis; }</div>
+<div class="line"><span class="lineno">  111</span> </div>
+<div class="line"><span class="lineno">  112</span>    QBarSet *set_found = <span class="keyword">new</span> QBarSet(<span class="stringliteral">&quot;Encontradas&quot;</span>);</div>
+<div class="line"><span class="lineno">  113</span>    QBarSet *set_not_found = <span class="keyword">new</span> QBarSet(<span class="stringliteral">&quot;No Encontradas&quot;</span>);</div>
+<div class="line"><span class="lineno">  114</span> </div>
+<div class="line"><span class="lineno">  115</span>    *set_found &lt;&lt; results.<a class="code hl_variable" href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">easy</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> &lt;&lt; results.<a class="code hl_variable" href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">medium</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a> &lt;&lt; results.<a class="code hl_variable" href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">hard</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a6963634855b4191ca8bb8016d95ef91f">successes</a>;</div>
+<div class="line"><span class="lineno">  116</span>    *set_not_found &lt;&lt; results.<a class="code hl_variable" href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">easy</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a8e1a548c613a501a4c029ef213229b2d">failures</a> &lt;&lt; results.<a class="code hl_variable" href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">medium</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a8e1a548c613a501a4c029ef213229b2d">failures</a> &lt;&lt; results.<a class="code hl_variable" href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">hard</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a8e1a548c613a501a4c029ef213229b2d">failures</a>;</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>    QPercentBarSeries *bar_series = <span class="keyword">new</span> QPercentBarSeries();</div>
+<div class="line"><span class="lineno">  119</span>    bar_series-&gt;append(set_found);</div>
+<div class="line"><span class="lineno">  120</span>    bar_series-&gt;append(set_not_found);</div>
+<div class="line"><span class="lineno">  121</span>    <a class="code hl_variable" href="#af29af942308612d0edca1e48c93b7f24">m_success_chart</a>-&gt;addSeries(bar_series);</div>
+<div class="line"><span class="lineno">  122</span> </div>
+<div class="line"><span class="lineno">  123</span>    QStringList categories_bar = {<span class="stringliteral">&quot;Fácil&quot;</span>, <span class="stringliteral">&quot;Medio&quot;</span>, <span class="stringliteral">&quot;Difícil&quot;</span>};</div>
+<div class="line"><span class="lineno">  124</span>    QBarCategoryAxis *axisX_bar = <span class="keyword">new</span> QBarCategoryAxis();</div>
+<div class="line"><span class="lineno">  125</span>    axisX_bar-&gt;append(categories_bar);</div>
+<div class="line"><span class="lineno">  126</span>    <a class="code hl_variable" href="#af29af942308612d0edca1e48c93b7f24">m_success_chart</a>-&gt;addAxis(axisX_bar, Qt::AlignBottom);</div>
+<div class="line"><span class="lineno">  127</span>    bar_series-&gt;attachAxis(axisX_bar);</div>
+<div class="line"><span class="lineno">  128</span> </div>
+<div class="line"><span class="lineno">  129</span>    QValueAxis *axisY_bar = <span class="keyword">new</span> QValueAxis();</div>
+<div class="line"><span class="lineno">  130</span>    axisY_bar-&gt;setRange(0, 100);</div>
+<div class="line"><span class="lineno">  131</span>    axisY_bar-&gt;setTitleText(<span class="stringliteral">&quot;Porcentaje (%)&quot;</span>);</div>
+<div class="line"><span class="lineno">  132</span>    <a class="code hl_variable" href="#af29af942308612d0edca1e48c93b7f24">m_success_chart</a>-&gt;addAxis(axisY_bar, Qt::AlignLeft);</div>
+<div class="line"><span class="lineno">  133</span>    bar_series-&gt;attachAxis(axisY_bar);</div>
+<div class="line"><span class="lineno">  134</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="analysis__tab_8h_source.html#l00030">AnalysisResults::easy</a>, <a class="el" href="analysis__tab_8h_source.html#l00024">DifficultyMetrics::failures</a>, <a class="el" href="analysis__tab_8h_source.html#l00032">AnalysisResults::hard</a>, <a class="el" href="analysis__tab_8h_source.html#l00045">m_success_chart</a>, <a class="el" href="analysis__tab_8h_source.html#l00031">AnalysisResults::medium</a> y <a class="el" href="analysis__tab_8h_source.html#l00023">DifficultyMetrics::successes</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00170">update_all_charts()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_a21e3966fa712141b0faa25f35731e3bf_icgraph.png" border="0" usemap="#aclassAnalysisTab_a21e3966fa712141b0faa25f35731e3bf_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_a21e3966fa712141b0faa25f35731e3bf_icgraph" id="aclassAnalysisTab_a21e3966fa712141b0faa25f35731e3bf_icgraph">
+<area shape="rect" title=" " alt="" coords="599,21,739,64"/>
+<area shape="rect" href="classAnalysisTab.html#acf2d2bb4c043ac1e420a2d95c7aae0c2" title=" " alt="" coords="412,21,551,64"/>
+<area shape="poly" title=" " alt="" coords="581,43,552,45,552,40,587,43"/>
+<area shape="rect" href="classAnalysisTab.html#aeff7abdc8a7f8111e9e783d19440bc24" title=" " alt="" coords="225,21,364,64"/>
+<area shape="poly" title=" " alt="" coords="394,43,365,45,364,40,399,43"/>
+<area shape="rect" href="classAnalysisTab.html#a8b92a76d421f4739f4bfea7a80134d5a" title=" " alt="" coords="5,29,177,56"/>
+<area shape="poly" title=" " alt="" coords="207,43,177,45,177,40,212,42"/>
+<area shape="poly" title=" " alt="" coords="124,14,114,10,91,8,70,10,58,15,56,20,61,29,56,29,50,21,55,11,68,5,91,3,115,5,130,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac29b8a05c69e1b8850850b291efa9797" name="ac29b8a05c69e1b8850850b291efa9797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac29b8a05c69e1b8850850b291efa9797">&#9670;&#160;</a></span>update_time_chart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AnalysisTab::update_time_chart </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structAnalysisResults.html">AnalysisResults</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>results</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8cpp_source.html#l00083">83</a> del archivo <a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   83</span>                                                                  {</div>
+<div class="line"><span class="lineno">   84</span>    <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>-&gt;removeAllSeries();</div>
+<div class="line"><span class="lineno">   85</span>    <span class="keywordflow">for</span> (QAbstractAxis *axis : <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>-&gt;axes()) { <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>-&gt;removeAxis(axis); <span class="keyword">delete</span> axis; }</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>    QLineSeries *line_easy = <span class="keyword">new</span> QLineSeries();</div>
+<div class="line"><span class="lineno">   88</span>    line_easy-&gt;setName(<span class="stringliteral">&quot;Fácil&quot;</span>);</div>
+<div class="line"><span class="lineno">   89</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pt : results.<a class="code hl_variable" href="structAnalysisResults.html#a9a9c2c70dd0a3dcc8c6e4e3416269903">easy</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a50920c97778a55d5846f4f8d41bcfc97">execution_times</a>) line_easy-&gt;append(pt);</div>
+<div class="line"><span class="lineno">   90</span> </div>
+<div class="line"><span class="lineno">   91</span>    QLineSeries *line_med = <span class="keyword">new</span> QLineSeries();</div>
+<div class="line"><span class="lineno">   92</span>    line_med-&gt;setName(<span class="stringliteral">&quot;Medio&quot;</span>);</div>
+<div class="line"><span class="lineno">   93</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pt : results.<a class="code hl_variable" href="structAnalysisResults.html#ad3a037e5a9046df8ff66cd2547c12436">medium</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a50920c97778a55d5846f4f8d41bcfc97">execution_times</a>) line_med-&gt;append(pt);</div>
+<div class="line"><span class="lineno">   94</span> </div>
+<div class="line"><span class="lineno">   95</span>    QLineSeries *line_hard = <span class="keyword">new</span> QLineSeries();</div>
+<div class="line"><span class="lineno">   96</span>    line_hard-&gt;setName(<span class="stringliteral">&quot;Difícil&quot;</span>);</div>
+<div class="line"><span class="lineno">   97</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pt : results.<a class="code hl_variable" href="structAnalysisResults.html#a915f753eee7d48caec903afbc340e0f4">hard</a>.<a class="code hl_variable" href="structDifficultyMetrics.html#a50920c97778a55d5846f4f8d41bcfc97">execution_times</a>) line_hard-&gt;append(pt);</div>
+<div class="line"><span class="lineno">   98</span> </div>
+<div class="line"><span class="lineno">   99</span>    <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>-&gt;addSeries(line_easy);</div>
+<div class="line"><span class="lineno">  100</span>    <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>-&gt;addSeries(line_med);</div>
+<div class="line"><span class="lineno">  101</span>    <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>-&gt;addSeries(line_hard);</div>
+<div class="line"><span class="lineno">  102</span>    <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>-&gt;createDefaultAxes();</div>
+<div class="line"><span class="lineno">  103</span> </div>
+<div class="line"><span class="lineno">  104</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> axisX = <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>-&gt;axes(Qt::Horizontal).value(0, <span class="keyword">nullptr</span>)) axisX-&gt;setTitleText(<span class="stringliteral">&quot;Índice de Instancia&quot;</span>);</div>
+<div class="line"><span class="lineno">  105</span>    <span class="keywordflow">if</span> (<span class="keyword">auto</span> axisY = <a class="code hl_variable" href="#a7e4bae40bf71a00591864648f991fc99">m_time_chart</a>-&gt;axes(Qt::Vertical).value(0, <span class="keyword">nullptr</span>)) axisY-&gt;setTitleText(QString(<span class="stringliteral">&quot;Tiempo (ms) [Tablero %1x%1]&quot;</span>).arg(results.<a class="code hl_variable" href="structAnalysisResults.html#ad33aa0f22fb9902da6d2d233b2b27dcd">board_dimension</a>));</div>
+<div class="line"><span class="lineno">  106</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="analysis__tab_8h_source.html#l00033">AnalysisResults::board_dimension</a>, <a class="el" href="analysis__tab_8h_source.html#l00030">AnalysisResults::easy</a>, <a class="el" href="analysis__tab_8h_source.html#l00022">DifficultyMetrics::execution_times</a>, <a class="el" href="analysis__tab_8h_source.html#l00032">AnalysisResults::hard</a>, <a class="el" href="analysis__tab_8h_source.html#l00044">m_time_chart</a> y <a class="el" href="analysis__tab_8h_source.html#l00031">AnalysisResults::medium</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00170">update_all_charts()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAnalysisTab_ac29b8a05c69e1b8850850b291efa9797_icgraph.png" border="0" usemap="#aclassAnalysisTab_ac29b8a05c69e1b8850850b291efa9797_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassAnalysisTab_ac29b8a05c69e1b8850850b291efa9797_icgraph" id="aclassAnalysisTab_ac29b8a05c69e1b8850850b291efa9797_icgraph">
+<area shape="rect" title=" " alt="" coords="599,21,739,64"/>
+<area shape="rect" href="classAnalysisTab.html#acf2d2bb4c043ac1e420a2d95c7aae0c2" title=" " alt="" coords="412,21,551,64"/>
+<area shape="poly" title=" " alt="" coords="581,43,552,45,552,40,587,43"/>
+<area shape="rect" href="classAnalysisTab.html#aeff7abdc8a7f8111e9e783d19440bc24" title=" " alt="" coords="225,21,364,64"/>
+<area shape="poly" title=" " alt="" coords="394,43,365,45,364,40,399,43"/>
+<area shape="rect" href="classAnalysisTab.html#a8b92a76d421f4739f4bfea7a80134d5a" title=" " alt="" coords="5,29,177,56"/>
+<area shape="poly" title=" " alt="" coords="207,43,177,45,177,40,212,42"/>
+<area shape="poly" title=" " alt="" coords="124,14,114,10,91,8,70,10,58,15,56,20,61,29,56,29,50,21,55,11,68,5,91,3,115,5,130,14"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="aadc496156792c39f6c764b5ba4d97d17" name="aadc496156792c39f6c764b5ba4d97d17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc496156792c39f6c764b5ba4d97d17">&#9670;&#160;</a></span>m_analysis_watcher</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QFutureWatcher&lt;void&gt; AnalysisTab::m_analysis_watcher</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8h_source.html#l00041">41</a> del archivo <a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00351">on_cancel_analysis_clicked()</a>, <a class="el" href="analysis__tab_8cpp_source.html#l00247">on_run_analysis_clicked()</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00046">~AnalysisTab()</a>.</p>
+
+</div>
+</div>
+<a id="aff96c65044d33c9db4be69aa6fc7604e" name="aff96c65044d33c9db4be69aa6fc7604e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff96c65044d33c9db4be69aa6fc7604e">&#9670;&#160;</a></span>m_is_analyzing</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AnalysisTab::m_is_analyzing = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8h_source.html#l00042">42</a> del archivo <a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00351">on_cancel_analysis_clicked()</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00247">on_run_analysis_clicked()</a>.</p>
+
+</div>
+</div>
+<a id="a90839b0d27ed05d148ad97061e451554" name="a90839b0d27ed05d148ad97061e451554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90839b0d27ed05d148ad97061e451554">&#9670;&#160;</a></span>m_optimal_chart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChart* AnalysisTab::m_optimal_chart = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8h_source.html#l00046">46</a> del archivo <a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00054">setup_charts()</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00136">update_optimal_chart()</a>.</p>
+
+</div>
+</div>
+<a id="aa3f8166ad6ba7c0887af055da4d25333" name="aa3f8166ad6ba7c0887af055da4d25333"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3f8166ad6ba7c0887af055da4d25333">&#9670;&#160;</a></span>m_optimal_chart_view</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChartView* AnalysisTab::m_optimal_chart_view = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8h_source.html#l00050">50</a> del archivo <a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00176">save_all_charts()</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00054">setup_charts()</a>.</p>
+
+</div>
+</div>
+<a id="af29af942308612d0edca1e48c93b7f24" name="af29af942308612d0edca1e48c93b7f24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af29af942308612d0edca1e48c93b7f24">&#9670;&#160;</a></span>m_success_chart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChart* AnalysisTab::m_success_chart = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8h_source.html#l00045">45</a> del archivo <a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00054">setup_charts()</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00108">update_success_chart()</a>.</p>
+
+</div>
+</div>
+<a id="a32872d6c281b2bef1005b6794fd43396" name="a32872d6c281b2bef1005b6794fd43396"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32872d6c281b2bef1005b6794fd43396">&#9670;&#160;</a></span>m_success_chart_view</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChartView* AnalysisTab::m_success_chart_view = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8h_source.html#l00049">49</a> del archivo <a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00176">save_all_charts()</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00054">setup_charts()</a>.</p>
+
+</div>
+</div>
+<a id="a7e4bae40bf71a00591864648f991fc99" name="a7e4bae40bf71a00591864648f991fc99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e4bae40bf71a00591864648f991fc99">&#9670;&#160;</a></span>m_time_chart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChart* AnalysisTab::m_time_chart = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8h_source.html#l00044">44</a> del archivo <a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00054">setup_charts()</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00083">update_time_chart()</a>.</p>
+
+</div>
+</div>
+<a id="ad2a74647215ebb92e4eb00842fd50e4b" name="ad2a74647215ebb92e4eb00842fd50e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2a74647215ebb92e4eb00842fd50e4b">&#9670;&#160;</a></span>m_time_chart_view</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QChartView* AnalysisTab::m_time_chart_view = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8h_source.html#l00048">48</a> del archivo <a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00176">save_all_charts()</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00054">setup_charts()</a>.</p>
+
+</div>
+</div>
+<a id="af98f5fe75bd919ae7108e98327806821" name="af98f5fe75bd919ae7108e98327806821"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af98f5fe75bd919ae7108e98327806821">&#9670;&#160;</a></span>m_ui</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ui::AnalysisTab* AnalysisTab::m_ui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="analysis__tab_8h_source.html#l00040">40</a> del archivo <a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="analysis__tab_8cpp_source.html#l00019">AnalysisTab()</a>, <a class="el" href="analysis__tab_8cpp_source.html#l00351">on_cancel_analysis_clicked()</a>, <a class="el" href="analysis__tab_8cpp_source.html#l00247">on_run_analysis_clicked()</a>, <a class="el" href="analysis__tab_8cpp_source.html#l00054">setup_charts()</a> y <a class="el" href="analysis__tab_8cpp_source.html#l00046">~AnalysisTab()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>src/ui/analysis/<a class="el" href="analysis__tab_8h_source.html">analysis_tab.h</a></li>
+<li>src/ui/analysis/<a class="el" href="analysis__tab_8cpp_source.html">analysis_tab.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="classAnalysisTab.html">AnalysisTab</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

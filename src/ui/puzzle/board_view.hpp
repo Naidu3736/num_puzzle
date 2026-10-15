@@ -19,6 +19,10 @@ class BoardView : public QWidget {
     public:
         explicit BoardView(QWidget *parent);
 
+        /**
+         * @brief Recibe y almacena una copia del tablero lógico del núcleo (naidu::Board) para actualizar su representación visual.
+         * @param board Referencia al tablero del núcleo que se va a renderizar.
+         */
         void set_board(const naidu::Board& board);
         void clear();
 

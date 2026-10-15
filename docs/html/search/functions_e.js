@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['solvable_5f5x5_0',['solvable_5x5',['../namespacefixtures.html#a9502995f912f55e6bf9f1ac764c9c2ee',1,'fixtures']]],
-  ['solvable_5fhole_5fcenter_5f4x4_1',['solvable_hole_center_4x4',['../namespacefixtures.html#a3052aaa3f9891be15e0eb4239c91e753',1,'fixtures']]],
-  ['solvable_5funsolved_5f4x4_2',['solvable_unsolved_4x4',['../namespacefixtures.html#a37d8adfe4649ec66cc7a45e78d4cbdb2',1,'fixtures']]],
-  ['solved_5f4x4_3',['solved_4x4',['../namespacefixtures.html#a23d74d608036129ee360fa6731184154',1,'fixtures']]],
-  ['step_5fcost_4',['step_cost',['../namespacenaidu_1_1component.html#aaf4e0eafd85533318bfd22a8f1c7b083',1,'naidu::component']]]
+  ['save_5fall_5fcharts_0',['save_all_charts',['../classAnalysisTab.html#a2c5fe39468645b48c0a1792f2d10fec0',1,'AnalysisTab']]],
+  ['set_5fboard_1',['set_board',['../classBoardView.html#acfdf4b20b9e5dd92d464157e5c248876',1,'BoardView']]],
+  ['set_5fboards_2',['set_boards',['../classPuzzleTab.html#a1f00027785e44f07330810f204be0be7',1,'PuzzleTab']]],
+  ['setup_5fcharts_3',['setup_charts',['../classAnalysisTab.html#aab47c36d85abb5bb798be4d1811aecc1',1,'AnalysisTab']]],
+  ['sizehint_4',['sizeHint',['../classBoardView.html#a0cf9ce1455ca1ca014a16c059a097281',1,'BoardView']]],
+  ['step_5fcost_5',['step_cost',['../namespacenaidu_1_1component.html#aaf4e0eafd85533318bfd22a8f1c7b083',1,'naidu::component']]]
 ];

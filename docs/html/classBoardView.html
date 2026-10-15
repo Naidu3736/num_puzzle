@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Referencia de la clase BoardView</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classBoardView.html','','classBoardView-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase BoardView</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="board__view_8hpp_source.html">board_view.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de herencia de BoardView</div>
+<div class="dyncontent">
+<div class="center"><img src="classBoardView__inherit__graph.png" border="0" usemap="#aBoardView_inherit__map" loading="lazy" alt="Inheritance graph"/></div>
+<map name="aBoardView_inherit__map" id="aBoardView_inherit__map">
+<area shape="rect" title=" " alt="" coords="5,80,90,107"/>
+<area shape="rect" title=" " alt="" coords="11,5,84,32"/>
+<area shape="poly" title=" " alt="" coords="49,46,50,80,45,79,46,50"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">leyenda</a>]</span></center></div>
+<div class="dynheader">
+Diagrama de colaboración de BoardView:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBoardView__coll__graph.png" border="0" usemap="#aBoardView_coll__map" loading="lazy" alt="Collaboration graph"/></div>
+<map name="aBoardView_coll__map" id="aBoardView_coll__map">
+<area shape="rect" title=" " alt="" coords="53,104,137,131"/>
+<area shape="rect" title=" " alt="" coords="5,5,78,32"/>
+<area shape="poly" title=" " alt="" coords="57,43,91,103,85,104,54,48"/>
+<area shape="rect" href="classnaidu_1_1Board.html" title="Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N." alt="" coords="102,5,197,32"/>
+<area shape="poly" title=" " alt="" coords="138,45,104,105,100,102,132,46"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">leyenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:ab650bf798ba9ed8e1b1e3fc854a8ce94" id="r_ab650bf798ba9ed8e1b1e3fc854a8ce94"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#ab650bf798ba9ed8e1b1e3fc854a8ce94">BoardView</a> (QWidget *parent)</td></tr>
+<tr class="memitem:acfdf4b20b9e5dd92d464157e5c248876" id="r_acfdf4b20b9e5dd92d464157e5c248876"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#acfdf4b20b9e5dd92d464157e5c248876">set_board</a> (const <a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> &amp;board)</td></tr>
+<tr class="memdesc:acfdf4b20b9e5dd92d464157e5c248876"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recibe y almacena una copia del tablero lógico del núcleo (<a class="el" href="classnaidu_1_1Board.html" title="Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N.">naidu::Board</a>) para actualizar su representación visual.  <br /></td></tr>
+<tr class="memitem:ab253684c536616529a1408157b19d710" id="r_ab253684c536616529a1408157b19d710"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab253684c536616529a1408157b19d710">clear</a> ()</td></tr>
+<tr class="memitem:a0cf9ce1455ca1ca014a16c059a097281" id="r_a0cf9ce1455ca1ca014a16c059a097281"><td class="memItemLeft">QSize&#160;</td><td class="memItemRight"><a class="el" href="#a0cf9ce1455ca1ca014a16c059a097281">sizeHint</a> () const override</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Métodos protegidos</h2></td></tr>
+<tr class="memitem:a6ea62d61f2e3f9b6ecb772b89e60a0a2" id="r_a6ea62d61f2e3f9b6ecb772b89e60a0a2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6ea62d61f2e3f9b6ecb772b89e60a0a2">paintEvent</a> (QPaintEvent *event) override</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
+<tr class="memitem:a8f60f936fdfe024965b2f4f3bb043a7d" id="r_a8f60f936fdfe024965b2f4f3bb043a7d"><td class="memItemLeft"><a class="el" href="classnaidu_1_1Board.html">naidu::Board</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8f60f936fdfe024965b2f4f3bb043a7d">m_board</a></td></tr>
+<tr class="memitem:ad72e416b1e77d0bcb5506fdfa55a470a" id="r_ad72e416b1e77d0bcb5506fdfa55a470a"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#ad72e416b1e77d0bcb5506fdfa55a470a">m_has_board</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Atributos estáticos privados</h2></td></tr>
+<tr class="memitem:a7c224eaaed6415bbe3811d953fd86f19" id="r_a7c224eaaed6415bbe3811d953fd86f19"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#a7c224eaaed6415bbe3811d953fd86f19">MARGIN</a> = 4</td></tr>
+<tr class="memitem:a23118d4a3230a60e7608e1a6f7356555" id="r_a23118d4a3230a60e7608e1a6f7356555"><td class="memItemLeft">static constexpr int&#160;</td><td class="memItemRight"><a class="el" href="#a23118d4a3230a60e7608e1a6f7356555">MIN_CELL</a> = 30</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock">
+<p class="definition">Definición en la línea <a class="el" href="board__view_8hpp_source.html#l00010">10</a> del archivo <a class="el" href="board__view_8hpp_source.html">board_view.hpp</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="ab650bf798ba9ed8e1b1e3fc854a8ce94" name="ab650bf798ba9ed8e1b1e3fc854a8ce94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab650bf798ba9ed8e1b1e3fc854a8ce94">&#9670;&#160;</a></span>BoardView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BoardView::BoardView </td>
+          <td>(</td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="board__view_8cpp_source.html#l00010">10</a> del archivo <a class="el" href="board__view_8cpp_source.html">board_view.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   11</span>    : QWidget(parent)</div>
+<div class="line"><span class="lineno">   12</span>    , <a class="code hl_variable" href="#ad72e416b1e77d0bcb5506fdfa55a470a">m_has_board</a>(<span class="keyword">false</span>)</div>
+<div class="line"><span class="lineno">   13</span>{   </div>
+<div class="line"><span class="lineno">   14</span>    setMinimumSize(200, 200);</div>
+<div class="line"><span class="lineno">   15</span>    setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);</div>
+<div class="line"><span class="lineno">   16</span>}</div>
+<div class="ttc" id="aclassBoardView_html_ad72e416b1e77d0bcb5506fdfa55a470a"><div class="ttname"><a href="#ad72e416b1e77d0bcb5506fdfa55a470a">BoardView::m_has_board</a></div><div class="ttdeci">bool m_has_board</div><div class="ttdef"><b>Definición</b> <a href="board__view_8hpp_source.html#l00015">board_view.hpp:15</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board__view_8hpp_source.html#l00015">m_has_board</a>.</p>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="ab253684c536616529a1408157b19d710" name="ab253684c536616529a1408157b19d710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab253684c536616529a1408157b19d710">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardView::clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="board__view_8cpp_source.html#l00024">24</a> del archivo <a class="el" href="board__view_8cpp_source.html">board_view.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   24</span>                      {</div>
+<div class="line"><span class="lineno">   25</span>    <a class="code hl_variable" href="#ad72e416b1e77d0bcb5506fdfa55a470a">m_has_board</a> = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   26</span>    update();</div>
+<div class="line"><span class="lineno">   27</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board__view_8hpp_source.html#l00015">m_has_board</a>.</p>
+
+</div>
+</div>
+<a id="a6ea62d61f2e3f9b6ecb772b89e60a0a2" name="a6ea62d61f2e3f9b6ecb772b89e60a0a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ea62d61f2e3f9b6ecb772b89e60a0a2">&#9670;&#160;</a></span>paintEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardView::paintEvent </td>
+          <td>(</td>
+          <td class="paramtype">QPaintEvent *</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="board__view_8cpp_source.html#l00034">34</a> del archivo <a class="el" href="board__view_8cpp_source.html">board_view.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   34</span>                                       {</div>
+<div class="line"><span class="lineno">   35</span>    QPainter p(<span class="keyword">this</span>);</div>
+<div class="line"><span class="lineno">   36</span>    p.setRenderHint(QPainter::Antialiasing, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   37</span>    p.setRenderHint(QPainter::TextAntialiasing, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   38</span> </div>
+<div class="line"><span class="lineno">   39</span>    p.fillRect(rect(), QColor(30, 32, 38));</div>
+<div class="line"><span class="lineno">   40</span> </div>
+<div class="line"><span class="lineno">   41</span>    <span class="keywordflow">if</span> (!<a class="code hl_variable" href="#ad72e416b1e77d0bcb5506fdfa55a470a">m_has_board</a>) {</div>
+<div class="line"><span class="lineno">   42</span>        p.setPen(QColor(140, 145, 155));</div>
+<div class="line"><span class="lineno">   43</span>        QFont placeholder_font = p.font();</div>
+<div class="line"><span class="lineno">   44</span>        placeholder_font.setPointSize(12);</div>
+<div class="line"><span class="lineno">   45</span>        p.setFont(placeholder_font);</div>
+<div class="line"><span class="lineno">   46</span>        p.drawText(rect(), Qt::AlignCenter, <span class="stringliteral">&quot;Sin tablero&quot;</span>);</div>
+<div class="line"><span class="lineno">   47</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   48</span>    }</div>
+<div class="line"><span class="lineno">   49</span> </div>
+<div class="line"><span class="lineno">   50</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> n = <a class="code hl_variable" href="#a8f60f936fdfe024965b2f4f3bb043a7d">m_board</a>.<a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a>();</div>
+<div class="line"><span class="lineno">   51</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> avail = std::min(width(), height()) - 2 * <a class="code hl_variable" href="#a7c224eaaed6415bbe3811d953fd86f19">MARGIN</a>;</div>
+<div class="line"><span class="lineno">   52</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> cell = avail / n;</div>
+<div class="line"><span class="lineno">   53</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> board_size = cell * n;</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> x0 = (width() - board_size) / 2;</div>
+<div class="line"><span class="lineno">   56</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> y0 = (height() - board_size) / 2;</div>
+<div class="line"><span class="lineno">   57</span> </div>
+<div class="line"><span class="lineno">   58</span>    p.setPen(QPen(QColor(50, 54, 64), 2));</div>
+<div class="line"><span class="lineno">   59</span>    p.setBrush(QColor(24, 26, 31));</div>
+<div class="line"><span class="lineno">   60</span>    p.drawRoundedRect(x0 - 4, y0 - 4, board_size + 8, board_size + 8, 8, 8);</div>
+<div class="line"><span class="lineno">   61</span> </div>
+<div class="line"><span class="lineno">   62</span>    QFont font = p.font();</div>
+<div class="line"><span class="lineno">   63</span>    font.setPixelSize(std::max(10, cell / 3));</div>
+<div class="line"><span class="lineno">   64</span>    font.setBold(<span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">   65</span>    p.setFont(font);</div>
+<div class="line"><span class="lineno">   66</span> </div>
+<div class="line"><span class="lineno">   67</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> radius = std::max(4, cell / 10);</div>
+<div class="line"><span class="lineno">   68</span> </div>
+<div class="line"><span class="lineno">   69</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) {</div>
+<div class="line"><span class="lineno">   70</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; n; ++j) {</div>
+<div class="line"><span class="lineno">   71</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> x = x0 + j * cell + 2;</div>
+<div class="line"><span class="lineno">   72</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> y = y0 + i * cell + 2;</div>
+<div class="line"><span class="lineno">   73</span>            <span class="keyword">const</span> <span class="keywordtype">int</span> inner_size = cell - 4;</div>
+<div class="line"><span class="lineno">   74</span>            <span class="keyword">const</span> QRect r(x, y, inner_size, inner_size);</div>
+<div class="line"><span class="lineno">   75</span> </div>
+<div class="line"><span class="lineno">   76</span>            <span class="keyword">const</span> std::uint8_t tile = <a class="code hl_variable" href="#a8f60f936fdfe024965b2f4f3bb043a7d">m_board</a>.<a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(i, j);</div>
+<div class="line"><span class="lineno">   77</span> </div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (tile == 0) {</div>
+<div class="line"><span class="lineno">   79</span>                p.setPen(Qt::NoPen);</div>
+<div class="line"><span class="lineno">   80</span>                p.setBrush(QColor(38, 41, 48));</div>
+<div class="line"><span class="lineno">   81</span>                p.drawRoundedRect(r, radius, radius);</div>
+<div class="line"><span class="lineno">   82</span>            } <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   83</span>                p.setPen(QPen(QColor(70, 130, 200), 1));</div>
+<div class="line"><span class="lineno">   84</span>                p.setBrush(QColor(41, 128, 185));</div>
+<div class="line"><span class="lineno">   85</span>                p.drawRoundedRect(r, radius, radius);</div>
+<div class="line"><span class="lineno">   86</span> </div>
+<div class="line"><span class="lineno">   87</span>                p.setPen(QColor(255, 255, 255));</div>
+<div class="line"><span class="lineno">   88</span>                p.drawText(r, Qt::AlignCenter, QString::number(tile));</div>
+<div class="line"><span class="lineno">   89</span>            }</div>
+<div class="line"><span class="lineno">   90</span>        }</div>
+<div class="line"><span class="lineno">   91</span>    }</div>
+<div class="line"><span class="lineno">   92</span>}</div>
+<div class="ttc" id="aclassBoardView_html_a7c224eaaed6415bbe3811d953fd86f19"><div class="ttname"><a href="#a7c224eaaed6415bbe3811d953fd86f19">BoardView::MARGIN</a></div><div class="ttdeci">static constexpr int MARGIN</div><div class="ttdef"><b>Definición</b> <a href="board__view_8hpp_source.html#l00016">board_view.hpp:16</a></div></div>
+<div class="ttc" id="aclassBoardView_html_a8f60f936fdfe024965b2f4f3bb043a7d"><div class="ttname"><a href="#a8f60f936fdfe024965b2f4f3bb043a7d">BoardView::m_board</a></div><div class="ttdeci">naidu::Board m_board</div><div class="ttdef"><b>Definición</b> <a href="board__view_8hpp_source.html#l00014">board_view.hpp:14</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_a29a6c512367aa1515226649177d25f2a"><div class="ttname"><a href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">naidu::Board::at</a></div><div class="ttdeci">std::uint8_t at(std::size_t index) const</div><div class="ttdoc">Devuelve la ficha en el índice lineal dado.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00109">board.cpp:109</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ab65a3e1adb23a5d6c1b12a8f8bed3337"><div class="ttname"><a href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">naidu::Board::dim</a></div><div class="ttdeci">std::uint8_t dim() const noexcept</div><div class="ttdoc">Devuelve la dimensión N del tablero.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00105">board.cpp:105</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board_8cpp_source.html#l00109">naidu::Board::at()</a>, <a class="el" href="board_8cpp_source.html#l00105">naidu::Board::dim()</a>, <a class="el" href="board__view_8hpp_source.html#l00014">m_board</a>, <a class="el" href="board__view_8hpp_source.html#l00015">m_has_board</a> y <a class="el" href="board__view_8hpp_source.html#l00016">MARGIN</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBoardView_a6ea62d61f2e3f9b6ecb772b89e60a0a2_cgraph.png" border="0" usemap="#aclassBoardView_a6ea62d61f2e3f9b6ecb772b89e60a0a2_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassBoardView_a6ea62d61f2e3f9b6ecb772b89e60a0a2_cgraph" id="aclassBoardView_a6ea62d61f2e3f9b6ecb772b89e60a0a2_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,160,57"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="213,5,326,32"/>
+<area shape="poly" title=" " alt="" coords="159,31,200,28,195,29,160,36"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="208,56,331,83"/>
+<area shape="poly" title=" " alt="" coords="160,52,195,59,190,59,160,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acfdf4b20b9e5dd92d464157e5c248876" name="acfdf4b20b9e5dd92d464157e5c248876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfdf4b20b9e5dd92d464157e5c248876">&#9670;&#160;</a></span>set_board()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BoardView::set_board </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>board</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recibe y almacena una copia del tablero lógico del núcleo (<a class="el" href="classnaidu_1_1Board.html" title="Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N.">naidu::Board</a>) para actualizar su representación visual. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">board</td><td>Referencia al tablero del núcleo que se va a renderizar. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="board__view_8cpp_source.html#l00018">18</a> del archivo <a class="el" href="board__view_8cpp_source.html">board_view.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   18</span>                                                 {</div>
+<div class="line"><span class="lineno">   19</span>    <a class="code hl_variable" href="#a8f60f936fdfe024965b2f4f3bb043a7d">m_board</a> = board;</div>
+<div class="line"><span class="lineno">   20</span>    <a class="code hl_variable" href="#ad72e416b1e77d0bcb5506fdfa55a470a">m_has_board</a> = <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">   21</span>    update();</div>
+<div class="line"><span class="lineno">   22</span>}</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board__view_8hpp_source.html#l00014">m_board</a> y <a class="el" href="board__view_8hpp_source.html#l00015">m_has_board</a>.</p>
+
+</div>
+</div>
+<a id="a0cf9ce1455ca1ca014a16c059a097281" name="a0cf9ce1455ca1ca014a16c059a097281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cf9ce1455ca1ca014a16c059a097281">&#9670;&#160;</a></span>sizeHint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QSize BoardView::sizeHint </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="board__view_8cpp_source.html#l00029">29</a> del archivo <a class="el" href="board__view_8cpp_source.html">board_view.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>                                {</div>
+<div class="line"><span class="lineno">   30</span>    <span class="keyword">const</span> <span class="keywordtype">int</span> side = (<a class="code hl_variable" href="#ad72e416b1e77d0bcb5506fdfa55a470a">m_has_board</a> ? <a class="code hl_variable" href="#a8f60f936fdfe024965b2f4f3bb043a7d">m_board</a>.<a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a>() : 5) * <a class="code hl_variable" href="#a23118d4a3230a60e7608e1a6f7356555">MIN_CELL</a> + 2 * <a class="code hl_variable" href="#a7c224eaaed6415bbe3811d953fd86f19">MARGIN</a>;</div>
+<div class="line"><span class="lineno">   31</span>    <span class="keywordflow">return</span> QSize(side, side);</div>
+<div class="line"><span class="lineno">   32</span>}</div>
+<div class="ttc" id="aclassBoardView_html_a23118d4a3230a60e7608e1a6f7356555"><div class="ttname"><a href="#a23118d4a3230a60e7608e1a6f7356555">BoardView::MIN_CELL</a></div><div class="ttdeci">static constexpr int MIN_CELL</div><div class="ttdef"><b>Definición</b> <a href="board__view_8hpp_source.html#l00017">board_view.hpp:17</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board_8cpp_source.html#l00105">naidu::Board::dim()</a>, <a class="el" href="board__view_8hpp_source.html#l00014">m_board</a>, <a class="el" href="board__view_8hpp_source.html#l00015">m_has_board</a>, <a class="el" href="board__view_8hpp_source.html#l00016">MARGIN</a> y <a class="el" href="board__view_8hpp_source.html#l00017">MIN_CELL</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classBoardView_a0cf9ce1455ca1ca014a16c059a097281_cgraph.png" border="0" usemap="#aclassBoardView_a0cf9ce1455ca1ca014a16c059a097281_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassBoardView_a0cf9ce1455ca1ca014a16c059a097281_cgraph" id="aclassBoardView_a0cf9ce1455ca1ca014a16c059a097281_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,146,32"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="194,5,317,32"/>
+<area shape="poly" title=" " alt="" coords="146,16,181,19,176,19,146,21"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Documentación de datos miembro</h2>
+<a id="a8f60f936fdfe024965b2f4f3bb043a7d" name="a8f60f936fdfe024965b2f4f3bb043a7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f60f936fdfe024965b2f4f3bb043a7d">&#9670;&#160;</a></span>m_board</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnaidu_1_1Board.html">naidu::Board</a> BoardView::m_board</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="board__view_8hpp_source.html#l00014">14</a> del archivo <a class="el" href="board__view_8hpp_source.html">board_view.hpp</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="board__view_8cpp_source.html#l00034">paintEvent()</a>, <a class="el" href="board__view_8cpp_source.html#l00018">set_board()</a> y <a class="el" href="board__view_8cpp_source.html#l00029">sizeHint()</a>.</p>
+
+</div>
+</div>
+<a id="ad72e416b1e77d0bcb5506fdfa55a470a" name="ad72e416b1e77d0bcb5506fdfa55a470a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72e416b1e77d0bcb5506fdfa55a470a">&#9670;&#160;</a></span>m_has_board</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool BoardView::m_has_board</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="board__view_8hpp_source.html#l00015">15</a> del archivo <a class="el" href="board__view_8hpp_source.html">board_view.hpp</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="board__view_8cpp_source.html#l00010">BoardView()</a>, <a class="el" href="board__view_8cpp_source.html#l00024">clear()</a>, <a class="el" href="board__view_8cpp_source.html#l00034">paintEvent()</a>, <a class="el" href="board__view_8cpp_source.html#l00018">set_board()</a> y <a class="el" href="board__view_8cpp_source.html#l00029">sizeHint()</a>.</p>
+
+</div>
+</div>
+<a id="a7c224eaaed6415bbe3811d953fd86f19" name="a7c224eaaed6415bbe3811d953fd86f19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c224eaaed6415bbe3811d953fd86f19">&#9670;&#160;</a></span>MARGIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BoardView::MARGIN = 4</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="board__view_8hpp_source.html#l00016">16</a> del archivo <a class="el" href="board__view_8hpp_source.html">board_view.hpp</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="board__view_8cpp_source.html#l00034">paintEvent()</a> y <a class="el" href="board__view_8cpp_source.html#l00029">sizeHint()</a>.</p>
+
+</div>
+</div>
+<a id="a23118d4a3230a60e7608e1a6f7356555" name="a23118d4a3230a60e7608e1a6f7356555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23118d4a3230a60e7608e1a6f7356555">&#9670;&#160;</a></span>MIN_CELL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int BoardView::MIN_CELL = 30</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="board__view_8hpp_source.html#l00017">17</a> del archivo <a class="el" href="board__view_8hpp_source.html">board_view.hpp</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="board__view_8cpp_source.html#l00029">sizeHint()</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada de los siguientes archivos:<ul>
+<li>src/ui/puzzle/<a class="el" href="board__view_8hpp_source.html">board_view.hpp</a></li>
+<li>src/ui/puzzle/<a class="el" href="board__view_8cpp_source.html">board_view.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="classBoardView.html">BoardView</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['ida_0',['Puzzle Numérico con IDA*',['../md_Readme.html',1,'']]],
-  ['ida_1',['ida',['../namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4',1,'naidu::solver']]],
-  ['instalación_20en_20arch_20linux_2',['3. Instalación en Arch Linux',['../md_installation__guiede.html#autotoc_md5',1,'']]],
-  ['instalación_20en_20linux_20distribuciones_20basadas_20en_20debian_20ubuntu_3',['2. Instalación en Linux (Distribuciones Basadas en Debian / Ubuntu)',['../md_installation__guiede.html#autotoc_md3',1,'']]],
-  ['instalación_20en_20windows_4',['4. Instalación en Windows',['../md_installation__guiede.html#autotoc_md7',1,'']]],
-  ['instalación_20y_20configuración_5',['3. Instalación y Configuración',['../md_Readme.html#autotoc_md17',1,'']]],
-  ['instalación_20y_20configuración_20multiplataforma_6',['Guía de Instalación y Configuración Multiplataforma',['../md_installation__guiede.html',1,'']]],
-  ['instalador_20oficial_20de_20qt_20recomendado_7',['Opción A: Utilizando el Instalador Oficial de Qt (Recomendado)',['../md_installation__guiede.html#autotoc_md8',1,'']]],
-  ['installation_5fguiede_2emd_8',['installation_guiede.md',['../installation__guiede_8md.html',1,'']]],
-  ['is_5fsolvable_9',['is_solvable',['../classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04',1,'naidu::Board']]],
-  ['is_5fsolved_10',['is_solved',['../classnaidu_1_1Board.html#a4ac1d6cb6ab37b0de15072e09ea12c32',1,'naidu::Board']]],
-  ['iterator_11',['iterator',['../classMoveSet_1_1iterator.html',1,'MoveSet::iterator'],['../classnaidu_1_1MoveSet_1_1iterator.html',1,'naidu::MoveSet::iterator'],['../classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323',1,'naidu::MoveSet::iterator::iterator()'],['../classMoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323',1,'MoveSet::iterator::iterator()']]]
+  ['paintevent_0',['paintEvent',['../classBoardView.html#a6ea62d61f2e3f9b6ecb772b89e60a0a2',1,'BoardView']]],
+  ['parse_5fboard_5fgrid_1',['parse_board_grid',['../classMainWindow.html#a23b1c1a33b654dbef35bd42cb1b2d742',1,'MainWindow']]],
+  ['parse_5fboard_5finput_2',['parse_board_input',['../classPuzzleTab.html#a13539036477fd037d27a341d6af36f59',1,'PuzzleTab']]],
+  ['peek_5fempty_3',['peek_empty',['../classnaidu_1_1Board.html#abaab9492b6b831f874a5f2c7be8c237d',1,'naidu::Board']]],
+  ['peek_5ftile_4',['peek_tile',['../classnaidu_1_1Board.html#ac275bea4902020994a2462caf3ed3917',1,'naidu::Board']]],
+  ['puzzle_5ftab_2ecpp_5',['puzzle_tab.cpp',['../puzzle__tab_8cpp.html',1,'']]],
+  ['puzzle_5ftab_2eh_6',['puzzle_tab.h',['../puzzle__tab_8h.html',1,'']]],
+  ['puzzletab_7',['PuzzleTab',['../classPuzzleTab.html',1,'PuzzleTab'],['../classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4',1,'PuzzleTab::PuzzleTab()']]]
 ];

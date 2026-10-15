@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Archivo de código fuente src/ui/puzzle/puzzle_tab.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('puzzle__tab_8h_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">puzzle_tab.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="puzzle__tab_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once </span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="board_8hpp.html">board/board.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="evaluation_8hpp.html">evaluation/evaluation.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="solver_8hpp.html">solver/solver.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;QFutureWatcher&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;QTimer&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>QT_BEGIN_NAMESPACE</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceUi.html">Ui</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">class </span>PuzzleTab;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>}</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>QT_END_NAMESPACE</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classPuzzleTab.html">   24</a></span><span class="keyword">class </span><a class="code hl_function" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4">PuzzleTab</a> : <span class="keyword">public</span> QWidget {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    Q_OBJECT</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classPuzzleTab.html#ad84d9b3e52aa349b9f4f3136c928f81c">   28</a></span>        Ui::PuzzleTab *<a class="code hl_variable" href="classPuzzleTab.html#ad84d9b3e52aa349b9f4f3136c928f81c">m_ui</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="classPuzzleTab.html#ab18fd5487a3f3a6b093d60f167b92a15">   30</a></span>        QFutureWatcher&lt;naidu::solver::Solution&gt; <a class="code hl_variable" href="classPuzzleTab.html#ab18fd5487a3f3a6b093d60f167b92a15">m_solver_watcher</a>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classPuzzleTab.html#a38e537e5c35ceb87abb8ddc5953ebd29">   31</a></span>        QTimer <a class="code hl_variable" href="classPuzzleTab.html#a38e537e5c35ceb87abb8ddc5953ebd29">m_anim_timer</a>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="classPuzzleTab.html#af6d8ced1674796a92e81af62daaf4e10">   34</a></span>        <a class="code hl_class" href="classnaidu_1_1Board.html">naidu::Board</a> <a class="code hl_variable" href="classPuzzleTab.html#af6d8ced1674796a92e81af62daaf4e10">m_initial_board</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classPuzzleTab.html#acd37e53f5b76c43eb0e73e52efd1df3f">   36</a></span>        <a class="code hl_class" href="classnaidu_1_1Board.html">naidu::Board</a> <a class="code hl_variable" href="classPuzzleTab.html#acd37e53f5b76c43eb0e73e52efd1df3f">m_goal_board</a>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classPuzzleTab.html#a074978075a2cd13500206c34cdbed78e">   37</a></span>        <a class="code hl_class" href="classnaidu_1_1Board.html">naidu::Board</a> <a class="code hl_variable" href="classPuzzleTab.html#a074978075a2cd13500206c34cdbed78e">m_current_anim_board</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="classPuzzleTab.html#a1d4d4232471bdfeb8d9521f8eda4f010">   38</a></span>        std::vector&lt;naidu::Direction&gt; <a class="code hl_variable" href="classPuzzleTab.html#a1d4d4232471bdfeb8d9521f8eda4f010">m_anim_moves</a>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classPuzzleTab.html#a50870c89d7fe28b515f359885c452cb2">   39</a></span>        std::size_t <a class="code hl_variable" href="classPuzzleTab.html#a50870c89d7fe28b515f359885c452cb2">m_anim_index</a> = 0;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="classPuzzleTab.html#aa4fac1d2c93c04491ceaf428b9671b27">   41</a></span>        std::chrono::high_resolution_clock::time_point <a class="code hl_variable" href="classPuzzleTab.html#aa4fac1d2c93c04491ceaf428b9671b27">m_start_time</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPuzzleTab.html#ab90d67d4f231a0bdd9dd9a58a6986ff5">on_dimension_changed</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPuzzleTab.html#af92079c81348986c55c3f9025d3d1450">on_solve_clicked</a>();</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPuzzleTab.html#a550a8b30e4566d4a0157c2e9df1241bb">on_stop_clicked</a>();</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPuzzleTab.html#aaab7b43869327f957614c225446940ac">on_shuffle_clicked</a>();</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPuzzleTab.html#af1b31fea90eed57085485179397854ef">on_solver_finished</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPuzzleTab.html#aa1d493396cefc640b572d366048d50ee">on_solver_cancelled</a>();</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPuzzleTab.html#a51f1e564095a8ca105c4e5e6fa038eca">on_anim_step</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPuzzleTab.html#afe132dd7b37da93ac8c818c36ad20c78">on_speed_slider_changed</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPuzzleTab.html#a3794d62cea4e1f02bbf5c69e69312965">on_replay_animation</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        std::optional&lt;naidu::Board&gt; <a class="code hl_function" href="classPuzzleTab.html#a13539036477fd037d27a341d6af36f59">parse_board_input</a>(<span class="keyword">const</span> QString&amp; text, std::uint8_t dim) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4">PuzzleTab</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <a class="code hl_function" href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4">~PuzzleTab</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPuzzleTab.html#a1f00027785e44f07330810f204be0be7">set_boards</a>(<span class="keyword">const</span> <a class="code hl_class" href="classnaidu_1_1Board.html">naidu::Board</a>&amp; initial, <span class="keyword">const</span> <a class="code hl_class" href="classnaidu_1_1Board.html">naidu::Board</a>&amp; goal);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <a class="code hl_typedef" href="namespacenaidu_1_1evaluation.html#a00edf3a90cd05b589b2d73e444e63863">naidu::evaluation::EvaluationFn</a> <a class="code hl_function" href="classPuzzleTab.html#a4532f1e18c2053e5a77a179ac9349652">get_selected_evaluation</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>};</div>
+</div>
+<div class="ttc" id="aboard_8hpp_html"><div class="ttname"><a href="board_8hpp.html">board.hpp</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a074978075a2cd13500206c34cdbed78e"><div class="ttname"><a href="classPuzzleTab.html#a074978075a2cd13500206c34cdbed78e">PuzzleTab::m_current_anim_board</a></div><div class="ttdeci">naidu::Board m_current_anim_board</div><div class="ttdef"><b>Definición</b> <a href="#l00037">puzzle_tab.h:37</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a13539036477fd037d27a341d6af36f59"><div class="ttname"><a href="classPuzzleTab.html#a13539036477fd037d27a341d6af36f59">PuzzleTab::parse_board_input</a></div><div class="ttdeci">std::optional&lt; naidu::Board &gt; parse_board_input(const QString &amp;text, std::uint8_t dim) const</div><div class="ttdoc">Valida y convierte la entrada de texto en una instancia de naidu::Board para el núcleo.</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00106">puzzle_tab.cpp:106</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a1d4d4232471bdfeb8d9521f8eda4f010"><div class="ttname"><a href="classPuzzleTab.html#a1d4d4232471bdfeb8d9521f8eda4f010">PuzzleTab::m_anim_moves</a></div><div class="ttdeci">std::vector&lt; naidu::Direction &gt; m_anim_moves</div><div class="ttdef"><b>Definición</b> <a href="#l00038">puzzle_tab.h:38</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a1f00027785e44f07330810f204be0be7"><div class="ttname"><a href="classPuzzleTab.html#a1f00027785e44f07330810f204be0be7">PuzzleTab::set_boards</a></div><div class="ttdeci">void set_boards(const naidu::Board &amp;initial, const naidu::Board &amp;goal)</div><div class="ttdoc">Sincroniza y actualiza los tableros inicial y meta con el núcleo lógico.</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00050">puzzle_tab.cpp:50</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a3794d62cea4e1f02bbf5c69e69312965"><div class="ttname"><a href="classPuzzleTab.html#a3794d62cea4e1f02bbf5c69e69312965">PuzzleTab::on_replay_animation</a></div><div class="ttdeci">void on_replay_animation()</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00269">puzzle_tab.cpp:269</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a38e537e5c35ceb87abb8ddc5953ebd29"><div class="ttname"><a href="classPuzzleTab.html#a38e537e5c35ceb87abb8ddc5953ebd29">PuzzleTab::m_anim_timer</a></div><div class="ttdeci">QTimer m_anim_timer</div><div class="ttdef"><b>Definición</b> <a href="#l00031">puzzle_tab.h:31</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a4532f1e18c2053e5a77a179ac9349652"><div class="ttname"><a href="classPuzzleTab.html#a4532f1e18c2053e5a77a179ac9349652">PuzzleTab::get_selected_evaluation</a></div><div class="ttdeci">naidu::evaluation::EvaluationFn get_selected_evaluation() const</div><div class="ttdoc">Obtiene la función heurística vinculada a los métodos de evaluación del núcleo (naidu::evaluation).</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00094">puzzle_tab.cpp:94</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a50870c89d7fe28b515f359885c452cb2"><div class="ttname"><a href="classPuzzleTab.html#a50870c89d7fe28b515f359885c452cb2">PuzzleTab::m_anim_index</a></div><div class="ttdeci">std::size_t m_anim_index</div><div class="ttdef"><b>Definición</b> <a href="#l00039">puzzle_tab.h:39</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a51f1e564095a8ca105c4e5e6fa038eca"><div class="ttname"><a href="classPuzzleTab.html#a51f1e564095a8ca105c4e5e6fa038eca">PuzzleTab::on_anim_step</a></div><div class="ttdeci">void on_anim_step()</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00289">puzzle_tab.cpp:289</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a550a8b30e4566d4a0157c2e9df1241bb"><div class="ttname"><a href="classPuzzleTab.html#a550a8b30e4566d4a0157c2e9df1241bb">PuzzleTab::on_stop_clicked</a></div><div class="ttdeci">void on_stop_clicked()</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00254">puzzle_tab.cpp:254</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_a9cf28d7926ecb6eb3fa4a7c4031f81e4"><div class="ttname"><a href="classPuzzleTab.html#a9cf28d7926ecb6eb3fa4a7c4031f81e4">PuzzleTab::PuzzleTab</a></div><div class="ttdeci">PuzzleTab(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00015">puzzle_tab.cpp:15</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_aa1d493396cefc640b572d366048d50ee"><div class="ttname"><a href="classPuzzleTab.html#aa1d493396cefc640b572d366048d50ee">PuzzleTab::on_solver_cancelled</a></div><div class="ttdeci">void on_solver_cancelled()</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00263">puzzle_tab.cpp:263</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_aa4fac1d2c93c04491ceaf428b9671b27"><div class="ttname"><a href="classPuzzleTab.html#aa4fac1d2c93c04491ceaf428b9671b27">PuzzleTab::m_start_time</a></div><div class="ttdeci">std::chrono::high_resolution_clock::time_point m_start_time</div><div class="ttdef"><b>Definición</b> <a href="#l00041">puzzle_tab.h:41</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_aaab7b43869327f957614c225446940ac"><div class="ttname"><a href="classPuzzleTab.html#aaab7b43869327f957614c225446940ac">PuzzleTab::on_shuffle_clicked</a></div><div class="ttdeci">void on_shuffle_clicked()</div><div class="ttdoc">Solicita al generador aleatorio del núcleo naidu::randomizer un nuevo estado válido para el tablero.</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00300">puzzle_tab.cpp:300</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_ab18fd5487a3f3a6b093d60f167b92a15"><div class="ttname"><a href="classPuzzleTab.html#ab18fd5487a3f3a6b093d60f167b92a15">PuzzleTab::m_solver_watcher</a></div><div class="ttdeci">QFutureWatcher&lt; naidu::solver::Solution &gt; m_solver_watcher</div><div class="ttdef"><b>Definición</b> <a href="#l00030">puzzle_tab.h:30</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_ab90d67d4f231a0bdd9dd9a58a6986ff5"><div class="ttname"><a href="classPuzzleTab.html#ab90d67d4f231a0bdd9dd9a58a6986ff5">PuzzleTab::on_dimension_changed</a></div><div class="ttdeci">void on_dimension_changed(int value)</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00079">puzzle_tab.cpp:79</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_acd37e53f5b76c43eb0e73e52efd1df3f"><div class="ttname"><a href="classPuzzleTab.html#acd37e53f5b76c43eb0e73e52efd1df3f">PuzzleTab::m_goal_board</a></div><div class="ttdeci">naidu::Board m_goal_board</div><div class="ttdoc">Tablero objetivo o meta del núcleo lógico.</div><div class="ttdef"><b>Definición</b> <a href="#l00036">puzzle_tab.h:36</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_ad84d9b3e52aa349b9f4f3136c928f81c"><div class="ttname"><a href="classPuzzleTab.html#ad84d9b3e52aa349b9f4f3136c928f81c">PuzzleTab::m_ui</a></div><div class="ttdeci">Ui::PuzzleTab * m_ui</div><div class="ttdef"><b>Definición</b> <a href="#l00028">puzzle_tab.h:28</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_af1b31fea90eed57085485179397854ef"><div class="ttname"><a href="classPuzzleTab.html#af1b31fea90eed57085485179397854ef">PuzzleTab::on_solver_finished</a></div><div class="ttdeci">void on_solver_finished()</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00212">puzzle_tab.cpp:212</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_af6d8ced1674796a92e81af62daaf4e10"><div class="ttname"><a href="classPuzzleTab.html#af6d8ced1674796a92e81af62daaf4e10">PuzzleTab::m_initial_board</a></div><div class="ttdeci">naidu::Board m_initial_board</div><div class="ttdoc">Tablero inicial gestionado por el núcleo lógico.</div><div class="ttdef"><b>Definición</b> <a href="#l00034">puzzle_tab.h:34</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_af92079c81348986c55c3f9025d3d1450"><div class="ttname"><a href="classPuzzleTab.html#af92079c81348986c55c3f9025d3d1450">PuzzleTab::on_solve_clicked</a></div><div class="ttdeci">void on_solve_clicked()</div><div class="ttdoc">Ejecuta el proceso de resolución asíncrona invocando directamente al núcleo de búsqueda naidu::solver...</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00123">puzzle_tab.cpp:123</a></div></div>
+<div class="ttc" id="aclassPuzzleTab_html_afe132dd7b37da93ac8c818c36ad20c78"><div class="ttname"><a href="classPuzzleTab.html#afe132dd7b37da93ac8c818c36ad20c78">PuzzleTab::on_speed_slider_changed</a></div><div class="ttdeci">void on_speed_slider_changed(int value)</div><div class="ttdef"><b>Definición</b> <a href="puzzle__tab_8cpp_source.html#l00087">puzzle_tab.cpp:87</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html"><div class="ttname"><a href="classnaidu_1_1Board.html">naidu::Board</a></div><div class="ttdoc">Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N.</div><div class="ttdef"><b>Definición</b> <a href="board_8hpp_source.html#l00026">board.hpp:26</a></div></div>
+<div class="ttc" id="aevaluation_8hpp_html"><div class="ttname"><a href="evaluation_8hpp.html">evaluation.hpp</a></div></div>
+<div class="ttc" id="anamespaceUi_html"><div class="ttname"><a href="namespaceUi.html">Ui</a></div><div class="ttdef"><b>Definición</b> <a href="analysis__tab_8h_source.html#l00016">analysis_tab.h:16</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1evaluation_html_a00edf3a90cd05b589b2d73e444e63863"><div class="ttname"><a href="namespacenaidu_1_1evaluation.html#a00edf3a90cd05b589b2d73e444e63863">naidu::evaluation::EvaluationFn</a></div><div class="ttdeci">std::uint16_t(*)( const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos, std::uint16_t g) noexcept EvaluationFn</div><div class="ttdoc">Firma común de las funciones de evaluación.</div><div class="ttdef"><b>Definición</b> <a href="evaluation_8hpp_source.html#l00020">evaluation.hpp:20</a></div></div>
+<div class="ttc" id="asolver_8hpp_html"><div class="ttname"><a href="solver_8hpp.html">solver.hpp</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_da5c6b39c0a2f54e57df6799511cd3ab.html">ui</a></li><li class="navelem"><a href="dir_c9e9bad68d791e67cd35d3c0eebc6050.html">puzzle</a></li><li class="navelem"><a href="puzzle__tab_8h.html">puzzle_tab.h</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>
