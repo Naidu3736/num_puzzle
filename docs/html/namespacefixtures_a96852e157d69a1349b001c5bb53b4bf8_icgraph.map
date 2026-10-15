@@ -1,0 +1,6 @@
+<map id="fixtures::unsolvable_5x5" name="fixtures::unsolvable_5x5">
+<area shape="rect" id="Node000001" title=" " alt="" coords="153,29,315,56"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="263,14,254,10,234,8,215,10,205,15,203,20,208,30,203,28,198,21,201,11,214,5,234,3,255,5,268,14"/>
+<area shape="rect" id="Node000002" href="$test__board__queries_8cpp.html#a8b9ab0813b52082f136417f85b19aefd" title=" " alt="" coords="5,29,105,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,43,105,45,105,40,140,42"/>
+</map>

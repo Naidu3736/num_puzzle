@@ -1,0 +1,9 @@
+<map id="naidu::Board::Board" name="naidu::Board::Board">
+<area shape="rect" id="Node000001" title="Construye un tablero resuelto de dimensión dim." alt="" coords="5,31,142,57"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="197,5,320,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,32,184,28,179,30,143,37"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html#a6984ceb36ab56184586162dfcb7695da" title="Redimensiona el tablero y lo reinicia a su estado resuelto." alt="" coords="190,56,327,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,51,177,58,172,58,142,56"/>
+<area shape="rect" id="Node000004" href="$classnaidu_1_1Board.html#aaac8dd20fedb46ab483b9cc70f046740" title="Reinicia el tablero a su estado resuelto." alt="" coords="375,56,506,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="328,67,363,69,357,69,328,72"/>
+</map>

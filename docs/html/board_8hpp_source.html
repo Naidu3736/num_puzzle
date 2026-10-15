@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Archivo de código fuente src/board/board.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('board_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">board.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="board_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="direction_8hpp.html">core/direction.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="moveset_8hpp.html">core/moveset.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;span&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenaidu.html">naidu</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classnaidu_1_1Board.html">   26</a></span>    <span class="keyword">class </span><a class="code hl_function" href="classnaidu_1_1Board.html#ad4fc5ed78cc93ab03f996cbc3a08ea3c">Board</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classnaidu_1_1Board.html#a51cb560a43fcd771650682e2b4fb96d0">   29</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> std::uint8_t <a class="code hl_variable" href="classnaidu_1_1Board.html#a51cb560a43fcd771650682e2b4fb96d0">MIN_DIM</a>   = 3;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="classnaidu_1_1Board.html#afd7b489685e82085349ff8af25d4e980">   32</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> std::uint8_t <a class="code hl_variable" href="classnaidu_1_1Board.html#afd7b489685e82085349ff8af25d4e980">MAX_DIM</a>   = 15;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classnaidu_1_1Board.html#aa183658ada2a47708a645a98c2b73f44">   35</a></span>        <span class="keyword">static</span> <span class="keyword">constexpr</span> std::uint8_t <a class="code hl_variable" href="classnaidu_1_1Board.html#aa183658ada2a47708a645a98c2b73f44">MAX_TILES</a> = <a class="code hl_variable" href="classnaidu_1_1Board.html#afd7b489685e82085349ff8af25d4e980">MAX_DIM</a> * <a class="code hl_variable" href="classnaidu_1_1Board.html#afd7b489685e82085349ff8af25d4e980">MAX_DIM</a>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        std::array&lt;std::uint8_t, MAX_TILES&gt; m_board;  </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        std::uint8_t m_dim;                            </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        std::uint8_t m_size;                           </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        std::uint8_t m_empty_index;                    </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordtype">void</span> validate_tiles() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        std::uint8_t find_empty() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        std::size_t inversions() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        std::uint8_t neighbor_of_empty(<a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> m) <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordtype">bool</span> can_move(<a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> m) <span class="keyword">const</span> <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classnaidu_1_1Board.html#ad4fc5ed78cc93ab03f996cbc3a08ea3c">Board</a>(std::uint8_t <a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a> = <a class="code hl_variable" href="classnaidu_1_1Board.html#a51cb560a43fcd771650682e2b4fb96d0">MIN_DIM</a>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keyword">explicit</span> <a class="code hl_function" href="classnaidu_1_1Board.html#ad4fc5ed78cc93ab03f996cbc3a08ea3c">Board</a>(std::span&lt;const std::uint8_t&gt; <a class="code hl_function" href="classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f">tiles</a>);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="comment">/*</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment">         * @brief Construye un tablero desde una lista de fichas.</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="comment">         * @param tiles Fichas en orden fila-mayor.</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="comment">         * @throw std::invalid_argument si el tamaño no es cuadrado o las fichas son inválidas.</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="comment">        */</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <a class="code hl_function" href="classnaidu_1_1Board.html#ad4fc5ed78cc93ab03f996cbc3a08ea3c">Board</a>(std::initializer_list&lt;std::uint8_t&gt; <a class="code hl_function" href="classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f">tiles</a>);</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classnaidu_1_1Board.html#a6984ceb36ab56184586162dfcb7695da">resize</a>(std::uint8_t new_dim);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        std::uint8_t <a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a>() const noexcept;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        std::uint8_t <a class="code hl_function" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">tile_count</a>() const noexcept;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        std::uint8_t <a class="code hl_function" href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac">empty_index</a>() const noexcept;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>        std::uint8_t <a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(std::<span class="keywordtype">size_t</span> index) const;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        std::uint8_t <a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(std::<span class="keywordtype">size_t</span> row, std::<span class="keywordtype">size_t</span> col) const;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>        std::uint8_t <a class="code hl_function" href="classnaidu_1_1Board.html#abaab9492b6b831f874a5f2c7be8c237d">peek_empty</a>(<a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> d) const noexcept;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        std::uint8_t <a class="code hl_function" href="classnaidu_1_1Board.html#ac275bea4902020994a2462caf3ed3917">peek_tile</a>(<a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> d) const noexcept;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        std::span&lt;const std::uint8_t&gt; <a class="code hl_function" href="classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f">tiles</a>() const noexcept;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classnaidu_1_1Board.html#a4ac1d6cb6ab37b0de15072e09ea12c32">is_solved</a>() const noexcept;</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04">is_solvable</a>() const noexcept;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>        <a class="code hl_class" href="classnaidu_1_1MoveSet.html">MoveSet</a> <a class="code hl_function" href="classnaidu_1_1Board.html#ae5927ff613abc30c3a4015d3d4b27a5f">legal_moves</a>() const noexcept;</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9">move</a>(<a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> m);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        std::<span class="keywordtype">size_t</span> <a class="code hl_function" href="classnaidu_1_1Board.html#ac187e237f061761ba23f3418c41bc5b3">apply</a>(std::span&lt;const <a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a>&gt; sequence);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classnaidu_1_1Board.html#aaac8dd20fedb46ab483b9cc70f046740">reset</a>();</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        <span class="keywordtype">bool</span> operator==(const <a class="code hl_function" href="classnaidu_1_1Board.html#ad4fc5ed78cc93ab03f996cbc3a08ea3c">Board</a>&amp; other) const noexcept;</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        <span class="keywordtype">bool</span> operator!=(const <a class="code hl_function" href="classnaidu_1_1Board.html#ad4fc5ed78cc93ab03f996cbc3a08ea3c">Board</a>&amp; other) const noexcept;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>    };</div>
+</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span> </div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>}</div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_a1f90e96f7037c77e87b72788fc895af9"><div class="ttname"><a href="classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9">naidu::Board::move</a></div><div class="ttdeci">bool move(Direction m)</div><div class="ttdoc">Intenta mover el hueco en la dirección m.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00148">board.cpp:148</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_a29a6c512367aa1515226649177d25f2a"><div class="ttname"><a href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">naidu::Board::at</a></div><div class="ttdeci">std::uint8_t at(std::size_t index) const</div><div class="ttdoc">Devuelve la ficha en el índice lineal dado.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00109">board.cpp:109</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_a4ac1d6cb6ab37b0de15072e09ea12c32"><div class="ttname"><a href="classnaidu_1_1Board.html#a4ac1d6cb6ab37b0de15072e09ea12c32">naidu::Board::is_solved</a></div><div class="ttdeci">bool is_solved() const noexcept</div><div class="ttdoc">Comprueba si el tablero está en el estado resuelto.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00126">board.cpp:126</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_a51cb560a43fcd771650682e2b4fb96d0"><div class="ttname"><a href="classnaidu_1_1Board.html#a51cb560a43fcd771650682e2b4fb96d0">naidu::Board::MIN_DIM</a></div><div class="ttdeci">static constexpr std::uint8_t MIN_DIM</div><div class="ttdef"><b>Definición</b> <a href="#l00029">board.hpp:29</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_a6984ceb36ab56184586162dfcb7695da"><div class="ttname"><a href="classnaidu_1_1Board.html#a6984ceb36ab56184586162dfcb7695da">naidu::Board::resize</a></div><div class="ttdeci">void resize(std::uint8_t new_dim)</div><div class="ttdoc">Redimensiona el tablero y lo reinicia a su estado resuelto.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00094">board.cpp:94</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_aa183658ada2a47708a645a98c2b73f44"><div class="ttname"><a href="classnaidu_1_1Board.html#aa183658ada2a47708a645a98c2b73f44">naidu::Board::MAX_TILES</a></div><div class="ttdeci">static constexpr std::uint8_t MAX_TILES</div><div class="ttdef"><b>Definición</b> <a href="#l00035">board.hpp:35</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_aa27b65ba0fb898217ead8d43aabbfdb4"><div class="ttname"><a href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">naidu::Board::tile_count</a></div><div class="ttdeci">std::uint8_t tile_count() const noexcept</div><div class="ttdoc">Devuelve el número total de fichas (N²).</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00106">board.cpp:106</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_aaac8dd20fedb46ab483b9cc70f046740"><div class="ttname"><a href="classnaidu_1_1Board.html#aaac8dd20fedb46ab483b9cc70f046740">naidu::Board::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reinicia el tablero a su estado resuelto.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00162">board.cpp:162</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ab08eb2bc1a7ffb966aa267f91dca15ac"><div class="ttname"><a href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac">naidu::Board::empty_index</a></div><div class="ttdeci">std::uint8_t empty_index() const noexcept</div><div class="ttdoc">Devuelve el índice lineal del hueco.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00107">board.cpp:107</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ab4d4df6f09f8f37842b68e8fee429e04"><div class="ttname"><a href="classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04">naidu::Board::is_solvable</a></div><div class="ttdeci">bool is_solvable() const noexcept</div><div class="ttdoc">Comprueba si el tablero es soluble desde su estado actual.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00132">board.cpp:132</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ab65a3e1adb23a5d6c1b12a8f8bed3337"><div class="ttname"><a href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">naidu::Board::dim</a></div><div class="ttdeci">std::uint8_t dim() const noexcept</div><div class="ttdoc">Devuelve la dimensión N del tablero.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00105">board.cpp:105</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_abaab9492b6b831f874a5f2c7be8c237d"><div class="ttname"><a href="classnaidu_1_1Board.html#abaab9492b6b831f874a5f2c7be8c237d">naidu::Board::peek_empty</a></div><div class="ttdeci">std::uint8_t peek_empty(Direction d) const noexcept</div><div class="ttdoc">Devuelve el índice donde terminaría el hueco tras moverse en d.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00114">board.cpp:114</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ac187e237f061761ba23f3418c41bc5b3"><div class="ttname"><a href="classnaidu_1_1Board.html#ac187e237f061761ba23f3418c41bc5b3">naidu::Board::apply</a></div><div class="ttdeci">std::size_t apply(std::span&lt; const Direction &gt; sequence)</div><div class="ttdoc">Aplica una secuencia de movimientos al tablero.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00156">board.cpp:156</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ac275bea4902020994a2462caf3ed3917"><div class="ttname"><a href="classnaidu_1_1Board.html#ac275bea4902020994a2462caf3ed3917">naidu::Board::peek_tile</a></div><div class="ttdeci">std::uint8_t peek_tile(Direction d) const noexcept</div><div class="ttdoc">Devuelve la ficha que se movería si el hueco se moviera en d.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00118">board.cpp:118</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_acfa91c67a9c781e336100d285b8a0a5f"><div class="ttname"><a href="classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f">naidu::Board::tiles</a></div><div class="ttdeci">std::span&lt; const std::uint8_t &gt; tiles() const noexcept</div><div class="ttdoc">Vista de solo lectura sobre las fichas válidas del tablero.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00122">board.cpp:122</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ad4fc5ed78cc93ab03f996cbc3a08ea3c"><div class="ttname"><a href="classnaidu_1_1Board.html#ad4fc5ed78cc93ab03f996cbc3a08ea3c">naidu::Board::Board</a></div><div class="ttdeci">Board(std::uint8_t dim=MIN_DIM)</div><div class="ttdoc">Construye un tablero resuelto de dimensión dim.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00068">board.cpp:68</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ae5927ff613abc30c3a4015d3d4b27a5f"><div class="ttname"><a href="classnaidu_1_1Board.html#ae5927ff613abc30c3a4015d3d4b27a5f">naidu::Board::legal_moves</a></div><div class="ttdeci">MoveSet legal_moves() const noexcept</div><div class="ttdoc">Devuelve el conjunto de movimientos legales desde el estado actual.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00139">board.cpp:139</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_afd7b489685e82085349ff8af25d4e980"><div class="ttname"><a href="classnaidu_1_1Board.html#afd7b489685e82085349ff8af25d4e980">naidu::Board::MAX_DIM</a></div><div class="ttdeci">static constexpr std::uint8_t MAX_DIM</div><div class="ttdef"><b>Definición</b> <a href="#l00032">board.hpp:32</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1MoveSet_html"><div class="ttname"><a href="classnaidu_1_1MoveSet.html">naidu::MoveSet</a></div><div class="ttdoc">Conjunto de direcciones, representado como una máscara de bits.</div><div class="ttdef"><b>Definición</b> <a href="moveset_8hpp_source.html#l00022">moveset.hpp:22</a></div></div>
+<div class="ttc" id="adirection_8hpp_html"><div class="ttname"><a href="direction_8hpp.html">direction.hpp</a></div></div>
+<div class="ttc" id="amoveset_8hpp_html"><div class="ttname"><a href="moveset_8hpp.html">moveset.hpp</a></div></div>
+<div class="ttc" id="anamespacenaidu_html"><div class="ttname"><a href="namespacenaidu.html">naidu</a></div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00010">board.cpp:10</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222b"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">Direcciones de movimiento del hueco en el tablero.</div><div class="ttdef"><b>Definición</b> <a href="direction_8hpp_source.html#l00017">direction.hpp:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_8ce7cd6e96eb11a61d1d013aa8c7fa46.html">board</a></li><li class="navelem"><a href="board_8hpp.html">board.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

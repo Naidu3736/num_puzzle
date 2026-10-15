@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Archivo de código fuente src/randomizer/randomizer.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('randomizer_8cpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">randomizer.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="randomizer_8cpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="randomizer_8hpp.html">randomizer.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="board_8hpp.html">board/board.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="board__hash_8hpp.html">board/board_hash.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="direction_8hpp.html">core/direction.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="moveset_8hpp.html">core/moveset.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;optional&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;random&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">namespace  </span>{</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    std::uint32_t resolve_moves(std::uint8_t dim, std::uint32_t moves) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <span class="keywordflow">if</span> (moves != 0) </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>            <span class="keywordflow">return</span> moves;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint32_t<span class="keyword">&gt;</span>(dim * dim * 20);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::uint32_t resolve_max_attempts(std::uint32_t max_attempts, std::uint32_t moves) {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <span class="keywordflow">if</span> (max_attempts != 0)</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="keywordflow">return</span> max_attempts;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">return</span> moves * 10;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a> rand_direction(</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">const</span> <a class="code hl_class" href="classnaidu_1_1MoveSet.html">naidu::MoveSet</a>&amp; legal_moves, </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keyword">const</span> std::optional&lt;naidu::Direction&gt; prev,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        std::mt19937&amp; rng</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    ) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        std::uniform_int_distribution&lt;std::uint8_t&gt; dist(0, 3);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a> d = <a class="code hl_variable" href="namespacenaidu.html#a390021f34d4498f36beea593b5942d92">naidu::ALL_DIRECTIONS</a>[dist(rng)];</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (prev &amp;&amp; *prev == <a class="code hl_function" href="namespacenaidu.html#a2cb0f06155c3ecac63a413b8032310b4">naidu::opposite</a>(d))</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">if</span> (legal_moves.<a class="code hl_function" href="classnaidu_1_1MoveSet.html#a417a6ca4dccef3f2af5c942d413a9f66">contains</a>(d))</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                <span class="keywordflow">return</span> d;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> random_walk(</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <a class="code hl_class" href="classnaidu_1_1Board.html">naidu::Board</a>&amp; board,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        std::uint32_t moves,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        std::mt19937&amp; rng</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    ) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        std::optional&lt;naidu::Direction&gt; prev;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordflow">for</span> (std::uint32_t i = 0; i &lt; moves; ++i) {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a> d = rand_direction(board.<a class="code hl_function" href="classnaidu_1_1Board.html#ae5927ff613abc30c3a4015d3d4b27a5f">legal_moves</a>(), prev, rng);</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            <span class="keywordflow">if</span> (board.<a class="code hl_function" href="classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9">move</a>(d))</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                prev = d;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> random_walk_unique(</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_class" href="classnaidu_1_1Board.html">naidu::Board</a>&amp; board,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        std::uint32_t moves,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        std::uint32_t max_attempts,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::mt19937&amp; rng</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    ) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        std::unordered_set&lt;naidu::Board, naidu::BoardHash&gt; visited;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        visited.insert(board);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        std::optional&lt;naidu::Direction&gt; prev;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        std::uint32_t applied = 0;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        std::uint32_t attempts = 0;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keywordflow">while</span> (applied &lt; moves &amp;&amp; attempts &lt; max_attempts) {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            ++attempts;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            <a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a> d = rand_direction(board.<a class="code hl_function" href="classnaidu_1_1Board.html#ae5927ff613abc30c3a4015d3d4b27a5f">legal_moves</a>(), prev, rng);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            <span class="keywordflow">if</span> (!board.<a class="code hl_function" href="classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9">move</a>(d))</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keyword">const</span> <span class="keyword">auto</span> [it, inserted] = visited.insert(board);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            <span class="keywordflow">if</span> (!inserted) {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                board.<a class="code hl_function" href="classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9">move</a>(<a class="code hl_function" href="namespacenaidu.html#a2cb0f06155c3ecac63a413b8032310b4">naidu::opposite</a>(d));</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            }</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            ++applied;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            prev = d;</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        }</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="namespacenaidu_1_1randomizer.html">   94</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenaidu_1_1randomizer.html">naidu::randomizer</a> {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    </div>
+<div class="foldopen" id="foldopen00096" data-start="{" data-end="}">
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno"><a class="line" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44">   96</a></span>    <a class="code hl_class" href="classnaidu_1_1Board.html">Board</a> <a class="code hl_function" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44">generate</a>(std::uint8_t dim, <span class="keyword">const</span> <a class="code hl_struct" href="structnaidu_1_1randomizer_1_1Config.html">Config</a>&amp; config, std::mt19937&amp; rng) {</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        <a class="code hl_class" href="classnaidu_1_1Board.html">Board</a> board(dim);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> </div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="keyword">const</span> <span class="keyword">auto</span> moves = resolve_moves(dim, config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#a2424ba488d6884baa0607b19f1f6d43b">moves</a>);</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keyword">const</span> <span class="keyword">auto</span> max_attempts = resolve_max_attempts(</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>            config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#ac7eeb9dad90f2b1e42515903eb2e67f7">max_attempts</a>, moves</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        );</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>        <span class="keywordflow">if</span> (!config.<a class="code hl_variable" href="structnaidu_1_1randomizer_1_1Config.html#a2e2c83fb8e19ea2b77dc9bd4206aa218">avoid_revisits</a>) {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            random_walk(board, moves, rng);</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            random_walk_unique(board, moves, max_attempts, rng);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> board;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="}">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="namespacenaidu_1_1randomizer.html#a18e8f27e0b21a0c675dde94d09bda214">  113</a></span>    <a class="code hl_class" href="classnaidu_1_1Board.html">Board</a> <a class="code hl_function" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44">generate</a>(std::uint8_t dim, std::mt19937&amp; rng) {</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44">generate</a>(dim, <a class="code hl_struct" href="structnaidu_1_1randomizer_1_1Config.html">Config</a>{}, rng);</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>}</div>
+</div>
+<div class="ttc" id="aboard_8hpp_html"><div class="ttname"><a href="board_8hpp.html">board.hpp</a></div></div>
+<div class="ttc" id="aboard__hash_8hpp_html"><div class="ttname"><a href="board__hash_8hpp.html">board_hash.hpp</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html"><div class="ttname"><a href="classnaidu_1_1Board.html">naidu::Board</a></div><div class="ttdoc">Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N.</div><div class="ttdef"><b>Definición</b> <a href="board_8hpp_source.html#l00026">board.hpp:26</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_a1f90e96f7037c77e87b72788fc895af9"><div class="ttname"><a href="classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9">naidu::Board::move</a></div><div class="ttdeci">bool move(Direction m)</div><div class="ttdoc">Intenta mover el hueco en la dirección m.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00148">board.cpp:148</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ae5927ff613abc30c3a4015d3d4b27a5f"><div class="ttname"><a href="classnaidu_1_1Board.html#ae5927ff613abc30c3a4015d3d4b27a5f">naidu::Board::legal_moves</a></div><div class="ttdeci">MoveSet legal_moves() const noexcept</div><div class="ttdoc">Devuelve el conjunto de movimientos legales desde el estado actual.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00139">board.cpp:139</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1MoveSet_html"><div class="ttname"><a href="classnaidu_1_1MoveSet.html">naidu::MoveSet</a></div><div class="ttdoc">Conjunto de direcciones, representado como una máscara de bits.</div><div class="ttdef"><b>Definición</b> <a href="moveset_8hpp_source.html#l00022">moveset.hpp:22</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1MoveSet_html_a417a6ca4dccef3f2af5c942d413a9f66"><div class="ttname"><a href="classnaidu_1_1MoveSet.html#a417a6ca4dccef3f2af5c942d413a9f66">naidu::MoveSet::contains</a></div><div class="ttdeci">constexpr bool contains(Direction d) const noexcept</div><div class="ttdoc">Comprueba si una dirección está contenida en el conjunto.</div><div class="ttdef"><b>Definición</b> <a href="moveset_8hpp_source.html#l00054">moveset.hpp:54</a></div></div>
+<div class="ttc" id="adirection_8hpp_html"><div class="ttname"><a href="direction_8hpp.html">direction.hpp</a></div></div>
+<div class="ttc" id="amoveset_8hpp_html"><div class="ttname"><a href="moveset_8hpp.html">moveset.hpp</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1randomizer_html"><div class="ttname"><a href="namespacenaidu_1_1randomizer.html">naidu::randomizer</a></div><div class="ttdef"><b>Definición</b> <a href="#l00094">randomizer.cpp:94</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1randomizer_html_a0b188bc9bd11f1f8a32fdd9bbee10d44"><div class="ttname"><a href="namespacenaidu_1_1randomizer.html#a0b188bc9bd11f1f8a32fdd9bbee10d44">naidu::randomizer::generate</a></div><div class="ttdeci">Board generate(std::uint8_t dim, const Config &amp;config, std::mt19937 &amp;rng)</div><div class="ttdoc">Genera un tablero aleatorio resoluble.</div><div class="ttdef"><b>Definición</b> <a href="#l00096">randomizer.cpp:96</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a2cb0f06155c3ecac63a413b8032310b4"><div class="ttname"><a href="namespacenaidu.html#a2cb0f06155c3ecac63a413b8032310b4">naidu::opposite</a></div><div class="ttdeci">constexpr Direction opposite(Direction d) noexcept</div><div class="ttdoc">Devuelve la dirección opuesta a la dada.</div><div class="ttdef"><b>Definición</b> <a href="direction_8hpp_source.html#l00053">direction.hpp:53</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a390021f34d4498f36beea593b5942d92"><div class="ttname"><a href="namespacenaidu.html#a390021f34d4498f36beea593b5942d92">naidu::ALL_DIRECTIONS</a></div><div class="ttdeci">constexpr std::array&lt; Direction, 4 &gt; ALL_DIRECTIONS</div><div class="ttdef"><b>Definición</b> <a href="direction_8hpp_source.html#l00028">direction.hpp:28</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222b"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">Direcciones de movimiento del hueco en el tablero.</div><div class="ttdef"><b>Definición</b> <a href="direction_8hpp_source.html#l00017">direction.hpp:17</a></div></div>
+<div class="ttc" id="arandomizer_8hpp_html"><div class="ttname"><a href="randomizer_8hpp.html">randomizer.hpp</a></div></div>
+<div class="ttc" id="astructnaidu_1_1randomizer_1_1Config_html"><div class="ttname"><a href="structnaidu_1_1randomizer_1_1Config.html">naidu::randomizer::Config</a></div><div class="ttdoc">Parámetros del random walk.</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8hpp_source.html#l00014">randomizer.hpp:14</a></div></div>
+<div class="ttc" id="astructnaidu_1_1randomizer_1_1Config_html_a2424ba488d6884baa0607b19f1f6d43b"><div class="ttname"><a href="structnaidu_1_1randomizer_1_1Config.html#a2424ba488d6884baa0607b19f1f6d43b">naidu::randomizer::Config::moves</a></div><div class="ttdeci">std::uint32_t moves</div><div class="ttdoc">Número de movimientos a aplicar (0 = dim² · 20).</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8hpp_source.html#l00015">randomizer.hpp:15</a></div></div>
+<div class="ttc" id="astructnaidu_1_1randomizer_1_1Config_html_a2e2c83fb8e19ea2b77dc9bd4206aa218"><div class="ttname"><a href="structnaidu_1_1randomizer_1_1Config.html#a2e2c83fb8e19ea2b77dc9bd4206aa218">naidu::randomizer::Config::avoid_revisits</a></div><div class="ttdeci">bool avoid_revisits</div><div class="ttdoc">Si true, evita repetir estados en el walk.</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8hpp_source.html#l00016">randomizer.hpp:16</a></div></div>
+<div class="ttc" id="astructnaidu_1_1randomizer_1_1Config_html_ac7eeb9dad90f2b1e42515903eb2e67f7"><div class="ttname"><a href="structnaidu_1_1randomizer_1_1Config.html#ac7eeb9dad90f2b1e42515903eb2e67f7">naidu::randomizer::Config::max_attempts</a></div><div class="ttdeci">std::uint32_t max_attempts</div><div class="ttdoc">Límite de intentos totales (0 = moves · 10).</div><div class="ttdef"><b>Definición</b> <a href="randomizer_8hpp_source.html#l00017">randomizer.hpp:17</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_e3364e7d6f67f58e897f886eca6e55a5.html">randomizer</a></li><li class="navelem"><a href="randomizer_8cpp.html">randomizer.cpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

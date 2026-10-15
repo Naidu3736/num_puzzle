@@ -1,0 +1,11 @@
+<map id="naidu::Board::operator!=" name="naidu::Board::operator!=">
+<area shape="rect" id="Node000001" title="Compara dos tableros por contenido y dimensión." alt="" coords="5,31,167,57"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#ad4fc5ed78cc93ab03f996cbc3a08ea3c" title="Construye un tablero resuelto de dimensión dim." alt="" coords="215,31,351,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,41,202,44,196,44,167,47"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="406,5,529,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="351,32,388,30,393,29,352,37"/>
+<area shape="rect" id="Node000004" href="$classnaidu_1_1Board.html#a6984ceb36ab56184586162dfcb7695da" title="Redimensiona el tablero y lo reinicia a su estado resuelto." alt="" coords="399,56,536,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="352,51,386,58,381,58,351,56"/>
+<area shape="rect" id="Node000005" href="$classnaidu_1_1Board.html#aaac8dd20fedb46ab483b9cc70f046740" title="Reinicia el tablero a su estado resuelto." alt="" coords="584,56,716,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="537,67,572,69,567,69,537,72"/>
+</map>

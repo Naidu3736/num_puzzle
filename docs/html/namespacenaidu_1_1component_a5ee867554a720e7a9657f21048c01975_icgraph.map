@@ -1,0 +1,13 @@
+<map id="naidu::component::broken_pairs" name="naidu::component::broken_pairs">
+<area shape="rect" id="Node000001" title="Número de pares adyacentes mal ordenados (desorden local)." alt="" coords="328,59,499,101"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="444,43,433,40,414,37,395,39,384,44,380,50,381,60,376,57,374,49,381,40,394,34,414,32,435,34,449,43"/>
+<area shape="rect" id="Node000002" href="$namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8" title="Evaluación 3: estructura local." alt="" coords="153,29,280,72"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="310,65,281,63,281,57,315,65"/>
+<area shape="rect" id="Node000005" href="$test__component_8cpp.html#a6156c4d640be4854078a77a432913607" title=" " alt="" coords="167,96,266,123"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="315,95,267,105,266,99,310,95"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="241,14,232,10,216,8,201,10,193,14,189,20,190,30,185,28,184,19,189,11,200,5,216,3,234,5,246,14"/>
+<area shape="rect" id="Node000003" href="$test__evaluation_8cpp.html#a887b592a9635e045eb32009d6be28c47" title=" " alt="" coords="5,12,105,39"/>
+<area shape="poly" id="edge4_Node000002_Node000003" title=" " alt="" coords="135,39,105,36,105,30,140,37"/>
+<area shape="rect" id="Node000004" href="$test__solver_8cpp.html#a956905c670acd85146d6c16dd89dee1b" title=" " alt="" coords="5,63,105,89"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="135,64,106,71,104,66,140,62"/>
+</map>

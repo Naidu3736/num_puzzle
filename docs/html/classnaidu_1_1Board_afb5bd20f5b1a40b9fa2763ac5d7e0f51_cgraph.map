@@ -1,0 +1,7 @@
+<map id="naidu::Board::Board" name="naidu::Board::Board">
+<area shape="rect" id="Node000001" title="Construye un tablero a partir de una secuencia lineal de fichas." alt="" coords="5,31,142,57"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="191,5,314,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,32,178,29,173,30,143,37"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f" title="Vista de solo lectura sobre las fichas válidas del tablero." alt="" coords="190,56,316,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,51,177,58,172,58,142,56"/>
+</map>

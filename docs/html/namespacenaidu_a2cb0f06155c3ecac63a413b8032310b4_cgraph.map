@@ -1,0 +1,7 @@
+<map id="naidu::opposite" name="naidu::opposite">
+<area shape="rect" id="Node000001" title="Devuelve la dirección opuesta a la dada." alt="" coords="5,29,115,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="32,29,28,21,31,11,42,5,60,3,79,5,90,14,85,14,77,10,60,8,44,10,35,15,33,20,38,29"/>
+<area shape="rect" id="Node000002" href="$namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939" title="Convierte una dirección a su índice numérico subyacente." alt="" coords="163,29,272,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="115,40,150,42,145,43,115,45"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="190,28,185,21,189,11,200,5,217,3,236,5,248,15,243,14,235,10,217,8,201,10,193,15,191,20,195,30"/>
+</map>

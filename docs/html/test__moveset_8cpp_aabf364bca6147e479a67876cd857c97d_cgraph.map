@@ -1,0 +1,23 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,105,83"/>
+<area shape="rect" id="Node000002" href="$classMoveSet.html#a2fb1539a5fdf0fa3cf644a2c0ba2c81d" title="Crea un MoveSet con una sola dirección." alt="" coords="170,5,277,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="101,53,164,35,160,39,104,58"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1MoveSet.html#a8ccfc7a05c6e97abbbf3be4ea16f1489" title="Devuelve la máscara de bits subyacente." alt="" coords="153,56,294,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="104,67,139,68,135,71,106,72"/>
+<area shape="rect" id="Node000004" href="$test__board__construction_8cpp.html#afe5596495ba3c15ca57c1507e2e6a6b7" title=" " alt="" coords="174,131,273,157"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="87,81,180,123,175,126,87,86"/>
+<area shape="poly" id="edge11_Node000004_Node000004" title=" " alt="" coords="194,130,189,122,193,112,204,106,223,104,244,107,256,115,250,116,242,112,223,109,206,111,197,116,194,121,199,131"/>
+<area shape="rect" id="Node000005" href="$namespacefixtures.html#a01c683279d72caaa795b04974cd6d8d6" title=" " alt="" coords="342,131,495,157"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="273,141,329,143,324,145,274,147"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="385,129,379,122,384,112,397,106,419,104,442,107,456,116,451,115,440,112,419,109,398,111,387,116,385,121,390,131"/>
+<area shape="rect" id="Node000006" href="$classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="565,21,679,48"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="436,128,482,94,542,58,555,55,559,53,545,62,485,98,438,132"/>
+<area shape="rect" id="Node000007" href="$classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="560,72,684,99"/>
+<area shape="poly" id="edge7_Node000005_Node000007" title=" " alt="" coords="467,128,561,103,556,104,468,133"/>
+<area shape="rect" id="Node000008" href="$classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac" title="Devuelve el índice lineal del hueco." alt="" coords="553,123,691,165"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="496,141,540,144,535,144,496,147"/>
+<area shape="rect" id="Node000009" href="$classnaidu_1_1Board.html#a4ac1d6cb6ab37b0de15072e09ea12c32" title="Comprueba si el tablero está en el estado resuelto." alt="" coords="543,189,701,216"/>
+<area shape="poly" id="edge9_Node000005_Node000009" title=" " alt="" coords="468,155,561,184,556,185,467,161"/>
+<area shape="rect" id="Node000010" href="$classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="562,240,682,283"/>
+<area shape="poly" id="edge10_Node000005_Node000010" title=" " alt="" coords="439,155,486,189,545,226,555,233,550,233,542,230,483,194,437,161"/>
+</map>

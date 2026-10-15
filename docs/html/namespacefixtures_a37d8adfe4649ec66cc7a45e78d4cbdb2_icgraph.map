@@ -1,0 +1,8 @@
+<map id="fixtures::solvable_unsolved_4x4" name="fixtures::solvable_unsolved_4x4">
+<area shape="rect" id="Node000001" title=" " alt="" coords="153,29,273,72"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="236,14,228,10,213,8,198,10,190,14,186,20,187,30,182,27,181,19,186,11,197,5,213,3,230,5,242,14"/>
+<area shape="rect" id="Node000002" href="$test__board__queries_8cpp.html#a6ecbe733d8f819b4b7cbdc3b0fd31a0a" title=" " alt="" coords="5,12,105,39"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="135,39,105,36,105,31,140,38"/>
+<area shape="rect" id="Node000003" href="$test__board__queries_8cpp.html#ab120fa7036723091ef35c337fc0e69e2" title=" " alt="" coords="5,63,105,89"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="135,63,106,71,105,65,140,62"/>
+</map>

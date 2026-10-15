@@ -1,0 +1,5 @@
+<map id="naidu::MoveSet::end" name="naidu::MoveSet::end">
+<area shape="rect" id="Node000001" title="Iterador al final (uno más allá del último bit)." alt="" coords="5,13,147,40"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323" title="Construye un iterador sobre la máscara dada." alt="" coords="195,5,355,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,24,182,26,176,27,147,29"/>
+</map>

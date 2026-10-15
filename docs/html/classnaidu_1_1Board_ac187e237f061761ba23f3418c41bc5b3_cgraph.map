@@ -1,0 +1,5 @@
+<map id="naidu::Board::apply" name="naidu::Board::apply">
+<area shape="rect" id="Node000001" title="Aplica una secuencia de movimientos al tablero." alt="" coords="5,5,139,32"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9" title="Intenta mover el hueco en la dirección m." alt="" coords="187,5,321,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,16,174,18,169,19,139,21"/>
+</map>

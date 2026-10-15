@@ -1,0 +1,8 @@
+<map id="naidu::evaluation::evaluation_2" name="naidu::evaluation::evaluation_2">
+<area shape="rect" id="Node000001" title="Evaluación 2: Manhattan + fichas mal colocadas + proximidad." alt="" coords="153,29,280,72"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="241,14,232,10,216,8,201,10,193,14,189,20,190,30,185,27,184,19,189,11,200,5,216,3,234,5,246,14"/>
+<area shape="rect" id="Node000002" href="$test__evaluation_8cpp.html#aa1e1bbb2d4d4aee256666900a2765959" title=" " alt="" coords="5,12,105,39"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="135,39,105,36,105,30,140,37"/>
+<area shape="rect" id="Node000003" href="$test__solver_8cpp.html#aa4d645e55d34bcc360d7e1d4f304efc9" title=" " alt="" coords="5,63,105,89"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="135,64,105,71,104,66,140,63"/>
+</map>

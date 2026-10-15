@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['manhattan_0',['manhattan',['../structfixtures_1_1BoardCase.html#a46b6b0f817069c18aed2c86f3537374c',1,'fixtures::BoardCase']]],
+  ['manhattan_5frandom_5f3x3_5f1_1',['manhattan_random_3x3_1',['../namespacefixtures.html#a7a06e1300efefda5b1c219b8377a3296',1,'fixtures']]],
+  ['manhattan_5frandom_5f3x3_5f2_2',['manhattan_random_3x3_2',['../namespacefixtures.html#a66903e822f9ba68747ace503fb3909a6',1,'fixtures']]],
+  ['manhattan_5frandom_5f3x3_5f3_3',['manhattan_random_3x3_3',['../namespacefixtures.html#ae2a533325383d658baab5d4009145ed8',1,'fixtures']]],
+  ['manhattan_5frandom_5f4x4_5f1_4',['manhattan_random_4x4_1',['../namespacefixtures.html#a4e381de0f45c2cd54aa64c8df0e90015',1,'fixtures']]],
+  ['manhattan_5frandom_5f4x4_5f2_5',['manhattan_random_4x4_2',['../namespacefixtures.html#a16cda21433d16a3c1838713dbecb6e5b',1,'fixtures']]],
+  ['manhattan_5frandom_5f4x4_5f3_6',['manhattan_random_4x4_3',['../namespacefixtures.html#a91a1334fb1a941b63a5ec26071f642c6',1,'fixtures']]],
+  ['manhattan_5frandom_5f5x5_5f1_7',['manhattan_random_5x5_1',['../namespacefixtures.html#a9df5083278911e0359808b1cb795c2b4',1,'fixtures']]],
+  ['manhattan_5frandom_5f5x5_5f2_8',['manhattan_random_5x5_2',['../namespacefixtures.html#a9a4658e270f61f494fa3907217e0379d',1,'fixtures']]],
+  ['manhattan_5frandom_5f5x5_5f3_9',['manhattan_random_5x5_3',['../namespacefixtures.html#ad88dc387003bbc18125daecab47d97c6',1,'fixtures']]],
+  ['max_5fattempts_10',['max_attempts',['../structnaidu_1_1randomizer_1_1Config.html#ac7eeb9dad90f2b1e42515903eb2e67f7',1,'naidu::randomizer::Config']]],
+  ['max_5fdim_11',['MAX_DIM',['../classnaidu_1_1Board.html#afd7b489685e82085349ff8af25d4e980',1,'naidu::Board']]],
+  ['max_5fnodes_12',['max_nodes',['../structnaidu_1_1solver_1_1Config.html#addedafd3219e33cfe2225af32e635432',1,'naidu::solver::Config']]],
+  ['max_5ftiles_13',['MAX_TILES',['../classnaidu_1_1Board.html#aa183658ada2a47708a645a98c2b73f44',1,'naidu::Board']]],
+  ['min_5fdim_14',['MIN_DIM',['../classnaidu_1_1Board.html#a51cb560a43fcd771650682e2b4fb96d0',1,'naidu::Board']]],
+  ['moves_15',['moves',['../structnaidu_1_1randomizer_1_1Config.html#a2424ba488d6884baa0607b19f1f6d43b',1,'naidu::randomizer::Config::moves'],['../structnaidu_1_1solver_1_1Solution.html#a29567a8c5d5d48866b052d978309a7b3',1,'naidu::solver::Solution::moves']]]
+];

@@ -1,0 +1,355 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Referencia de la clase naidu::MoveSet::iterator</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classnaidu_1_1MoveSet_1_1iterator.html','','classnaidu_1_1MoveSet_1_1iterator-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase naidu::MoveSet::iterator</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Iterador minimalista sobre las direcciones activas.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:acb0f52f73a412b6d409a638cf6cd0323" id="r_acb0f52f73a412b6d409a638cf6cd0323"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#acb0f52f73a412b6d409a638cf6cd0323">iterator</a> (std::uint8_t mask, std::uint8_t index)</td></tr>
+<tr class="memdesc:acb0f52f73a412b6d409a638cf6cd0323"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construye un iterador sobre la máscara dada.  <br /></td></tr>
+<tr class="memitem:a7222d998feb86f6919e4424fbe415145" id="r_a7222d998feb86f6919e4424fbe415145"><td class="memItemLeft"><a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a>&#160;</td><td class="memItemRight"><a class="el" href="#a7222d998feb86f6919e4424fbe415145">operator*</a> () const</td></tr>
+<tr class="memdesc:a7222d998feb86f6919e4424fbe415145"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dirección actual.  <br /></td></tr>
+<tr class="memitem:a05904a54202ea7a8d2cedd292e7d2fe3" id="r_a05904a54202ea7a8d2cedd292e7d2fe3"><td class="memItemLeft"><a class="el" href="#acb0f52f73a412b6d409a638cf6cd0323">iterator</a> &amp;&#160;</td><td class="memItemRight"><a class="el" href="#a05904a54202ea7a8d2cedd292e7d2fe3">operator++</a> ()</td></tr>
+<tr class="memdesc:a05904a54202ea7a8d2cedd292e7d2fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Avanza al siguiente bit activo.  <br /></td></tr>
+<tr class="memitem:a95ec73ace5c0955686d506226cea72f2" id="r_a95ec73ace5c0955686d506226cea72f2"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a95ec73ace5c0955686d506226cea72f2">operator!=</a> (const <a class="el" href="#acb0f52f73a412b6d409a638cf6cd0323">iterator</a> &amp;other) const</td></tr>
+<tr class="memdesc:a95ec73ace5c0955686d506226cea72f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara dos iteradores por su índice.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Iterador minimalista sobre las direcciones activas. </p>
+<p>Salta los bits apagados. Compatible con el bucle <span class="tt">for range</span>:</p>
+<p>for (<a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b" title="Direcciones de movimiento del hueco en el tablero.">Direction</a> d : moves) { ... } </p>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00089">89</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="acb0f52f73a412b6d409a638cf6cd0323" name="acb0f52f73a412b6d409a638cf6cd0323"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb0f52f73a412b6d409a638cf6cd0323">&#9670;&#160;</a></span>iterator()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">naidu::MoveSet::iterator::iterator </td>
+          <td>(</td>
+          <td class="paramtype">std::uint8_t</td>          <td class="paramname"><span class="paramname"><em>mask</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint8_t</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construye un iterador sobre la máscara dada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mask</td><td>Máscara del <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a>. </td></tr>
+    <tr><td class="paramname">index</td><td>Índice inicial (0..4). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00110">110</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                : m_mask(mask), m_index(index) {</div>
+<div class="line"><span class="lineno">  112</span>                advance_to_active();</div>
+<div class="line"><span class="lineno">  113</span>            }</div>
+</div><!-- fragment -->
+<p class="reference">Referenciado por <a class="el" href="moveset_8hpp_source.html#l00147">naidu::MoveSet::begin()</a>, <a class="el" href="moveset_8hpp_source.html#l00155">naidu::MoveSet::end()</a>, <a class="el" href="moveset_8hpp_source.html#l00138">operator!=()</a> y <a class="el" href="moveset_8hpp_source.html#l00127">operator++()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_1_1iterator_acb0f52f73a412b6d409a638cf6cd0323_icgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_1_1iterator_acb0f52f73a412b6d409a638cf6cd0323_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_1_1iterator_acb0f52f73a412b6d409a638cf6cd0323_icgraph" id="aclassnaidu_1_1MoveSet_1_1iterator_acb0f52f73a412b6d409a638cf6cd0323_icgraph">
+<area shape="rect" title="Construye un iterador sobre la máscara dada." alt="" coords="214,77,374,120"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#abeb752bf0a37b455f7a2a909a5f46dab" title="Iterador al primer bit activo." alt="" coords="10,5,161,32"/>
+<area shape="poly" title=" " alt="" coords="228,72,165,46,133,35,132,30,167,42,233,70"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#a67749b77f18a1b3b401fd9b28fb493a7" title="Iterador al final (uno más allá del último bit)." alt="" coords="15,56,156,83"/>
+<area shape="poly" title=" " alt="" coords="196,86,157,82,156,77,201,84"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#a95ec73ace5c0955686d506226cea72f2" title="Compara dos iteradores por su índice." alt="" coords="5,107,166,149"/>
+<area shape="poly" title=" " alt="" coords="196,113,167,119,165,114,201,111"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#a05904a54202ea7a8d2cedd292e7d2fe3" title="Avanza al siguiente bit activo." alt="" coords="5,173,166,216"/>
+<area shape="poly" title=" " alt="" coords="239,126,167,164,141,175,139,170,165,159,234,128"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="a95ec73ace5c0955686d506226cea72f2" name="a95ec73ace5c0955686d506226cea72f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95ec73ace5c0955686d506226cea72f2">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool naidu::MoveSet::iterator::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="#acb0f52f73a412b6d409a638cf6cd0323">iterator</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>other</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Compara dos iteradores por su índice. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Otro iterador. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si apuntan a índices distintos. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00138">138</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  138</span>                                                       {</div>
+<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">return</span> m_index != other.m_index;</div>
+<div class="line"><span class="lineno">  140</span>            }</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00110">iterator()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_1_1iterator_a95ec73ace5c0955686d506226cea72f2_cgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_1_1iterator_a95ec73ace5c0955686d506226cea72f2_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_1_1iterator_a95ec73ace5c0955686d506226cea72f2_cgraph" id="aclassnaidu_1_1MoveSet_1_1iterator_a95ec73ace5c0955686d506226cea72f2_cgraph">
+<area shape="rect" title="Compara dos iteradores por su índice." alt="" coords="5,5,166,48"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323" title="Construye un iterador sobre la máscara dada." alt="" coords="214,5,374,48"/>
+<area shape="poly" title=" " alt="" coords="166,24,201,26,195,27,166,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7222d998feb86f6919e4424fbe415145" name="a7222d998feb86f6919e4424fbe415145"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7222d998feb86f6919e4424fbe415145">&#9670;&#160;</a></span>operator*()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> naidu::MoveSet::iterator::operator* </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dirección actual. </p>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b" title="Direcciones de movimiento del hueco en el tablero.">Direction</a> correspondiente al bit activo actual. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00119">119</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>                                        {</div>
+<div class="line"><span class="lineno">  120</span>                <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a><span class="keyword">&gt;</span>(m_index);</div>
+<div class="line"><span class="lineno">  121</span>            }</div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222b"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">Direcciones de movimiento del hueco en el tablero.</div><div class="ttdef"><b>Definición</b> <a href="direction_8hpp_source.html#l00017">direction.hpp:17</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a05904a54202ea7a8d2cedd292e7d2fe3" name="a05904a54202ea7a8d2cedd292e7d2fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05904a54202ea7a8d2cedd292e7d2fe3">&#9670;&#160;</a></span>operator++()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#acb0f52f73a412b6d409a638cf6cd0323">iterator</a> &amp; naidu::MoveSet::iterator::operator++ </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Avanza al siguiente bit activo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Referencia al iterador actualizado. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00127">127</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  127</span>                                   {</div>
+<div class="line"><span class="lineno">  128</span>                ++m_index;</div>
+<div class="line"><span class="lineno">  129</span>                advance_to_active();</div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><span class="lineno">  131</span>            }</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00110">iterator()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_1_1iterator_a05904a54202ea7a8d2cedd292e7d2fe3_cgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_1_1iterator_a05904a54202ea7a8d2cedd292e7d2fe3_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_1_1iterator_a05904a54202ea7a8d2cedd292e7d2fe3_cgraph" id="aclassnaidu_1_1MoveSet_1_1iterator_a05904a54202ea7a8d2cedd292e7d2fe3_cgraph">
+<area shape="rect" title="Avanza al siguiente bit activo." alt="" coords="5,5,166,48"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323" title="Construye un iterador sobre la máscara dada." alt="" coords="214,5,374,48"/>
+<area shape="poly" title=" " alt="" coords="166,24,201,26,195,27,166,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>src/core/<a class="el" href="moveset_8hpp_source.html">moveset.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacenaidu.html">naidu</a></li><li class="navelem"><a href="classnaidu_1_1MoveSet.html">MoveSet</a></li><li class="navelem"><a href="classnaidu_1_1MoveSet_1_1iterator.html">iterator</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

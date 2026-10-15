@@ -1,0 +1,8 @@
+<map id="naidu::component::misplaced_tiles" name="naidu::component::misplaced_tiles">
+<area shape="rect" id="Node000001" title="Número de fichas fuera de su meta." alt="" coords="5,29,197,72"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="62,28,61,19,67,10,81,5,101,3,123,5,138,13,132,14,121,10,101,8,82,10,70,15,66,21,67,29"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="248,8,361,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,34,235,31,230,32,197,39"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="245,59,364,101"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="197,62,232,69,227,69,197,67"/>
+</map>

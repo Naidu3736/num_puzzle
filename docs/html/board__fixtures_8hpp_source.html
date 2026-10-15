@@ -1,0 +1,552 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Archivo de código fuente test/board_fixtures.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('board__fixtures_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">board_fixtures.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="board__fixtures_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="board_8hpp.html">board/board.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;doctest/doctest.h&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespacefixtures.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacefixtures.html">fixtures</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="}">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a01c683279d72caaa795b04974cd6d8d6">   13</a></span>    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code hl_function" href="namespacefixtures.html#a01c683279d72caaa795b04974cd6d8d6">check_default</a>(<span class="keyword">const</span> <a class="code hl_class" href="classnaidu_1_1Board.html">naidu::Board</a>&amp; b, std::size_t dim) {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        CHECK(b.<a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a>() == dim);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">for</span> (std::size_t i = 0; i &lt; b.<a class="code hl_function" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">tile_count</a>(); ++i) {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>            <span class="keywordflow">if</span> (i == b.<a class="code hl_function" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">tile_count</a>() - 1)</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>                CHECK(b.<a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(i) == 0);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>                CHECK(b.<a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(i) == i + 1);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        }</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        CHECK(b.<a class="code hl_function" href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac">empty_index</a>() == b.<a class="code hl_function" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">tile_count</a>() - 1);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        CHECK(b.<a class="code hl_function" href="classnaidu_1_1Board.html#a4ac1d6cb6ab37b0de15072e09ea12c32">is_solved</a>());</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">// --- Tableros 4x4 reutilizables ---</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="foldopen" id="foldopen00029" data-start="{" data-end="}">
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a23d74d608036129ee360fa6731184154">   29</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a23d74d608036129ee360fa6731184154">solved_4x4</a>() {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            1,  2,  3,  4,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            5,  6,  7,  8,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            9, 10, 11, 12,</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            13, 14, 15,  0</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        };</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// El 0 en la esquina pero con 14 y 15 intercambiados: no resuelto, no resoluble.</span></div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a55e91aaeda3f7145f6230cccb25b5d33">   39</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a55e91aaeda3f7145f6230cccb25b5d33">unsolvable_4x4</a>() {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            1,  2,  3,  4,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            5,  6,  7,  8,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            9, 10, 11, 12,</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            13, 15, 14,  0</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        };</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    }</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// 0 en el centro, con 11 y 15 en posiciones raras: resoluble.</span></div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a3052aaa3f9891be15e0eb4239c91e753">   49</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a3052aaa3f9891be15e0eb4239c91e753">solvable_hole_center_4x4</a>() {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            1,  2,  3,  4,</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            5,  6,  7,  8,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            9, 10,  0, 12,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            13, 14, 11, 15</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        };</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
+</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="comment">// El 0 no está al final: no resuelto pero resoluble.</span></div>
+<div class="foldopen" id="foldopen00059" data-start="{" data-end="}">
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a37d8adfe4649ec66cc7a45e78d4cbdb2">   59</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a37d8adfe4649ec66cc7a45e78d4cbdb2">solvable_unsolved_4x4</a>() {</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            1,  2,  3,  4,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            5,  6,  7,  8,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            9, 10, 11, 12,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            13, 14,  0, 15</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        };</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="comment">// --- Tableros 5x5 reutilizables ---</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// 5x5 con 0 en (4,3): resoluble (impar).</span></div>
+<div class="foldopen" id="foldopen00071" data-start="{" data-end="}">
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a9502995f912f55e6bf9f1ac764c9c2ee">   71</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a9502995f912f55e6bf9f1ac764c9c2ee">solvable_5x5</a>() {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            1,  2,  3,  4,  5,</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            6,  7,  8,  9, 10,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            11, 12, 13, 14, 15,</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            16, 17, 18, 19, 20,</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            21, 22, 23,  0, 24</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>        };</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    }</div>
+</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="comment">// 5x5 con 19 y 20 intercambiados y 0 al final: no resoluble.</span></div>
+<div class="foldopen" id="foldopen00082" data-start="{" data-end="}">
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a96852e157d69a1349b001c5bb53b4bf8">   82</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a96852e157d69a1349b001c5bb53b4bf8">unsolvable_5x5</a>() {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            1,  2,  3,  4,  5,</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>            6,  7,  8,  9, 10,</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>            11, 12, 13, 14, 15,</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            16, 17, 18, 20, 19,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>            21, 22, 23, 24,  0</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        };</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    }</div>
+</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    <span class="comment">// --- Tableros 3x3 reutilizables ---</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="foldopen" id="foldopen00094" data-start="{" data-end="}">
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a13e53a75c716c821931c3b59cb9eaa1d">   94</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a13e53a75c716c821931c3b59cb9eaa1d">hole_top_left_3x3</a>() {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            0,  1,  2,</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            3,  4,  5,</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            6,  7,  8</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        };</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="foldopen" id="foldopen00102" data-start="{" data-end="}">
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a2b8e979aa53ed52eb2b4bac63f816680">  102</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a2b8e979aa53ed52eb2b4bac63f816680">hole_top_center_3x3</a>() {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            1,  0,  2,</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            3,  4,  5,</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            6,  7,  8</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        };</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    }</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment">// --- Tableros aleatorios predefinidos ---</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <span class="comment">// Manhattan calculado pieza por pieza, sin contar el 0.</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="comment">// broken_pairs = número de pares adyacentes mal ordenados (sin contar el 0).</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="comment">// tiles_at_1_distance: piezas mal colocadas a Manhattan 1 (sin contar el 0).</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    <span class="comment">// blank_dispersion: distancia Manhattan media del hueco a cada ficha mal colocada.</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    <span class="comment">// 3x3 aleatorio #1: resoluble, 0 en (2,1).</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">// Manhattan = 21, bad_tiles = 7, broken_pairs = 9, tiles_at_1 = 0, dispersion = 2</span></div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a05d9e059f9eee1dc5890625dc7e974c6">  118</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a05d9e059f9eee1dc5890625dc7e974c6">random_3x3_1</a>() {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            8,  6,  7,</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            2,  5,  4,</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            3,  0,  1,</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        };</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    }</div>
+</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a7a06e1300efefda5b1c219b8377a3296">  125</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a7a06e1300efefda5b1c219b8377a3296">manhattan_random_3x3_1</a> = 21;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a86cde2f273b1f177d4c7f9612be8c419">  126</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a86cde2f273b1f177d4c7f9612be8c419">bad_tiles_random_3x3_1</a> = 7;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno"><a class="line" href="namespacefixtures.html#ae047ec60706556227ce8a0ac7ade7b51">  127</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#ae047ec60706556227ce8a0ac7ade7b51">broken_pairs_random_3x3_1</a> = 9;</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno"><a class="line" href="namespacefixtures.html#ad449170d77bb1cf108023829e971e110">  128</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#ad449170d77bb1cf108023829e971e110">tiles_at_1_distance_random_3x3_1</a> = 0;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a845024d49d8dcc39518dd717eab28ef3">  129</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespacefixtures.html#a845024d49d8dcc39518dd717eab28ef3">blank_dispersion_random_3x3_1</a> = 2;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="comment">// 3x3 aleatorio #2: resoluble, 0 en (2,1).</span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    <span class="comment">// Manhattan = 11, bad_tiles = 8, broken_pairs = 9, tiles_at_1 = 6, dispersion = 1.875</span></div>
+<div class="foldopen" id="foldopen00133" data-start="{" data-end="}">
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a1d63576d621a3a2d7a7bb1a7cd641606">  133</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a1d63576d621a3a2d7a7bb1a7cd641606">random_3x3_2</a>() {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>            3,  1,  4,</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            7,  2,  5,</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>            8,  0,  6,</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        };</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    }</div>
+</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a66903e822f9ba68747ace503fb3909a6">  140</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a66903e822f9ba68747ace503fb3909a6">manhattan_random_3x3_2</a> = 11;</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a5629e7c5f84e98c4407a14a6135ffbd0">  141</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a5629e7c5f84e98c4407a14a6135ffbd0">bad_tiles_random_3x3_2</a> = 8;</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a09c67ecd66c282a9512f1a5f09f82571">  142</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a09c67ecd66c282a9512f1a5f09f82571">broken_pairs_random_3x3_2</a> = 9;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a61084d45ecfe7a11663863ff2369d98b">  143</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a61084d45ecfe7a11663863ff2369d98b">tiles_at_1_distance_random_3x3_2</a> = 6;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno"><a class="line" href="namespacefixtures.html#ae19471ccd88e33a011089eb3c91a1d6d">  144</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespacefixtures.html#ae19471ccd88e33a011089eb3c91a1d6d">blank_dispersion_random_3x3_2</a> = 1.875;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span> </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment">// 3x3 aleatorio #3: resoluble, 0 en (0,0).</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="comment">// Manhattan = 8, bad_tiles = 8, broken_pairs = 8, tiles_at_1 = 8, dispersion = 2.25</span></div>
+<div class="foldopen" id="foldopen00148" data-start="{" data-end="}">
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a99c464350d3f5208239fb60e0baf9e53">  148</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a99c464350d3f5208239fb60e0baf9e53">random_3x3_3</a>() {</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>            0,  5,  2,</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            1,  8,  3,</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            4,  7,  6,</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        };</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    }</div>
+</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno"><a class="line" href="namespacefixtures.html#ae2a533325383d658baab5d4009145ed8">  155</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#ae2a533325383d658baab5d4009145ed8">manhattan_random_3x3_3</a> = 8;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="namespacefixtures.html#ac83646b98d7ea2a192d7f9a5b9caeda1">  156</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#ac83646b98d7ea2a192d7f9a5b9caeda1">bad_tiles_random_3x3_3</a> = 8;</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a19466af008384529ef2158c7209cc3a2">  157</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a19466af008384529ef2158c7209cc3a2">broken_pairs_random_3x3_3</a> = 7;</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno"><a class="line" href="namespacefixtures.html#aef520d27eac89ebeba246d112acaecb9">  158</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#aef520d27eac89ebeba246d112acaecb9">tiles_at_1_distance_random_3x3_3</a> = 8;</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno"><a class="line" href="namespacefixtures.html#ab5080fbaf9f6ae5fcbb44c9fac18fffe">  159</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespacefixtures.html#ab5080fbaf9f6ae5fcbb44c9fac18fffe">blank_dispersion_random_3x3_3</a> = 2.25;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="comment">// 4x4 aleatorio #1: resoluble, 0 en (2,2).</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="comment">// Manhattan = 10, bad_tiles = 9, broken_pairs = 12, tiles_at_1 = 8, dispersion = 2.333</span></div>
+<div class="foldopen" id="foldopen00163" data-start="{" data-end="}">
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a10dc6c4e27673758a19165ffac7183db">  163</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a10dc6c4e27673758a19165ffac7183db">random_4x4_1</a>() {</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>            5,   1,   3,   4,</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>            9,   2,   7,   8,</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>            13,  6,   0,   12,</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>            10,  14,  11,  15,</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>        };</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>    }</div>
+</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a4e381de0f45c2cd54aa64c8df0e90015">  171</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a4e381de0f45c2cd54aa64c8df0e90015">manhattan_random_4x4_1</a> = 10;</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a0f29e325576cdb3efaedc67c4c0a6826">  172</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a0f29e325576cdb3efaedc67c4c0a6826">bad_tiles_random_4x4_1</a> = 9;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a10532de9fb4d1c81fba0cd7af9220912">  173</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a10532de9fb4d1c81fba0cd7af9220912">broken_pairs_random_4x4_1</a> = 12;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a07aa716388c0ede3712aef940f261085">  174</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a07aa716388c0ede3712aef940f261085">tiles_at_1_distance_random_4x4_1</a> = 8;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a60900b1ee8897eac235c018128d7ab69">  175</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespacefixtures.html#a60900b1ee8897eac235c018128d7ab69">blank_dispersion_random_4x4_1</a> = 2.333333333;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>    <span class="comment">// 4x4 aleatorio #2: resoluble, 0 en (3,2).</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>    <span class="comment">// Manhattan = 13, bad_tiles = 9, broken_pairs = 13, tiles_at_1 = 6, dispersion = 2.77777</span></div>
+<div class="foldopen" id="foldopen00179" data-start="{" data-end="}">
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a63adf2f02a199c722e45f4dae9824c14">  179</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a63adf2f02a199c722e45f4dae9824c14">random_4x4_2</a>() {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            2,   8,   3,   4,</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            1,   6,   7,   12,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            5,   10,  11,  15,</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>            9,   13,  0,   14,</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        };</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    }</div>
+</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a16cda21433d16a3c1838713dbecb6e5b">  187</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a16cda21433d16a3c1838713dbecb6e5b">manhattan_random_4x4_2</a> = 13;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a2839e863735be847573cff8c4fb86b67">  188</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a2839e863735be847573cff8c4fb86b67">bad_tiles_random_4x4_2</a> = 9;</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a20409206920d46ea2c96992d3474c5dd">  189</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a20409206920d46ea2c96992d3474c5dd">broken_pairs_random_4x4_2</a> = 13;</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a8af2c7d9cc5fa5ca1f182f8309e0e8d5">  190</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a8af2c7d9cc5fa5ca1f182f8309e0e8d5">tiles_at_1_distance_random_4x4_2</a> = 6;</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a5732071b8a7086edc5f6f4fb509cf97f">  191</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespacefixtures.html#a5732071b8a7086edc5f6f4fb509cf97f">blank_dispersion_random_4x4_2</a> = 2.777777778;</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="comment">// 4x4 aleatorio #3: resoluble, 0 en (0,3).</span></div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    <span class="comment">// Manhattan = 3, bad_tiles = 3, broken_pairs = 3, tiles_at_1 = 3, dispersion = 2.0</span></div>
+<div class="foldopen" id="foldopen00195" data-start="{" data-end="}">
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="namespacefixtures.html#abb26cad659a90c935f55f06c23578755">  195</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#abb26cad659a90c935f55f06c23578755">random_4x4_3</a>() {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            1,   2,   3,   0,</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            5,   6,   7,   4,</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            9,   10,  11,  8,</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            13,  14,  15,  12,</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        };</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    }</div>
+</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a91a1334fb1a941b63a5ec26071f642c6">  203</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a91a1334fb1a941b63a5ec26071f642c6">manhattan_random_4x4_3</a> = 3;</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a22efc067bbccb7466cd017f65509807b">  204</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a22efc067bbccb7466cd017f65509807b">bad_tiles_random_4x4_3</a> = 3;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a434436336fae0e16a75ac62d62db1574">  205</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a434436336fae0e16a75ac62d62db1574">broken_pairs_random_4x4_3</a> = 3;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a86616a6d65d0f61f4bd78d5dfc01f06e">  206</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a86616a6d65d0f61f4bd78d5dfc01f06e">tiles_at_1_distance_random_4x4_3</a> = 3;</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="namespacefixtures.html#ab9aeee72602f286bba86e4239ef7c594">  207</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespacefixtures.html#ab9aeee72602f286bba86e4239ef7c594">blank_dispersion_random_4x4_3</a> = 2.0;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="comment">// 5x5 aleatorio #1: resoluble, 0 en (2,2).</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>    <span class="comment">// Manhattan = 4, bad_tiles = 1, broken_pairs = 2, tiles_at_1 = 0, dispersion = 4.0</span></div>
+<div class="foldopen" id="foldopen00211" data-start="{" data-end="}">
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno"><a class="line" href="namespacefixtures.html#aff2ce03aa61ce0cebae076edd442deaf">  211</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#aff2ce03aa61ce0cebae076edd442deaf">random_5x5_1</a>() {</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>            1,   2,   3,   4,   5,</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>            6,   7,   8,   9,   10,</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>            11,  12,  0,   14,  15,</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>            16,  17,  18,  19,  20,</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            21,  22,  23,  24,  13,</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        };</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>    }</div>
+</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a9df5083278911e0359808b1cb795c2b4">  220</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a9df5083278911e0359808b1cb795c2b4">manhattan_random_5x5_1</a> = 4;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a89bc059a902f9a0e0e7a306c98411404">  221</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a89bc059a902f9a0e0e7a306c98411404">bad_tiles_random_5x5_1</a> = 1;</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno"><a class="line" href="namespacefixtures.html#ac1cd7225f7d8342912dafbb2da9fb57a">  222</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#ac1cd7225f7d8342912dafbb2da9fb57a">broken_pairs_random_5x5_1</a> = 2;</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a2b9a44b5478b469165ac56d297a2b867">  223</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a2b9a44b5478b469165ac56d297a2b867">tiles_at_1_distance_random_5x5_1</a> = 0;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a99ffe318936f8800e277bbb68473c9e4">  224</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespacefixtures.html#a99ffe318936f8800e277bbb68473c9e4">blank_dispersion_random_5x5_1</a> = 4.0;</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="comment">// 5x5 aleatorio #2: resoluble, 0 en (4,0).</span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>    <span class="comment">// Manhattan = 4, bad_tiles = 4, broken_pairs = 4, tiles_at_1 = 4, dispersion = 2.5</span></div>
+<div class="foldopen" id="foldopen00228" data-start="{" data-end="}">
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a47c321d89637e982207404d2acd93554">  228</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#a47c321d89637e982207404d2acd93554">random_5x5_2</a>() {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            1,   2,   3,   4,   5,</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            6,   7,   8,   9,   10,</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>            11,  12,  13,  14,  15,</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            16,  17,  18,  19,  20,</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            0,   21,  22,  23,  24,</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        };</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>    }</div>
+</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a9a4658e270f61f494fa3907217e0379d">  237</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a9a4658e270f61f494fa3907217e0379d">manhattan_random_5x5_2</a> = 4;</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a8e463d3e81ba11fe80de38a6d2175399">  238</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a8e463d3e81ba11fe80de38a6d2175399">bad_tiles_random_5x5_2</a> = 4;</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a21e5a9eab25339da11e6369ccbb99985">  239</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a21e5a9eab25339da11e6369ccbb99985">broken_pairs_random_5x5_2</a> = 4;</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a3d48b179589e7d83f8a3a78392398b1e">  240</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a3d48b179589e7d83f8a3a78392398b1e">tiles_at_1_distance_random_5x5_2</a> = 4;</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno"><a class="line" href="namespacefixtures.html#ad20c5ef76cddf74809fb3e6a52e3b0da">  241</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespacefixtures.html#ad20c5ef76cddf74809fb3e6a52e3b0da">blank_dispersion_random_5x5_2</a> = 2.5;</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    <span class="comment">// 5x5 aleatorio #3: resoluble, 0 en (1,3).</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    <span class="comment">// Manhattan = 4, bad_tiles = 1, broken_pairs = 2, tiles_at_1 = 0, dispersion = 4.0</span></div>
+<div class="foldopen" id="foldopen00245" data-start="{" data-end="}">
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno"><a class="line" href="namespacefixtures.html#ae9ba42788bf01c494b1cba24b335d387">  245</a></span>    <span class="keyword">inline</span> std::vector&lt;std::uint8_t&gt; <a class="code hl_function" href="namespacefixtures.html#ae9ba42788bf01c494b1cba24b335d387">random_5x5_3</a>() {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>        <span class="keywordflow">return</span> {</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            1,   2,   3,   4,   5,</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            6,   7,   8,   0,   10,</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>            11,  12,  13,  14,  15,</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>            16,  17,  18,  19,  20,</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            21,  22,  23,  24,  9,</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>        };</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>    }</div>
+</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno"><a class="line" href="namespacefixtures.html#ad88dc387003bbc18125daecab47d97c6">  254</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#ad88dc387003bbc18125daecab47d97c6">manhattan_random_5x5_3</a> = 4;</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a5e582ea33f1ef2a78f3b4dc0560e5266">  255</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a5e582ea33f1ef2a78f3b4dc0560e5266">bad_tiles_random_5x5_3</a> = 1;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a965f62316bcb40c9659310bac130d54d">  256</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a965f62316bcb40c9659310bac130d54d">broken_pairs_random_5x5_3</a> = 2;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a1344d02928d8f414ae8075b35fc4ec25">  257</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint16_t <a class="code hl_variable" href="namespacefixtures.html#a1344d02928d8f414ae8075b35fc4ec25">tiles_at_1_distance_random_5x5_3</a> = 0;</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a8a0c3234030b216f7476db27fbad5696">  258</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="namespacefixtures.html#a8a0c3234030b216f7476db27fbad5696">blank_dispersion_random_5x5_3</a> = 4.0;</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>    <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="comment">// Estructura y mapa de casos</span></div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="foldopen" id="foldopen00264" data-start="{" data-end="};">
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno"><a class="line" href="structfixtures_1_1BoardCase.html">  264</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structfixtures_1_1BoardCase.html">BoardCase</a> {</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno"><a class="line" href="structfixtures_1_1BoardCase.html#a493dd4b08b5eb352e55d7a966707badf">  265</a></span>        std::vector&lt;std::uint8_t&gt; <a class="code hl_variable" href="structfixtures_1_1BoardCase.html#a493dd4b08b5eb352e55d7a966707badf">tiles</a>;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno"><a class="line" href="structfixtures_1_1BoardCase.html#a46b6b0f817069c18aed2c86f3537374c">  266</a></span>        std::uint16_t <a class="code hl_variable" href="structfixtures_1_1BoardCase.html#a46b6b0f817069c18aed2c86f3537374c">manhattan</a>;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno"><a class="line" href="structfixtures_1_1BoardCase.html#a43371d9b42329ab4dcf2fb4ade733d5d">  267</a></span>        std::uint16_t <a class="code hl_variable" href="structfixtures_1_1BoardCase.html#a43371d9b42329ab4dcf2fb4ade733d5d">bad_tiles</a>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno"><a class="line" href="structfixtures_1_1BoardCase.html#ae77ecb339d8adc12148deb8128ebcb7b">  268</a></span>        std::uint16_t <a class="code hl_variable" href="structfixtures_1_1BoardCase.html#ae77ecb339d8adc12148deb8128ebcb7b">broken_pairs</a>;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="structfixtures_1_1BoardCase.html#a5ff5f0d9e479511e403c35697a00b6f1">  269</a></span>        std::uint16_t <a class="code hl_variable" href="structfixtures_1_1BoardCase.html#a5ff5f0d9e479511e403c35697a00b6f1">tiles_at_1_distance</a>;</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno"><a class="line" href="structfixtures_1_1BoardCase.html#a74999d45c3d0248eaccaef2fd9932b47">  270</a></span>        <span class="keywordtype">double</span> <a class="code hl_variable" href="structfixtures_1_1BoardCase.html#a74999d45c3d0248eaccaef2fd9932b47">blank_dispersion</a>;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    };</div>
+</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
+<div class="foldopen" id="foldopen00273" data-start="{" data-end="};">
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno"><a class="line" href="namespacefixtures.html#a73d50d81c9c1a04f296e9124aed54448">  273</a></span>    <span class="keyword">inline</span> <span class="keyword">const</span> std::map&lt;std::string, BoardCase&gt; <a class="code hl_variable" href="namespacefixtures.html#a73d50d81c9c1a04f296e9124aed54448">random_cases</a> = {</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        {<span class="stringliteral">&quot;random_3x3_1&quot;</span>, {<a class="code hl_function" href="namespacefixtures.html#a05d9e059f9eee1dc5890625dc7e974c6">random_3x3_1</a>(), <a class="code hl_variable" href="namespacefixtures.html#a7a06e1300efefda5b1c219b8377a3296">manhattan_random_3x3_1</a>, <a class="code hl_variable" href="namespacefixtures.html#a86cde2f273b1f177d4c7f9612be8c419">bad_tiles_random_3x3_1</a>,</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>                          <a class="code hl_variable" href="namespacefixtures.html#ae047ec60706556227ce8a0ac7ade7b51">broken_pairs_random_3x3_1</a>, <a class="code hl_variable" href="namespacefixtures.html#ad449170d77bb1cf108023829e971e110">tiles_at_1_distance_random_3x3_1</a>,</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>                          <a class="code hl_variable" href="namespacefixtures.html#a845024d49d8dcc39518dd717eab28ef3">blank_dispersion_random_3x3_1</a>}},</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        {<span class="stringliteral">&quot;random_3x3_2&quot;</span>, {<a class="code hl_function" href="namespacefixtures.html#a1d63576d621a3a2d7a7bb1a7cd641606">random_3x3_2</a>(), <a class="code hl_variable" href="namespacefixtures.html#a66903e822f9ba68747ace503fb3909a6">manhattan_random_3x3_2</a>, <a class="code hl_variable" href="namespacefixtures.html#a5629e7c5f84e98c4407a14a6135ffbd0">bad_tiles_random_3x3_2</a>,</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>                          <a class="code hl_variable" href="namespacefixtures.html#a09c67ecd66c282a9512f1a5f09f82571">broken_pairs_random_3x3_2</a>, <a class="code hl_variable" href="namespacefixtures.html#a61084d45ecfe7a11663863ff2369d98b">tiles_at_1_distance_random_3x3_2</a>,</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>                          <a class="code hl_variable" href="namespacefixtures.html#ae19471ccd88e33a011089eb3c91a1d6d">blank_dispersion_random_3x3_2</a>}},</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        {<span class="stringliteral">&quot;random_3x3_3&quot;</span>, {<a class="code hl_function" href="namespacefixtures.html#a99c464350d3f5208239fb60e0baf9e53">random_3x3_3</a>(), <a class="code hl_variable" href="namespacefixtures.html#ae2a533325383d658baab5d4009145ed8">manhattan_random_3x3_3</a>, <a class="code hl_variable" href="namespacefixtures.html#ac83646b98d7ea2a192d7f9a5b9caeda1">bad_tiles_random_3x3_3</a>,</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>                          <a class="code hl_variable" href="namespacefixtures.html#a19466af008384529ef2158c7209cc3a2">broken_pairs_random_3x3_3</a>, <a class="code hl_variable" href="namespacefixtures.html#aef520d27eac89ebeba246d112acaecb9">tiles_at_1_distance_random_3x3_3</a>,</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>                          <a class="code hl_variable" href="namespacefixtures.html#ab5080fbaf9f6ae5fcbb44c9fac18fffe">blank_dispersion_random_3x3_3</a>}},</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        {<span class="stringliteral">&quot;random_4x4_1&quot;</span>, {<a class="code hl_function" href="namespacefixtures.html#a10dc6c4e27673758a19165ffac7183db">random_4x4_1</a>(), <a class="code hl_variable" href="namespacefixtures.html#a4e381de0f45c2cd54aa64c8df0e90015">manhattan_random_4x4_1</a>, <a class="code hl_variable" href="namespacefixtures.html#a0f29e325576cdb3efaedc67c4c0a6826">bad_tiles_random_4x4_1</a>,</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>                          <a class="code hl_variable" href="namespacefixtures.html#a10532de9fb4d1c81fba0cd7af9220912">broken_pairs_random_4x4_1</a>, <a class="code hl_variable" href="namespacefixtures.html#a07aa716388c0ede3712aef940f261085">tiles_at_1_distance_random_4x4_1</a>,</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>                          <a class="code hl_variable" href="namespacefixtures.html#a60900b1ee8897eac235c018128d7ab69">blank_dispersion_random_4x4_1</a>}},</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        {<span class="stringliteral">&quot;random_4x4_2&quot;</span>, {<a class="code hl_function" href="namespacefixtures.html#a63adf2f02a199c722e45f4dae9824c14">random_4x4_2</a>(), <a class="code hl_variable" href="namespacefixtures.html#a16cda21433d16a3c1838713dbecb6e5b">manhattan_random_4x4_2</a>, <a class="code hl_variable" href="namespacefixtures.html#a2839e863735be847573cff8c4fb86b67">bad_tiles_random_4x4_2</a>,</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                          <a class="code hl_variable" href="namespacefixtures.html#a20409206920d46ea2c96992d3474c5dd">broken_pairs_random_4x4_2</a>, <a class="code hl_variable" href="namespacefixtures.html#a8af2c7d9cc5fa5ca1f182f8309e0e8d5">tiles_at_1_distance_random_4x4_2</a>,</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>                          <a class="code hl_variable" href="namespacefixtures.html#a5732071b8a7086edc5f6f4fb509cf97f">blank_dispersion_random_4x4_2</a>}},</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>        {<span class="stringliteral">&quot;random_4x4_3&quot;</span>, {<a class="code hl_function" href="namespacefixtures.html#abb26cad659a90c935f55f06c23578755">random_4x4_3</a>(), <a class="code hl_variable" href="namespacefixtures.html#a91a1334fb1a941b63a5ec26071f642c6">manhattan_random_4x4_3</a>, <a class="code hl_variable" href="namespacefixtures.html#a22efc067bbccb7466cd017f65509807b">bad_tiles_random_4x4_3</a>,</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                          <a class="code hl_variable" href="namespacefixtures.html#a434436336fae0e16a75ac62d62db1574">broken_pairs_random_4x4_3</a>, <a class="code hl_variable" href="namespacefixtures.html#a86616a6d65d0f61f4bd78d5dfc01f06e">tiles_at_1_distance_random_4x4_3</a>,</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                          <a class="code hl_variable" href="namespacefixtures.html#ab9aeee72602f286bba86e4239ef7c594">blank_dispersion_random_4x4_3</a>}},</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        {<span class="stringliteral">&quot;random_5x5_1&quot;</span>, {<a class="code hl_function" href="namespacefixtures.html#aff2ce03aa61ce0cebae076edd442deaf">random_5x5_1</a>(), <a class="code hl_variable" href="namespacefixtures.html#a9df5083278911e0359808b1cb795c2b4">manhattan_random_5x5_1</a>, <a class="code hl_variable" href="namespacefixtures.html#a89bc059a902f9a0e0e7a306c98411404">bad_tiles_random_5x5_1</a>,</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                          <a class="code hl_variable" href="namespacefixtures.html#ac1cd7225f7d8342912dafbb2da9fb57a">broken_pairs_random_5x5_1</a>, <a class="code hl_variable" href="namespacefixtures.html#a2b9a44b5478b469165ac56d297a2b867">tiles_at_1_distance_random_5x5_1</a>,</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                          <a class="code hl_variable" href="namespacefixtures.html#a99ffe318936f8800e277bbb68473c9e4">blank_dispersion_random_5x5_1</a>}},</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>        {<span class="stringliteral">&quot;random_5x5_2&quot;</span>, {<a class="code hl_function" href="namespacefixtures.html#a47c321d89637e982207404d2acd93554">random_5x5_2</a>(), <a class="code hl_variable" href="namespacefixtures.html#a9a4658e270f61f494fa3907217e0379d">manhattan_random_5x5_2</a>, <a class="code hl_variable" href="namespacefixtures.html#a8e463d3e81ba11fe80de38a6d2175399">bad_tiles_random_5x5_2</a>,</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>                          <a class="code hl_variable" href="namespacefixtures.html#a21e5a9eab25339da11e6369ccbb99985">broken_pairs_random_5x5_2</a>, <a class="code hl_variable" href="namespacefixtures.html#a3d48b179589e7d83f8a3a78392398b1e">tiles_at_1_distance_random_5x5_2</a>,</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>                          <a class="code hl_variable" href="namespacefixtures.html#ad20c5ef76cddf74809fb3e6a52e3b0da">blank_dispersion_random_5x5_2</a>}},</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>        {<span class="stringliteral">&quot;random_5x5_3&quot;</span>, {<a class="code hl_function" href="namespacefixtures.html#ae9ba42788bf01c494b1cba24b335d387">random_5x5_3</a>(), <a class="code hl_variable" href="namespacefixtures.html#ad88dc387003bbc18125daecab47d97c6">manhattan_random_5x5_3</a>, <a class="code hl_variable" href="namespacefixtures.html#a5e582ea33f1ef2a78f3b4dc0560e5266">bad_tiles_random_5x5_3</a>,</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>                          <a class="code hl_variable" href="namespacefixtures.html#a965f62316bcb40c9659310bac130d54d">broken_pairs_random_5x5_3</a>, <a class="code hl_variable" href="namespacefixtures.html#a1344d02928d8f414ae8075b35fc4ec25">tiles_at_1_distance_random_5x5_3</a>,</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>                          <a class="code hl_variable" href="namespacefixtures.html#a8a0c3234030b216f7476db27fbad5696">blank_dispersion_random_5x5_3</a>}},</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    };</div>
+</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span> </div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>} <span class="comment">// namespace fixtures</span></div>
+</div>
+<div class="ttc" id="aboard_8hpp_html"><div class="ttname"><a href="board_8hpp.html">board.hpp</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html"><div class="ttname"><a href="classnaidu_1_1Board.html">naidu::Board</a></div><div class="ttdoc">Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N.</div><div class="ttdef"><b>Definición</b> <a href="board_8hpp_source.html#l00026">board.hpp:26</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_a29a6c512367aa1515226649177d25f2a"><div class="ttname"><a href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">naidu::Board::at</a></div><div class="ttdeci">std::uint8_t at(std::size_t index) const</div><div class="ttdoc">Devuelve la ficha en el índice lineal dado.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00109">board.cpp:109</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_a4ac1d6cb6ab37b0de15072e09ea12c32"><div class="ttname"><a href="classnaidu_1_1Board.html#a4ac1d6cb6ab37b0de15072e09ea12c32">naidu::Board::is_solved</a></div><div class="ttdeci">bool is_solved() const noexcept</div><div class="ttdoc">Comprueba si el tablero está en el estado resuelto.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00126">board.cpp:126</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_aa27b65ba0fb898217ead8d43aabbfdb4"><div class="ttname"><a href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">naidu::Board::tile_count</a></div><div class="ttdeci">std::uint8_t tile_count() const noexcept</div><div class="ttdoc">Devuelve el número total de fichas (N²).</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00106">board.cpp:106</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ab08eb2bc1a7ffb966aa267f91dca15ac"><div class="ttname"><a href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac">naidu::Board::empty_index</a></div><div class="ttdeci">std::uint8_t empty_index() const noexcept</div><div class="ttdoc">Devuelve el índice lineal del hueco.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00107">board.cpp:107</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ab65a3e1adb23a5d6c1b12a8f8bed3337"><div class="ttname"><a href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">naidu::Board::dim</a></div><div class="ttdeci">std::uint8_t dim() const noexcept</div><div class="ttdoc">Devuelve la dimensión N del tablero.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00105">board.cpp:105</a></div></div>
+<div class="ttc" id="anamespacefixtures_html"><div class="ttname"><a href="namespacefixtures.html">fixtures</a></div><div class="ttdef"><b>Definición</b> <a href="#l00011">board_fixtures.hpp:11</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a01c683279d72caaa795b04974cd6d8d6"><div class="ttname"><a href="namespacefixtures.html#a01c683279d72caaa795b04974cd6d8d6">fixtures::check_default</a></div><div class="ttdeci">void check_default(const naidu::Board &amp;b, std::size_t dim)</div><div class="ttdef"><b>Definición</b> <a href="#l00013">board_fixtures.hpp:13</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a05d9e059f9eee1dc5890625dc7e974c6"><div class="ttname"><a href="namespacefixtures.html#a05d9e059f9eee1dc5890625dc7e974c6">fixtures::random_3x3_1</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; random_3x3_1()</div><div class="ttdef"><b>Definición</b> <a href="#l00118">board_fixtures.hpp:118</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a07aa716388c0ede3712aef940f261085"><div class="ttname"><a href="namespacefixtures.html#a07aa716388c0ede3712aef940f261085">fixtures::tiles_at_1_distance_random_4x4_1</a></div><div class="ttdeci">constexpr std::uint16_t tiles_at_1_distance_random_4x4_1</div><div class="ttdef"><b>Definición</b> <a href="#l00174">board_fixtures.hpp:174</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a09c67ecd66c282a9512f1a5f09f82571"><div class="ttname"><a href="namespacefixtures.html#a09c67ecd66c282a9512f1a5f09f82571">fixtures::broken_pairs_random_3x3_2</a></div><div class="ttdeci">constexpr std::uint16_t broken_pairs_random_3x3_2</div><div class="ttdef"><b>Definición</b> <a href="#l00142">board_fixtures.hpp:142</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a0f29e325576cdb3efaedc67c4c0a6826"><div class="ttname"><a href="namespacefixtures.html#a0f29e325576cdb3efaedc67c4c0a6826">fixtures::bad_tiles_random_4x4_1</a></div><div class="ttdeci">constexpr std::uint16_t bad_tiles_random_4x4_1</div><div class="ttdef"><b>Definición</b> <a href="#l00172">board_fixtures.hpp:172</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a10532de9fb4d1c81fba0cd7af9220912"><div class="ttname"><a href="namespacefixtures.html#a10532de9fb4d1c81fba0cd7af9220912">fixtures::broken_pairs_random_4x4_1</a></div><div class="ttdeci">constexpr std::uint16_t broken_pairs_random_4x4_1</div><div class="ttdef"><b>Definición</b> <a href="#l00173">board_fixtures.hpp:173</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a10dc6c4e27673758a19165ffac7183db"><div class="ttname"><a href="namespacefixtures.html#a10dc6c4e27673758a19165ffac7183db">fixtures::random_4x4_1</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; random_4x4_1()</div><div class="ttdef"><b>Definición</b> <a href="#l00163">board_fixtures.hpp:163</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a1344d02928d8f414ae8075b35fc4ec25"><div class="ttname"><a href="namespacefixtures.html#a1344d02928d8f414ae8075b35fc4ec25">fixtures::tiles_at_1_distance_random_5x5_3</a></div><div class="ttdeci">constexpr std::uint16_t tiles_at_1_distance_random_5x5_3</div><div class="ttdef"><b>Definición</b> <a href="#l00257">board_fixtures.hpp:257</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a13e53a75c716c821931c3b59cb9eaa1d"><div class="ttname"><a href="namespacefixtures.html#a13e53a75c716c821931c3b59cb9eaa1d">fixtures::hole_top_left_3x3</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; hole_top_left_3x3()</div><div class="ttdef"><b>Definición</b> <a href="#l00094">board_fixtures.hpp:94</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a16cda21433d16a3c1838713dbecb6e5b"><div class="ttname"><a href="namespacefixtures.html#a16cda21433d16a3c1838713dbecb6e5b">fixtures::manhattan_random_4x4_2</a></div><div class="ttdeci">constexpr std::uint16_t manhattan_random_4x4_2</div><div class="ttdef"><b>Definición</b> <a href="#l00187">board_fixtures.hpp:187</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a19466af008384529ef2158c7209cc3a2"><div class="ttname"><a href="namespacefixtures.html#a19466af008384529ef2158c7209cc3a2">fixtures::broken_pairs_random_3x3_3</a></div><div class="ttdeci">constexpr std::uint16_t broken_pairs_random_3x3_3</div><div class="ttdef"><b>Definición</b> <a href="#l00157">board_fixtures.hpp:157</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a1d63576d621a3a2d7a7bb1a7cd641606"><div class="ttname"><a href="namespacefixtures.html#a1d63576d621a3a2d7a7bb1a7cd641606">fixtures::random_3x3_2</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; random_3x3_2()</div><div class="ttdef"><b>Definición</b> <a href="#l00133">board_fixtures.hpp:133</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a20409206920d46ea2c96992d3474c5dd"><div class="ttname"><a href="namespacefixtures.html#a20409206920d46ea2c96992d3474c5dd">fixtures::broken_pairs_random_4x4_2</a></div><div class="ttdeci">constexpr std::uint16_t broken_pairs_random_4x4_2</div><div class="ttdef"><b>Definición</b> <a href="#l00189">board_fixtures.hpp:189</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a21e5a9eab25339da11e6369ccbb99985"><div class="ttname"><a href="namespacefixtures.html#a21e5a9eab25339da11e6369ccbb99985">fixtures::broken_pairs_random_5x5_2</a></div><div class="ttdeci">constexpr std::uint16_t broken_pairs_random_5x5_2</div><div class="ttdef"><b>Definición</b> <a href="#l00239">board_fixtures.hpp:239</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a22efc067bbccb7466cd017f65509807b"><div class="ttname"><a href="namespacefixtures.html#a22efc067bbccb7466cd017f65509807b">fixtures::bad_tiles_random_4x4_3</a></div><div class="ttdeci">constexpr std::uint16_t bad_tiles_random_4x4_3</div><div class="ttdef"><b>Definición</b> <a href="#l00204">board_fixtures.hpp:204</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a23d74d608036129ee360fa6731184154"><div class="ttname"><a href="namespacefixtures.html#a23d74d608036129ee360fa6731184154">fixtures::solved_4x4</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; solved_4x4()</div><div class="ttdef"><b>Definición</b> <a href="#l00029">board_fixtures.hpp:29</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a2839e863735be847573cff8c4fb86b67"><div class="ttname"><a href="namespacefixtures.html#a2839e863735be847573cff8c4fb86b67">fixtures::bad_tiles_random_4x4_2</a></div><div class="ttdeci">constexpr std::uint16_t bad_tiles_random_4x4_2</div><div class="ttdef"><b>Definición</b> <a href="#l00188">board_fixtures.hpp:188</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a2b8e979aa53ed52eb2b4bac63f816680"><div class="ttname"><a href="namespacefixtures.html#a2b8e979aa53ed52eb2b4bac63f816680">fixtures::hole_top_center_3x3</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; hole_top_center_3x3()</div><div class="ttdef"><b>Definición</b> <a href="#l00102">board_fixtures.hpp:102</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a2b9a44b5478b469165ac56d297a2b867"><div class="ttname"><a href="namespacefixtures.html#a2b9a44b5478b469165ac56d297a2b867">fixtures::tiles_at_1_distance_random_5x5_1</a></div><div class="ttdeci">constexpr std::uint16_t tiles_at_1_distance_random_5x5_1</div><div class="ttdef"><b>Definición</b> <a href="#l00223">board_fixtures.hpp:223</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a3052aaa3f9891be15e0eb4239c91e753"><div class="ttname"><a href="namespacefixtures.html#a3052aaa3f9891be15e0eb4239c91e753">fixtures::solvable_hole_center_4x4</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; solvable_hole_center_4x4()</div><div class="ttdef"><b>Definición</b> <a href="#l00049">board_fixtures.hpp:49</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a37d8adfe4649ec66cc7a45e78d4cbdb2"><div class="ttname"><a href="namespacefixtures.html#a37d8adfe4649ec66cc7a45e78d4cbdb2">fixtures::solvable_unsolved_4x4</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; solvable_unsolved_4x4()</div><div class="ttdef"><b>Definición</b> <a href="#l00059">board_fixtures.hpp:59</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a3d48b179589e7d83f8a3a78392398b1e"><div class="ttname"><a href="namespacefixtures.html#a3d48b179589e7d83f8a3a78392398b1e">fixtures::tiles_at_1_distance_random_5x5_2</a></div><div class="ttdeci">constexpr std::uint16_t tiles_at_1_distance_random_5x5_2</div><div class="ttdef"><b>Definición</b> <a href="#l00240">board_fixtures.hpp:240</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a434436336fae0e16a75ac62d62db1574"><div class="ttname"><a href="namespacefixtures.html#a434436336fae0e16a75ac62d62db1574">fixtures::broken_pairs_random_4x4_3</a></div><div class="ttdeci">constexpr std::uint16_t broken_pairs_random_4x4_3</div><div class="ttdef"><b>Definición</b> <a href="#l00205">board_fixtures.hpp:205</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a47c321d89637e982207404d2acd93554"><div class="ttname"><a href="namespacefixtures.html#a47c321d89637e982207404d2acd93554">fixtures::random_5x5_2</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; random_5x5_2()</div><div class="ttdef"><b>Definición</b> <a href="#l00228">board_fixtures.hpp:228</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a4e381de0f45c2cd54aa64c8df0e90015"><div class="ttname"><a href="namespacefixtures.html#a4e381de0f45c2cd54aa64c8df0e90015">fixtures::manhattan_random_4x4_1</a></div><div class="ttdeci">constexpr std::uint16_t manhattan_random_4x4_1</div><div class="ttdef"><b>Definición</b> <a href="#l00171">board_fixtures.hpp:171</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a55e91aaeda3f7145f6230cccb25b5d33"><div class="ttname"><a href="namespacefixtures.html#a55e91aaeda3f7145f6230cccb25b5d33">fixtures::unsolvable_4x4</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; unsolvable_4x4()</div><div class="ttdef"><b>Definición</b> <a href="#l00039">board_fixtures.hpp:39</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a5629e7c5f84e98c4407a14a6135ffbd0"><div class="ttname"><a href="namespacefixtures.html#a5629e7c5f84e98c4407a14a6135ffbd0">fixtures::bad_tiles_random_3x3_2</a></div><div class="ttdeci">constexpr std::uint16_t bad_tiles_random_3x3_2</div><div class="ttdef"><b>Definición</b> <a href="#l00141">board_fixtures.hpp:141</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a5732071b8a7086edc5f6f4fb509cf97f"><div class="ttname"><a href="namespacefixtures.html#a5732071b8a7086edc5f6f4fb509cf97f">fixtures::blank_dispersion_random_4x4_2</a></div><div class="ttdeci">constexpr double blank_dispersion_random_4x4_2</div><div class="ttdef"><b>Definición</b> <a href="#l00191">board_fixtures.hpp:191</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a5e582ea33f1ef2a78f3b4dc0560e5266"><div class="ttname"><a href="namespacefixtures.html#a5e582ea33f1ef2a78f3b4dc0560e5266">fixtures::bad_tiles_random_5x5_3</a></div><div class="ttdeci">constexpr std::uint16_t bad_tiles_random_5x5_3</div><div class="ttdef"><b>Definición</b> <a href="#l00255">board_fixtures.hpp:255</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a60900b1ee8897eac235c018128d7ab69"><div class="ttname"><a href="namespacefixtures.html#a60900b1ee8897eac235c018128d7ab69">fixtures::blank_dispersion_random_4x4_1</a></div><div class="ttdeci">constexpr double blank_dispersion_random_4x4_1</div><div class="ttdef"><b>Definición</b> <a href="#l00175">board_fixtures.hpp:175</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a61084d45ecfe7a11663863ff2369d98b"><div class="ttname"><a href="namespacefixtures.html#a61084d45ecfe7a11663863ff2369d98b">fixtures::tiles_at_1_distance_random_3x3_2</a></div><div class="ttdeci">constexpr std::uint16_t tiles_at_1_distance_random_3x3_2</div><div class="ttdef"><b>Definición</b> <a href="#l00143">board_fixtures.hpp:143</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a63adf2f02a199c722e45f4dae9824c14"><div class="ttname"><a href="namespacefixtures.html#a63adf2f02a199c722e45f4dae9824c14">fixtures::random_4x4_2</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; random_4x4_2()</div><div class="ttdef"><b>Definición</b> <a href="#l00179">board_fixtures.hpp:179</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a66903e822f9ba68747ace503fb3909a6"><div class="ttname"><a href="namespacefixtures.html#a66903e822f9ba68747ace503fb3909a6">fixtures::manhattan_random_3x3_2</a></div><div class="ttdeci">constexpr std::uint16_t manhattan_random_3x3_2</div><div class="ttdef"><b>Definición</b> <a href="#l00140">board_fixtures.hpp:140</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a73d50d81c9c1a04f296e9124aed54448"><div class="ttname"><a href="namespacefixtures.html#a73d50d81c9c1a04f296e9124aed54448">fixtures::random_cases</a></div><div class="ttdeci">const std::map&lt; std::string, BoardCase &gt; random_cases</div><div class="ttdef"><b>Definición</b> <a href="#l00273">board_fixtures.hpp:273</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a7a06e1300efefda5b1c219b8377a3296"><div class="ttname"><a href="namespacefixtures.html#a7a06e1300efefda5b1c219b8377a3296">fixtures::manhattan_random_3x3_1</a></div><div class="ttdeci">constexpr std::uint16_t manhattan_random_3x3_1</div><div class="ttdef"><b>Definición</b> <a href="#l00125">board_fixtures.hpp:125</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a845024d49d8dcc39518dd717eab28ef3"><div class="ttname"><a href="namespacefixtures.html#a845024d49d8dcc39518dd717eab28ef3">fixtures::blank_dispersion_random_3x3_1</a></div><div class="ttdeci">constexpr double blank_dispersion_random_3x3_1</div><div class="ttdef"><b>Definición</b> <a href="#l00129">board_fixtures.hpp:129</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a86616a6d65d0f61f4bd78d5dfc01f06e"><div class="ttname"><a href="namespacefixtures.html#a86616a6d65d0f61f4bd78d5dfc01f06e">fixtures::tiles_at_1_distance_random_4x4_3</a></div><div class="ttdeci">constexpr std::uint16_t tiles_at_1_distance_random_4x4_3</div><div class="ttdef"><b>Definición</b> <a href="#l00206">board_fixtures.hpp:206</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a86cde2f273b1f177d4c7f9612be8c419"><div class="ttname"><a href="namespacefixtures.html#a86cde2f273b1f177d4c7f9612be8c419">fixtures::bad_tiles_random_3x3_1</a></div><div class="ttdeci">constexpr std::uint16_t bad_tiles_random_3x3_1</div><div class="ttdef"><b>Definición</b> <a href="#l00126">board_fixtures.hpp:126</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a89bc059a902f9a0e0e7a306c98411404"><div class="ttname"><a href="namespacefixtures.html#a89bc059a902f9a0e0e7a306c98411404">fixtures::bad_tiles_random_5x5_1</a></div><div class="ttdeci">constexpr std::uint16_t bad_tiles_random_5x5_1</div><div class="ttdef"><b>Definición</b> <a href="#l00221">board_fixtures.hpp:221</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a8a0c3234030b216f7476db27fbad5696"><div class="ttname"><a href="namespacefixtures.html#a8a0c3234030b216f7476db27fbad5696">fixtures::blank_dispersion_random_5x5_3</a></div><div class="ttdeci">constexpr double blank_dispersion_random_5x5_3</div><div class="ttdef"><b>Definición</b> <a href="#l00258">board_fixtures.hpp:258</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a8af2c7d9cc5fa5ca1f182f8309e0e8d5"><div class="ttname"><a href="namespacefixtures.html#a8af2c7d9cc5fa5ca1f182f8309e0e8d5">fixtures::tiles_at_1_distance_random_4x4_2</a></div><div class="ttdeci">constexpr std::uint16_t tiles_at_1_distance_random_4x4_2</div><div class="ttdef"><b>Definición</b> <a href="#l00190">board_fixtures.hpp:190</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a8e463d3e81ba11fe80de38a6d2175399"><div class="ttname"><a href="namespacefixtures.html#a8e463d3e81ba11fe80de38a6d2175399">fixtures::bad_tiles_random_5x5_2</a></div><div class="ttdeci">constexpr std::uint16_t bad_tiles_random_5x5_2</div><div class="ttdef"><b>Definición</b> <a href="#l00238">board_fixtures.hpp:238</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a91a1334fb1a941b63a5ec26071f642c6"><div class="ttname"><a href="namespacefixtures.html#a91a1334fb1a941b63a5ec26071f642c6">fixtures::manhattan_random_4x4_3</a></div><div class="ttdeci">constexpr std::uint16_t manhattan_random_4x4_3</div><div class="ttdef"><b>Definición</b> <a href="#l00203">board_fixtures.hpp:203</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a9502995f912f55e6bf9f1ac764c9c2ee"><div class="ttname"><a href="namespacefixtures.html#a9502995f912f55e6bf9f1ac764c9c2ee">fixtures::solvable_5x5</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; solvable_5x5()</div><div class="ttdef"><b>Definición</b> <a href="#l00071">board_fixtures.hpp:71</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a965f62316bcb40c9659310bac130d54d"><div class="ttname"><a href="namespacefixtures.html#a965f62316bcb40c9659310bac130d54d">fixtures::broken_pairs_random_5x5_3</a></div><div class="ttdeci">constexpr std::uint16_t broken_pairs_random_5x5_3</div><div class="ttdef"><b>Definición</b> <a href="#l00256">board_fixtures.hpp:256</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a96852e157d69a1349b001c5bb53b4bf8"><div class="ttname"><a href="namespacefixtures.html#a96852e157d69a1349b001c5bb53b4bf8">fixtures::unsolvable_5x5</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; unsolvable_5x5()</div><div class="ttdef"><b>Definición</b> <a href="#l00082">board_fixtures.hpp:82</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a99c464350d3f5208239fb60e0baf9e53"><div class="ttname"><a href="namespacefixtures.html#a99c464350d3f5208239fb60e0baf9e53">fixtures::random_3x3_3</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; random_3x3_3()</div><div class="ttdef"><b>Definición</b> <a href="#l00148">board_fixtures.hpp:148</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a99ffe318936f8800e277bbb68473c9e4"><div class="ttname"><a href="namespacefixtures.html#a99ffe318936f8800e277bbb68473c9e4">fixtures::blank_dispersion_random_5x5_1</a></div><div class="ttdeci">constexpr double blank_dispersion_random_5x5_1</div><div class="ttdef"><b>Definición</b> <a href="#l00224">board_fixtures.hpp:224</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a9a4658e270f61f494fa3907217e0379d"><div class="ttname"><a href="namespacefixtures.html#a9a4658e270f61f494fa3907217e0379d">fixtures::manhattan_random_5x5_2</a></div><div class="ttdeci">constexpr std::uint16_t manhattan_random_5x5_2</div><div class="ttdef"><b>Definición</b> <a href="#l00237">board_fixtures.hpp:237</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_a9df5083278911e0359808b1cb795c2b4"><div class="ttname"><a href="namespacefixtures.html#a9df5083278911e0359808b1cb795c2b4">fixtures::manhattan_random_5x5_1</a></div><div class="ttdeci">constexpr std::uint16_t manhattan_random_5x5_1</div><div class="ttdef"><b>Definición</b> <a href="#l00220">board_fixtures.hpp:220</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_ab5080fbaf9f6ae5fcbb44c9fac18fffe"><div class="ttname"><a href="namespacefixtures.html#ab5080fbaf9f6ae5fcbb44c9fac18fffe">fixtures::blank_dispersion_random_3x3_3</a></div><div class="ttdeci">constexpr double blank_dispersion_random_3x3_3</div><div class="ttdef"><b>Definición</b> <a href="#l00159">board_fixtures.hpp:159</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_ab9aeee72602f286bba86e4239ef7c594"><div class="ttname"><a href="namespacefixtures.html#ab9aeee72602f286bba86e4239ef7c594">fixtures::blank_dispersion_random_4x4_3</a></div><div class="ttdeci">constexpr double blank_dispersion_random_4x4_3</div><div class="ttdef"><b>Definición</b> <a href="#l00207">board_fixtures.hpp:207</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_abb26cad659a90c935f55f06c23578755"><div class="ttname"><a href="namespacefixtures.html#abb26cad659a90c935f55f06c23578755">fixtures::random_4x4_3</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; random_4x4_3()</div><div class="ttdef"><b>Definición</b> <a href="#l00195">board_fixtures.hpp:195</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_ac1cd7225f7d8342912dafbb2da9fb57a"><div class="ttname"><a href="namespacefixtures.html#ac1cd7225f7d8342912dafbb2da9fb57a">fixtures::broken_pairs_random_5x5_1</a></div><div class="ttdeci">constexpr std::uint16_t broken_pairs_random_5x5_1</div><div class="ttdef"><b>Definición</b> <a href="#l00222">board_fixtures.hpp:222</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_ac83646b98d7ea2a192d7f9a5b9caeda1"><div class="ttname"><a href="namespacefixtures.html#ac83646b98d7ea2a192d7f9a5b9caeda1">fixtures::bad_tiles_random_3x3_3</a></div><div class="ttdeci">constexpr std::uint16_t bad_tiles_random_3x3_3</div><div class="ttdef"><b>Definición</b> <a href="#l00156">board_fixtures.hpp:156</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_ad20c5ef76cddf74809fb3e6a52e3b0da"><div class="ttname"><a href="namespacefixtures.html#ad20c5ef76cddf74809fb3e6a52e3b0da">fixtures::blank_dispersion_random_5x5_2</a></div><div class="ttdeci">constexpr double blank_dispersion_random_5x5_2</div><div class="ttdef"><b>Definición</b> <a href="#l00241">board_fixtures.hpp:241</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_ad449170d77bb1cf108023829e971e110"><div class="ttname"><a href="namespacefixtures.html#ad449170d77bb1cf108023829e971e110">fixtures::tiles_at_1_distance_random_3x3_1</a></div><div class="ttdeci">constexpr std::uint16_t tiles_at_1_distance_random_3x3_1</div><div class="ttdef"><b>Definición</b> <a href="#l00128">board_fixtures.hpp:128</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_ad88dc387003bbc18125daecab47d97c6"><div class="ttname"><a href="namespacefixtures.html#ad88dc387003bbc18125daecab47d97c6">fixtures::manhattan_random_5x5_3</a></div><div class="ttdeci">constexpr std::uint16_t manhattan_random_5x5_3</div><div class="ttdef"><b>Definición</b> <a href="#l00254">board_fixtures.hpp:254</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_ae047ec60706556227ce8a0ac7ade7b51"><div class="ttname"><a href="namespacefixtures.html#ae047ec60706556227ce8a0ac7ade7b51">fixtures::broken_pairs_random_3x3_1</a></div><div class="ttdeci">constexpr std::uint16_t broken_pairs_random_3x3_1</div><div class="ttdef"><b>Definición</b> <a href="#l00127">board_fixtures.hpp:127</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_ae19471ccd88e33a011089eb3c91a1d6d"><div class="ttname"><a href="namespacefixtures.html#ae19471ccd88e33a011089eb3c91a1d6d">fixtures::blank_dispersion_random_3x3_2</a></div><div class="ttdeci">constexpr double blank_dispersion_random_3x3_2</div><div class="ttdef"><b>Definición</b> <a href="#l00144">board_fixtures.hpp:144</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_ae2a533325383d658baab5d4009145ed8"><div class="ttname"><a href="namespacefixtures.html#ae2a533325383d658baab5d4009145ed8">fixtures::manhattan_random_3x3_3</a></div><div class="ttdeci">constexpr std::uint16_t manhattan_random_3x3_3</div><div class="ttdef"><b>Definición</b> <a href="#l00155">board_fixtures.hpp:155</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_ae9ba42788bf01c494b1cba24b335d387"><div class="ttname"><a href="namespacefixtures.html#ae9ba42788bf01c494b1cba24b335d387">fixtures::random_5x5_3</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; random_5x5_3()</div><div class="ttdef"><b>Definición</b> <a href="#l00245">board_fixtures.hpp:245</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_aef520d27eac89ebeba246d112acaecb9"><div class="ttname"><a href="namespacefixtures.html#aef520d27eac89ebeba246d112acaecb9">fixtures::tiles_at_1_distance_random_3x3_3</a></div><div class="ttdeci">constexpr std::uint16_t tiles_at_1_distance_random_3x3_3</div><div class="ttdef"><b>Definición</b> <a href="#l00158">board_fixtures.hpp:158</a></div></div>
+<div class="ttc" id="anamespacefixtures_html_aff2ce03aa61ce0cebae076edd442deaf"><div class="ttname"><a href="namespacefixtures.html#aff2ce03aa61ce0cebae076edd442deaf">fixtures::random_5x5_1</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; random_5x5_1()</div><div class="ttdef"><b>Definición</b> <a href="#l00211">board_fixtures.hpp:211</a></div></div>
+<div class="ttc" id="astructfixtures_1_1BoardCase_html"><div class="ttname"><a href="structfixtures_1_1BoardCase.html">fixtures::BoardCase</a></div><div class="ttdef"><b>Definición</b> <a href="#l00264">board_fixtures.hpp:264</a></div></div>
+<div class="ttc" id="astructfixtures_1_1BoardCase_html_a43371d9b42329ab4dcf2fb4ade733d5d"><div class="ttname"><a href="structfixtures_1_1BoardCase.html#a43371d9b42329ab4dcf2fb4ade733d5d">fixtures::BoardCase::bad_tiles</a></div><div class="ttdeci">std::uint16_t bad_tiles</div><div class="ttdef"><b>Definición</b> <a href="#l00267">board_fixtures.hpp:267</a></div></div>
+<div class="ttc" id="astructfixtures_1_1BoardCase_html_a46b6b0f817069c18aed2c86f3537374c"><div class="ttname"><a href="structfixtures_1_1BoardCase.html#a46b6b0f817069c18aed2c86f3537374c">fixtures::BoardCase::manhattan</a></div><div class="ttdeci">std::uint16_t manhattan</div><div class="ttdef"><b>Definición</b> <a href="#l00266">board_fixtures.hpp:266</a></div></div>
+<div class="ttc" id="astructfixtures_1_1BoardCase_html_a493dd4b08b5eb352e55d7a966707badf"><div class="ttname"><a href="structfixtures_1_1BoardCase.html#a493dd4b08b5eb352e55d7a966707badf">fixtures::BoardCase::tiles</a></div><div class="ttdeci">std::vector&lt; std::uint8_t &gt; tiles</div><div class="ttdef"><b>Definición</b> <a href="#l00265">board_fixtures.hpp:265</a></div></div>
+<div class="ttc" id="astructfixtures_1_1BoardCase_html_a5ff5f0d9e479511e403c35697a00b6f1"><div class="ttname"><a href="structfixtures_1_1BoardCase.html#a5ff5f0d9e479511e403c35697a00b6f1">fixtures::BoardCase::tiles_at_1_distance</a></div><div class="ttdeci">std::uint16_t tiles_at_1_distance</div><div class="ttdef"><b>Definición</b> <a href="#l00269">board_fixtures.hpp:269</a></div></div>
+<div class="ttc" id="astructfixtures_1_1BoardCase_html_a74999d45c3d0248eaccaef2fd9932b47"><div class="ttname"><a href="structfixtures_1_1BoardCase.html#a74999d45c3d0248eaccaef2fd9932b47">fixtures::BoardCase::blank_dispersion</a></div><div class="ttdeci">double blank_dispersion</div><div class="ttdef"><b>Definición</b> <a href="#l00270">board_fixtures.hpp:270</a></div></div>
+<div class="ttc" id="astructfixtures_1_1BoardCase_html_ae77ecb339d8adc12148deb8128ebcb7b"><div class="ttname"><a href="structfixtures_1_1BoardCase.html#ae77ecb339d8adc12148deb8128ebcb7b">fixtures::BoardCase::broken_pairs</a></div><div class="ttdeci">std::uint16_t broken_pairs</div><div class="ttdef"><b>Definición</b> <a href="#l00268">board_fixtures.hpp:268</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a href="board__fixtures_8hpp.html">board_fixtures.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

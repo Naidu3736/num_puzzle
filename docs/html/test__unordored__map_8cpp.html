@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Referencia del archivo test/general/test_unordored_map.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('test__unordored__map_8cpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo test_unordored_map.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="board_8hpp_source.html">board/board.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="board__hash_8hpp_source.html">board/board_hash.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="direction_8hpp_source.html">core/direction.hpp</a>&quot;</code><br />
+<code>#include &lt;doctest/doctest.h&gt;</code><br />
+<code>#include &lt;unordered_set&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependencias incluidas en test_unordored_map.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__unordored__map_8cpp__incl.png" border="0" usemap="#atest_2general_2test__unordored__map_8cpp" loading="lazy" alt=""/></div>
+<map name="atest_2general_2test__unordored__map_8cpp" id="atest_2general_2test__unordored__map_8cpp">
+<area shape="rect" title=" " alt="" coords="166,5,345,48"/>
+<area shape="rect" href="board_8hpp.html" title=" " alt="" coords="95,171,210,197"/>
+<area shape="poly" title=" " alt="" coords="216,51,193,71,171,97,160,126,155,156,150,155,154,125,166,95,189,67,220,46"/>
+<area shape="rect" href="direction_8hpp.html" title=" " alt="" coords="21,320,145,347"/>
+<area shape="poly" title=" " alt="" coords="218,51,154,98,116,132,85,172,54,220,48,243,51,271,67,307,62,307,46,273,42,242,49,218,81,169,112,128,151,94,222,46"/>
+<area shape="rect" href="board__hash_8hpp.html" title=" " alt="" coords="181,96,330,123"/>
+<area shape="poly" title=" " alt="" coords="256,46,258,81,253,79,254,51"/>
+<area shape="rect" title=" " alt="" coords="354,96,476,123"/>
+<area shape="poly" title=" " alt="" coords="296,46,379,88,374,89,297,51"/>
+<area shape="rect" title=" " alt="" coords="501,96,604,123"/>
+<area shape="poly" title=" " alt="" coords="332,46,494,90,489,93,332,51"/>
+<area shape="poly" title=" " alt="" coords="116,200,87,219,73,231,62,247,57,261,58,276,69,307,64,307,53,277,52,260,57,244,69,228,84,214,119,196"/>
+<area shape="rect" title=" " alt="" coords="9,395,59,421"/>
+<area shape="poly" title=" " alt="" coords="120,200,86,220,50,247,29,271,15,292,9,316,11,346,23,380,18,381,6,347,3,315,10,290,25,268,47,243,83,215,123,196"/>
+<area shape="rect" title=" " alt="" coords="160,395,220,421"/>
+<area shape="poly" title=" " alt="" coords="210,194,252,213,271,226,286,244,292,263,294,289,290,319,279,348,259,371,235,389,232,384,256,368,274,345,285,318,289,289,287,264,281,247,267,230,249,217,211,199"/>
+<area shape="rect" href="moveset_8hpp.html" title=" " alt="" coords="146,245,271,272"/>
+<area shape="poly" title=" " alt="" coords="163,195,192,233,187,233,162,201"/>
+<area shape="rect" title=" " alt="" coords="346,245,410,272"/>
+<area shape="poly" title=" " alt="" coords="192,195,333,241,329,244,192,201"/>
+<area shape="rect" title=" " alt="" coords="72,245,121,272"/>
+<area shape="poly" title=" " alt="" coords="141,200,118,235,113,232,144,196"/>
+<area shape="poly" title=" " alt="" coords="77,346,53,383,49,380,72,349"/>
+<area shape="poly" title=" " alt="" coords="103,345,161,385,156,386,101,350"/>
+<area shape="poly" title=" " alt="" coords="185,274,120,314,117,310,189,271"/>
+<area shape="poly" title=" " alt="" coords="209,271,196,380,191,378,205,274"/>
+<area shape="rect" title=" " alt="" coords="227,320,265,347"/>
+<area shape="poly" title=" " alt="" coords="216,270,235,307,230,306,214,275"/>
+<area shape="poly" title=" " alt="" coords="236,125,185,163,181,159,239,121"/>
+<area shape="poly" title=" " alt="" coords="257,121,265,158,272,178,283,196,306,218,335,238,329,238,303,223,278,199,267,180,260,159,255,126"/>
+<area shape="rect" title=" " alt="" coords="293,171,380,197"/>
+<area shape="poly" title=" " alt="" coords="270,121,314,160,309,161,269,126"/>
+</map>
+</div>
+</div>
+<p><a href="test__unordored__map_8cpp_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a7596178d847d90853d5f919b1538d5dc" id="r_a7596178d847d90853d5f919b1538d5dc"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a7596178d847d90853d5f919b1538d5dc">TEST_CASE</a> (&quot;US: Colision&quot;)</td></tr>
+<tr class="memitem:a4bd4216f95c6a0940550928aed333bc0" id="r_a4bd4216f95c6a0940550928aed333bc0"><td class="memItemLeft">&#160;</td><td class="memItemRight"><a class="el" href="#a4bd4216f95c6a0940550928aed333bc0">TEST_CASE</a> (&quot;US: Sin colision&quot;)</td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a7596178d847d90853d5f919b1538d5dc" name="a7596178d847d90853d5f919b1538d5dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7596178d847d90853d5f919b1538d5dc">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;US: Colision&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="test__unordored__map_8cpp_source.html#l00008">8</a> del archivo <a class="el" href="test__unordored__map_8cpp_source.html">test_unordored_map.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">    8</span>             : Colision<span class="stringliteral">&quot;) {</span></div>
+<div class="line"><span class="lineno">    9</span><span class="stringliteral">    std::unordered_set&lt;naidu::Board, naidu::BoardHash&gt; visited;</span></div>
+<div class="line"><span class="lineno">   10</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   11</span><span class="stringliteral">    naidu::Board a(3);</span></div>
+<div class="line"><span class="lineno">   12</span><span class="stringliteral">    visited.insert(a);</span></div>
+<div class="line"><span class="lineno">   13</span><span class="stringliteral">    naidu::Board b(3);</span></div>
+<div class="line"><span class="lineno">   14</span><span class="stringliteral">    const auto [it, inserted] = visited.insert(b);</span></div>
+<div class="line"><span class="lineno">   15</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   16</span><span class="stringliteral">    CHECK(!inserted);</span></div>
+<div class="line"><span class="lineno">   17</span><span class="stringliteral">}</span></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="test__board__construction_8cpp_source.html#l00011">TEST_CASE()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__unordored__map_8cpp_a7596178d847d90853d5f919b1538d5dc_cgraph.png" border="0" usemap="#atest__unordored__map_8cpp_a7596178d847d90853d5f919b1538d5dc_cgraph" loading="lazy" alt=""/></div>
+<map name="atest__unordored__map_8cpp_a7596178d847d90853d5f919b1538d5dc_cgraph" id="atest__unordored__map_8cpp_a7596178d847d90853d5f919b1538d5dc_cgraph">
+<area shape="rect" title=" " alt="" coords="5,115,105,141"/>
+<area shape="rect" href="test__board__construction_8cpp.html#afe5596495ba3c15ca57c1507e2e6a6b7" title=" " alt="" coords="153,115,252,141"/>
+<area shape="poly" title=" " alt="" coords="104,125,139,127,135,129,106,131"/>
+<area shape="poly" title=" " alt="" coords="176,114,172,106,175,96,186,90,202,88,220,91,231,99,226,100,218,96,202,93,187,95,179,100,177,106,182,115"/>
+<area shape="rect" href="namespacefixtures.html#a01c683279d72caaa795b04974cd6d8d6" title=" " alt="" coords="300,115,453,141"/>
+<area shape="poly" title=" " alt="" coords="252,125,287,127,282,129,253,131"/>
+<area shape="poly" title=" " alt="" coords="346,113,341,106,345,96,357,90,377,88,398,91,410,100,405,99,396,96,377,93,359,95,349,100,347,105,352,115"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="523,5,637,32"/>
+<area shape="poly" title=" " alt="" coords="394,112,440,78,500,42,517,37,513,39,503,46,443,82,396,116"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="518,56,642,83"/>
+<area shape="poly" title=" " alt="" coords="425,112,519,87,514,88,426,117"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac" title="Devuelve el índice lineal del hueco." alt="" coords="511,107,649,149"/>
+<area shape="poly" title=" " alt="" coords="454,125,498,128,493,128,454,131"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a4ac1d6cb6ab37b0de15072e09ea12c32" title="Comprueba si el tablero está en el estado resuelto." alt="" coords="501,173,659,200"/>
+<area shape="poly" title=" " alt="" coords="426,139,519,168,514,169,425,145"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="520,224,640,267"/>
+<area shape="poly" title=" " alt="" coords="397,139,444,173,503,210,513,217,508,217,500,214,441,178,395,145"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4bd4216f95c6a0940550928aed333bc0" name="a4bd4216f95c6a0940550928aed333bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bd4216f95c6a0940550928aed333bc0">&#9670;&#160;</a></span>TEST_CASE() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;US: Sin colision&quot;</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definición en la línea <a class="el" href="test__unordored__map_8cpp_source.html#l00019">19</a> del archivo <a class="el" href="test__unordored__map_8cpp_source.html">test_unordored_map.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   19</span>             : Sin colision<span class="stringliteral">&quot;) {</span></div>
+<div class="line"><span class="lineno">   20</span><span class="stringliteral">    std::unordered_set&lt;naidu::Board, naidu::BoardHash&gt; visited;</span></div>
+<div class="line"><span class="lineno">   21</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   22</span><span class="stringliteral">    naidu::Board a(3);</span></div>
+<div class="line"><span class="lineno">   23</span><span class="stringliteral">    visited.insert(a);</span></div>
+<div class="line"><span class="lineno">   24</span><span class="stringliteral">    a.move(naidu::Direction::UP);</span></div>
+<div class="line"><span class="lineno">   25</span><span class="stringliteral">    const auto [it, inserted] = visited.insert(a);</span></div>
+<div class="line"><span class="lineno">   26</span><span class="stringliteral"></span> </div>
+<div class="line"><span class="lineno">   27</span><span class="stringliteral">    CHECK(inserted);</span></div>
+<div class="line"><span class="lineno">   28</span><span class="stringliteral">}</span></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board_8cpp_source.html#l00148">naidu::Board::move()</a>, <a class="el" href="test__board__construction_8cpp_source.html#l00011">TEST_CASE()</a> y <a class="el" href="direction_8hpp_source.html#l00018">naidu::UP</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="test__unordored__map_8cpp_a4bd4216f95c6a0940550928aed333bc0_cgraph.png" border="0" usemap="#atest__unordored__map_8cpp_a4bd4216f95c6a0940550928aed333bc0_cgraph" loading="lazy" alt=""/></div>
+<map name="atest__unordored__map_8cpp_a4bd4216f95c6a0940550928aed333bc0_cgraph" id="atest__unordored__map_8cpp_a4bd4216f95c6a0940550928aed333bc0_cgraph">
+<area shape="rect" title=" " alt="" coords="5,77,105,104"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9" title="Intenta mover el hueco en la dirección m." alt="" coords="153,40,287,67"/>
+<area shape="poly" title=" " alt="" coords="104,77,145,69,141,73,106,82"/>
+<area shape="rect" href="test__board__construction_8cpp.html#afe5596495ba3c15ca57c1507e2e6a6b7" title=" " alt="" coords="170,115,270,141"/>
+<area shape="poly" title=" " alt="" coords="104,99,157,112,153,115,106,104"/>
+<area shape="poly" title=" " alt="" coords="191,114,186,106,190,96,201,90,220,88,240,91,252,99,246,100,238,96,220,93,203,95,194,100,192,105,196,115"/>
+<area shape="rect" href="namespacefixtures.html#a01c683279d72caaa795b04974cd6d8d6" title=" " alt="" coords="335,115,488,141"/>
+<area shape="poly" title=" " alt="" coords="269,125,322,127,317,129,270,131"/>
+<area shape="poly" title=" " alt="" coords="379,113,373,106,377,96,390,90,412,88,435,91,448,100,443,99,433,96,412,93,392,95,381,100,378,105,384,115"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="558,5,672,32"/>
+<area shape="poly" title=" " alt="" coords="429,112,475,78,535,42,548,39,552,37,538,46,478,82,431,116"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="553,56,677,83"/>
+<area shape="poly" title=" " alt="" coords="460,112,554,87,549,88,461,117"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac" title="Devuelve el índice lineal del hueco." alt="" coords="546,107,684,149"/>
+<area shape="poly" title=" " alt="" coords="489,125,533,128,528,128,489,131"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a4ac1d6cb6ab37b0de15072e09ea12c32" title="Comprueba si el tablero está en el estado resuelto." alt="" coords="536,173,694,200"/>
+<area shape="poly" title=" " alt="" coords="461,139,554,168,549,169,460,145"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="555,224,675,267"/>
+<area shape="poly" title=" " alt="" coords="432,139,479,173,538,210,548,217,543,217,535,214,476,178,430,145"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a href="dir_7723471cf184e4dd0b153e7448fcad0f.html">general</a></li><li class="navelem"><a href="test__unordored__map_8cpp.html">test_unordored_map.cpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Archivo de código fuente src/solver/solver.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('solver_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">solver.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="solver_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="board_8hpp.html">board/board.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="direction_8hpp.html">core/direction.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="evaluation_8hpp.html">evaluation/evaluation.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenaidu_1_1solver.html">naidu::solver</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="structnaidu_1_1solver_1_1Solution.html">   16</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structnaidu_1_1solver_1_1Solution.html">Solution</a> {</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structnaidu_1_1solver_1_1Solution.html#a29567a8c5d5d48866b052d978309a7b3">   17</a></span>        std::vector&lt;Direction&gt; <a class="code hl_variable" href="structnaidu_1_1solver_1_1Solution.html#a29567a8c5d5d48866b052d978309a7b3">moves</a>;   </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structnaidu_1_1solver_1_1Solution.html#abd816af1b0c9214d337ce143793edca2">   18</a></span>        std::uint16_t <a class="code hl_variable" href="structnaidu_1_1solver_1_1Solution.html#abd816af1b0c9214d337ce143793edca2">cost</a>;             </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structnaidu_1_1solver_1_1Solution.html#ad649b059f3febb835964a3010380dc11">   19</a></span>        std::uint64_t <a class="code hl_variable" href="structnaidu_1_1solver_1_1Solution.html#ad649b059f3febb835964a3010380dc11">nodes_expanded</a>;   </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structnaidu_1_1solver_1_1Solution.html#a62a09ac08e4f204a10fd85d1d3beb0aa">   20</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="structnaidu_1_1solver_1_1Solution.html#a62a09ac08e4f204a10fd85d1d3beb0aa">found</a>;                     </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    };</div>
+</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="structnaidu_1_1solver_1_1Config.html">   26</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structnaidu_1_1solver_1_1Config.html">Config</a> {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="structnaidu_1_1solver_1_1Config.html#a85dcc562cc0a88423c73eeee4d3e5bfc">   27</a></span>        <a class="code hl_typedef" href="namespacenaidu_1_1evaluation.html#a00edf3a90cd05b589b2d73e444e63863">evaluation::EvaluationFn</a> <a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a85dcc562cc0a88423c73eeee4d3e5bfc">eval_fn</a>;                   </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="structnaidu_1_1solver_1_1Config.html#a7df4c850f048c1ae30fde20834aa91aa">   28</a></span>        std::function&lt;bool()&gt; <a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a7df4c850f048c1ae30fde20834aa91aa">cancel_requested</a> = <span class="keyword">nullptr</span>;   </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="structnaidu_1_1solver_1_1Config.html#addedafd3219e33cfe2225af32e635432">   29</a></span>        std::uint64_t <a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#addedafd3219e33cfe2225af32e635432">max_nodes</a> = 10&#39;000&#39;000;               </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="structnaidu_1_1solver_1_1Config.html#a5303b954f1bd89dfe63fe0ffff13107e">   30</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a5303b954f1bd89dfe63fe0ffff13107e">avoid_revisits</a> = <span class="keyword">false</span>;                        </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="structnaidu_1_1solver_1_1Config.html#a0b82393bc386e27be882d4242c928869">   31</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="structnaidu_1_1solver_1_1Config.html#a0b82393bc386e27be882d4242c928869">weighted_cost</a> = <span class="keyword">false</span>;                         </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    };</div>
+</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <a class="code hl_struct" href="structnaidu_1_1solver_1_1Solution.html">Solution</a> <a class="code hl_function" href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4">ida</a>(</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keyword">const</span> <a class="code hl_class" href="classnaidu_1_1Board.html">Board</a>&amp; initial,</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">const</span> <a class="code hl_class" href="classnaidu_1_1Board.html">Board</a>&amp; goal,</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keyword">const</span> <a class="code hl_struct" href="structnaidu_1_1solver_1_1Config.html">Config</a>&amp; config = {}</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    );</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="ttc" id="aboard_8hpp_html"><div class="ttname"><a href="board_8hpp.html">board.hpp</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html"><div class="ttname"><a href="classnaidu_1_1Board.html">naidu::Board</a></div><div class="ttdoc">Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N.</div><div class="ttdef"><b>Definición</b> <a href="board_8hpp_source.html#l00026">board.hpp:26</a></div></div>
+<div class="ttc" id="adirection_8hpp_html"><div class="ttname"><a href="direction_8hpp.html">direction.hpp</a></div></div>
+<div class="ttc" id="aevaluation_8hpp_html"><div class="ttname"><a href="evaluation_8hpp.html">evaluation.hpp</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1evaluation_html_a00edf3a90cd05b589b2d73e444e63863"><div class="ttname"><a href="namespacenaidu_1_1evaluation.html#a00edf3a90cd05b589b2d73e444e63863">naidu::evaluation::EvaluationFn</a></div><div class="ttdeci">std::uint16_t(*)( const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos, std::uint16_t g) noexcept EvaluationFn</div><div class="ttdoc">Firma común de las funciones de evaluación.</div><div class="ttdef"><b>Definición</b> <a href="evaluation_8hpp_source.html#l00020">evaluation.hpp:20</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1solver_html"><div class="ttname"><a href="namespacenaidu_1_1solver.html">naidu::solver</a></div><div class="ttdef"><b>Definición</b> <a href="solver_8cpp_source.html#l00174">solver.cpp:174</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1solver_html_a58e65e18b4d9edeeb787b0d6ab36f5c4"><div class="ttname"><a href="namespacenaidu_1_1solver.html#a58e65e18b4d9edeeb787b0d6ab36f5c4">naidu::solver::ida</a></div><div class="ttdeci">Solution ida(const Board &amp;initial, const Board &amp;goal, const Config &amp;config)</div><div class="ttdoc">Resuelve un num-puzzle usando IDA* (Iterative Deepening A*).</div><div class="ttdef"><b>Definición</b> <a href="solver_8cpp_source.html#l00176">solver.cpp:176</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html">naidu::solver::Config</a></div><div class="ttdoc">Configuración de la búsqueda.</div><div class="ttdef"><b>Definición</b> <a href="#l00026">solver.hpp:26</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_a0b82393bc386e27be882d4242c928869"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#a0b82393bc386e27be882d4242c928869">naidu::solver::Config::weighted_cost</a></div><div class="ttdeci">bool weighted_cost</div><div class="ttdoc">Coste ponderado (true), uniforme (false).</div><div class="ttdef"><b>Definición</b> <a href="#l00031">solver.hpp:31</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_a5303b954f1bd89dfe63fe0ffff13107e"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#a5303b954f1bd89dfe63fe0ffff13107e">naidu::solver::Config::avoid_revisits</a></div><div class="ttdeci">bool avoid_revisits</div><div class="ttdoc">Evitar revisitar estados en el camino actual.</div><div class="ttdef"><b>Definición</b> <a href="#l00030">solver.hpp:30</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_a7df4c850f048c1ae30fde20834aa91aa"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#a7df4c850f048c1ae30fde20834aa91aa">naidu::solver::Config::cancel_requested</a></div><div class="ttdeci">std::function&lt; bool()&gt; cancel_requested</div><div class="ttdoc">Función para detener busqueda.</div><div class="ttdef"><b>Definición</b> <a href="#l00028">solver.hpp:28</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_a85dcc562cc0a88423c73eeee4d3e5bfc"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#a85dcc562cc0a88423c73eeee4d3e5bfc">naidu::solver::Config::eval_fn</a></div><div class="ttdeci">evaluation::EvaluationFn eval_fn</div><div class="ttdoc">Función de evaluación.</div><div class="ttdef"><b>Definición</b> <a href="#l00027">solver.hpp:27</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Config_html_addedafd3219e33cfe2225af32e635432"><div class="ttname"><a href="structnaidu_1_1solver_1_1Config.html#addedafd3219e33cfe2225af32e635432">naidu::solver::Config::max_nodes</a></div><div class="ttdeci">std::uint64_t max_nodes</div><div class="ttdoc">Límite de nodos expandidos.</div><div class="ttdef"><b>Definición</b> <a href="#l00029">solver.hpp:29</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Solution_html"><div class="ttname"><a href="structnaidu_1_1solver_1_1Solution.html">naidu::solver::Solution</a></div><div class="ttdoc">Resultado de la búsqueda.</div><div class="ttdef"><b>Definición</b> <a href="#l00016">solver.hpp:16</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Solution_html_a29567a8c5d5d48866b052d978309a7b3"><div class="ttname"><a href="structnaidu_1_1solver_1_1Solution.html#a29567a8c5d5d48866b052d978309a7b3">naidu::solver::Solution::moves</a></div><div class="ttdeci">std::vector&lt; Direction &gt; moves</div><div class="ttdoc">Secuencia de movimientos (vacía si no se encontró).</div><div class="ttdef"><b>Definición</b> <a href="#l00017">solver.hpp:17</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Solution_html_a62a09ac08e4f204a10fd85d1d3beb0aa"><div class="ttname"><a href="structnaidu_1_1solver_1_1Solution.html#a62a09ac08e4f204a10fd85d1d3beb0aa">naidu::solver::Solution::found</a></div><div class="ttdeci">bool found</div><div class="ttdoc">¿Se encontró solución?</div><div class="ttdef"><b>Definición</b> <a href="#l00020">solver.hpp:20</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Solution_html_abd816af1b0c9214d337ce143793edca2"><div class="ttname"><a href="structnaidu_1_1solver_1_1Solution.html#abd816af1b0c9214d337ce143793edca2">naidu::solver::Solution::cost</a></div><div class="ttdeci">std::uint16_t cost</div><div class="ttdoc">Costo total del camino.</div><div class="ttdef"><b>Definición</b> <a href="#l00018">solver.hpp:18</a></div></div>
+<div class="ttc" id="astructnaidu_1_1solver_1_1Solution_html_ad649b059f3febb835964a3010380dc11"><div class="ttname"><a href="structnaidu_1_1solver_1_1Solution.html#ad649b059f3febb835964a3010380dc11">naidu::solver::Solution::nodes_expanded</a></div><div class="ttdeci">std::uint64_t nodes_expanded</div><div class="ttdoc">Nodos expandidos durante la búsqueda.</div><div class="ttdef"><b>Definición</b> <a href="#l00019">solver.hpp:19</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_041db6ad6a3d44280e40e5af409429cb.html">solver</a></li><li class="navelem"><a href="solver_8hpp.html">solver.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

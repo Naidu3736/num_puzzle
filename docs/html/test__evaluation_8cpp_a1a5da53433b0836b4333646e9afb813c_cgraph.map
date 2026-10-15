@@ -1,0 +1,41 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,301,105,328"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="586,243,710,269"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,326,177,349,228,360,285,368,345,371,405,368,464,358,520,338,536,326,544,311,552,295,568,279,575,277,580,275,571,283,557,298,549,314,540,329,523,342,466,363,406,374,345,376,285,373,228,365,175,354,95,331"/>
+<area shape="rect" id="Node000003" href="$namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad" title="Evaluación 1: Manhattan + fichas mal colocadas + dispersión." alt="" coords="153,165,280,208"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="72,299,175,215,177,221,75,303"/>
+<area shape="rect" id="Node000010" href="$test__board__construction_8cpp.html#afe5596495ba3c15ca57c1507e2e6a6b7" title=" " alt="" coords="167,301,266,328"/>
+<area shape="poly" id="edge19_Node000001_Node000010" title=" " alt="" coords="105,312,154,313,149,316,106,317"/>
+<area shape="poly" id="edge9_Node000003_Node000003" title=" " alt="" coords="185,164,184,155,189,147,200,141,216,139,234,141,246,149,241,150,232,146,216,144,201,146,193,150,189,156,190,165"/>
+<area shape="rect" id="Node000004" href="$namespacenaidu_1_1component.html#a5aa323aa12d6f0d47981caadf025a27f" title="Dispersión promedio del hueco respecto a fichas mal colocadas." alt="" coords="343,211,506,253"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="280,198,331,210,325,212,281,203"/>
+<area shape="rect" id="Node000008" href="$namespacenaidu_1_1component.html#a98dbc965e47e6afe68a7d482ffa677dd" title="Suma de distancias Manhattan de todas las fichas a su meta." alt="" coords="328,120,521,163"/>
+<area shape="poly" id="edge10_Node000003_Node000008" title=" " alt="" coords="279,170,315,164,311,167,282,175"/>
+<area shape="rect" id="Node000009" href="$namespacenaidu_1_1component.html#aa2edc1ec363b10621ca53482da223200" title="Número de fichas fuera de su meta." alt="" coords="329,29,520,72"/>
+<area shape="poly" id="edge15_Node000003_Node000009" title=" " alt="" coords="234,163,274,122,327,82,339,77,335,81,329,86,278,126,238,167"/>
+<area shape="poly" id="edge6_Node000004_Node000002" title=" " alt="" coords="507,238,574,247,568,248,507,243"/>
+<area shape="poly" id="edge5_Node000004_Node000004" title=" " alt="" coords="385,209,383,201,390,192,404,186,425,184,447,186,462,195,457,195,446,192,425,189,405,191,393,196,388,202,390,211"/>
+<area shape="rect" id="Node000005" href="$classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="591,125,705,152"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="468,208,568,162,589,157,584,159,570,166,470,212"/>
+<area shape="rect" id="Node000006" href="$classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac" title="Devuelve el índice lineal del hueco." alt="" coords="579,293,717,336"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="490,251,522,263,581,287,576,287,520,268,490,257"/>
+<area shape="rect" id="Node000007" href="$classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="588,176,708,219"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="506,217,575,208,570,210,508,222"/>
+<area shape="poly" id="edge12_Node000008_Node000002" title=" " alt="" coords="501,161,523,173,538,187,548,201,556,215,571,229,581,236,575,236,568,233,552,219,543,204,534,190,520,177,501,166"/>
+<area shape="poly" id="edge11_Node000008_Node000005" title=" " alt="" coords="521,138,579,139,574,140,522,143"/>
+<area shape="poly" id="edge14_Node000008_Node000007" title=" " alt="" coords="513,161,576,178,571,179,513,166"/>
+<area shape="poly" id="edge13_Node000008_Node000008" title=" " alt="" coords="385,118,383,110,390,101,404,95,425,93,447,96,462,104,457,105,446,101,425,99,405,101,393,105,388,111,390,120"/>
+<area shape="poly" id="edge16_Node000009_Node000005" title=" " alt="" coords="491,70,522,82,605,118,600,119,520,86,491,75"/>
+<area shape="poly" id="edge18_Node000009_Node000007" title=" " alt="" coords="504,70,523,82,540,102,548,123,556,142,571,162,578,169,573,168,567,166,551,145,543,125,536,105,520,86,504,75"/>
+<area shape="poly" id="edge17_Node000009_Node000009" title=" " alt="" coords="385,28,383,19,390,10,404,5,425,3,447,5,462,13,457,14,446,10,425,8,405,10,393,15,388,21,390,30"/>
+<area shape="poly" id="edge27_Node000010_Node000010" title=" " alt="" coords="188,300,183,293,187,283,198,277,216,275,236,277,248,286,242,286,234,282,216,280,200,282,191,287,189,292,193,302"/>
+<area shape="rect" id="Node000011" href="$namespacefixtures.html#a01c683279d72caaa795b04974cd6d8d6" title=" " alt="" coords="348,301,501,328"/>
+<area shape="poly" id="edge20_Node000010_Node000011" title=" " alt="" coords="266,312,335,314,330,315,267,317"/>
+<area shape="poly" id="edge23_Node000011_Node000002" title=" " alt="" coords="478,298,577,274,582,273,479,303"/>
+<area shape="poly" id="edge21_Node000011_Node000005" title=" " alt="" coords="465,298,494,284,519,264,536,238,542,213,549,188,567,162,575,159,580,157,571,166,553,190,547,214,541,240,523,267,497,288,467,303"/>
+<area shape="poly" id="edge24_Node000011_Node000006" title=" " alt="" coords="502,312,566,314,561,315,502,317"/>
+<area shape="poly" id="edge26_Node000011_Node000007" title=" " alt="" coords="454,298,520,263,544,246,568,228,576,227,581,225,571,233,547,250,523,268,456,303"/>
+<area shape="poly" id="edge22_Node000011_Node000011" title=" " alt="" coords="389,300,383,293,387,283,402,277,425,275,449,277,464,286,459,286,448,282,425,280,403,282,391,287,388,292,394,302"/>
+<area shape="rect" id="Node000012" href="$classnaidu_1_1Board.html#a4ac1d6cb6ab37b0de15072e09ea12c32" title="Comprueba si el tablero está en el estado resuelto." alt="" coords="569,360,727,387"/>
+<area shape="poly" id="edge25_Node000011_Node000012" title=" " alt="" coords="479,326,583,356,577,356,478,331"/>
+</map>

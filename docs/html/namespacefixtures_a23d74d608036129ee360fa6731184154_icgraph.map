@@ -1,0 +1,6 @@
+<map id="fixtures::solved_4x4" name="fixtures::solved_4x4">
+<area shape="rect" id="Node000001" title=" " alt="" coords="153,29,291,56"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="249,14,240,10,222,8,205,10,195,15,193,20,198,30,193,28,188,21,191,11,203,5,222,3,242,5,254,14"/>
+<area shape="rect" id="Node000002" href="$test__board__construction_8cpp.html#aadc69328d5188cc531562574172ab7f9" title=" " alt="" coords="5,29,105,56"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="135,43,105,45,105,40,140,42"/>
+</map>

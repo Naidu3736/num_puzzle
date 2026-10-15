@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Archivo de código fuente src/evaluation/component.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('component_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">component.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="component_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="board_8hpp.html">board/board.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;span&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenaidu_1_1component.html">naidu::component</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="comment">// --------------------------------------------------------</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="comment">// Componente de costo</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="comment">// --------------------------------------------------------</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::uint16_t <a class="code hl_function" href="namespacenaidu_1_1component.html#aaf4e0eafd85533318bfd22a8f1c7b083">step_cost</a>(</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        std::uint8_t moved_tile,</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        std::uint8_t new_empty_index,</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        std::span&lt;const std::uint8_t&gt; goal_pos,</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">bool</span> weighted</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    ) <span class="keyword">noexcept</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="comment">// --------------------------------------------------------</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">// Componentes heurísticos</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">// --------------------------------------------------------</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    std::uint16_t <a class="code hl_function" href="namespacenaidu_1_1component.html#a98dbc965e47e6afe68a7d482ffa677dd">manhattan_total</a>(</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keyword">const</span> Board&amp; b,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        std::span&lt;const std::uint8_t&gt; goal_pos</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    );</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    std::uint16_t <a class="code hl_function" href="namespacenaidu_1_1component.html#a5ee867554a720e7a9657f21048c01975">broken_pairs</a>(</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">const</span> Board&amp; b,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        std::span&lt;const std::uint8_t&gt; goal_pos</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    );</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::uint16_t <a class="code hl_function" href="namespacenaidu_1_1component.html#aa2edc1ec363b10621ca53482da223200">misplaced_tiles</a>(</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keyword">const</span> Board&amp; b,</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        std::span&lt;const std::uint8_t&gt; goal_pos</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    );</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    std::uint16_t <a class="code hl_function" href="namespacenaidu_1_1component.html#a076a19f62fc59f74a485906361657a20">tiles_at_distance_1</a>(</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        <span class="keyword">const</span> Board&amp; b,</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        std::span&lt;const std::uint8_t&gt; goal_pos</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    );</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordtype">double</span> <a class="code hl_function" href="namespacenaidu_1_1component.html#a5aa323aa12d6f0d47981caadf025a27f">blank_dispersion</a>(</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keyword">const</span> Board&amp; b,</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        std::span&lt;const std::uint8_t&gt; goal_pos</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    );</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>}</div>
+<div class="ttc" id="aboard_8hpp_html"><div class="ttname"><a href="board_8hpp.html">board.hpp</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1component_html"><div class="ttname"><a href="namespacenaidu_1_1component.html">naidu::component</a></div><div class="ttdef"><b>Definición</b> <a href="component_8cpp_source.html#l00041">component.cpp:41</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1component_html_a076a19f62fc59f74a485906361657a20"><div class="ttname"><a href="namespacenaidu_1_1component.html#a076a19f62fc59f74a485906361657a20">naidu::component::tiles_at_distance_1</a></div><div class="ttdeci">std::uint16_t tiles_at_distance_1(const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</div><div class="ttdoc">Fichas mal colocadas a Manhattan 1 de su meta.</div><div class="ttdef"><b>Definición</b> <a href="component_8cpp_source.html#l00121">component.cpp:121</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1component_html_a5aa323aa12d6f0d47981caadf025a27f"><div class="ttname"><a href="namespacenaidu_1_1component.html#a5aa323aa12d6f0d47981caadf025a27f">naidu::component::blank_dispersion</a></div><div class="ttdeci">double blank_dispersion(const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</div><div class="ttdoc">Dispersión promedio del hueco respecto a fichas mal colocadas.</div><div class="ttdef"><b>Definición</b> <a href="component_8cpp_source.html#l00138">component.cpp:138</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1component_html_a5ee867554a720e7a9657f21048c01975"><div class="ttname"><a href="namespacenaidu_1_1component.html#a5ee867554a720e7a9657f21048c01975">naidu::component::broken_pairs</a></div><div class="ttdeci">std::uint16_t broken_pairs(const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</div><div class="ttdoc">Número de pares adyacentes mal ordenados (desorden local).</div><div class="ttdef"><b>Definición</b> <a href="component_8cpp_source.html#l00074">component.cpp:74</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1component_html_a98dbc965e47e6afe68a7d482ffa677dd"><div class="ttname"><a href="namespacenaidu_1_1component.html#a98dbc965e47e6afe68a7d482ffa677dd">naidu::component::manhattan_total</a></div><div class="ttdeci">std::uint16_t manhattan_total(const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</div><div class="ttdoc">Suma de distancias Manhattan de todas las fichas a su meta.</div><div class="ttdef"><b>Definición</b> <a href="component_8cpp_source.html#l00058">component.cpp:58</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1component_html_aa2edc1ec363b10621ca53482da223200"><div class="ttname"><a href="namespacenaidu_1_1component.html#aa2edc1ec363b10621ca53482da223200">naidu::component::misplaced_tiles</a></div><div class="ttdeci">std::uint16_t misplaced_tiles(const Board &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</div><div class="ttdoc">Número de fichas fuera de su meta.</div><div class="ttdef"><b>Definición</b> <a href="component_8cpp_source.html#l00104">component.cpp:104</a></div></div>
+<div class="ttc" id="anamespacenaidu_1_1component_html_aaf4e0eafd85533318bfd22a8f1c7b083"><div class="ttname"><a href="namespacenaidu_1_1component.html#aaf4e0eafd85533318bfd22a8f1c7b083">naidu::component::step_cost</a></div><div class="ttdeci">std::uint16_t step_cost(std::uint8_t moved_tile, std::uint8_t new_empty_index, std::span&lt; const std::uint8_t &gt; goal_pos, bool weighted) noexcept</div><div class="ttdoc">Costo de transición entre dos estados adyacentes.</div><div class="ttdef"><b>Definición</b> <a href="component_8cpp_source.html#l00043">component.cpp:43</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_211e0f6adb36544d22235d2adc40a517.html">evaluation</a></li><li class="navelem"><a href="component_8hpp.html">component.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

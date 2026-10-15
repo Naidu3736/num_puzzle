@@ -1,0 +1,26 @@
+var classnaidu_1_1Board =
+[
+    [ "Board", "classnaidu_1_1Board.html#ad4fc5ed78cc93ab03f996cbc3a08ea3c", null ],
+    [ "Board", "classnaidu_1_1Board.html#afb5bd20f5b1a40b9fa2763ac5d7e0f51", null ],
+    [ "Board", "classnaidu_1_1Board.html#a9cb930c722141b4c4222b4e5ea244dde", null ],
+    [ "apply", "classnaidu_1_1Board.html#ac187e237f061761ba23f3418c41bc5b3", null ],
+    [ "at", "classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a", null ],
+    [ "at", "classnaidu_1_1Board.html#a76860f2535adb526797ceaf867c6875b", null ],
+    [ "dim", "classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337", null ],
+    [ "empty_index", "classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac", null ],
+    [ "is_solvable", "classnaidu_1_1Board.html#ab4d4df6f09f8f37842b68e8fee429e04", null ],
+    [ "is_solved", "classnaidu_1_1Board.html#a4ac1d6cb6ab37b0de15072e09ea12c32", null ],
+    [ "legal_moves", "classnaidu_1_1Board.html#ae5927ff613abc30c3a4015d3d4b27a5f", null ],
+    [ "move", "classnaidu_1_1Board.html#a1f90e96f7037c77e87b72788fc895af9", null ],
+    [ "operator!=", "classnaidu_1_1Board.html#a580d6dcc72d504e987194b21b0723bba", null ],
+    [ "operator==", "classnaidu_1_1Board.html#af5b3aa81b431cf59983e42cb668a6809", null ],
+    [ "peek_empty", "classnaidu_1_1Board.html#abaab9492b6b831f874a5f2c7be8c237d", null ],
+    [ "peek_tile", "classnaidu_1_1Board.html#ac275bea4902020994a2462caf3ed3917", null ],
+    [ "reset", "classnaidu_1_1Board.html#aaac8dd20fedb46ab483b9cc70f046740", null ],
+    [ "resize", "classnaidu_1_1Board.html#a6984ceb36ab56184586162dfcb7695da", null ],
+    [ "tile_count", "classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4", null ],
+    [ "tiles", "classnaidu_1_1Board.html#acfa91c67a9c781e336100d285b8a0a5f", null ],
+    [ "MAX_DIM", "classnaidu_1_1Board.html#afd7b489685e82085349ff8af25d4e980", null ],
+    [ "MAX_TILES", "classnaidu_1_1Board.html#aa183658ada2a47708a645a98c2b73f44", null ],
+    [ "MIN_DIM", "classnaidu_1_1Board.html#a51cb560a43fcd771650682e2b4fb96d0", null ]
+];

@@ -1,0 +1,5 @@
+<map id="naidu::Board::peek_empty" name="naidu::Board::peek_empty">
+<area shape="rect" id="Node000001" title="Devuelve el índice donde terminaría el hueco tras moverse en d." alt="" coords="153,5,283,48"/>
+<area shape="rect" id="Node000002" href="$test__board__queries_8cpp.html#a441a21ee9dc2ef236a86e9af1e52abd9" title=" " alt="" coords="5,13,105,40"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,27,105,29,105,24,140,26"/>
+</map>

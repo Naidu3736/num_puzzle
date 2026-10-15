@@ -1,0 +1,5 @@
+<map id="naidu::solver::Config" name="naidu::solver::Config">
+<area shape="rect" id="Node000001" title="Configuración de la búsqueda." alt="" coords="5,104,147,131"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1Board.html" title="Representa un tablero de num_puzzle (puzzle deslizante) de tamaño N×N." alt="" coords="29,5,123,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,46,79,104,73,103,74,49"/>
+</map>

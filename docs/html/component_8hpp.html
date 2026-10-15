@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Referencia del archivo src/evaluation/component.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('component_8hpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo component.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="board_8hpp_source.html">board/board.hpp</a>&quot;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+<code>#include &lt;span&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependencias incluidas en component.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="component_8hpp__incl.png" border="0" usemap="#asrc_2evaluation_2component_8hpp" loading="lazy" alt=""/></div>
+<map name="asrc_2evaluation_2component_8hpp" id="asrc_2evaluation_2component_8hpp">
+<area shape="rect" title=" " alt="" coords="287,5,482,32"/>
+<area shape="rect" href="board_8hpp.html" title=" " alt="" coords="196,80,310,107"/>
+<area shape="poly" title=" " alt="" coords="360,34,290,75,287,70,364,31"/>
+<area shape="rect" title=" " alt="" coords="260,304,320,331"/>
+<area shape="poly" title=" " alt="" coords="394,30,410,59,424,97,432,139,430,161,425,182,405,218,379,250,323,297,321,293,375,246,400,215,420,180,425,160,426,140,419,98,405,61,392,35"/>
+<area shape="rect" title=" " alt="" coords="360,155,409,181"/>
+<area shape="poly" title=" " alt="" coords="386,30,387,140,382,138,383,35"/>
+<area shape="rect" href="direction_8hpp.html" title=" " alt="" coords="21,229,146,256"/>
+<area shape="poly" title=" " alt="" coords="193,97,160,103,123,113,89,130,62,156,56,170,56,185,69,216,63,216,51,186,51,169,57,153,86,126,121,108,159,98,197,94"/>
+<area shape="rect" title=" " alt="" coords="9,304,59,331"/>
+<area shape="poly" title=" " alt="" coords="193,101,160,108,121,119,83,135,49,157,26,178,13,200,8,225,11,255,23,290,18,291,6,257,3,224,8,198,22,175,46,153,81,130,120,114,159,103,197,98"/>
+<area shape="poly" title=" " alt="" coords="266,104,285,127,299,154,307,190,308,226,299,290,295,287,302,226,301,190,294,156,281,130,265,110"/>
+<area shape="rect" href="moveset_8hpp.html" title=" " alt="" coords="71,155,197,181"/>
+<area shape="poly" title=" " alt="" coords="230,109,169,148,166,144,234,105"/>
+<area shape="rect" title=" " alt="" coords="221,155,285,181"/>
+<area shape="poly" title=" " alt="" coords="254,105,255,140,250,138,252,110"/>
+<area shape="poly" title=" " alt="" coords="276,105,351,146,346,148,276,110"/>
+<area shape="poly" title=" " alt="" coords="77,255,53,293,49,289,73,258"/>
+<area shape="poly" title=" " alt="" coords="120,254,248,299,244,302,119,259"/>
+<area shape="poly" title=" " alt="" coords="127,180,103,218,99,215,124,184"/>
+<area shape="poly" title=" " alt="" coords="156,179,188,201,221,227,251,259,276,292,270,291,247,262,218,231,185,205,155,185"/>
+<area shape="rect" title=" " alt="" coords="170,229,208,256"/>
+<area shape="poly" title=" " alt="" coords="144,179,173,217,168,217,143,184"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="component_8hpp__dep__incl.png" border="0" usemap="#asrc_2evaluation_2component_8hppdep" loading="lazy" alt=""/></div>
+<map name="asrc_2evaluation_2component_8hppdep" id="asrc_2evaluation_2component_8hppdep">
+<area shape="rect" title=" " alt="" coords="317,5,513,32"/>
+<area shape="rect" href="component_8cpp.html" title=" " alt="" coords="5,88,201,115"/>
+<area shape="poly" title=" " alt="" coords="352,39,153,90,152,85,350,34"/>
+<area shape="rect" href="evaluation_8cpp.html" title=" " alt="" coords="225,88,416,115"/>
+<area shape="poly" title=" " alt="" coords="391,41,336,90,333,85,386,43"/>
+<area shape="rect" href="solver_8cpp.html" title=" " alt="" coords="440,88,582,115"/>
+<area shape="poly" title=" " alt="" coords="442,39,499,88,494,87,440,44"/>
+<area shape="rect" href="test__component_8cpp.html" title=" " alt="" coords="606,80,738,123"/>
+<area shape="poly" title=" " alt="" coords="470,34,609,79,603,79,469,40"/>
+</map>
+</div>
+</div>
+<p><a href="component_8hpp_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Espacios de nombres</h2></td></tr>
+<tr class="memitem:naidu" id="r_naidu"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu.html">naidu</a></td></tr>
+<tr class="memitem:naidu_3A_3Acomponent" id="r_naidu_3A_3Acomponent"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu_1_1component.html">naidu::component</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aaf4e0eafd85533318bfd22a8f1c7b083" id="r_aaf4e0eafd85533318bfd22a8f1c7b083"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu_1_1component.html#aaf4e0eafd85533318bfd22a8f1c7b083">naidu::component::step_cost</a> (std::uint8_t moved_tile, std::uint8_t new_empty_index, std::span&lt; const std::uint8_t &gt; goal_pos, bool weighted) noexcept</td></tr>
+<tr class="memdesc:aaf4e0eafd85533318bfd22a8f1c7b083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Costo de transición entre dos estados adyacentes.  <br /></td></tr>
+<tr class="memitem:a98dbc965e47e6afe68a7d482ffa677dd" id="r_a98dbc965e47e6afe68a7d482ffa677dd"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu_1_1component.html#a98dbc965e47e6afe68a7d482ffa677dd">naidu::component::manhattan_total</a> (const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</td></tr>
+<tr class="memdesc:a98dbc965e47e6afe68a7d482ffa677dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suma de distancias Manhattan de todas las fichas a su meta.  <br /></td></tr>
+<tr class="memitem:a5ee867554a720e7a9657f21048c01975" id="r_a5ee867554a720e7a9657f21048c01975"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu_1_1component.html#a5ee867554a720e7a9657f21048c01975">naidu::component::broken_pairs</a> (const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</td></tr>
+<tr class="memdesc:a5ee867554a720e7a9657f21048c01975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Número de pares adyacentes mal ordenados (desorden local).  <br /></td></tr>
+<tr class="memitem:aa2edc1ec363b10621ca53482da223200" id="r_aa2edc1ec363b10621ca53482da223200"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu_1_1component.html#aa2edc1ec363b10621ca53482da223200">naidu::component::misplaced_tiles</a> (const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</td></tr>
+<tr class="memdesc:aa2edc1ec363b10621ca53482da223200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Número de fichas fuera de su meta.  <br /></td></tr>
+<tr class="memitem:a076a19f62fc59f74a485906361657a20" id="r_a076a19f62fc59f74a485906361657a20"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu_1_1component.html#a076a19f62fc59f74a485906361657a20">naidu::component::tiles_at_distance_1</a> (const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</td></tr>
+<tr class="memdesc:a076a19f62fc59f74a485906361657a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fichas mal colocadas a Manhattan 1 de su meta.  <br /></td></tr>
+<tr class="memitem:a5aa323aa12d6f0d47981caadf025a27f" id="r_a5aa323aa12d6f0d47981caadf025a27f"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu_1_1component.html#a5aa323aa12d6f0d47981caadf025a27f">naidu::component::blank_dispersion</a> (const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</td></tr>
+<tr class="memdesc:a5aa323aa12d6f0d47981caadf025a27f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispersión promedio del hueco respecto a fichas mal colocadas.  <br /></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_211e0f6adb36544d22235d2adc40a517.html">evaluation</a></li><li class="navelem"><a href="component_8hpp.html">component.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

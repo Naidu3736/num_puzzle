@@ -1,0 +1,741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Referencia del espacio de nombres naidu::component</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('namespacenaidu_1_1component.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del espacio de nombres naidu::component</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aaf4e0eafd85533318bfd22a8f1c7b083" id="r_aaf4e0eafd85533318bfd22a8f1c7b083"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#aaf4e0eafd85533318bfd22a8f1c7b083">step_cost</a> (std::uint8_t moved_tile, std::uint8_t new_empty_index, std::span&lt; const std::uint8_t &gt; goal_pos, bool weighted) noexcept</td></tr>
+<tr class="memdesc:aaf4e0eafd85533318bfd22a8f1c7b083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Costo de transición entre dos estados adyacentes.  <br /></td></tr>
+<tr class="memitem:a98dbc965e47e6afe68a7d482ffa677dd" id="r_a98dbc965e47e6afe68a7d482ffa677dd"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a98dbc965e47e6afe68a7d482ffa677dd">manhattan_total</a> (const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</td></tr>
+<tr class="memdesc:a98dbc965e47e6afe68a7d482ffa677dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suma de distancias Manhattan de todas las fichas a su meta.  <br /></td></tr>
+<tr class="memitem:a5ee867554a720e7a9657f21048c01975" id="r_a5ee867554a720e7a9657f21048c01975"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a5ee867554a720e7a9657f21048c01975">broken_pairs</a> (const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</td></tr>
+<tr class="memdesc:a5ee867554a720e7a9657f21048c01975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Número de pares adyacentes mal ordenados (desorden local).  <br /></td></tr>
+<tr class="memitem:aa2edc1ec363b10621ca53482da223200" id="r_aa2edc1ec363b10621ca53482da223200"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#aa2edc1ec363b10621ca53482da223200">misplaced_tiles</a> (const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</td></tr>
+<tr class="memdesc:aa2edc1ec363b10621ca53482da223200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Número de fichas fuera de su meta.  <br /></td></tr>
+<tr class="memitem:a076a19f62fc59f74a485906361657a20" id="r_a076a19f62fc59f74a485906361657a20"><td class="memItemLeft">std::uint16_t&#160;</td><td class="memItemRight"><a class="el" href="#a076a19f62fc59f74a485906361657a20">tiles_at_distance_1</a> (const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</td></tr>
+<tr class="memdesc:a076a19f62fc59f74a485906361657a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fichas mal colocadas a Manhattan 1 de su meta.  <br /></td></tr>
+<tr class="memitem:a5aa323aa12d6f0d47981caadf025a27f" id="r_a5aa323aa12d6f0d47981caadf025a27f"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a5aa323aa12d6f0d47981caadf025a27f">blank_dispersion</a> (const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;b, std::span&lt; const std::uint8_t &gt; goal_pos)</td></tr>
+<tr class="memdesc:a5aa323aa12d6f0d47981caadf025a27f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispersión promedio del hueco respecto a fichas mal colocadas.  <br /></td></tr>
+</table>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones</h2>
+<a id="a5aa323aa12d6f0d47981caadf025a27f" name="a5aa323aa12d6f0d47981caadf025a27f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5aa323aa12d6f0d47981caadf025a27f">&#9670;&#160;</a></span>blank_dispersion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double naidu::component::blank_dispersion </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::span&lt; const std::uint8_t &gt;</td>          <td class="paramname"><span class="paramname"><em>goal_pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dispersión promedio del hueco respecto a fichas mal colocadas. </p>
+<p>Métrica de desorden: distancia Manhattan media entre el hueco y cada ficha fuera de su meta. Se devuelve con precisión completa; cada función de evaluación decide cómo tratarla.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>Tablero a evaluar. </td></tr>
+    <tr><td class="paramname">goal_pos</td><td>Mapa de posiciones meta. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Distancia media en celdas. 0.0 si el tablero está resuelto. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="component_8cpp_source.html#l00138">138</a> del archivo <a class="el" href="component_8cpp_source.html">component.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>      {</div>
+<div class="line"><span class="lineno">  142</span>        std::uint16_t total_distance = 0;</div>
+<div class="line"><span class="lineno">  143</span>        std::uint16_t misplaced = 0;</div>
+<div class="line"><span class="lineno">  144</span> </div>
+<div class="line"><span class="lineno">  145</span>        <span class="keywordflow">for</span> (std::uint8_t i = 0; i &lt; b.<a class="code hl_function" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">tile_count</a>(); ++i) {</div>
+<div class="line"><span class="lineno">  146</span>            <span class="keyword">const</span> <span class="keyword">auto</span> tile = b.<a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(i);</div>
+<div class="line"><span class="lineno">  147</span>            <span class="keywordflow">if</span> (tile == 0)</div>
+<div class="line"><span class="lineno">  148</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">if</span> (goal_pos[tile] == i)</div>
+<div class="line"><span class="lineno">  150</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  151</span>            total_distance += manhattan(b.<a class="code hl_function" href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac">empty_index</a>(), i, b.<a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a>());</div>
+<div class="line"><span class="lineno">  152</span>            ++misplaced;</div>
+<div class="line"><span class="lineno">  153</span>        }</div>
+<div class="line"><span class="lineno">  154</span> </div>
+<div class="line"><span class="lineno">  155</span>        <span class="keywordflow">return</span> misplaced == 0</div>
+<div class="line"><span class="lineno">  156</span>            ? 0.0</div>
+<div class="line"><span class="lineno">  157</span>            : <span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(total_distance) / misplaced;</div>
+<div class="line"><span class="lineno">  158</span>    }</div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_a29a6c512367aa1515226649177d25f2a"><div class="ttname"><a href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">naidu::Board::at</a></div><div class="ttdeci">std::uint8_t at(std::size_t index) const</div><div class="ttdoc">Devuelve la ficha en el índice lineal dado.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00109">board.cpp:109</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_aa27b65ba0fb898217ead8d43aabbfdb4"><div class="ttname"><a href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">naidu::Board::tile_count</a></div><div class="ttdeci">std::uint8_t tile_count() const noexcept</div><div class="ttdoc">Devuelve el número total de fichas (N²).</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00106">board.cpp:106</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ab08eb2bc1a7ffb966aa267f91dca15ac"><div class="ttname"><a href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac">naidu::Board::empty_index</a></div><div class="ttdeci">std::uint8_t empty_index() const noexcept</div><div class="ttdoc">Devuelve el índice lineal del hueco.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00107">board.cpp:107</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1Board_html_ab65a3e1adb23a5d6c1b12a8f8bed3337"><div class="ttname"><a href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">naidu::Board::dim</a></div><div class="ttdeci">std::uint8_t dim() const noexcept</div><div class="ttdoc">Devuelve la dimensión N del tablero.</div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00105">board.cpp:105</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board_8cpp_source.html#l00109">naidu::Board::at()</a>, <a class="el" href="component_8cpp_source.html#l00138">blank_dispersion()</a>, <a class="el" href="board_8cpp_source.html#l00105">naidu::Board::dim()</a>, <a class="el" href="board_8cpp_source.html#l00107">naidu::Board::empty_index()</a> y <a class="el" href="board_8cpp_source.html#l00106">naidu::Board::tile_count()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="component_8cpp_source.html#l00138">blank_dispersion()</a>, <a class="el" href="evaluation_8cpp_source.html#l00006">naidu::evaluation::evaluation_1()</a> y <a class="el" href="test__component_8cpp_source.html#l00087">TEST_CASE()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_a5aa323aa12d6f0d47981caadf025a27f_cgraph.png" border="0" usemap="#anamespacenaidu_1_1component_a5aa323aa12d6f0d47981caadf025a27f_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_a5aa323aa12d6f0d47981caadf025a27f_cgraph" id="anamespacenaidu_1_1component_a5aa323aa12d6f0d47981caadf025a27f_cgraph">
+<area shape="rect" title="Dispersión promedio del hueco respecto a fichas mal colocadas." alt="" coords="5,77,169,120"/>
+<area shape="poly" title=" " alt="" coords="49,77,47,67,54,58,67,53,87,51,108,53,123,61,118,63,107,58,87,56,68,58,57,63,53,69,54,77"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="229,5,342,32"/>
+<area shape="poly" title=" " alt="" coords="137,75,216,42,235,36,230,39,218,46,139,79"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="224,56,348,83"/>
+<area shape="poly" title=" " alt="" coords="168,84,211,79,206,82,170,89"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab08eb2bc1a7ffb966aa267f91dca15ac" title="Devuelve el índice lineal del hueco." alt="" coords="217,107,355,149"/>
+<area shape="poly" title=" " alt="" coords="169,108,204,115,199,116,170,113"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="226,173,346,216"/>
+<area shape="poly" title=" " alt="" coords="133,118,229,165,224,167,132,123"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_a5aa323aa12d6f0d47981caadf025a27f_icgraph.png" border="0" usemap="#anamespacenaidu_1_1component_a5aa323aa12d6f0d47981caadf025a27f_icgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_a5aa323aa12d6f0d47981caadf025a27f_icgraph" id="anamespacenaidu_1_1component_a5aa323aa12d6f0d47981caadf025a27f_icgraph">
+<area shape="rect" title="Dispersión promedio del hueco respecto a fichas mal colocadas." alt="" coords="328,229,491,272"/>
+<area shape="poly" title=" " alt="" coords="439,214,429,210,410,208,392,210,381,215,376,221,378,230,373,228,371,219,377,210,390,205,410,203,431,205,445,214"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad" title="Evaluación 1: Manhattan + fichas mal colocadas + dispersión." alt="" coords="153,200,280,243"/>
+<area shape="poly" title=" " alt="" coords="310,237,281,234,280,228,315,235"/>
+<area shape="rect" href="test__component_8cpp.html#aa832102aeb55bcdbc12ce255ac0c361e" title=" " alt="" coords="167,267,266,293"/>
+<area shape="poly" title=" " alt="" coords="310,266,267,275,266,270,315,264"/>
+<area shape="poly" title=" " alt="" coords="241,185,232,181,216,179,201,180,193,185,189,191,190,200,185,199,184,190,189,181,200,175,216,173,234,176,246,184"/>
+<area shape="rect" href="test__evaluation_8cpp.html#a1a5da53433b0836b4333646e9afb813c" title=" " alt="" coords="5,5,105,32"/>
+<area shape="poly" title=" " alt="" coords="197,186,160,117,134,80,103,46,89,35,88,30,106,42,138,76,164,114,203,186"/>
+<area shape="rect" href="test__solver_8cpp.html#ad36a7b4ba2fbb7d3ec49a7a954c23c61" title=" " alt="" coords="5,56,105,83"/>
+<area shape="poly" title=" " alt="" coords="188,188,151,143,103,97,88,86,86,81,106,93,155,139,194,187"/>
+<area shape="rect" href="test__solver_8cpp.html#abf6db8ff83dc6be5517abc0a1f0ef817" title=" " alt="" coords="5,107,105,133"/>
+<area shape="poly" title=" " alt="" coords="171,192,103,148,85,136,83,131,106,143,176,190"/>
+<area shape="rect" href="test__solver_8cpp.html#a5090dfe5152b9f434db7df128b9c1f4c" title=" " alt="" coords="5,157,105,184"/>
+<area shape="poly" title=" " alt="" coords="135,198,101,187,99,182,140,195"/>
+<area shape="rect" href="test__solver_8cpp.html#a600d978eb5018ff2cd2e3380c0dc6062" title=" " alt="" coords="5,208,105,235"/>
+<area shape="poly" title=" " alt="" coords="135,223,106,224,104,219,139,220"/>
+<area shape="rect" href="test__solver_8cpp.html#a9585a209bab6fb27210ec31078c9cea2" title=" " alt="" coords="5,259,105,285"/>
+<area shape="poly" title=" " alt="" coords="136,248,102,260,99,256,140,244"/>
+<area shape="rect" href="test__solver_8cpp.html#a33d06f29565e0aed784ca2b92a8eade5" title=" " alt="" coords="5,309,105,336"/>
+<area shape="poly" title=" " alt="" coords="156,253,154,257,130,278,106,299,87,311,84,307,103,295,127,274,151,253,160,249"/>
+<area shape="rect" href="test__solver_8cpp.html#a047a4f7f60d6e8c0703c255d36154eb1" title=" " alt="" coords="5,360,105,387"/>
+<area shape="poly" title=" " alt="" coords="153,255,155,256,138,280,131,302,124,325,107,350,91,362,88,357,103,346,119,323,126,301,134,277,151,253,156,251"/>
+<area shape="rect" href="test__solver_8cpp.html#ac40a81a2cec726bbb883aa0110460531" title=" " alt="" coords="5,411,105,437"/>
+<area shape="poly" title=" " alt="" coords="152,255,155,256,142,275,136,292,131,327,127,362,120,381,107,400,92,412,90,408,103,397,115,379,122,361,126,326,130,291,138,272,151,253,156,251"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5ee867554a720e7a9657f21048c01975" name="a5ee867554a720e7a9657f21048c01975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ee867554a720e7a9657f21048c01975">&#9670;&#160;</a></span>broken_pairs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint16_t naidu::component::broken_pairs </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::span&lt; const std::uint8_t &gt;</td>          <td class="paramname"><span class="paramname"><em>goal_pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Número de pares adyacentes mal ordenados (desorden local). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>Tablero a evaluar. </td></tr>
+    <tr><td class="paramname">goal_pos</td><td>Mapa de posiciones meta. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Conteo de pares rotos. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="component_8cpp_source.html#l00074">74</a> del archivo <a class="el" href="component_8cpp_source.html">component.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   77</span>      {</div>
+<div class="line"><span class="lineno">   78</span>        <span class="keyword">const</span> <span class="keyword">auto</span> dim = b.<a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a>();</div>
+<div class="line"><span class="lineno">   79</span>        std::uint16_t broken = 0;</div>
+<div class="line"><span class="lineno">   80</span> </div>
+<div class="line"><span class="lineno">   81</span>        <span class="keywordflow">for</span> (std::uint8_t i = 0; i &lt; b.<a class="code hl_function" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">tile_count</a>(); ++i) {</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keyword">const</span> <span class="keyword">auto</span> tile = b.<a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(i);</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (tile == 0)</div>
+<div class="line"><span class="lineno">   84</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   85</span> </div>
+<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">if</span> ((i % dim) + 1 &lt; dim) {</div>
+<div class="line"><span class="lineno">   87</span>                <span class="keyword">const</span> <span class="keyword">auto</span> right = b.<a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(i + 1);</div>
+<div class="line"><span class="lineno">   88</span>                <span class="keywordflow">if</span> (right != 0</div>
+<div class="line"><span class="lineno">   89</span>                    &amp;&amp; !well_ordered_right(goal_pos[tile], goal_pos[right], dim))</div>
+<div class="line"><span class="lineno">   90</span>                    ++broken;</div>
+<div class="line"><span class="lineno">   91</span>            }</div>
+<div class="line"><span class="lineno">   92</span> </div>
+<div class="line"><span class="lineno">   93</span>            <span class="keywordflow">if</span> ((i / dim) + 1 &lt; dim) {</div>
+<div class="line"><span class="lineno">   94</span>                <span class="keyword">const</span> <span class="keyword">auto</span> below = b.<a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(i + dim);</div>
+<div class="line"><span class="lineno">   95</span>                <span class="keywordflow">if</span> (below != 0</div>
+<div class="line"><span class="lineno">   96</span>                    &amp;&amp; !well_ordered_below(goal_pos[tile], goal_pos[below], dim))</div>
+<div class="line"><span class="lineno">   97</span>                    ++broken;</div>
+<div class="line"><span class="lineno">   98</span>            }</div>
+<div class="line"><span class="lineno">   99</span>        }</div>
+<div class="line"><span class="lineno">  100</span> </div>
+<div class="line"><span class="lineno">  101</span>        <span class="keywordflow">return</span> broken;</div>
+<div class="line"><span class="lineno">  102</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board_8cpp_source.html#l00109">naidu::Board::at()</a>, <a class="el" href="component_8cpp_source.html#l00074">broken_pairs()</a>, <a class="el" href="board_8cpp_source.html#l00105">naidu::Board::dim()</a> y <a class="el" href="board_8cpp_source.html#l00106">naidu::Board::tile_count()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="component_8cpp_source.html#l00074">broken_pairs()</a>, <a class="el" href="evaluation_8cpp_source.html#l00037">naidu::evaluation::evaluation_3()</a> y <a class="el" href="test__component_8cpp_source.html#l00077">TEST_CASE()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_a5ee867554a720e7a9657f21048c01975_cgraph.png" border="0" usemap="#anamespacenaidu_1_1component_a5ee867554a720e7a9657f21048c01975_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_a5ee867554a720e7a9657f21048c01975_cgraph" id="anamespacenaidu_1_1component_a5ee867554a720e7a9657f21048c01975_cgraph">
+<area shape="rect" title="Número de pares adyacentes mal ordenados (desorden local)." alt="" coords="5,48,177,91"/>
+<area shape="poly" title=" " alt="" coords="53,47,52,38,58,29,71,23,91,21,112,24,126,32,121,33,111,29,91,27,73,29,62,33,57,39,59,48"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="230,5,343,32"/>
+<area shape="poly" title=" " alt="" coords="175,45,220,35,215,38,177,50"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="225,56,348,83"/>
+<area shape="poly" title=" " alt="" coords="176,67,212,69,207,70,177,72"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="227,107,346,149"/>
+<area shape="poly" title=" " alt="" coords="164,89,214,105,209,106,164,94"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_a5ee867554a720e7a9657f21048c01975_icgraph.png" border="0" usemap="#anamespacenaidu_1_1component_a5ee867554a720e7a9657f21048c01975_icgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_a5ee867554a720e7a9657f21048c01975_icgraph" id="anamespacenaidu_1_1component_a5ee867554a720e7a9657f21048c01975_icgraph">
+<area shape="rect" title="Número de pares adyacentes mal ordenados (desorden local)." alt="" coords="328,59,499,101"/>
+<area shape="poly" title=" " alt="" coords="444,43,433,40,414,37,395,39,384,44,380,50,381,60,376,57,374,49,381,40,394,34,414,32,435,34,449,43"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8" title="Evaluación 3: estructura local." alt="" coords="153,29,280,72"/>
+<area shape="poly" title=" " alt="" coords="310,65,281,63,281,57,315,65"/>
+<area shape="rect" href="test__component_8cpp.html#a6156c4d640be4854078a77a432913607" title=" " alt="" coords="167,96,266,123"/>
+<area shape="poly" title=" " alt="" coords="315,95,267,105,266,99,310,95"/>
+<area shape="poly" title=" " alt="" coords="241,14,232,10,216,8,201,10,193,14,189,20,190,30,185,28,184,19,189,11,200,5,216,3,234,5,246,14"/>
+<area shape="rect" href="test__evaluation_8cpp.html#a887b592a9635e045eb32009d6be28c47" title=" " alt="" coords="5,12,105,39"/>
+<area shape="poly" title=" " alt="" coords="135,39,105,36,105,30,140,37"/>
+<area shape="rect" href="test__solver_8cpp.html#a956905c670acd85146d6c16dd89dee1b" title=" " alt="" coords="5,63,105,89"/>
+<area shape="poly" title=" " alt="" coords="135,64,106,71,104,66,140,62"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a98dbc965e47e6afe68a7d482ffa677dd" name="a98dbc965e47e6afe68a7d482ffa677dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98dbc965e47e6afe68a7d482ffa677dd">&#9670;&#160;</a></span>manhattan_total()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint16_t naidu::component::manhattan_total </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::span&lt; const std::uint8_t &gt;</td>          <td class="paramname"><span class="paramname"><em>goal_pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Suma de distancias Manhattan de todas las fichas a su meta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>Tablero a evaluar. </td></tr>
+    <tr><td class="paramname">goal_pos</td><td>Mapa de posiciones meta. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Heurística de Manhattan. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="component_8cpp_source.html#l00058">58</a> del archivo <a class="el" href="component_8cpp_source.html">component.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   61</span>      {</div>
+<div class="line"><span class="lineno">   62</span>        std::uint16_t total = 0;</div>
+<div class="line"><span class="lineno">   63</span> </div>
+<div class="line"><span class="lineno">   64</span>        <span class="keywordflow">for</span> (std::uint8_t i = 0; i &lt; b.<a class="code hl_function" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">tile_count</a>(); ++i) {</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keyword">const</span> <span class="keyword">auto</span> tile = b.<a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(i);</div>
+<div class="line"><span class="lineno">   66</span>            <span class="keywordflow">if</span> (tile == 0)</div>
+<div class="line"><span class="lineno">   67</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">   68</span>            total += manhattan(i, goal_pos[tile], b.<a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a>());</div>
+<div class="line"><span class="lineno">   69</span>        }</div>
+<div class="line"><span class="lineno">   70</span> </div>
+<div class="line"><span class="lineno">   71</span>        <span class="keywordflow">return</span> total;</div>
+<div class="line"><span class="lineno">   72</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board_8cpp_source.html#l00109">naidu::Board::at()</a>, <a class="el" href="board_8cpp_source.html#l00105">naidu::Board::dim()</a>, <a class="el" href="component_8cpp_source.html#l00058">manhattan_total()</a> y <a class="el" href="board_8cpp_source.html#l00106">naidu::Board::tile_count()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="evaluation_8cpp_source.html#l00006">naidu::evaluation::evaluation_1()</a>, <a class="el" href="evaluation_8cpp_source.html#l00023">naidu::evaluation::evaluation_2()</a>, <a class="el" href="evaluation_8cpp_source.html#l00037">naidu::evaluation::evaluation_3()</a>, <a class="el" href="component_8cpp_source.html#l00058">manhattan_total()</a> y <a class="el" href="test__component_8cpp_source.html#l00047">TEST_CASE()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_a98dbc965e47e6afe68a7d482ffa677dd_cgraph.png" border="0" usemap="#anamespacenaidu_1_1component_a98dbc965e47e6afe68a7d482ffa677dd_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_a98dbc965e47e6afe68a7d482ffa677dd_cgraph" id="anamespacenaidu_1_1component_a98dbc965e47e6afe68a7d482ffa677dd_cgraph">
+<area shape="rect" title="Suma de distancias Manhattan de todas las fichas a su meta." alt="" coords="5,48,199,91"/>
+<area shape="poly" title=" " alt="" coords="63,47,61,38,68,29,81,23,102,21,124,24,139,32,134,33,123,29,102,27,83,29,71,33,66,39,68,48"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="252,5,365,32"/>
+<area shape="poly" title=" " alt="" coords="191,45,239,35,234,37,192,50"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="247,56,370,83"/>
+<area shape="poly" title=" " alt="" coords="199,67,234,69,229,70,200,72"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="249,107,368,149"/>
+<area shape="poly" title=" " alt="" coords="179,89,236,107,231,107,179,94"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_a98dbc965e47e6afe68a7d482ffa677dd_icgraph.png" border="0" usemap="#anamespacenaidu_1_1component_a98dbc965e47e6afe68a7d482ffa677dd_icgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_a98dbc965e47e6afe68a7d482ffa677dd_icgraph" id="anamespacenaidu_1_1component_a98dbc965e47e6afe68a7d482ffa677dd_icgraph">
+<area shape="rect" title="Suma de distancias Manhattan de todas las fichas a su meta." alt="" coords="328,509,521,552"/>
+<area shape="poly" title=" " alt="" coords="457,494,446,490,425,488,405,490,393,495,388,501,390,510,385,507,383,499,390,490,404,485,425,483,447,485,462,494"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad" title="Evaluación 1: Manhattan + fichas mal colocadas + dispersión." alt="" coords="153,225,280,268"/>
+<area shape="poly" title=" " alt="" coords="396,497,232,271,235,266,401,496"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c" title="Evaluación 2: Manhattan + fichas mal colocadas + proximidad." alt="" coords="153,464,280,507"/>
+<area shape="poly" title=" " alt="" coords="310,507,280,502,280,496,316,506"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#affdb7131eb24ddbc7a1c7c653bec86b8" title="Evaluación 3: estructura local." alt="" coords="153,555,280,597"/>
+<area shape="poly" title=" " alt="" coords="310,556,281,565,279,560,316,554"/>
+<area shape="rect" href="test__component_8cpp.html#a889db04ab0a439680941b3eab730afe7" title=" " alt="" coords="167,621,266,648"/>
+<area shape="poly" title=" " alt="" coords="376,560,281,612,254,623,253,618,279,607,371,561"/>
+<area shape="poly" title=" " alt="" coords="241,210,232,206,216,204,201,206,193,210,189,216,190,225,185,224,184,215,189,207,200,201,216,199,234,201,246,209"/>
+<area shape="rect" href="test__evaluation_8cpp.html#a1a5da53433b0836b4333646e9afb813c" title=" " alt="" coords="5,5,105,32"/>
+<area shape="poly" title=" " alt="" coords="200,211,164,130,136,86,103,46,90,35,88,30,106,42,141,83,168,128,206,211"/>
+<area shape="rect" href="test__solver_8cpp.html#ad36a7b4ba2fbb7d3ec49a7a954c23c61" title=" " alt="" coords="5,56,105,83"/>
+<area shape="poly" title=" " alt="" coords="194,212,156,155,131,124,103,97,89,86,87,81,106,93,135,121,160,152,199,211"/>
+<area shape="rect" href="test__solver_8cpp.html#abf6db8ff83dc6be5517abc0a1f0ef817" title=" " alt="" coords="5,107,105,133"/>
+<area shape="poly" title=" " alt="" coords="182,215,146,182,103,148,87,136,85,131,106,143,149,177,187,213"/>
+<area shape="rect" href="test__solver_8cpp.html#a5090dfe5152b9f434db7df128b9c1f4c" title=" " alt="" coords="5,157,105,184"/>
+<area shape="poly" title=" " alt="" coords="153,219,86,187,84,182,158,217"/>
+<area shape="rect" href="test__solver_8cpp.html#a600d978eb5018ff2cd2e3380c0dc6062" title=" " alt="" coords="5,208,105,235"/>
+<area shape="poly" title=" " alt="" coords="135,236,106,231,104,227,139,233"/>
+<area shape="rect" href="test__solver_8cpp.html#a9585a209bab6fb27210ec31078c9cea2" title=" " alt="" coords="5,259,105,285"/>
+<area shape="poly" title=" " alt="" coords="135,261,107,266,103,262,139,257"/>
+<area shape="rect" href="test__solver_8cpp.html#a33d06f29565e0aed784ca2b92a8eade5" title=" " alt="" coords="5,309,105,336"/>
+<area shape="poly" title=" " alt="" coords="154,277,87,311,83,307,157,273"/>
+<area shape="rect" href="test__solver_8cpp.html#a047a4f7f60d6e8c0703c255d36154eb1" title=" " alt="" coords="5,360,105,387"/>
+<area shape="poly" title=" " alt="" coords="183,281,149,316,106,350,88,361,84,358,103,346,146,312,186,277"/>
+<area shape="rect" href="test__solver_8cpp.html#ac40a81a2cec726bbb883aa0110460531" title=" " alt="" coords="5,411,105,437"/>
+<area shape="poly" title=" " alt="" coords="195,284,160,341,135,373,106,401,90,412,86,408,103,397,131,369,156,338,197,279"/>
+<area shape="poly" title=" " alt="" coords="241,449,232,445,216,443,201,444,193,449,189,455,190,464,185,463,184,454,189,445,200,439,216,437,234,440,246,448"/>
+<area shape="rect" href="test__evaluation_8cpp.html#aa1e1bbb2d4d4aee256666900a2765959" title=" " alt="" coords="5,461,105,488"/>
+<area shape="poly" title=" " alt="" coords="135,482,106,480,104,475,140,479"/>
+<area shape="rect" href="test__solver_8cpp.html#aa4d645e55d34bcc360d7e1d4f304efc9" title=" " alt="" coords="5,512,105,539"/>
+<area shape="poly" title=" " alt="" coords="136,506,106,515,104,511,140,503"/>
+<area shape="poly" title=" " alt="" coords="241,539,232,535,216,533,201,535,193,540,189,546,190,555,185,553,184,545,189,536,200,530,216,528,234,530,246,539"/>
+<area shape="rect" href="test__evaluation_8cpp.html#a887b592a9635e045eb32009d6be28c47" title=" " alt="" coords="5,563,105,589"/>
+<area shape="poly" title=" " alt="" coords="134,577,105,579,104,573,139,575"/>
+<area shape="rect" href="test__solver_8cpp.html#a956905c670acd85146d6c16dd89dee1b" title=" " alt="" coords="5,613,105,640"/>
+<area shape="poly" title=" " alt="" coords="135,602,101,615,99,610,140,600"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa2edc1ec363b10621ca53482da223200" name="aa2edc1ec363b10621ca53482da223200"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2edc1ec363b10621ca53482da223200">&#9670;&#160;</a></span>misplaced_tiles()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint16_t naidu::component::misplaced_tiles </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::span&lt; const std::uint8_t &gt;</td>          <td class="paramname"><span class="paramname"><em>goal_pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Número de fichas fuera de su meta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>Tablero a evaluar. </td></tr>
+    <tr><td class="paramname">goal_pos</td><td>Mapa de posiciones meta. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Conteo de fichas mal colocadas. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="component_8cpp_source.html#l00104">104</a> del archivo <a class="el" href="component_8cpp_source.html">component.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  107</span>      {</div>
+<div class="line"><span class="lineno">  108</span>        std::uint16_t bad = 0;</div>
+<div class="line"><span class="lineno">  109</span> </div>
+<div class="line"><span class="lineno">  110</span>        <span class="keywordflow">for</span> (std::uint8_t i = 0; i &lt; b.<a class="code hl_function" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">tile_count</a>(); ++i) {</div>
+<div class="line"><span class="lineno">  111</span>            <span class="keyword">const</span> <span class="keyword">auto</span> tile = b.<a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(i);</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">if</span> (tile == 0)</div>
+<div class="line"><span class="lineno">  113</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  114</span>            <span class="keywordflow">if</span> (goal_pos[tile] != i)</div>
+<div class="line"><span class="lineno">  115</span>                ++bad;</div>
+<div class="line"><span class="lineno">  116</span>        }</div>
+<div class="line"><span class="lineno">  117</span> </div>
+<div class="line"><span class="lineno">  118</span>        <span class="keywordflow">return</span> bad;</div>
+<div class="line"><span class="lineno">  119</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board_8cpp_source.html#l00109">naidu::Board::at()</a>, <a class="el" href="component_8cpp_source.html#l00104">misplaced_tiles()</a> y <a class="el" href="board_8cpp_source.html#l00106">naidu::Board::tile_count()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="evaluation_8cpp_source.html#l00006">naidu::evaluation::evaluation_1()</a>, <a class="el" href="evaluation_8cpp_source.html#l00023">naidu::evaluation::evaluation_2()</a>, <a class="el" href="component_8cpp_source.html#l00104">misplaced_tiles()</a> y <a class="el" href="test__component_8cpp_source.html#l00057">TEST_CASE()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_aa2edc1ec363b10621ca53482da223200_cgraph.png" border="0" usemap="#anamespacenaidu_1_1component_aa2edc1ec363b10621ca53482da223200_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_aa2edc1ec363b10621ca53482da223200_cgraph" id="anamespacenaidu_1_1component_aa2edc1ec363b10621ca53482da223200_cgraph">
+<area shape="rect" title="Número de fichas fuera de su meta." alt="" coords="5,29,197,72"/>
+<area shape="poly" title=" " alt="" coords="62,28,61,19,67,10,81,5,101,3,123,5,138,13,132,14,121,10,101,8,82,10,70,15,66,21,67,29"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="248,8,361,35"/>
+<area shape="poly" title=" " alt="" coords="196,34,235,31,230,32,197,39"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="245,59,364,101"/>
+<area shape="poly" title=" " alt="" coords="197,62,232,69,227,69,197,67"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_aa2edc1ec363b10621ca53482da223200_icgraph.png" border="0" usemap="#anamespacenaidu_1_1component_aa2edc1ec363b10621ca53482da223200_icgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_aa2edc1ec363b10621ca53482da223200_icgraph" id="anamespacenaidu_1_1component_aa2edc1ec363b10621ca53482da223200_icgraph">
+<area shape="rect" title="Número de fichas fuera de su meta." alt="" coords="328,453,519,496"/>
+<area shape="poly" title=" " alt="" coords="456,438,445,434,424,432,404,434,392,439,388,445,389,454,384,451,382,443,389,434,403,429,424,427,446,429,461,438"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#ac122c34c66431e7add2459e0008b20ad" title="Evaluación 1: Manhattan + fichas mal colocadas + dispersión." alt="" coords="153,225,280,268"/>
+<area shape="poly" title=" " alt="" coords="390,442,236,271,238,266,395,441"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c" title="Evaluación 2: Manhattan + fichas mal colocadas + proximidad." alt="" coords="153,453,280,496"/>
+<area shape="poly" title=" " alt="" coords="310,475,281,477,280,472,315,474"/>
+<area shape="rect" href="test__component_8cpp.html#a470b5c2f81f4dabcbf32d705cf0b955c" title=" " alt="" coords="167,520,266,547"/>
+<area shape="poly" title=" " alt="" coords="334,500,267,522,265,517,329,501"/>
+<area shape="poly" title=" " alt="" coords="241,210,232,206,216,204,201,206,193,210,189,216,190,225,185,224,184,215,189,207,200,201,216,199,234,201,246,209"/>
+<area shape="rect" href="test__evaluation_8cpp.html#a1a5da53433b0836b4333646e9afb813c" title=" " alt="" coords="5,5,105,32"/>
+<area shape="poly" title=" " alt="" coords="200,211,164,130,136,86,103,46,90,35,88,30,106,42,141,83,168,128,206,211"/>
+<area shape="rect" href="test__solver_8cpp.html#ad36a7b4ba2fbb7d3ec49a7a954c23c61" title=" " alt="" coords="5,56,105,83"/>
+<area shape="poly" title=" " alt="" coords="194,212,156,155,131,124,103,97,89,86,87,81,106,93,135,121,160,152,199,212"/>
+<area shape="rect" href="test__solver_8cpp.html#abf6db8ff83dc6be5517abc0a1f0ef817" title=" " alt="" coords="5,107,105,133"/>
+<area shape="poly" title=" " alt="" coords="182,215,146,182,103,148,87,136,85,131,106,143,149,177,187,214"/>
+<area shape="rect" href="test__solver_8cpp.html#a5090dfe5152b9f434db7df128b9c1f4c" title=" " alt="" coords="5,157,105,184"/>
+<area shape="poly" title=" " alt="" coords="153,219,86,187,85,182,158,217"/>
+<area shape="rect" href="test__solver_8cpp.html#a600d978eb5018ff2cd2e3380c0dc6062" title=" " alt="" coords="5,208,105,235"/>
+<area shape="poly" title=" " alt="" coords="135,236,106,231,104,227,140,233"/>
+<area shape="rect" href="test__solver_8cpp.html#a9585a209bab6fb27210ec31078c9cea2" title=" " alt="" coords="5,259,105,285"/>
+<area shape="poly" title=" " alt="" coords="135,261,106,266,103,262,139,257"/>
+<area shape="rect" href="test__solver_8cpp.html#a33d06f29565e0aed784ca2b92a8eade5" title=" " alt="" coords="5,309,105,336"/>
+<area shape="poly" title=" " alt="" coords="154,277,87,311,83,307,157,273"/>
+<area shape="rect" href="test__solver_8cpp.html#a047a4f7f60d6e8c0703c255d36154eb1" title=" " alt="" coords="5,360,105,387"/>
+<area shape="poly" title=" " alt="" coords="183,281,149,316,106,350,88,361,84,358,103,346,146,312,186,277"/>
+<area shape="rect" href="test__solver_8cpp.html#ac40a81a2cec726bbb883aa0110460531" title=" " alt="" coords="5,411,105,437"/>
+<area shape="poly" title=" " alt="" coords="198,279,160,341,135,373,106,401,90,412,86,408,103,397,131,369,156,338,195,284"/>
+<area shape="poly" title=" " alt="" coords="241,438,232,434,216,432,201,434,193,438,189,444,190,454,185,452,184,443,189,435,200,429,216,427,234,429,246,438"/>
+<area shape="rect" href="test__evaluation_8cpp.html#aa1e1bbb2d4d4aee256666900a2765959" title=" " alt="" coords="5,461,105,488"/>
+<area shape="poly" title=" " alt="" coords="134,476,105,477,104,472,139,474"/>
+<area shape="rect" href="test__solver_8cpp.html#aa4d645e55d34bcc360d7e1d4f304efc9" title=" " alt="" coords="5,512,105,539"/>
+<area shape="poly" title=" " alt="" coords="135,500,101,514,99,509,140,498"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aaf4e0eafd85533318bfd22a8f1c7b083" name="aaf4e0eafd85533318bfd22a8f1c7b083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf4e0eafd85533318bfd22a8f1c7b083">&#9670;&#160;</a></span>step_cost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint16_t naidu::component::step_cost </td>
+          <td>(</td>
+          <td class="paramtype">std::uint8_t</td>          <td class="paramname"><span class="paramname"><em>moved_tile</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::uint8_t</td>          <td class="paramname"><span class="paramname"><em>new_empty_index</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::span&lt; const std::uint8_t &gt;</td>          <td class="paramname"><span class="paramname"><em>goal_pos</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>weighted</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Costo de transición entre dos estados adyacentes. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">moved_tile</td><td>Ficha que se movió (la que estaba en el vecino del hueco). </td></tr>
+    <tr><td class="paramname">new_empty_index</td><td>Índice donde está ahora el hueco (donde estaba la ficha). </td></tr>
+    <tr><td class="paramname">goal_pos</td><td>Mapa de posiciones meta. </td></tr>
+    <tr><td class="paramname">weighted</td><td>Si es true, aplica la ponderación (1 o 2); si no, devuelve 1. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Costo del movimiento. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="component_8cpp_source.html#l00043">43</a> del archivo <a class="el" href="component_8cpp_source.html">component.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   48</span>               {</div>
+<div class="line"><span class="lineno">   49</span>        <span class="keywordflow">if</span> (!weighted)</div>
+<div class="line"><span class="lineno">   50</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   51</span> </div>
+<div class="line"><span class="lineno">   52</span>        <span class="keywordflow">if</span> (moved_tile == 0)</div>
+<div class="line"><span class="lineno">   53</span>            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><span class="lineno">   54</span> </div>
+<div class="line"><span class="lineno">   55</span>        <span class="keywordflow">return</span> (goal_pos[moved_tile] == new_empty_index) ? 2 : 1;</div>
+<div class="line"><span class="lineno">   56</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="component_8cpp_source.html#l00043">step_cost()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="component_8cpp_source.html#l00043">step_cost()</a>, <a class="el" href="test__component_8cpp_source.html#l00031">TEST_CASE()</a>, <a class="el" href="test__component_8cpp_source.html#l00039">TEST_CASE()</a> y <a class="el" href="test__component_8cpp_source.html#l00022">TEST_CASE()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_aaf4e0eafd85533318bfd22a8f1c7b083_cgraph.png" border="0" usemap="#anamespacenaidu_1_1component_aaf4e0eafd85533318bfd22a8f1c7b083_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_aaf4e0eafd85533318bfd22a8f1c7b083_cgraph" id="anamespacenaidu_1_1component_aaf4e0eafd85533318bfd22a8f1c7b083_cgraph">
+<area shape="rect" title="Costo de transición entre dos estados adyacentes." alt="" coords="5,29,195,56"/>
+<area shape="poly" title=" " alt="" coords="67,28,62,21,66,11,79,5,100,3,123,5,136,14,131,14,121,10,100,8,80,10,70,15,67,20,73,29"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_aaf4e0eafd85533318bfd22a8f1c7b083_icgraph.png" border="0" usemap="#anamespacenaidu_1_1component_aaf4e0eafd85533318bfd22a8f1c7b083_icgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_aaf4e0eafd85533318bfd22a8f1c7b083_icgraph" id="anamespacenaidu_1_1component_aaf4e0eafd85533318bfd22a8f1c7b083_icgraph">
+<area shape="rect" title="Costo de transición entre dos estados adyacentes." alt="" coords="153,56,342,83"/>
+<area shape="poly" title=" " alt="" coords="279,41,269,37,247,35,227,37,217,41,214,47,219,56,214,55,209,47,213,38,226,31,247,29,270,32,284,41"/>
+<area shape="rect" href="test__component_8cpp.html#abdc158e29d6057b50750879f4263931c" title=" " alt="" coords="5,5,105,32"/>
+<area shape="poly" title=" " alt="" coords="177,53,105,34,105,29,181,50"/>
+<area shape="rect" href="test__component_8cpp.html#af60c79baf8af79b9da95f5dabe83870c" title=" " alt="" coords="5,56,105,83"/>
+<area shape="poly" title=" " alt="" coords="135,70,105,72,104,67,140,68"/>
+<area shape="rect" href="test__component_8cpp.html#a9840736cf7e6a10ff7d30c3a4391514c" title=" " alt="" coords="5,107,105,133"/>
+<area shape="poly" title=" " alt="" coords="182,87,106,110,105,104,176,88"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a076a19f62fc59f74a485906361657a20" name="a076a19f62fc59f74a485906361657a20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a076a19f62fc59f74a485906361657a20">&#9670;&#160;</a></span>tiles_at_distance_1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint16_t naidu::component::tiles_at_distance_1 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnaidu_1_1Board.html">Board</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::span&lt; const std::uint8_t &gt;</td>          <td class="paramname"><span class="paramname"><em>goal_pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fichas mal colocadas a Manhattan 1 de su meta. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">b</td><td>Tablero a evaluar. </td></tr>
+    <tr><td class="paramname">goal_pos</td><td>Mapa de posiciones meta. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Número de fichas "casi resueltas". </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="component_8cpp_source.html#l00121">121</a> del archivo <a class="el" href="component_8cpp_source.html">component.cpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>      {</div>
+<div class="line"><span class="lineno">  125</span>        std::uint16_t tiles = 0;</div>
+<div class="line"><span class="lineno">  126</span> </div>
+<div class="line"><span class="lineno">  127</span>        <span class="keywordflow">for</span> (std::uint8_t i = 0; i &lt; b.<a class="code hl_function" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4">tile_count</a>(); ++i) {</div>
+<div class="line"><span class="lineno">  128</span>            <span class="keyword">const</span> <span class="keyword">auto</span> tile = b.<a class="code hl_function" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a">at</a>(i);</div>
+<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">if</span> (tile == 0)</div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">continue</span>;</div>
+<div class="line"><span class="lineno">  131</span>            <span class="keywordflow">if</span> (manhattan(i, goal_pos[tile], b.<a class="code hl_function" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337">dim</a>()) == 1)</div>
+<div class="line"><span class="lineno">  132</span>                ++tiles;</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+<div class="line"><span class="lineno">  134</span> </div>
+<div class="line"><span class="lineno">  135</span>        <span class="keywordflow">return</span> tiles;</div>
+<div class="line"><span class="lineno">  136</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="board_8cpp_source.html#l00109">naidu::Board::at()</a>, <a class="el" href="board_8cpp_source.html#l00105">naidu::Board::dim()</a>, <a class="el" href="board_8cpp_source.html#l00106">naidu::Board::tile_count()</a> y <a class="el" href="component_8cpp_source.html#l00121">tiles_at_distance_1()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="evaluation_8cpp_source.html#l00023">naidu::evaluation::evaluation_2()</a>, <a class="el" href="test__component_8cpp_source.html#l00067">TEST_CASE()</a> y <a class="el" href="component_8cpp_source.html#l00121">tiles_at_distance_1()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_a076a19f62fc59f74a485906361657a20_cgraph.png" border="0" usemap="#anamespacenaidu_1_1component_a076a19f62fc59f74a485906361657a20_cgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_a076a19f62fc59f74a485906361657a20_cgraph" id="anamespacenaidu_1_1component_a076a19f62fc59f74a485906361657a20_cgraph">
+<area shape="rect" title="Fichas mal colocadas a Manhattan 1 de su meta." alt="" coords="5,48,162,91"/>
+<area shape="poly" title=" " alt="" coords="47,47,46,38,52,29,65,23,84,21,104,24,117,32,112,33,102,29,83,27,66,29,55,33,51,39,53,48"/>
+<area shape="rect" href="classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="215,5,328,32"/>
+<area shape="poly" title=" " alt="" coords="161,46,207,35,202,38,163,51"/>
+<area shape="rect" href="classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="210,56,333,83"/>
+<area shape="poly" title=" " alt="" coords="162,67,197,69,192,70,163,72"/>
+<area shape="rect" href="classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="212,107,331,149"/>
+<area shape="poly" title=" " alt="" coords="154,89,199,104,194,105,154,94"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="namespacenaidu_1_1component_a076a19f62fc59f74a485906361657a20_icgraph.png" border="0" usemap="#anamespacenaidu_1_1component_a076a19f62fc59f74a485906361657a20_icgraph" loading="lazy" alt=""/></div>
+<map name="anamespacenaidu_1_1component_a076a19f62fc59f74a485906361657a20_icgraph" id="anamespacenaidu_1_1component_a076a19f62fc59f74a485906361657a20_icgraph">
+<area shape="rect" title="Fichas mal colocadas a Manhattan 1 de su meta." alt="" coords="328,59,484,101"/>
+<area shape="poly" title=" " alt="" coords="435,43,425,40,406,37,388,39,378,44,373,50,374,60,370,57,368,49,374,40,387,34,406,32,427,34,440,43"/>
+<area shape="rect" href="namespacenaidu_1_1evaluation.html#a8a26edc956478e7deebd54494f215b3c" title="Evaluación 2: Manhattan + fichas mal colocadas + proximidad." alt="" coords="153,29,280,72"/>
+<area shape="poly" title=" " alt="" coords="310,66,280,63,280,58,315,65"/>
+<area shape="rect" href="test__component_8cpp.html#a37ae98e40c1e2d4be95cf9c554c0d0c5" title=" " alt="" coords="167,96,266,123"/>
+<area shape="poly" title=" " alt="" coords="316,94,267,104,266,99,310,95"/>
+<area shape="poly" title=" " alt="" coords="241,14,232,10,216,8,201,10,193,14,189,20,190,30,185,28,184,19,189,11,200,5,216,3,234,5,246,14"/>
+<area shape="rect" href="test__evaluation_8cpp.html#aa1e1bbb2d4d4aee256666900a2765959" title=" " alt="" coords="5,12,105,39"/>
+<area shape="poly" title=" " alt="" coords="135,39,105,36,105,30,140,37"/>
+<area shape="rect" href="test__solver_8cpp.html#aa4d645e55d34bcc360d7e1d4f304efc9" title=" " alt="" coords="5,63,105,89"/>
+<area shape="poly" title=" " alt="" coords="135,64,106,71,104,66,140,62"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacenaidu.html">naidu</a></li><li class="navelem"><a href="namespacenaidu_1_1component.html">component</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,849 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Referencia de la clase naidu::MoveSet</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('classnaidu_1_1MoveSet.html','','classnaidu_1_1MoveSet-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia de la clase naidu::MoveSet</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Conjunto de direcciones, representado como una máscara de bits.  
+ <a href="#details">Más...</a></p>
+
+<p><code>#include &lt;<a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Clases</h2></td></tr>
+<tr class="memitem:iterator" id="r_iterator"><td class="memItemLeft">class &#160;</td><td class="memItemRight"><a class="el" href="classnaidu_1_1MoveSet_1_1iterator.html">iterator</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterador minimalista sobre las direcciones activas.  <a href="classnaidu_1_1MoveSet_1_1iterator.html#details">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Métodos públicos</h2></td></tr>
+<tr class="memitem:a29f64bcd4ffdd3669441d57f8d6e785d" id="r_a29f64bcd4ffdd3669441d57f8d6e785d"><td class="memItemLeft">constexpr&#160;</td><td class="memItemRight"><a class="el" href="#a29f64bcd4ffdd3669441d57f8d6e785d">MoveSet</a> () noexcept=default</td></tr>
+<tr class="memdesc:a29f64bcd4ffdd3669441d57f8d6e785d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construye un <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a> vacío.  <br /></td></tr>
+<tr class="memitem:a417a6ca4dccef3f2af5c942d413a9f66" id="r_a417a6ca4dccef3f2af5c942d413a9f66"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a417a6ca4dccef3f2af5c942d413a9f66">contains</a> (<a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> d) const noexcept</td></tr>
+<tr class="memdesc:a417a6ca4dccef3f2af5c942d413a9f66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba si una dirección está contenida en el conjunto.  <br /></td></tr>
+<tr class="memitem:a5107c4d7ecbd7049afcd2911193f28e9" id="r_a5107c4d7ecbd7049afcd2911193f28e9"><td class="memItemLeft">constexpr bool&#160;</td><td class="memItemRight"><a class="el" href="#a5107c4d7ecbd7049afcd2911193f28e9">empty</a> () const noexcept</td></tr>
+<tr class="memdesc:a5107c4d7ecbd7049afcd2911193f28e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Comprueba si el conjunto está vacío.  <br /></td></tr>
+<tr class="memitem:a2123767a944c6206a9a975f82babfdfb" id="r_a2123767a944c6206a9a975f82babfdfb"><td class="memItemLeft">constexpr std::uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a2123767a944c6206a9a975f82babfdfb">count</a> () const noexcept</td></tr>
+<tr class="memdesc:a2123767a944c6206a9a975f82babfdfb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cuenta cuántas direcciones contiene el conjunto.  <br /></td></tr>
+<tr class="memitem:a8ccfc7a05c6e97abbbf3be4ea16f1489" id="r_a8ccfc7a05c6e97abbbf3be4ea16f1489"><td class="memItemLeft">constexpr std::uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#a8ccfc7a05c6e97abbbf3be4ea16f1489">raw</a> () const noexcept</td></tr>
+<tr class="memdesc:a8ccfc7a05c6e97abbbf3be4ea16f1489"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la máscara de bits subyacente.  <br /></td></tr>
+<tr class="memitem:abeb752bf0a37b455f7a2a909a5f46dab" id="r_abeb752bf0a37b455f7a2a909a5f46dab"><td class="memItemLeft"><a class="el" href="classnaidu_1_1MoveSet_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#abeb752bf0a37b455f7a2a909a5f46dab">begin</a> () const</td></tr>
+<tr class="memdesc:abeb752bf0a37b455f7a2a909a5f46dab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterador al primer bit activo.  <br /></td></tr>
+<tr class="memitem:a67749b77f18a1b3b401fd9b28fb493a7" id="r_a67749b77f18a1b3b401fd9b28fb493a7"><td class="memItemLeft"><a class="el" href="classnaidu_1_1MoveSet_1_1iterator.html">iterator</a>&#160;</td><td class="memItemRight"><a class="el" href="#a67749b77f18a1b3b401fd9b28fb493a7">end</a> () const</td></tr>
+<tr class="memdesc:a67749b77f18a1b3b401fd9b28fb493a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterador al final (uno más allá del último bit).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Métodos públicos estáticos</h2></td></tr>
+<tr class="memitem:a2fb1539a5fdf0fa3cf644a2c0ba2c81d" id="r_a2fb1539a5fdf0fa3cf644a2c0ba2c81d"><td class="memItemLeft">static constexpr <a class="el" href="classMoveSet.html">MoveSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#a2fb1539a5fdf0fa3cf644a2c0ba2c81d">from</a> (<a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> d) noexcept</td></tr>
+<tr class="memdesc:a2fb1539a5fdf0fa3cf644a2c0ba2c81d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Crea un <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a> con una sola dirección.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-friends" class="groupheader"><a id="friends" name="friends"></a>
+Amigas</h2></td></tr>
+<tr class="memitem:a6784a78ca015c6348eea2c9a655252f7" id="r_a6784a78ca015c6348eea2c9a655252f7"><td class="memItemLeft">constexpr <a class="el" href="classMoveSet.html">MoveSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6784a78ca015c6348eea2c9a655252f7">operator|</a> (<a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> a, <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> b)</td></tr>
+<tr class="memdesc:a6784a78ca015c6348eea2c9a655252f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unión de dos direcciones.  <br /></td></tr>
+<tr class="memitem:aeb9a87526d1618e0172112acb32dfe83" id="r_aeb9a87526d1618e0172112acb32dfe83"><td class="memItemLeft">constexpr <a class="el" href="classMoveSet.html">MoveSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#aeb9a87526d1618e0172112acb32dfe83">operator|</a> (<a class="el" href="classMoveSet.html">MoveSet</a> a, <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> b)</td></tr>
+<tr class="memdesc:aeb9a87526d1618e0172112acb32dfe83"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade una dirección a un <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a>.  <br /></td></tr>
+<tr class="memitem:ab953bbaa8587656f220e5fd87989c6d5" id="r_ab953bbaa8587656f220e5fd87989c6d5"><td class="memItemLeft">constexpr <a class="el" href="classMoveSet.html">MoveSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab953bbaa8587656f220e5fd87989c6d5">operator|</a> (<a class="el" href="classMoveSet.html">MoveSet</a> a, <a class="el" href="classMoveSet.html">MoveSet</a> b)</td></tr>
+<tr class="memdesc:ab953bbaa8587656f220e5fd87989c6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unión de dos MoveSets.  <br /></td></tr>
+<tr class="memitem:a88d438012b0337a4879efd1534f58eb8" id="r_a88d438012b0337a4879efd1534f58eb8"><td class="memItemLeft">constexpr <a class="el" href="classMoveSet.html">MoveSet</a>&#160;</td><td class="memItemRight"><a class="el" href="#a88d438012b0337a4879efd1534f58eb8">operator&amp;</a> (<a class="el" href="classMoveSet.html">MoveSet</a> a, <a class="el" href="classMoveSet.html">MoveSet</a> b)</td></tr>
+<tr class="memdesc:a88d438012b0337a4879efd1534f58eb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Intersección de dos MoveSets.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Conjunto de direcciones, representado como una máscara de bits. </p>
+<p>Cada bit del índice i indica si la dirección i-ésima está presente (ver <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b" title="Direcciones de movimiento del hueco en el tablero.">Direction</a> y to_index). Permite combinar y consultar movimientos legales de forma O(1) y sin asignaciones dinámicas.</p>
+<p>Ejemplo: <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a> s = <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bafbaedde498cdead4f2780217646e9ba1" title="Desplazamiento hacia arriba (fila - 1).">Direction::UP</a> | <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba684d325a7303f52e64011467ff5c5758" title="Desplazamiento hacia la izquierda (columna - 1).">Direction::LEFT</a>; s.contains(Direction::UP); // true s.count(); // 2 for (<a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b" title="Direcciones de movimiento del hueco en el tablero.">Direction</a> d : s) { ... } </p>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00022">22</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+</div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Documentación de constructores y destructores</h2>
+<a id="a29f64bcd4ffdd3669441d57f8d6e785d" name="a29f64bcd4ffdd3669441d57f8d6e785d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29f64bcd4ffdd3669441d57f8d6e785d">&#9670;&#160;</a></span>MoveSet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">naidu::MoveSet::MoveSet </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel constexpr">constexpr</span><span class="mlabel default">default</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construye un <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a> vacío. </p>
+
+<p class="reference">Referenciado por <a class="el" href="moveset_8hpp_source.html#l00045">from()</a>, <a class="el" href="moveset_8hpp_source.html#l00204">operator&amp;</a>, <a class="el" href="moveset_8hpp_source.html#l00166">operator|</a>, <a class="el" href="moveset_8hpp_source.html#l00176">operator|</a> y <a class="el" href="moveset_8hpp_source.html#l00194">operator|</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_a29f64bcd4ffdd3669441d57f8d6e785d_icgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_a29f64bcd4ffdd3669441d57f8d6e785d_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_a29f64bcd4ffdd3669441d57f8d6e785d_icgraph" id="aclassnaidu_1_1MoveSet_a29f64bcd4ffdd3669441d57f8d6e785d_icgraph">
+<area shape="rect" title="Construye un MoveSet vacío." alt="" coords="666,120,839,146"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#a2fb1539a5fdf0fa3cf644a2c0ba2c81d" title="Crea un MoveSet con una sola dirección." alt="" coords="457,69,603,96"/>
+<area shape="poly" title=" " alt="" coords="673,116,592,99,592,94,678,115"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#a6784a78ca015c6348eea2c9a655252f7" title="Unión de dos direcciones." alt="" coords="224,120,394,146"/>
+<area shape="poly" title=" " alt="" coords="649,134,395,136,394,130,654,132"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#aeb9a87526d1618e0172112acb32dfe83" title="Añade una dirección a un MoveSet." alt="" coords="5,45,176,72"/>
+<area shape="poly" title=" " alt="" coords="726,108,679,69,649,50,617,36,553,19,486,10,419,8,353,11,233,27,142,47,140,42,232,22,352,6,419,3,487,5,554,14,619,31,652,45,682,65,731,109"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#ab953bbaa8587656f220e5fd87989c6d5" title="Unión de dos MoveSets." alt="" coords="5,145,176,172"/>
+<area shape="poly" title=" " alt="" coords="648,143,394,161,176,163,176,157,394,156,653,141"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#a88d438012b0337a4879efd1534f58eb8" title="Intersección de dos MoveSets." alt="" coords="442,245,618,272"/>
+<area shape="poly" title=" " alt="" coords="716,154,557,247,555,242,711,155"/>
+<area shape="poly" title=" " alt="" coords="567,54,555,50,530,48,507,50,494,54,491,60,498,69,492,68,486,60,491,51,506,44,530,42,556,45,572,54"/>
+<area shape="poly" title=" " alt="" coords="451,101,371,122,370,117,456,99"/>
+<area shape="poly" title=" " alt="" coords="440,80,176,66,176,60,443,75"/>
+<area shape="poly" title=" " alt="" coords="345,105,333,101,309,98,286,100,274,105,271,110,277,120,272,119,265,111,270,101,285,95,309,93,335,96,350,104"/>
+<area shape="poly" title=" " alt="" coords="251,116,132,75,132,70,255,113"/>
+<area shape="poly" title=" " alt="" coords="206,146,177,151,175,146,211,144"/>
+<area shape="poly" title=" " alt="" coords="567,229,555,226,530,224,507,226,494,230,491,236,497,246,493,243,486,236,491,227,506,220,530,218,556,221,572,230"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Documentación de funciones miembro</h2>
+<a id="abeb752bf0a37b455f7a2a909a5f46dab" name="abeb752bf0a37b455f7a2a909a5f46dab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeb752bf0a37b455f7a2a909a5f46dab">&#9670;&#160;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnaidu_1_1MoveSet_1_1iterator.html">iterator</a> naidu::MoveSet::begin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterador al primer bit activo. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>iterator sobre el primer bit activo (o <a class="el" href="#a67749b77f18a1b3b401fd9b28fb493a7" title="Iterador al final (uno más allá del último bit).">end()</a> si vacío). </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00147">147</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  147</span>                               {</div>
+<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323">iterator</a>(m_mask, 0);</div>
+<div class="line"><span class="lineno">  149</span>        }</div>
+<div class="ttc" id="aclassnaidu_1_1MoveSet_1_1iterator_html_acb0f52f73a412b6d409a638cf6cd0323"><div class="ttname"><a href="classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323">naidu::MoveSet::iterator::iterator</a></div><div class="ttdeci">iterator(std::uint8_t mask, std::uint8_t index)</div><div class="ttdoc">Construye un iterador sobre la máscara dada.</div><div class="ttdef"><b>Definición</b> <a href="moveset_8hpp_source.html#l00110">moveset.hpp:110</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00110">naidu::MoveSet::iterator::iterator()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_abeb752bf0a37b455f7a2a909a5f46dab_cgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_abeb752bf0a37b455f7a2a909a5f46dab_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_abeb752bf0a37b455f7a2a909a5f46dab_cgraph" id="aclassnaidu_1_1MoveSet_abeb752bf0a37b455f7a2a909a5f46dab_cgraph">
+<area shape="rect" title="Iterador al primer bit activo." alt="" coords="5,13,157,40"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323" title="Construye un iterador sobre la máscara dada." alt="" coords="205,5,365,48"/>
+<area shape="poly" title=" " alt="" coords="157,24,192,26,186,27,157,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a417a6ca4dccef3f2af5c942d413a9f66" name="a417a6ca4dccef3f2af5c942d413a9f66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a417a6ca4dccef3f2af5c942d413a9f66">&#9670;&#160;</a></span>contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool naidu::MoveSet::contains </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a></td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Comprueba si una dirección está contenida en el conjunto. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Dirección a consultar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>true si el bit correspondiente está activo. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00054">54</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   54</span>                                                            {</div>
+<div class="line"><span class="lineno">   55</span>            <span class="keywordflow">return</span> (m_mask &gt;&gt; <a class="code hl_function" href="namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939">to_index</a>(d)) &amp; 1u;</div>
+<div class="line"><span class="lineno">   56</span>        }</div>
+<div class="ttc" id="anamespacenaidu_html_a0c709f2cc41f878e68ed807e5363d939"><div class="ttname"><a href="namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939">naidu::to_index</a></div><div class="ttdeci">constexpr std::uint8_t to_index(Direction d)</div><div class="ttdoc">Convierte una dirección a su índice numérico subyacente.</div><div class="ttdef"><b>Definición</b> <a href="direction_8hpp_source.html#l00040">direction.hpp:40</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="direction_8hpp_source.html#l00040">naidu::to_index()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="test__moveset_8cpp_source.html#l00021">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00107">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00055">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00047">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00038">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00084">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00010">TEST_CASE()</a> y <a class="el" href="test__moveset_8cpp_source.html#l00140">TEST_CASE()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_a417a6ca4dccef3f2af5c942d413a9f66_cgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_a417a6ca4dccef3f2af5c942d413a9f66_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_a417a6ca4dccef3f2af5c942d413a9f66_cgraph" id="aclassnaidu_1_1MoveSet_a417a6ca4dccef3f2af5c942d413a9f66_cgraph">
+<area shape="rect" title="Comprueba si una dirección está contenida en el conjunto." alt="" coords="5,29,175,56"/>
+<area shape="rect" href="namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939" title="Convierte una dirección a su índice numérico subyacente." alt="" coords="223,29,332,56"/>
+<area shape="poly" title=" " alt="" coords="175,40,210,43,205,43,175,45"/>
+<area shape="poly" title=" " alt="" coords="245,28,240,21,244,11,256,5,277,3,300,5,313,14,308,14,298,10,277,8,258,10,247,15,245,20,250,30"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_a417a6ca4dccef3f2af5c942d413a9f66_icgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_a417a6ca4dccef3f2af5c942d413a9f66_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_a417a6ca4dccef3f2af5c942d413a9f66_icgraph" id="aclassnaidu_1_1MoveSet_a417a6ca4dccef3f2af5c942d413a9f66_icgraph">
+<area shape="rect" title="Comprueba si una dirección está contenida en el conjunto." alt="" coords="153,183,322,209"/>
+<area shape="rect" href="test__moveset_8cpp.html#a5dbc5514c65d8750fd6ecab3ba3c49ed" title=" " alt="" coords="5,5,105,32"/>
+<area shape="poly" title=" " alt="" coords="216,170,168,110,137,77,103,46,88,35,86,30,106,42,141,73,172,107,221,169"/>
+<area shape="rect" href="test__moveset_8cpp.html#ac2f59d291cb0f0acb61fc47656b5cb98" title=" " alt="" coords="5,56,105,83"/>
+<area shape="poly" title=" " alt="" coords="206,173,159,137,103,97,86,86,84,81,106,92,163,132,211,172"/>
+<area shape="rect" href="test__moveset_8cpp.html#a7d067f26c8d0472c4cbdc1dd43d8d500" title=" " alt="" coords="5,107,105,133"/>
+<area shape="poly" title=" " alt="" coords="187,178,89,137,89,131,192,175"/>
+<area shape="rect" href="test__moveset_8cpp.html#abdfcea075fdb2f4acf5143f659a0af0b" title=" " alt="" coords="5,157,105,184"/>
+<area shape="poly" title=" " alt="" coords="135,184,106,180,104,175,140,181"/>
+<area shape="rect" href="test__moveset_8cpp.html#a0a02ecf02f7bae613c65fd83278fe665" title=" " alt="" coords="5,208,105,235"/>
+<area shape="poly" title=" " alt="" coords="135,212,106,217,104,212,140,208"/>
+<area shape="rect" href="test__moveset_8cpp.html#a9155485b5ab1cf3352127ab12a399132" title=" " alt="" coords="5,259,105,285"/>
+<area shape="poly" title=" " alt="" coords="188,218,90,260,88,256,191,213"/>
+<area shape="rect" href="test__moveset_8cpp.html#a2ce40b356aeb65314103a7c7222b06c7" title=" " alt="" coords="5,309,105,336"/>
+<area shape="poly" title=" " alt="" coords="207,221,163,260,106,300,86,311,83,307,103,295,159,255,211,218"/>
+<area shape="rect" href="test__moveset_8cpp.html#a04d8216e25c44cadd70ef6cf0ccbacd7" title=" " alt="" coords="5,360,105,387"/>
+<area shape="poly" title=" " alt="" coords="220,221,172,285,141,319,106,350,88,362,86,357,103,346,137,315,168,282,216,224"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2123767a944c6206a9a975f82babfdfb" name="a2123767a944c6206a9a975f82babfdfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2123767a944c6206a9a975f82babfdfb">&#9670;&#160;</a></span>count()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint8_t naidu::MoveSet::count </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Cuenta cuántas direcciones contiene el conjunto. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Número de bits activos (0..4). </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00068">68</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   68</span>                                                    {</div>
+<div class="line"><span class="lineno">   69</span>            <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(std::popcount(m_mask));</div>
+<div class="line"><span class="lineno">   70</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Referenciado por <a class="el" href="test__moveset_8cpp_source.html#l00021">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00107">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00055">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00047">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00038">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00064">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00084">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00010">TEST_CASE()</a> y <a class="el" href="test__moveset_8cpp_source.html#l00140">TEST_CASE()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_a2123767a944c6206a9a975f82babfdfb_icgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_a2123767a944c6206a9a975f82babfdfb_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_a2123767a944c6206a9a975f82babfdfb_icgraph" id="aclassnaidu_1_1MoveSet_a2123767a944c6206a9a975f82babfdfb_icgraph">
+<area shape="rect" title="Cuenta cuántas direcciones contiene el conjunto." alt="" coords="153,208,305,235"/>
+<area shape="rect" href="test__moveset_8cpp.html#a5dbc5514c65d8750fd6ecab3ba3c49ed" title=" " alt="" coords="5,5,105,32"/>
+<area shape="poly" title=" " alt="" coords="212,195,169,123,138,83,103,46,89,35,87,30,106,42,142,79,173,120,217,194"/>
+<area shape="rect" href="test__moveset_8cpp.html#ac2f59d291cb0f0acb61fc47656b5cb98" title=" " alt="" coords="5,56,105,83"/>
+<area shape="poly" title=" " alt="" coords="204,196,160,148,103,97,87,86,85,81,106,93,164,144,210,195"/>
+<area shape="rect" href="test__moveset_8cpp.html#a7d067f26c8d0472c4cbdc1dd43d8d500" title=" " alt="" coords="5,107,105,133"/>
+<area shape="poly" title=" " alt="" coords="191,200,103,148,84,136,83,131,106,143,196,198"/>
+<area shape="rect" href="test__moveset_8cpp.html#abdfcea075fdb2f4acf5143f659a0af0b" title=" " alt="" coords="5,157,105,184"/>
+<area shape="poly" title=" " alt="" coords="164,205,104,187,103,182,168,202"/>
+<area shape="rect" href="test__moveset_8cpp.html#a0a02ecf02f7bae613c65fd83278fe665" title=" " alt="" coords="5,208,105,235"/>
+<area shape="poly" title=" " alt="" coords="135,223,106,224,104,219,140,220"/>
+<area shape="rect" href="test__moveset_8cpp.html#a4d26cbe8d1f98e265c26835c3abdd69f" title=" " alt="" coords="5,259,105,285"/>
+<area shape="poly" title=" " alt="" coords="164,242,105,260,102,256,168,238"/>
+<area shape="rect" href="test__moveset_8cpp.html#a9155485b5ab1cf3352127ab12a399132" title=" " alt="" coords="5,309,105,336"/>
+<area shape="poly" title=" " alt="" coords="192,246,106,300,85,311,82,307,103,295,195,241"/>
+<area shape="rect" href="test__moveset_8cpp.html#a2ce40b356aeb65314103a7c7222b06c7" title=" " alt="" coords="5,360,105,387"/>
+<area shape="poly" title=" " alt="" coords="209,245,164,298,106,350,88,362,85,357,103,346,160,295,205,249"/>
+<area shape="rect" href="test__moveset_8cpp.html#a04d8216e25c44cadd70ef6cf0ccbacd7" title=" " alt="" coords="5,411,105,437"/>
+<area shape="poly" title=" " alt="" coords="216,246,173,322,142,364,106,401,89,413,87,408,103,397,138,360,169,319,212,250"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5107c4d7ecbd7049afcd2911193f28e9" name="a5107c4d7ecbd7049afcd2911193f28e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5107c4d7ecbd7049afcd2911193f28e9">&#9670;&#160;</a></span>empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool naidu::MoveSet::empty </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Comprueba si el conjunto está vacío. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>true si no contiene ninguna dirección. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00062">62</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   62</span>{ <span class="keywordflow">return</span> m_mask == 0; }</div>
+</div><!-- fragment -->
+<p class="reference">Referenciado por <a class="el" href="test__moveset_8cpp_source.html#l00021">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00084">TEST_CASE()</a> y <a class="el" href="test__moveset_8cpp_source.html#l00010">TEST_CASE()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_a5107c4d7ecbd7049afcd2911193f28e9_icgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_a5107c4d7ecbd7049afcd2911193f28e9_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_a5107c4d7ecbd7049afcd2911193f28e9_icgraph" id="aclassnaidu_1_1MoveSet_a5107c4d7ecbd7049afcd2911193f28e9_icgraph">
+<area shape="rect" title="Comprueba si el conjunto está vacío." alt="" coords="153,56,309,83"/>
+<area shape="rect" href="test__moveset_8cpp.html#a5dbc5514c65d8750fd6ecab3ba3c49ed" title=" " alt="" coords="5,5,105,32"/>
+<area shape="poly" title=" " alt="" coords="165,52,104,35,104,30,169,50"/>
+<area shape="rect" href="test__moveset_8cpp.html#a9155485b5ab1cf3352127ab12a399132" title=" " alt="" coords="5,56,105,83"/>
+<area shape="poly" title=" " alt="" coords="134,70,105,72,104,67,139,68"/>
+<area shape="rect" href="test__moveset_8cpp.html#a2ce40b356aeb65314103a7c7222b06c7" title=" " alt="" coords="5,107,105,133"/>
+<area shape="poly" title=" " alt="" coords="170,87,105,109,103,104,164,88"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a67749b77f18a1b3b401fd9b28fb493a7" name="a67749b77f18a1b3b401fd9b28fb493a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67749b77f18a1b3b401fd9b28fb493a7">&#9670;&#160;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classnaidu_1_1MoveSet_1_1iterator.html">iterator</a> naidu::MoveSet::end </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterador al final (uno más allá del último bit). </p>
+<dl class="section return"><dt>Devuelve</dt><dd>iterator con m_index == 4 (fin). </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00155">155</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  155</span>                             {</div>
+<div class="line"><span class="lineno">  156</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323">iterator</a>(m_mask, 4);</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00110">naidu::MoveSet::iterator::iterator()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_a67749b77f18a1b3b401fd9b28fb493a7_cgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_a67749b77f18a1b3b401fd9b28fb493a7_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_a67749b77f18a1b3b401fd9b28fb493a7_cgraph" id="aclassnaidu_1_1MoveSet_a67749b77f18a1b3b401fd9b28fb493a7_cgraph">
+<area shape="rect" title="Iterador al final (uno más allá del último bit)." alt="" coords="5,13,147,40"/>
+<area shape="rect" href="classnaidu_1_1MoveSet_1_1iterator.html#acb0f52f73a412b6d409a638cf6cd0323" title="Construye un iterador sobre la máscara dada." alt="" coords="195,5,355,48"/>
+<area shape="poly" title=" " alt="" coords="147,24,182,26,176,27,147,29"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2fb1539a5fdf0fa3cf644a2c0ba2c81d" name="a2fb1539a5fdf0fa3cf644a2c0ba2c81d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fb1539a5fdf0fa3cf644a2c0ba2c81d">&#9670;&#160;</a></span>from()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="classMoveSet.html">MoveSet</a> naidu::MoveSet::from </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a></td>          <td class="paramname"><span class="paramname"><em>d</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel static">static</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Crea un <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a> con una sola dirección. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>Dirección a incluir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a> con el bit correspondiente activado. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00045">45</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   45</span>                                                            {</div>
+<div class="line"><span class="lineno">   46</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="#a29f64bcd4ffdd3669441d57f8d6e785d">MoveSet</a>(std::uint8_t{1} &lt;&lt; <a class="code hl_function" href="namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939">to_index</a>(d));</div>
+<div class="line"><span class="lineno">   47</span>        }</div>
+<div class="ttc" id="aclassnaidu_1_1MoveSet_html_a29f64bcd4ffdd3669441d57f8d6e785d"><div class="ttname"><a href="#a29f64bcd4ffdd3669441d57f8d6e785d">naidu::MoveSet::MoveSet</a></div><div class="ttdeci">constexpr MoveSet() noexcept=default</div><div class="ttdoc">Construye un MoveSet vacío.</div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00045">from()</a>, <a class="el" href="#a29f64bcd4ffdd3669441d57f8d6e785d">MoveSet()</a> y <a class="el" href="direction_8hpp_source.html#l00040">naidu::to_index()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="moveset_8hpp_source.html#l00045">from()</a>, <a class="el" href="moveset_8hpp_source.html#l00166">operator|</a> y <a class="el" href="moveset_8hpp_source.html#l00176">operator|</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas de esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_a2fb1539a5fdf0fa3cf644a2c0ba2c81d_cgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_a2fb1539a5fdf0fa3cf644a2c0ba2c81d_cgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_a2fb1539a5fdf0fa3cf644a2c0ba2c81d_cgraph" id="aclassnaidu_1_1MoveSet_a2fb1539a5fdf0fa3cf644a2c0ba2c81d_cgraph">
+<area shape="rect" title="Crea un MoveSet con una sola dirección." alt="" coords="5,43,152,69"/>
+<area shape="poly" title=" " alt="" coords="43,43,37,34,41,24,56,18,79,16,103,19,118,27,113,28,102,24,78,21,57,23,45,28,42,33,48,42"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#a29f64bcd4ffdd3669441d57f8d6e785d" title="Construye un MoveSet vacío." alt="" coords="200,5,372,32"/>
+<area shape="poly" title=" " alt="" coords="151,40,196,34,191,36,153,45"/>
+<area shape="rect" href="namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939" title="Convierte una dirección a su índice numérico subyacente." alt="" coords="231,80,340,107"/>
+<area shape="poly" title=" " alt="" coords="152,67,219,80,214,81,152,72"/>
+<area shape="poly" title=" " alt="" coords="250,79,244,71,249,62,263,55,286,53,311,56,325,65,320,64,309,61,286,59,264,61,252,65,250,71,255,81"/>
+</map>
+</div>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_a2fb1539a5fdf0fa3cf644a2c0ba2c81d_icgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_a2fb1539a5fdf0fa3cf644a2c0ba2c81d_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_a2fb1539a5fdf0fa3cf644a2c0ba2c81d_icgraph" id="aclassnaidu_1_1MoveSet_a2fb1539a5fdf0fa3cf644a2c0ba2c81d_icgraph">
+<area shape="rect" title="Crea un MoveSet con una sola dirección." alt="" coords="442,31,588,57"/>
+<area shape="poly" title=" " alt="" coords="549,15,538,12,515,9,494,11,482,16,479,21,485,31,480,29,474,22,478,12,492,6,515,4,540,7,554,16"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#a6784a78ca015c6348eea2c9a655252f7" title="Unión de dos direcciones." alt="" coords="224,68,394,95"/>
+<area shape="poly" title=" " alt="" coords="429,60,387,70,386,65,424,60"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#aeb9a87526d1618e0172112acb32dfe83" title="Añade una dirección a un MoveSet." alt="" coords="5,5,176,32"/>
+<area shape="poly" title=" " alt="" coords="424,35,394,35,176,24,176,18,394,29,429,35"/>
+<area shape="poly" title=" " alt="" coords="343,52,332,49,309,47,287,49,276,53,273,59,279,69,274,67,268,59,272,50,286,43,309,41,333,44,348,53"/>
+<area shape="poly" title=" " alt="" coords="243,65,140,35,140,30,248,62"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#ab953bbaa8587656f220e5fd87989c6d5" title="Unión de dos MoveSets." alt="" coords="5,68,176,95"/>
+<area shape="poly" title=" " alt="" coords="206,81,176,84,176,79,211,81"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8ccfc7a05c6e97abbbf3be4ea16f1489" name="a8ccfc7a05c6e97abbbf3be4ea16f1489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ccfc7a05c6e97abbbf3be4ea16f1489">&#9670;&#160;</a></span>raw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::uint8_t naidu::MoveSet::raw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel constexpr">constexpr</span><span class="mlabel noexcept">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Devuelve la máscara de bits subyacente. </p>
+<dl class="section return"><dt>Devuelve</dt><dd>Máscara cruda (bits 0..3). </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00076">76</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   76</span>{ <span class="keywordflow">return</span> m_mask; }</div>
+</div><!-- fragment -->
+<p class="reference">Referenciado por <a class="el" href="moveset_8hpp_source.html#l00166">operator|</a>, <a class="el" href="moveset_8hpp_source.html#l00176">operator|</a>, <a class="el" href="test__moveset_8cpp_source.html#l00117">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00064">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00084">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00072">TEST_CASE()</a>, <a class="el" href="test__moveset_8cpp_source.html#l00078">TEST_CASE()</a> y <a class="el" href="test__moveset_8cpp_source.html#l00010">TEST_CASE()</a>.</p>
+<div class="dynheader">
+Gráfico de llamadas a esta función:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnaidu_1_1MoveSet_a8ccfc7a05c6e97abbbf3be4ea16f1489_icgraph.png" border="0" usemap="#aclassnaidu_1_1MoveSet_a8ccfc7a05c6e97abbbf3be4ea16f1489_icgraph" loading="lazy" alt=""/></div>
+<map name="aclassnaidu_1_1MoveSet_a8ccfc7a05c6e97abbbf3be4ea16f1489_icgraph" id="aclassnaidu_1_1MoveSet_a8ccfc7a05c6e97abbbf3be4ea16f1489_icgraph">
+<area shape="rect" title="Devuelve la máscara de bits subyacente." alt="" coords="442,202,583,228"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#a6784a78ca015c6348eea2c9a655252f7" title="Unión de dos direcciones." alt="" coords="224,75,394,102"/>
+<area shape="poly" title=" " alt="" coords="486,190,445,153,393,116,368,105,368,100,395,111,449,149,491,190"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#aeb9a87526d1618e0172112acb32dfe83" title="Añade una dirección a un MoveSet." alt="" coords="5,12,176,39"/>
+<area shape="poly" title=" " alt="" coords="499,186,484,152,462,111,431,72,393,41,365,28,336,19,275,9,216,9,163,14,161,9,215,4,276,4,337,14,367,23,395,37,435,68,466,108,489,150,504,188"/>
+<area shape="rect" href="test__moveset_8cpp.html#aabf364bca6147e479a67876cd857c97d" title=" " alt="" coords="259,126,358,152"/>
+<area shape="poly" title=" " alt="" coords="466,195,393,167,359,155,359,150,395,162,471,194"/>
+<area shape="rect" href="test__moveset_8cpp.html#a4d26cbe8d1f98e265c26835c3abdd69f" title=" " alt="" coords="259,176,358,203"/>
+<area shape="poly" title=" " alt="" coords="424,205,359,198,359,193,429,204"/>
+<area shape="rect" href="test__moveset_8cpp.html#a9155485b5ab1cf3352127ab12a399132" title=" " alt="" coords="259,227,358,254"/>
+<area shape="poly" title=" " alt="" coords="424,226,360,237,358,232,429,225"/>
+<area shape="rect" href="test__moveset_8cpp.html#afb6b90dcf4790e0428e9ae400bc72ad5" title=" " alt="" coords="259,278,358,304"/>
+<area shape="poly" title=" " alt="" coords="471,234,395,268,360,280,358,275,393,263,466,236"/>
+<area shape="rect" href="test__moveset_8cpp.html#a7e6df69c844fae4c8c40bf36bddb16af" title=" " alt="" coords="259,328,358,355"/>
+<area shape="poly" title=" " alt="" coords="491,238,449,281,395,319,360,333,358,328,393,314,445,277,486,241"/>
+<area shape="rect" href="test__moveset_8cpp.html#a2ce40b356aeb65314103a7c7222b06c7" title=" " alt="" coords="259,379,358,406"/>
+<area shape="poly" title=" " alt="" coords="500,241,459,307,429,340,395,369,360,386,358,380,393,365,426,336,454,303,495,243"/>
+<area shape="poly" title=" " alt="" coords="342,60,332,56,309,54,288,56,276,60,273,66,279,75,274,74,268,66,272,56,286,50,309,48,333,51,347,59"/>
+<area shape="poly" title=" " alt="" coords="243,72,141,42,139,37,247,69"/>
+<area shape="rect" href="classnaidu_1_1MoveSet.html#ab953bbaa8587656f220e5fd87989c6d5" title="Unión de dos MoveSets." alt="" coords="5,75,176,102"/>
+<area shape="poly" title=" " alt="" coords="206,90,178,91,175,86,211,87"/>
+</map>
+</div>
+
+</div>
+</div>
+<a name="doc-related-members" id="doc-related-members"></a><h2 id="header-doc-related-members" class="groupheader">Documentación de símbolos amigos y relacionados</h2>
+<a id="a88d438012b0337a4879efd1534f58eb8" name="a88d438012b0337a4879efd1534f58eb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d438012b0337a4879efd1534f58eb8">&#9670;&#160;</a></span>operator&amp;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMoveSet.html">MoveSet</a> operator&amp; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMoveSet.html">MoveSet</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMoveSet.html">MoveSet</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Intersección de dos MoveSets. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Primer <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a>. </td></tr>
+    <tr><td class="paramname">b</td><td>Segundo <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a> con las direcciones comunes a ambos. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00204">204</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  204</span>                                                               {</div>
+<div class="line"><span class="lineno">  205</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a29f64bcd4ffdd3669441d57f8d6e785d">MoveSet</a>(a.<a class="code hl_function" href="classMoveSet.html#a8ccfc7a05c6e97abbbf3be4ea16f1489">raw</a>() &amp; b.<a class="code hl_function" href="classMoveSet.html#a8ccfc7a05c6e97abbbf3be4ea16f1489">raw</a>());</div>
+<div class="line"><span class="lineno">  206</span>    }</div>
+<div class="ttc" id="aclassMoveSet_html_a8ccfc7a05c6e97abbbf3be4ea16f1489"><div class="ttname"><a href="classMoveSet.html#a8ccfc7a05c6e97abbbf3be4ea16f1489">MoveSet::raw</a></div><div class="ttdeci">constexpr std::uint8_t raw() const noexcept</div><div class="ttdoc">Devuelve la máscara de bits subyacente.</div><div class="ttdef"><b>Definición</b> <a href="moveset_8hpp_source.html#l00076">moveset.hpp:76</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="#a29f64bcd4ffdd3669441d57f8d6e785d">MoveSet()</a> y <a class="el" href="moveset_8hpp_source.html#l00204">operator&amp;</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="moveset_8hpp_source.html#l00204">operator&amp;</a>.</p>
+
+</div>
+</div>
+<a id="a6784a78ca015c6348eea2c9a655252f7" name="a6784a78ca015c6348eea2c9a655252f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6784a78ca015c6348eea2c9a655252f7">&#9670;&#160;</a></span>operator| <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMoveSet.html">MoveSet</a> operator| </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unión de dos direcciones. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Primera dirección. </td></tr>
+    <tr><td class="paramname">b</td><td>Segunda dirección. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a> con ambas direcciones. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00166">166</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  166</span>                                                                   {</div>
+<div class="line"><span class="lineno">  167</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a29f64bcd4ffdd3669441d57f8d6e785d">MoveSet</a>(<a class="code hl_function" href="#a2fb1539a5fdf0fa3cf644a2c0ba2c81d">MoveSet::from</a>(a).<a class="code hl_function" href="#a8ccfc7a05c6e97abbbf3be4ea16f1489">raw</a>() | <a class="code hl_function" href="#a2fb1539a5fdf0fa3cf644a2c0ba2c81d">MoveSet::from</a>(b).<a class="code hl_function" href="#a8ccfc7a05c6e97abbbf3be4ea16f1489">raw</a>());</div>
+<div class="line"><span class="lineno">  168</span>    }</div>
+<div class="ttc" id="aclassnaidu_1_1MoveSet_html_a2fb1539a5fdf0fa3cf644a2c0ba2c81d"><div class="ttname"><a href="#a2fb1539a5fdf0fa3cf644a2c0ba2c81d">naidu::MoveSet::from</a></div><div class="ttdeci">static constexpr MoveSet from(Direction d) noexcept</div><div class="ttdoc">Crea un MoveSet con una sola dirección.</div><div class="ttdef"><b>Definición</b> <a href="moveset_8hpp_source.html#l00045">moveset.hpp:45</a></div></div>
+<div class="ttc" id="aclassnaidu_1_1MoveSet_html_a8ccfc7a05c6e97abbbf3be4ea16f1489"><div class="ttname"><a href="#a8ccfc7a05c6e97abbbf3be4ea16f1489">naidu::MoveSet::raw</a></div><div class="ttdeci">constexpr std::uint8_t raw() const noexcept</div><div class="ttdoc">Devuelve la máscara de bits subyacente.</div><div class="ttdef"><b>Definición</b> <a href="moveset_8hpp_source.html#l00076">moveset.hpp:76</a></div></div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00045">from()</a>, <a class="el" href="#a29f64bcd4ffdd3669441d57f8d6e785d">MoveSet()</a>, <a class="el" href="moveset_8hpp_source.html#l00166">operator|</a> y <a class="el" href="moveset_8hpp_source.html#l00076">raw()</a>.</p>
+
+<p class="reference">Referenciado por <a class="el" href="moveset_8hpp_source.html#l00166">operator|</a>, <a class="el" href="moveset_8hpp_source.html#l00176">operator|</a> y <a class="el" href="moveset_8hpp_source.html#l00194">operator|</a>.</p>
+
+</div>
+</div>
+<a id="aeb9a87526d1618e0172112acb32dfe83" name="aeb9a87526d1618e0172112acb32dfe83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb9a87526d1618e0172112acb32dfe83">&#9670;&#160;</a></span>operator| <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMoveSet.html">MoveSet</a> operator| </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMoveSet.html">MoveSet</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Añade una dirección a un <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a>. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a> original. </td></tr>
+    <tr><td class="paramname">b</td><td>Dirección a añadir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Nuevo <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a> con la dirección añadida. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00176">176</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  176</span>                                                                 {</div>
+<div class="line"><span class="lineno">  177</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a29f64bcd4ffdd3669441d57f8d6e785d">MoveSet</a>(a.<a class="code hl_function" href="classMoveSet.html#a8ccfc7a05c6e97abbbf3be4ea16f1489">raw</a>() | <a class="code hl_function" href="#a2fb1539a5fdf0fa3cf644a2c0ba2c81d">MoveSet::from</a>(b).<a class="code hl_function" href="#a8ccfc7a05c6e97abbbf3be4ea16f1489">raw</a>());</div>
+<div class="line"><span class="lineno">  178</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="moveset_8hpp_source.html#l00045">from()</a>, <a class="el" href="#a29f64bcd4ffdd3669441d57f8d6e785d">MoveSet()</a>, <a class="el" href="moveset_8hpp_source.html#l00166">operator|</a> y <a class="el" href="moveset_8hpp_source.html#l00076">raw()</a>.</p>
+
+</div>
+</div>
+<a id="ab953bbaa8587656f220e5fd87989c6d5" name="ab953bbaa8587656f220e5fd87989c6d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab953bbaa8587656f220e5fd87989c6d5">&#9670;&#160;</a></span>operator| <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classMoveSet.html">MoveSet</a> operator| </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMoveSet.html">MoveSet</a></td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classMoveSet.html">MoveSet</a></td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel friend">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Unión de dos MoveSets. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Primer <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a>. </td></tr>
+    <tr><td class="paramname">b</td><td>Segundo <a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd><a class="el" href="classnaidu_1_1MoveSet.html" title="Conjunto de direcciones, representado como una máscara de bits.">MoveSet</a> con todas las direcciones de ambos. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="moveset_8hpp_source.html#l00194">194</a> del archivo <a class="el" href="moveset_8hpp_source.html">moveset.hpp</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  194</span>                                                               {</div>
+<div class="line"><span class="lineno">  195</span>        <span class="keywordflow">return</span> <a class="code hl_function" href="#a29f64bcd4ffdd3669441d57f8d6e785d">MoveSet</a>(a.<a class="code hl_function" href="classMoveSet.html#a8ccfc7a05c6e97abbbf3be4ea16f1489">raw</a>() | b.<a class="code hl_function" href="classMoveSet.html#a8ccfc7a05c6e97abbbf3be4ea16f1489">raw</a>());</div>
+<div class="line"><span class="lineno">  196</span>    }</div>
+</div><!-- fragment -->
+<p class="reference">Hace referencia a <a class="el" href="#a29f64bcd4ffdd3669441d57f8d6e785d">MoveSet()</a> y <a class="el" href="moveset_8hpp_source.html#l00166">operator|</a>.</p>
+
+</div>
+</div>
+<hr/>La documentación de esta clase está generada del siguiente archivo:<ul>
+<li>src/core/<a class="el" href="moveset_8hpp_source.html">moveset.hpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespacenaidu.html">naidu</a></li><li class="navelem"><a href="classnaidu_1_1MoveSet.html">MoveSet</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

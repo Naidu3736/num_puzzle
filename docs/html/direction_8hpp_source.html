@@ -1,0 +1,176 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Archivo de código fuente src/core/direction.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('direction_8hpp_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">direction.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="direction_8hpp.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;array&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;cstdint&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacenaidu.html">naidu</a> {</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">   17</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> : std::uint8_t {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bafbaedde498cdead4f2780217646e9ba1">   18</a></span>        <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bafbaedde498cdead4f2780217646e9ba1">UP</a>    = 0,   </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bac4e0e4e3118472beeb2ae75827450f1f">   19</a></span>        <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bac4e0e4e3118472beeb2ae75827450f1f">DOWN</a>  = 1,   </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba684d325a7303f52e64011467ff5c5758">   20</a></span>        <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba684d325a7303f52e64011467ff5c5758">LEFT</a>  = 2,   </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba21507b40c80068eda19865706fdc2403">   21</a></span>        <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba21507b40c80068eda19865706fdc2403">RIGHT</a> = 3,   </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    };</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="namespacenaidu.html#ab4e3bdb5b0cdf449b9e4e6fe93563d82">   25</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::uint8_t <a class="code hl_variable" href="namespacenaidu.html#ab4e3bdb5b0cdf449b9e4e6fe93563d82">direction_count</a> = 4;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespacenaidu.html#a390021f34d4498f36beea593b5942d92">   28</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> std::array&lt;Direction, 4&gt; <a class="code hl_variable" href="namespacenaidu.html#a390021f34d4498f36beea593b5942d92">ALL_DIRECTIONS</a> = {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bafbaedde498cdead4f2780217646e9ba1">Direction::UP</a>,</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bac4e0e4e3118472beeb2ae75827450f1f">Direction::DOWN</a>,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba684d325a7303f52e64011467ff5c5758">Direction::LEFT</a>,</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <a class="code hl_enumvalue" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba21507b40c80068eda19865706fdc2403">Direction::RIGHT</a>,</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    };</div>
+</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939">   40</a></span>    <span class="keyword">constexpr</span> std::uint8_t <a class="code hl_function" href="namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939">to_index</a>(<a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> d) {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span>std::uint8_t<span class="keyword">&gt;</span>(d);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span></div>
+<div class="foldopen" id="foldopen00053" data-start="{" data-end="}">
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="namespacenaidu.html#a2cb0f06155c3ecac63a413b8032310b4">   53</a></span>    <span class="keyword">constexpr</span> <a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> <a class="code hl_function" href="namespacenaidu.html#a2cb0f06155c3ecac63a413b8032310b4">opposite</a>(<a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> d) <span class="keyword">noexcept</span> {</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        <span class="keywordflow">return</span> <span class="keyword">static_cast&lt;</span><a class="code hl_enumeration" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a><span class="keyword">&gt;</span>(<a class="code hl_function" href="namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939">to_index</a>(d) ^ 1u);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>}</div>
+<div class="ttc" id="anamespacenaidu_html"><div class="ttname"><a href="namespacenaidu.html">naidu</a></div><div class="ttdef"><b>Definición</b> <a href="board_8cpp_source.html#l00010">board.cpp:10</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a0c709f2cc41f878e68ed807e5363d939"><div class="ttname"><a href="namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939">naidu::to_index</a></div><div class="ttdeci">constexpr std::uint8_t to_index(Direction d)</div><div class="ttdoc">Convierte una dirección a su índice numérico subyacente.</div><div class="ttdef"><b>Definición</b> <a href="#l00040">direction.hpp:40</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a2cb0f06155c3ecac63a413b8032310b4"><div class="ttname"><a href="namespacenaidu.html#a2cb0f06155c3ecac63a413b8032310b4">naidu::opposite</a></div><div class="ttdeci">constexpr Direction opposite(Direction d) noexcept</div><div class="ttdoc">Devuelve la dirección opuesta a la dada.</div><div class="ttdef"><b>Definición</b> <a href="#l00053">direction.hpp:53</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a390021f34d4498f36beea593b5942d92"><div class="ttname"><a href="namespacenaidu.html#a390021f34d4498f36beea593b5942d92">naidu::ALL_DIRECTIONS</a></div><div class="ttdeci">constexpr std::array&lt; Direction, 4 &gt; ALL_DIRECTIONS</div><div class="ttdef"><b>Definición</b> <a href="#l00028">direction.hpp:28</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222b"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a></div><div class="ttdeci">Direction</div><div class="ttdoc">Direcciones de movimiento del hueco en el tablero.</div><div class="ttdef"><b>Definición</b> <a href="#l00017">direction.hpp:17</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222ba21507b40c80068eda19865706fdc2403"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba21507b40c80068eda19865706fdc2403">naidu::Direction::RIGHT</a></div><div class="ttdeci">@ RIGHT</div><div class="ttdoc">Desplazamiento hacia la derecha (columna + 1).</div><div class="ttdef"><b>Definición</b> <a href="#l00021">direction.hpp:21</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222ba684d325a7303f52e64011467ff5c5758"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba684d325a7303f52e64011467ff5c5758">naidu::Direction::LEFT</a></div><div class="ttdeci">@ LEFT</div><div class="ttdoc">Desplazamiento hacia la izquierda (columna - 1).</div><div class="ttdef"><b>Definición</b> <a href="#l00020">direction.hpp:20</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222bac4e0e4e3118472beeb2ae75827450f1f"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bac4e0e4e3118472beeb2ae75827450f1f">naidu::Direction::DOWN</a></div><div class="ttdeci">@ DOWN</div><div class="ttdoc">Desplazamiento hacia abajo (fila + 1).</div><div class="ttdef"><b>Definición</b> <a href="#l00019">direction.hpp:19</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_a93e2d5ff746731bf99e6a5f5256e222bafbaedde498cdead4f2780217646e9ba1"><div class="ttname"><a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bafbaedde498cdead4f2780217646e9ba1">naidu::Direction::UP</a></div><div class="ttdeci">@ UP</div><div class="ttdoc">Desplazamiento hacia arriba (fila - 1).</div><div class="ttdef"><b>Definición</b> <a href="#l00018">direction.hpp:18</a></div></div>
+<div class="ttc" id="anamespacenaidu_html_ab4e3bdb5b0cdf449b9e4e6fe93563d82"><div class="ttname"><a href="namespacenaidu.html#ab4e3bdb5b0cdf449b9e4e6fe93563d82">naidu::direction_count</a></div><div class="ttdeci">constexpr std::uint8_t direction_count</div><div class="ttdef"><b>Definición</b> <a href="#l00025">direction.hpp:25</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a href="direction_8hpp.html">direction.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<map id="naidu::evaluation::evaluation_3" name="naidu::evaluation::evaluation_3">
+<area shape="rect" id="Node000001" title="Evaluación 3: estructura local." alt="" coords="5,75,133,117"/>
+<area shape="poly" id="edge6_Node000001_Node000001" title=" " alt="" coords="29,74,28,65,34,56,48,50,69,48,91,50,106,58,101,60,90,56,69,53,49,55,38,60,33,66,34,74"/>
+<area shape="rect" id="Node000002" href="$namespacenaidu_1_1component.html#a5ee867554a720e7a9657f21048c01975" title="Número de pares adyacentes mal ordenados (desorden local)." alt="" coords="192,29,363,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,80,179,71,174,74,134,85"/>
+<area shape="rect" id="Node000006" href="$namespacenaidu_1_1component.html#a98dbc965e47e6afe68a7d482ffa677dd" title="Suma de distancias Manhattan de todas las fichas a su meta." alt="" coords="181,120,374,163"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="133,107,168,116,163,118,133,113"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="238,28,236,19,243,10,257,5,277,3,300,5,314,14,309,14,298,10,277,8,258,10,246,15,242,21,243,30"/>
+<area shape="rect" id="Node000003" href="$classnaidu_1_1Board.html#a29a6c512367aa1515226649177d25f2a" title="Devuelve la ficha en el índice lineal dado." alt="" coords="427,28,540,55"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,44,414,44,409,45,364,49"/>
+<area shape="rect" id="Node000004" href="$classnaidu_1_1Board.html#ab65a3e1adb23a5d6c1b12a8f8bed3337" title="Devuelve la dimensión N del tablero." alt="" coords="422,79,545,105"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="363,65,410,77,405,77,363,71"/>
+<area shape="rect" id="Node000005" href="$classnaidu_1_1Board.html#aa27b65ba0fb898217ead8d43aabbfdb4" title="Devuelve el número total de fichas (N²)." alt="" coords="424,129,543,172"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="349,70,375,82,400,98,423,115,431,122,426,121,421,120,397,102,373,86,348,75"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="317,117,421,64,431,62,436,60,423,69,319,122"/>
+<area shape="poly" id="edge9_Node000006_Node000004" title=" " alt="" coords="369,117,408,110,413,109,370,122"/>
+<area shape="poly" id="edge11_Node000006_Node000005" title=" " alt="" coords="375,143,411,147,406,147,375,148"/>
+<area shape="poly" id="edge10_Node000006_Node000006" title=" " alt="" coords="238,118,236,110,243,101,257,95,277,93,300,96,314,105,309,104,298,101,277,99,258,101,246,105,242,111,243,121"/>
+</map>

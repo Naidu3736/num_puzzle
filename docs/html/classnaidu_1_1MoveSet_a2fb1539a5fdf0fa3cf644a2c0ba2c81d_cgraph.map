@@ -1,0 +1,9 @@
+<map id="naidu::MoveSet::from" name="naidu::MoveSet::from">
+<area shape="rect" id="Node000001" title="Crea un MoveSet con una sola dirección." alt="" coords="5,43,152,69"/>
+<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="43,43,37,34,41,24,56,18,79,16,103,19,118,27,113,28,102,24,78,21,57,23,45,28,42,33,48,42"/>
+<area shape="rect" id="Node000002" href="$classnaidu_1_1MoveSet.html#a29f64bcd4ffdd3669441d57f8d6e785d" title="Construye un MoveSet vacío." alt="" coords="200,5,372,32"/>
+<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="151,40,196,34,191,36,153,45"/>
+<area shape="rect" id="Node000003" href="$namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939" title="Convierte una dirección a su índice numérico subyacente." alt="" coords="231,80,340,107"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="152,67,219,80,214,81,152,72"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="250,79,244,71,249,62,263,55,286,53,311,56,325,65,320,64,309,61,286,59,264,61,252,65,250,71,255,81"/>
+</map>

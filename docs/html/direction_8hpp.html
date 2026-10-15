@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.18.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Num Puzzle IDA* Solver Suite: Referencia del archivo src/core/direction.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="codefolding.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Num Puzzle IDA* Solver Suite<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Optimizador y suite de análisis empírico para puzzle numérico usando IDA* y std::span</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.18.0 -->
+<script type="text/javascript">
+let searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', codefold.init);
+</script>
+<script type="application/json" id="doxygen-config">
+{
+  "relPath": "",
+  "generateTreeView": true,
+  "searchEngine": true,
+  "serverBasedSearch": false,
+  "disableIndex": false,
+  "dynamicMenus": true,
+  "fullSidebar": false
+}
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<div id="main-nav-mobile">
+<div class="sm sm-dox"><input id="main-menu-state" type="checkbox"/>
+<label class="main-menu-btn" for="main-menu-state">
+<span class="main-menu-btn-icon"></span> Toggle main menu visibility</label>
+<span id="searchBoxPos1"></span>
+</div>
+</div><!-- main-nav-mobile -->
+<div id="main-nav">
+  <ul class="sm sm-dox" id="main-menu">
+    <li id="searchBoxPos2">
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect" class="search-icon"><span class="search-icon-dropdown"></span></span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><div id="MSearchCloseImg" class="close-icon"></div></a>
+          </span>
+        </div>
+    </li>
+  </ul>
+</div><!-- main-nav -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded',() => { initNavTree('direction_8hpp.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Referencia del archivo direction.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;array&gt;</code><br />
+<code>#include &lt;cstdint&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependencias incluidas en direction.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="direction_8hpp__incl.png" border="0" usemap="#asrc_2core_2direction_8hpp" loading="lazy" alt=""/></div>
+<map name="asrc_2core_2direction_8hpp" id="asrc_2core_2direction_8hpp">
+<area shape="rect" title=" " alt="" coords="5,5,152,32"/>
+<area shape="rect" title=" " alt="" coords="13,80,64,107"/>
+<area shape="poly" title=" " alt="" coords="74,31,55,68,51,65,69,34"/>
+<area shape="rect" title=" " alt="" coords="88,80,149,107"/>
+<area shape="poly" title=" " alt="" coords="87,30,107,66,102,66,84,35"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="direction_8hpp__dep__incl.png" border="0" usemap="#asrc_2core_2direction_8hppdep" loading="lazy" alt=""/></div>
+<map name="asrc_2core_2direction_8hppdep" id="asrc_2core_2direction_8hppdep">
+<area shape="rect" title=" " alt="" coords="1384,5,1530,32"/>
+<area shape="rect" href="board_8cpp.html" title=" " alt="" coords="201,245,338,272"/>
+<area shape="poly" title=" " alt="" coords="1380,38,333,247,332,242,1379,33"/>
+<area shape="rect" href="board_8hpp.html" title=" " alt="" coords="1270,171,1407,197"/>
+<area shape="poly" title=" " alt="" coords="1438,43,1409,82,1348,172,1345,168,1405,78,1434,45"/>
+<area shape="rect" href="randomizer_8cpp.html" title=" " alt="" coords="2042,328,2243,355"/>
+<area shape="poly" title=" " alt="" coords="1518,34,1620,65,1751,111,1894,171,1964,205,2032,243,2090,286,2133,328,2128,327,2087,290,2029,248,1962,210,1891,176,1749,116,1619,70,1518,39"/>
+<area shape="rect" href="solver_8cpp.html" title=" " alt="" coords="93,411,235,437"/>
+<area shape="poly" title=" " alt="" coords="1366,21,1022,31,799,40,569,54,354,74,174,102,105,119,52,139,19,160,11,171,8,183,8,260,12,286,22,310,37,332,56,352,98,385,139,409,134,411,95,390,52,356,33,336,17,313,7,288,3,260,3,182,6,169,15,156,50,134,103,114,173,97,353,69,568,48,798,34,1022,25,1371,20"/>
+<area shape="rect" href="test__unordored__map_8cpp.html" title=" " alt="" coords="2317,320,2496,363"/>
+<area shape="poly" title=" " alt="" coords="1534,33,1731,77,1824,97,1905,110,2043,129,2108,142,2176,163,2248,196,2330,243,2351,260,2369,280,2397,321,2392,318,2365,283,2347,264,2326,248,2246,200,2174,168,2107,147,2042,134,1904,115,1823,103,1730,83,1534,38"/>
+<area shape="rect" href="solver_8hpp.html" title=" " alt="" coords="93,328,235,355"/>
+<area shape="poly" title=" " alt="" coords="1366,29,1181,52,960,83,838,96,730,99,631,97,540,96,454,105,412,114,369,128,326,148,283,174,238,206,191,247,178,266,170,288,166,329,161,326,165,286,173,263,187,244,234,202,280,169,324,143,367,123,410,109,453,100,540,91,631,91,730,94,838,91,960,77,1180,46,1372,28"/>
+<area shape="rect" href="moveset_8hpp.html" title=" " alt="" coords="1418,88,1566,115"/>
+<area shape="poly" title=" " alt="" coords="1470,44,1489,89,1484,87,1468,49"/>
+<area shape="rect" href="test__direction_8cpp.html" title=" " alt="" coords="2399,80,2521,123"/>
+<area shape="poly" title=" " alt="" coords="1545,18,1703,21,1911,31,2145,48,2380,77,2401,83,2396,83,2380,83,2144,54,1911,36,1703,27,1546,23"/>
+<area shape="poly" title=" " alt="" coords="1252,189,866,209,613,226,356,248,339,250,337,245,356,243,612,221,866,204,1257,188"/>
+<area shape="rect" href="board__hash_8hpp.html" title=" " alt="" coords="2102,245,2274,272"/>
+<area shape="poly" title=" " alt="" coords="1422,195,1806,230,2105,253,2099,253,1805,235,1422,200"/>
+<area shape="poly" title=" " alt="" coords="1422,195,1569,205,1684,206,1798,214,1863,225,1939,243,1969,255,1997,270,2118,328,2113,327,1995,274,1967,259,1938,248,1862,230,1797,219,1684,212,1569,210,1422,200"/>
+<area shape="poly" title=" " alt="" coords="1252,186,1059,192,811,201,570,219,471,232,397,248,374,260,350,274,309,285,270,287,202,279,170,278,141,282,112,295,83,322,77,331,76,340,84,361,94,376,107,389,137,410,132,410,103,393,90,380,79,364,71,341,72,330,79,318,109,291,139,277,170,272,202,274,270,281,308,279,348,270,371,256,395,243,470,226,569,213,810,196,1059,187,1258,185"/>
+<area shape="poly" title=" " alt="" coords="1422,195,1513,199,1621,200,1867,201,1991,203,2106,210,2207,222,2286,243,2317,258,2346,278,2391,321,2386,319,2343,282,2315,263,2284,248,2206,228,2106,215,1990,208,1867,206,1621,206,1512,205,1422,200"/>
+<area shape="rect" href="component_8hpp.html" title=" " alt="" coords="510,245,706,272"/>
+<area shape="poly" title=" " alt="" coords="1253,194,719,248,706,249,705,244,718,243,1258,192"/>
+<area shape="rect" href="test__component_8cpp.html" title=" " alt="" coords="794,320,926,363"/>
+<area shape="poly" title=" " alt="" coords="1258,198,1163,220,1065,248,974,284,899,322,897,317,972,280,1063,243,1162,215,1253,199"/>
+<area shape="rect" href="evaluation_8hpp.html" title=" " alt="" coords="730,245,920,272"/>
+<area shape="poly" title=" " alt="" coords="1252,198,916,247,915,242,1258,197"/>
+<area shape="poly" title=" " alt="" coords="1252,186,1111,192,923,201,711,219,499,248,374,282,207,330,206,325,372,277,498,243,711,213,922,196,1111,186,1258,185"/>
+<area shape="rect" href="test__solver_8cpp.html" title=" " alt="" coords="850,411,1025,437"/>
+<area shape="poly" title=" " alt="" coords="1302,204,1234,247,1096,365,1038,393,983,413,982,407,1036,388,1093,360,1230,243,1297,206"/>
+<area shape="rect" href="test__evaluation_8cpp.html" title=" " alt="" coords="950,320,1082,363"/>
+<area shape="poly" title=" " alt="" coords="1258,194,1179,215,1139,229,1103,248,1081,264,1061,283,1030,322,1028,317,1057,279,1077,260,1100,243,1137,224,1177,210,1252,195"/>
+<area shape="rect" href="randomizer_8hpp.html" title=" " alt="" coords="1726,245,1927,272"/>
+<area shape="poly" title=" " alt="" coords="1422,195,1743,245,1738,245,1422,201"/>
+<area shape="rect" href="test__randomizer_8cpp.html" title=" " alt="" coords="1881,320,2018,363"/>
+<area shape="poly" title=" " alt="" coords="1404,199,1883,322,1878,323,1403,204"/>
+<area shape="rect" href="test__board__construction_8cpp.html" title=" " alt="" coords="1157,320,1302,363"/>
+<area shape="poly" title=" " alt="" coords="1298,204,1272,225,1252,247,1242,264,1237,284,1231,321,1227,318,1231,283,1238,262,1247,244,1269,221,1293,206"/>
+<area shape="rect" href="test__board__moves_8cpp.html" title=" " alt="" coords="1376,320,1520,363"/>
+<area shape="poly" title=" " alt="" coords="1382,202,1409,221,1430,244,1440,262,1446,283,1450,321,1446,318,1441,284,1435,264,1426,247,1405,225,1381,208"/>
+<area shape="rect" href="test__board__operators_8cpp.html" title=" " alt="" coords="1544,320,1688,363"/>
+<area shape="poly" title=" " alt="" coords="1377,202,1455,243,1585,320,1579,319,1452,248,1376,207"/>
+<area shape="rect" href="test__board__queries_8cpp.html" title=" " alt="" coords="1712,320,1856,363"/>
+<area shape="poly" title=" " alt="" coords="1390,200,1727,319,1722,319,1389,205"/>
+<area shape="rect" href="board__fixtures_8hpp.html" title=" " alt="" coords="1262,245,1416,272"/>
+<area shape="poly" title=" " alt="" coords="1340,211,1341,247,1337,243,1337,215"/>
+<area shape="poly" title=" " alt="" coords="2176,284,2151,330,2148,326,2171,287"/>
+<area shape="poly" title=" " alt="" coords="2219,279,2241,298,2258,320,2266,343,2264,354,2256,365,2178,373,1983,381,1375,399,235,424,235,419,1375,394,1983,376,2177,368,2253,360,2259,352,2260,343,2253,322,2237,302,2218,284"/>
+<area shape="poly" title=" " alt="" coords="2237,275,2353,320,2348,319,2236,280"/>
+<area shape="poly" title=" " alt="" coords="578,279,519,322,495,345,484,355,468,365,409,388,348,404,236,421,235,416,347,399,407,383,465,360,481,351,491,341,516,318,573,281"/>
+<area shape="rect" href="component_8cpp.html" title=" " alt="" coords="260,328,455,355"/>
+<area shape="poly" title=" " alt="" coords="557,276,397,330,396,325,552,278"/>
+<area shape="rect" href="evaluation_8cpp.html" title=" " alt="" coords="529,328,719,355"/>
+<area shape="poly" title=" " alt="" coords="615,285,624,329,619,326,612,289"/>
+<area shape="poly" title=" " alt="" coords="662,274,798,319,792,319,661,280"/>
+<area shape="poly" title=" " alt="" coords="782,278,656,330,654,325,777,279"/>
+<area shape="poly" title=" " alt="" coords="713,273,479,294,377,304,248,323,213,330,211,325,248,317,377,298,479,289,718,271"/>
+<area shape="poly" title=" " alt="" coords="805,282,791,303,781,323,778,343,784,361,798,377,815,390,856,410,851,410,812,395,794,381,779,364,772,343,776,321,787,300,800,285"/>
+<area shape="poly" title=" " alt="" coords="869,276,969,320,964,319,869,281"/>
+<area shape="poly" title=" " alt="" coords="166,369,166,412,162,409,162,372"/>
+<area shape="poly" title=" " alt="" coords="226,356,248,360,414,383,580,399,852,419,847,419,579,404,414,388,248,365,227,361"/>
+<area shape="poly" title=" " alt="" coords="1891,274,2095,328,2090,327,1891,279"/>
+<area shape="poly" title=" " alt="" coords="1859,278,1920,320,1915,319,1858,283"/>
+<area shape="poly" title=" " alt="" coords="1249,271,1101,294,938,323,927,325,926,320,937,317,1100,289,1244,271"/>
+<area shape="poly" title=" " alt="" coords="1342,286,1337,328,1328,348,1315,365,1294,378,1266,389,1191,406,1106,416,1026,422,1025,417,1106,411,1190,401,1264,384,1292,373,1312,361,1324,345,1331,326,1338,289"/>
+<area shape="poly" title=" " alt="" coords="1276,276,1083,326,1082,321,1271,277"/>
+<area shape="poly" title=" " alt="" coords="1312,280,1258,322,1256,317,1307,282"/>
+<area shape="poly" title=" " alt="" coords="1369,279,1423,320,1417,319,1367,284"/>
+<area shape="poly" title=" " alt="" coords="1397,274,1547,320,1542,319,1396,279"/>
+<area shape="poly" title=" " alt="" coords="1432,271,1700,317,1714,323,1709,322,1700,323,1431,276"/>
+<area shape="poly" title=" " alt="" coords="1457,121,1363,173,1362,168,1452,123"/>
+<area shape="poly" title=" " alt="" coords="1570,116,1763,164,1877,200,1988,243,2067,286,2128,328,2123,327,2065,290,1986,248,1875,205,1762,169,1570,121"/>
+<area shape="rect" href="test__moveset_8cpp.html" title=" " alt="" coords="1431,171,1636,197"/>
+<area shape="poly" title=" " alt="" coords="1507,126,1529,172,1525,169,1504,131"/>
+</map>
+</div>
+</div>
+<p><a href="direction_8hpp_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-namespaces" class="groupheader"><a id="namespaces" name="namespaces"></a>
+Espacios de nombres</h2></td></tr>
+<tr class="memitem:naidu" id="r_naidu"><td class="memItemLeft">namespace &#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu.html">naidu</a></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:a93e2d5ff746731bf99e6a5f5256e222b" id="r_a93e2d5ff746731bf99e6a5f5256e222b"><td class="memItemLeft">enum class &#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">naidu::Direction</a> : std::uint8_t { <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bafbaedde498cdead4f2780217646e9ba1">naidu::UP</a> = 0
+, <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222bac4e0e4e3118472beeb2ae75827450f1f">naidu::DOWN</a> = 1
+, <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba684d325a7303f52e64011467ff5c5758">naidu::LEFT</a> = 2
+, <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222ba21507b40c80068eda19865706fdc2403">naidu::RIGHT</a> = 3
+ }</td></tr>
+<tr class="memdesc:a93e2d5ff746731bf99e6a5f5256e222b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Direcciones de movimiento del hueco en el tablero.  <a href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Más...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a0c709f2cc41f878e68ed807e5363d939" id="r_a0c709f2cc41f878e68ed807e5363d939"><td class="memItemLeft">constexpr std::uint8_t&#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu.html#a0c709f2cc41f878e68ed807e5363d939">naidu::to_index</a> (<a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> d)</td></tr>
+<tr class="memdesc:a0c709f2cc41f878e68ed807e5363d939"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convierte una dirección a su índice numérico subyacente.  <br /></td></tr>
+<tr class="memitem:a2cb0f06155c3ecac63a413b8032310b4" id="r_a2cb0f06155c3ecac63a413b8032310b4"><td class="memItemLeft">constexpr <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a>&#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu.html#a2cb0f06155c3ecac63a413b8032310b4">naidu::opposite</a> (<a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a> d) noexcept</td></tr>
+<tr class="memdesc:a2cb0f06155c3ecac63a413b8032310b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Devuelve la dirección opuesta a la dada.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab4e3bdb5b0cdf449b9e4e6fe93563d82" id="r_ab4e3bdb5b0cdf449b9e4e6fe93563d82"><td class="memItemLeft">constexpr std::uint8_t&#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu.html#ab4e3bdb5b0cdf449b9e4e6fe93563d82">naidu::direction_count</a> = 4</td></tr>
+<tr class="memitem:a390021f34d4498f36beea593b5942d92" id="r_a390021f34d4498f36beea593b5942d92"><td class="memItemLeft">constexpr std::array&lt; <a class="el" href="namespacenaidu.html#a93e2d5ff746731bf99e6a5f5256e222b">Direction</a>, 4 &gt;&#160;</td><td class="memItemRight"><a class="el" href="namespacenaidu.html#a390021f34d4498f36beea593b5942d92">naidu::ALL_DIRECTIONS</a></td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a href="dir_aebb8dcc11953d78e620bbef0b9e2183.html">core</a></li><li class="navelem"><a href="direction_8hpp.html">direction.hpp</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
+  </ul>
+</div>
+</body>
+</html>
