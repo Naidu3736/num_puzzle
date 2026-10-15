@@ -5,6 +5,7 @@
 #include "evaluation/evaluation.hpp"
 
 #include <cstdint>
+#include <functional>
 #include <vector>
 
 namespace naidu::solver {
@@ -23,10 +24,11 @@ namespace naidu::solver {
      * @brief Configuración de la búsqueda.
      */
     struct Config {
-        evaluation::EvaluationFn eval_fn;       ///< Función de evaluación
-        std::uint64_t max_nodes = 10'000'000;   ///< Límite de nodos expandidos.
-        bool avoid_revisits = false;            ///< Evitar revisitar estados en el camino actual
-        bool weighted_cost = false;             ///< Coste ponderado (true), uniforme (false)
+        evaluation::EvaluationFn eval_fn;                   ///< Función de evaluación
+        std::function<bool()> cancel_requested = nullptr;   ///< Función para detener busqueda
+        std::uint64_t max_nodes = 10'000'000;               ///< Límite de nodos expandidos.
+        bool avoid_revisits = false;                        ///< Evitar revisitar estados en el camino actual
+        bool weighted_cost = false;                         ///< Coste ponderado (true), uniforme (false)
     };
     
     /**

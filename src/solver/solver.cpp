@@ -129,6 +129,9 @@ namespace {
     ) {
         ++ctx.nodes_expanded;
 
+        if (ctx.config.cancel_requested && ctx.config.cancel_requested())
+            return std::nullopt;
+
         if (ctx.config.max_nodes != 0 && ctx.nodes_expanded > ctx.config.max_nodes)
             return std::nullopt;
 
