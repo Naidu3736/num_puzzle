@@ -9,7 +9,7 @@ namespace naidu::evaluation {
     /**
      * @brief Firma común de las funciones de evaluación.
      *
-     * Todas las funciones de evaluación (baseline, evaluation_1/2/3) comparten
+     * Todas las funciones de evaluación (evaluation_1/2/3) comparten
      * esta firma para que el solver pueda seleccionarlas en tiempo de ejecución.
      *
      * Una función de evaluación calcula f(n) = g(n) + h(n):
