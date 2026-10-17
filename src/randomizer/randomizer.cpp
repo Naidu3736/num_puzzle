@@ -93,10 +93,8 @@ namespace  {
 
 namespace naidu::randomizer {
     
-    Board generate(std::uint8_t dim, const Config& config, std::mt19937& rng) {
-        Board board(dim);
-
-        const auto moves = resolve_moves(dim, config.moves);
+    Board generate(naidu::Board board, const Config& config, std::mt19937& rng) {
+        const auto moves = resolve_moves(board.dim(), config.moves);
         const auto max_attempts = resolve_max_attempts(
             config.max_attempts, moves
         );
@@ -110,8 +108,8 @@ namespace naidu::randomizer {
         return board;
     }
 
-    Board generate(std::uint8_t dim, std::mt19937& rng) {
-        return generate(dim, Config{}, rng);
+    Board generate(naidu::Board board, std::mt19937& rng) {
+        return generate(board, Config{}, rng);
     }
 
 }

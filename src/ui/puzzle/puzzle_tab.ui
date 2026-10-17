@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>950</width>
-    <height>723</height>
+    <height>751</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -167,7 +167,7 @@
                <item>
                 <widget class="QSlider" name="speed_slider">
                  <property name="minimum">
-                  <number>200</number>
+                  <number>100</number>
                  </property>
                  <property name="maximum">
                   <number>1000</number>
@@ -289,6 +289,9 @@
                    <verstretch>0</verstretch>
                   </sizepolicy>
                  </property>
+                 <property name="showGroupSeparator" stdset="0">
+                  <bool>true</bool>
+                 </property>
                  <property name="maximum">
                   <number>999999999</number>
                  </property>
@@ -353,44 +356,8 @@
         <layout class="QVBoxLayout" name="randomizer_layout">
          <item>
           <widget class="QWidget" name="randomizer_controls" native="true">
-           <layout class="QGridLayout" name="randomizer_grid">
-            <item row="0" column="1">
-             <widget class="QCheckBox" name="avoid_revisits_rand_check">
-              <property name="text">
-               <string>No revisitar</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QWidget" name="attempts_widget" native="true">
-              <layout class="QHBoxLayout" name="attempts_layout">
-               <item>
-                <widget class="QLabel" name="attempts_label">
-                 <property name="text">
-                  <string>Intentos:</string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QSpinBox" name="attempts_spin">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="maximum">
-                  <number>999999999</number>
-                 </property>
-                 <property name="stepType">
-                  <enum>QAbstractSpinBox::StepType::AdaptiveDecimalStepType</enum>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
              <widget class="QWidget" name="moves_widget" native="true">
               <layout class="QHBoxLayout" name="moves_layout">
                <item>
@@ -407,6 +374,9 @@
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
+                 </property>
+                 <property name="showGroupSeparator" stdset="0">
+                  <bool>true</bool>
                  </property>
                  <property name="minimum">
                   <number>1</number>
@@ -425,7 +395,52 @@
               </layout>
              </widget>
             </item>
-            <item row="2" column="0">
+            <item>
+             <widget class="QWidget" name="attempts_widget" native="true">
+              <layout class="QHBoxLayout" name="attempts_layout">
+               <item>
+                <widget class="QLabel" name="attempts_label">
+                 <property name="text">
+                  <string>Intentos:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="attempts_spin">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="showGroupSeparator" stdset="0">
+                  <bool>true</bool>
+                 </property>
+                 <property name="maximum">
+                  <number>999999999</number>
+                 </property>
+                 <property name="stepType">
+                  <enum>QAbstractSpinBox::StepType::AdaptiveDecimalStepType</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="avoid_revisits_rand_check">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>No revisitar</string>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QPushButton" name="shuffle_btn">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">

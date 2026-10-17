@@ -1,16 +1,43 @@
 #include "puzzle_tab.h"
-#include "board/board.hpp"
 #include "ui_puzzle_tab.h"
+#include "board/board.hpp"
 #include "board_view.hpp"
 #include "solver/solver.hpp"
 #include "randomizer/randomizer.hpp"
 
 #include <QMessageBox>
 #include <QStringList>
-#include <QtConcurrent/QtConcurrent>
+#include <QtConcurrent>
 #include <random>
-#include <QScrollArea>
-#include <QLabel>
+
+static QString board_to_string(const naidu::Board& board) {
+    QStringList parts;
+    for (auto tile : board.tiles()) {
+        parts.append(QString::number(tile));
+    }
+    return parts.join(",");
+}
+
+static std::optional<naidu::Board> parse_board(const QString& text) {
+    QStringList parts = text.split(',', Qt::SkipEmptyParts);
+    int total = parts.size();
+    int dim_int = static_cast<int>(std::round(std::sqrt(total)));
+    
+    if (dim_int * dim_int != total || dim_int < 3 || dim_int > 15) return std::nullopt;
+    
+    std::vector<std::uint8_t> tiles;
+    tiles.reserve(parts.size());
+    
+    for (const QString& part : parts) {
+        bool ok = false;
+        int val = part.trimmed().toInt(&ok);
+        if (!ok || val < 0 || val >= dim_int * dim_int) return std::nullopt;
+        tiles.push_back(static_cast<std::uint8_t>(val));
+    }
+    
+    try { return naidu::Board(tiles); }
+    catch (...) { return std::nullopt; }
+}
 
 PuzzleTab::PuzzleTab(QWidget *parent)
     : QWidget(parent)
@@ -20,8 +47,6 @@ PuzzleTab::PuzzleTab(QWidget *parent)
     m_ui->eval_combo->setCurrentIndex(-1);
 
     connect(m_ui->dimension_slider, &QSlider::valueChanged, this, &PuzzleTab::on_dimension_changed);
-    m_ui->dimension_value->setText(QString::number(m_ui->dimension_slider->value()));
-
     connect(m_ui->speed_slider, &QSlider::valueChanged, this, &PuzzleTab::on_speed_slider_changed);
     connect(m_ui->solve_btn, &QPushButton::clicked, this, &PuzzleTab::on_solve_clicked);
     connect(m_ui->stop_btn, &QPushButton::clicked, this, &PuzzleTab::on_stop_clicked);
@@ -32,10 +57,10 @@ PuzzleTab::PuzzleTab(QWidget *parent)
     connect(&m_solver_watcher, &QFutureWatcher<naidu::solver::Solution>::canceled, this, &PuzzleTab::on_solver_cancelled);
     connect(&m_anim_timer, &QTimer::timeout, this, &PuzzleTab::on_anim_step);
 
+    m_ui->dimension_value->setText(QString::number(m_ui->dimension_slider->value()));
+    
     std::uint8_t default_dim = static_cast<std::uint8_t>(m_ui->dimension_slider->value());
-    naidu::Board default_board(default_dim);
-    m_initial_board = default_board;
-    m_goal_board = default_board;
+    m_initial_board = m_goal_board = naidu::Board(default_dim);
     m_ui->board_view->set_board(m_initial_board);
 }
 
@@ -51,36 +76,25 @@ void PuzzleTab::set_boards(const naidu::Board& initial, const naidu::Board& goal
     m_initial_board = initial;
     m_goal_board = goal;
 
-    std::uint8_t dim = initial.dim();
-    
     m_ui->dimension_slider->blockSignals(true);
-    m_ui->dimension_slider->setValue(dim);
+    m_ui->dimension_slider->setValue(initial.dim());
     m_ui->dimension_slider->blockSignals(false);
-    m_ui->dimension_value->setText(QString::number(dim));
 
+    m_ui->dimension_value->setText(QString::number(initial.dim()));
     m_ui->board_view->set_board(initial);
-
-    QString initial_str, goal_str;
-    auto initial_tiles = initial.tiles();
-    for (std::size_t i = 0; i < initial_tiles.size(); ++i) {
-        initial_str += QString::number(initial_tiles[i]);
-        if (i + 1 < initial_tiles.size()) initial_str += ",";
-    }
-    m_ui->initial_input->setText(initial_str);
-
-    auto goal_tiles = goal.tiles();
-    for (std::size_t i = 0; i < goal_tiles.size(); ++i) {
-        goal_str += QString::number(goal_tiles[i]);
-        if (i + 1 < goal_tiles.size()) goal_str += ",";
-    }
-    m_ui->goal_input->setText(goal_str);
+    
+    m_ui->initial_input->setText(board_to_string(initial));
+    m_ui->goal_input->setText(board_to_string(goal));
 }
 
 void PuzzleTab::on_dimension_changed(int value) {
     m_ui->dimension_value->setText(QString::number(value));
     naidu::Board default_board(static_cast<std::uint8_t>(value));
-    m_initial_board = default_board;
-    m_goal_board = default_board;
+    
+    m_ui->initial_input->clear();
+    m_ui->goal_input->clear();
+    
+    m_initial_board = m_goal_board = default_board;
     m_ui->board_view->set_board(default_board);
 }
 
@@ -92,32 +106,15 @@ void PuzzleTab::on_speed_slider_changed(int value) {
 }
 
 naidu::evaluation::EvaluationFn PuzzleTab::get_selected_evaluation() const {
-    int index = m_ui->eval_combo->currentIndex();
-    if (index == -1) return naidu::evaluation::evaluation_1;
-
-    switch (index) {
-        case 0: return naidu::evaluation::evaluation_1;
-        case 1: return naidu::evaluation::evaluation_2;
-        case 2: return naidu::evaluation::evaluation_3;
-        default: return naidu::evaluation::evaluation_1;
-    }
-}
-
-std::optional<naidu::Board> PuzzleTab::parse_board_input(const QString& text, std::uint8_t dim) const {
-    QStringList parts = text.split(',', Qt::SkipEmptyParts);
-    std::vector<std::uint8_t> tiles;
-    tiles.reserve(parts.size());
-    for (const QString& part : parts) {
-        bool ok = false;
-        int val = part.trimmed().toInt(&ok);
-        if (!ok || val < 0 || val >= dim * dim) return std::nullopt;
-        tiles.push_back(static_cast<std::uint8_t>(val));
-    }
-    try {
-        return naidu::Board(tiles);
-    } catch (...) {
-        return std::nullopt;
-    }
+    static const naidu::evaluation::EvaluationFn evals[] = {
+        naidu::evaluation::evaluation_1,
+        naidu::evaluation::evaluation_2,
+        naidu::evaluation::evaluation_3
+    };
+    
+    int idx = m_ui->eval_combo->currentIndex();
+    if (idx < 0 || idx >= 3) return naidu::evaluation::evaluation_2;
+    return evals[idx];
 }
 
 void PuzzleTab::on_solve_clicked() {
@@ -126,9 +123,7 @@ void PuzzleTab::on_solve_clicked() {
         return;
     }
 
-    if (m_anim_timer.isActive()) {
-        m_anim_timer.stop();
-    }
+    if (m_anim_timer.isActive()) m_anim_timer.stop();
 
     QString initial_text = m_ui->initial_input->text().trimmed();
     QString goal_text = m_ui->goal_input->text().trimmed();
@@ -138,51 +133,30 @@ void PuzzleTab::on_solve_clicked() {
         return;
     }
 
-    QStringList initial_parts = initial_text.split(',', Qt::SkipEmptyParts);
-    int initial_total = initial_parts.size();
-    int initial_dim_int = static_cast<int>(std::round(std::sqrt(initial_total)));
-    if (initial_dim_int * initial_dim_int != initial_total || initial_dim_int < 3 || initial_dim_int > 15) {
-        QMessageBox::warning(this, "Error", "El tamaño del estado inicial no forma un tablero cuadrado válido.");
-        return;
-    }
-    std::uint8_t initial_dim = static_cast<std::uint8_t>(initial_dim_int);
-
-    auto initial_parsed = parse_board_input(initial_text, initial_dim);
-    if (!initial_parsed) {
+    auto initial_board = parse_board(initial_text);
+    if (!initial_board) {
         QMessageBox::warning(this, "Error", "El estado inicial ingresado no es válido.");
         return;
     }
 
-    naidu::Board initial_board = *initial_parsed;
     naidu::Board goal_board;
-
-    // Si el campo meta está vacío, se asume automáticamente la meta estándar por defecto
     if (goal_text.isEmpty()) {
-        goal_board = naidu::Board(initial_dim);
+        goal_board = naidu::Board(initial_board->dim());
     } else {
-        QStringList goal_parts = goal_text.split(',', Qt::SkipEmptyParts);
-        int goal_total = goal_parts.size();
-        int goal_dim_int = static_cast<int>(std::round(std::sqrt(goal_total)));
-        if (goal_dim_int * goal_dim_int != goal_total || goal_dim_int < 3 || goal_dim_int > 15) {
-            QMessageBox::warning(this, "Error", "El tamaño del estado meta no forma un tablero cuadrado válido.");
-            return;
-        }
-        std::uint8_t goal_dim = static_cast<std::uint8_t>(goal_dim_int);
-
-        auto goal_parsed = parse_board_input(goal_text, goal_dim);
-        if (!goal_parsed) {
+        auto parsed_goal = parse_board(goal_text);
+        if (!parsed_goal) {
             QMessageBox::warning(this, "Error", "El estado meta ingresado no es válido.");
             return;
         }
-        goal_board = *goal_parsed;
+        goal_board = *parsed_goal;
     }
 
-    if (initial_board.dim() != goal_board.dim()) {
-        QMessageBox::warning(this, "Error", "El tablero inicial y el tablero meta deben tener exactamente la misma dimensión.");
+    if (initial_board->dim() != goal_board.dim()) {
+        QMessageBox::warning(this, "Error", "El tablero inicial y el tablero meta deben tener la misma dimensión.");
         return;
     }
 
-    m_initial_board = initial_board;
+    m_initial_board = *initial_board;
     m_goal_board = goal_board;
 
     naidu::solver::Config config;
@@ -190,9 +164,7 @@ void PuzzleTab::on_solve_clicked() {
     config.max_nodes = static_cast<std::uint64_t>(m_ui->max_nodes_spin->value());
     config.avoid_revisits = m_ui->avoid_revisits_solver_check->isChecked();
     config.weighted_cost = m_ui->weighted_cost_check->isChecked();
-    config.cancel_requested = [this]() {
-        return m_solver_watcher.isCanceled();
-    };
+    config.cancel_requested = [this]() { return m_solver_watcher.isCanceled(); };
 
     m_ui->status_label->setText("Resolviendo en segundo plano...");
     m_ui->solve_btn->setEnabled(false);
@@ -201,8 +173,8 @@ void PuzzleTab::on_solve_clicked() {
     m_start_time = std::chrono::high_resolution_clock::now();
 
     QFuture<naidu::solver::Solution> future = QtConcurrent::run(
-        [initial_board, goal_board, config]() {
-            return naidu::solver::ida(initial_board, goal_board, config);
+        [initial = *initial_board, goal = goal_board, config]() {
+            return naidu::solver::ida(initial, goal, config);
         }
     );
 
@@ -213,9 +185,7 @@ void PuzzleTab::on_solver_finished() {
     m_ui->solve_btn->setEnabled(true);
     m_ui->stop_btn->setEnabled(false);
 
-    if (m_solver_watcher.isCanceled()) {
-        return;
-    }
+    if (m_solver_watcher.isCanceled()) return;
 
     naidu::solver::Solution solution = m_solver_watcher.result();
 
@@ -231,9 +201,9 @@ void PuzzleTab::on_solver_finished() {
         QStringList path_list;
         for (auto d : solution.moves) {
             switch(d) {
-                case naidu::Direction::UP: path_list.append("U"); break;
-                case naidu::Direction::DOWN: path_list.append("D"); break;
-                case naidu::Direction::LEFT: path_list.append("L"); break;
+                case naidu::Direction::UP:    path_list.append("U"); break;
+                case naidu::Direction::DOWN:  path_list.append("D"); break;
+                case naidu::Direction::LEFT:  path_list.append("L"); break;
                 case naidu::Direction::RIGHT: path_list.append("R"); break;
             }
         }
@@ -268,15 +238,12 @@ void PuzzleTab::on_solver_cancelled() {
 
 void PuzzleTab::on_replay_animation() {
     if (m_anim_moves.empty() && m_solver_watcher.isFinished()) {
-        auto solution = m_solver_watcher.result();
-        m_anim_moves = solution.moves;
+        m_anim_moves = m_solver_watcher.result().moves;
     }
 
     if (m_anim_moves.empty()) return;
 
-    if (m_anim_timer.isActive()) {
-        m_anim_timer.stop();
-    }
+    if (m_anim_timer.isActive()) m_anim_timer.stop();
 
     m_current_anim_board = m_initial_board;
     m_anim_index = 0;
@@ -298,11 +265,7 @@ void PuzzleTab::on_anim_step() {
 }
 
 void PuzzleTab::on_shuffle_clicked() {
-    if (m_anim_timer.isActive()) {
-        m_anim_timer.stop();
-    }
-
-    std::uint8_t dim = static_cast<std::uint8_t>(m_ui->dimension_slider->value());
+    if (m_anim_timer.isActive()) m_anim_timer.stop();
 
     naidu::randomizer::Config rand_config;
     rand_config.moves = static_cast<std::uint32_t>(m_ui->moves_spin->value());
@@ -312,16 +275,8 @@ void PuzzleTab::on_shuffle_clicked() {
     std::random_device rd;
     std::mt19937 rng(rd());
 
-    naidu::Board shuffled = naidu::randomizer::generate(dim, rand_config, rng);
-    m_initial_board = shuffled;
-    m_ui->board_view->set_board(shuffled);
-
-    QString tiles_str;
-    auto tiles = shuffled.tiles();
-    for (std::size_t i = 0; i < tiles.size(); ++i) {
-        tiles_str += QString::number(tiles[i]);
-        if (i + 1 < tiles.size()) tiles_str += ",";
-    }
-    m_ui->initial_input->setText(tiles_str);
+    m_initial_board = naidu::randomizer::generate(m_goal_board, rand_config, rng);
+    m_ui->board_view->set_board(m_initial_board);
+    m_ui->initial_input->setText(board_to_string(m_initial_board));
     m_ui->status_label->setText("Tablero mezclado aleatoriamente.");
 }

@@ -30,7 +30,7 @@ namespace naidu::randomizer {
      * @param rng Generador de números aleatorios.
      * @return Tablero resoluble aleatorio.
      */
-    Board generate(std::uint8_t dim, const Config& config, std::mt19937& rng);
+    Board generate(Board goal, const Config& config, std::mt19937& rng);
 
     /**
      * @brief Genera un tablero aleatorio con parámetros por defecto.
@@ -38,5 +38,5 @@ namespace naidu::randomizer {
      * @param rng Generador de números aleatorios.
      * @return Tablero resoluble aleatorio.
      */
-    Board generate(std::uint8_t dim, std::mt19937& rng);
+    Board generate(Board goal, std::mt19937& rng);
 }

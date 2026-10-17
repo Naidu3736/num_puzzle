@@ -1,16 +1,12 @@
 #pragma once
 
+#include "board/board.hpp"
+
 #include <QWidget>
 #include <QFutureWatcher>
 #include <QChartView>
-#include <QChart>
-#include <QLineSeries>
-#include <QBarSeries>
-#include <QBarSet>
-#include <QPercentBarSeries>
-#include <QBarCategoryAxis>
-#include <QValueAxis>
-#include "solver/solver.hpp"
+#include <QtCharts>
+#include <optional>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,7 +15,8 @@ namespace Ui {
 QT_END_NAMESPACE
 
 struct DifficultyMetrics {
-    QVector<QPointF> execution_times;
+    QList<QPointF> execution_times;
+    QList<QPointF> nodes_expanded_points;
     int successes = 0;
     int failures = 0;
     double total_cost = 0;
@@ -38,35 +35,37 @@ class AnalysisTab : public QWidget {
 
     private:
         Ui::AnalysisTab *m_ui;
+        naidu::Board m_goal_board;
         QFutureWatcher<void> m_analysis_watcher;
         bool m_is_analyzing = false;
 
         QChart *m_time_chart = nullptr;
+        QChart *m_nodes_chart = nullptr;
         QChart *m_success_chart = nullptr;
         QChart *m_optimal_chart = nullptr;
 
         QChartView *m_time_chart_view = nullptr;
+        QChartView *m_nodes_chart_view = nullptr;
         QChartView *m_success_chart_view = nullptr;
         QChartView *m_optimal_chart_view = nullptr;
 
+        AnalysisResults*   m_pending_results = nullptr;
+         QMutex* m_pending_mutex   = nullptr;
+
+        QChartView* create_chart_view(QChart* chart, QWidget* container);
         void setup_charts();
         void update_time_chart(const AnalysisResults& results);
+        void update_nodes_chart(const AnalysisResults& results);
         void update_success_chart(const AnalysisResults& results);
         void update_optimal_chart(const AnalysisResults& results);
         void update_all_charts(const AnalysisResults& results);
         
-        /**
-         * @brief Ejecuta el análisis empírico masivo coordinando lotes de tableros generados por naidu::randomizer y resueltos por naidu::solver::ida.
-         */
-        AnalysisResults execute_empirical_analysis(int instances, int easy_m, int med_m, int hard_m, int max_attempts, int dim, const naidu::solver::Config& config, bool rand_avoid);
-        
-        /**
-         * @brief Ejecuta un lote de pruebas de dificultad para medir rendimiento y métricas utilizando el núcleo de resolución.
-         */
-        DifficultyMetrics run_difficulty_batch(int moves_count, int instances, std::uint8_t dim, int max_attempts, bool rand_avoid, const naidu::solver::Config& config);
-
         void on_run_analysis_clicked();
         void on_cancel_analysis_clicked();
+        void on_analysis_finished();
+        void on_dimension_changed(int value);
+
+        std::optional<naidu::Board> parse_goal_input() const;
 
     public:
         explicit AnalysisTab(QWidget *parent = nullptr);
@@ -76,4 +75,6 @@ class AnalysisTab : public QWidget {
          * @brief Guarda las gráficas estadísticas del análisis en el directorio especificado.
          */
         void save_all_charts(const QString& directory_path);
+
+        void set_board(const naidu::Board& goal);
 };

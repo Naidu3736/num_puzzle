@@ -67,7 +67,7 @@ namespace {
         std::uint16_t& cost
     ) {
         const auto moved_tile = node.peek_tile(d);
-        const auto new_empty_index = node.peek_empty(d);
+        const auto old_empty_index = node.empty_index();
 
         node.move(d);
         ctx.path.push_back(d);
@@ -84,7 +84,7 @@ namespace {
 
         cost = naidu::component::step_cost(
             moved_tile,
-            new_empty_index,
+            old_empty_index,
             ctx.goal_pos,
             ctx.config.weighted_cost
         );

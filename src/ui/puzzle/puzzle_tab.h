@@ -30,9 +30,7 @@ class PuzzleTab : public QWidget {
         QFutureWatcher<naidu::solver::Solution> m_solver_watcher;
         QTimer m_anim_timer;
         
-        /// Tablero inicial gestionado por el núcleo lógico.
         naidu::Board m_initial_board;
-        /// Tablero objetivo o meta del núcleo lógico.
         naidu::Board m_goal_board;
         naidu::Board m_current_anim_board;
         std::vector<naidu::Direction> m_anim_moves;

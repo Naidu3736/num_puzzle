@@ -34,4 +34,5 @@ class MainWindow : public QMainWindow {
 
     private:
         Ui::MainWindow *m_ui;
+        QString get_project_root() const;
 };

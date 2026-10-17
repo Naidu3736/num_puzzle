@@ -67,7 +67,7 @@ Una vez instaladas las herramientas y dependencias correspondientes a su sistema
    * *En Linux / Arch / MSYS2:*
 
      ```bash
-     cmake -B bulid -S . -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-O3 -march=native"
+     cmake -B build -S . -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS="-O3 -march=native"
      ```
 
    * *En Windows (Visual Studio / MSVC nativo):*

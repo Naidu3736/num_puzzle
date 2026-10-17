@@ -42,7 +42,7 @@ namespace naidu::component {
 
     std::uint16_t step_cost(
         std::uint8_t moved_tile,
-        std::uint8_t new_empty_index,
+        std::uint8_t old_empty_index,
         std::span<const std::uint8_t> goal_pos,
         bool weighted
     ) noexcept {
@@ -52,7 +52,7 @@ namespace naidu::component {
         if (moved_tile == 0)
             return 1;
 
-        return (goal_pos[moved_tile] == new_empty_index) ? 2 : 1;
+        return (goal_pos[moved_tile] == old_empty_index) ? 2 : 1;
     }
 
     std::uint16_t manhattan_total(
